@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 import ThemeToggle from "./ThemeToggle";
 import Wordmark from "./Wordmark";
 import { BLOG_URL, signInHref } from "@/lib/cta";
@@ -94,6 +95,11 @@ export default function SiteHeader({ campaign = "site" }: { campaign?: string })
           >
             Sign in
           </a>
+          <MobileMenu
+            items={nav}
+            signInLabel="Sign in"
+            signInHref={signInHref(campaign, "menu_sign_in")}
+          />
         </div>
       </div>
     </header>

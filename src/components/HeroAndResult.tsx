@@ -5,6 +5,8 @@ import { useCallback, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, DocPlus, DocScan } from "./icons";
 import GuestResultSection from "./GuestResultSection";
+import StickyUploadCta from "./StickyUploadCta";
+import UploadProgress from "./UploadProgress";
 import { homeCta } from "@/lib/cta";
 import { ACCEPTED_TYPES } from "@/lib/guest-api";
 import { useGuestAnalysis } from "@/hooks/useGuestAnalysis";
@@ -33,6 +35,7 @@ export default function HeroAndResult() {
   // Which control the file came from. Read at upload time, not at click time,
   // because the picker opens from two different buttons.
   const entryMethod = useRef<"drag_drop" | "file_picker">("file_picker");
+  const dropZone = useRef<HTMLDivElement>(null);
 
   const { phase, status, fileName, error } = guest;
   const busy = phase === "uploading" || phase === "processing";
@@ -293,6 +296,7 @@ export default function HeroAndResult() {
                   />
 
                   <div
+                    ref={dropZone}
                     role="button"
                     tabIndex={0}
                     aria-label="Upload your resume"
@@ -352,35 +356,11 @@ export default function HeroAndResult() {
                       </div>
                     )}
                     {busy && (
-                      <div
-                        style={{
-                          display: "grid",
-                          placeItems: "center",
-                          gap: 16,
-                          textAlign: "center",
-                        }}
-                      >
-                        <div
-                          style={{
-                            width: 38,
-                            height: 38,
-                            borderRadius: 999,
-                            border: "2.5px solid var(--acsoft)",
-                            borderTopColor: "var(--ac)",
-                            animation: "sd-spin .8s linear infinite",
-                          }}
-                        />
-                        <div style={{ fontSize: 17, fontWeight: 500, color: "var(--tx)" }}>
-                          {phase === "uploading"
-                            ? "Uploading your resume\u2026"
-                            : `Reading ${fileName ?? "your resume"}`}
-                        </div>
-                        <div style={{ fontSize: 14, color: "var(--tx3)" }}>
-                          {status === "analysis_ready"
-                            ? "Score is in, finding your gaps and matches\u2026"
-                            : "Reading your skills and scoring them\u2026"}
-                        </div>
-                      </div>
+                      <UploadProgress
+                        phase={phase}
+                        status={status}
+                        fileName={fileName}
+                      />
                     )}
                   </div>
 
@@ -593,6 +573,8 @@ export default function HeroAndResult() {
       {done && (
         <GuestResultSection state={guest} guestToken={guest.guestToken} />
       )}
+
+      {!done && <StickyUploadCta dropZone={dropZone} onUpload={openPicker} />}
     </>
   );
 }

@@ -177,9 +177,27 @@ button {
   padding-bottom: 22px;
 }
 
-/* Header collapses its centred nav on small screens. */
+/* Header collapses its centred nav on small screens; the same breakpoint
+   reveals the menu button that replaces it. */
+.sd-menu {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .sd-nav {
+    display: none !important;
+  }
+  .sd-menu {
+    display: block;
+  }
+}
+
+/* Narrow enough that the lockup, the toggle, the menu and a button no longer
+   fit: the button is in the menu anyway, so it is the one that goes.
+   `!important` because the anchor sets `display` inline, which no plain rule
+   in this file can outrank. */
+@media (max-width: 420px) {
+  .sd-header-cta {
     display: none !important;
   }
 }
@@ -402,4 +420,44 @@ html[data-sd-theme="dark"] .sd-result-card::after {
   width: 260px;
   height: 260px;
   background: radial-gradient(circle, rgba(124, 93, 249, 0.22), transparent 66%);
+}
+
+/* ---- sticky upload CTA ----
+   Phone only. The drop zone is the page's one conversion point and it scrolls
+   away after the first screen, so it follows the reader down. Kept out of the
+   layout entirely on larger screens, where the zone stays in view. */
+
+.sd-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .sd-sticky-cta {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+    background: color-mix(in oklab, var(--bg2) 92%, transparent);
+    backdrop-filter: blur(14px);
+    transform: translateY(120%);
+    opacity: 0;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+    pointer-events: none;
+  }
+
+  .sd-sticky-cta[data-visible="true"] {
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sd-sticky-cta {
+    transition: none;
+  }
 }
