@@ -1,25 +1,6 @@
 :root {
-  --bg: #08090a;
-  --bg2: #0b0b10;
-  --card: #0e0f13;
-  --card2: #14151a;
-  --line: rgba(255, 255, 255, 0.09);
-  --line2: rgba(255, 255, 255, 0.16);
-  --tx: #ffffff;
-  --tx2: #9ea0a8;
-  --tx3: #6b6d75;
-  --ac: #7c5df9;
-  --ac2: #6049c0;
-  --acline: #4b3ad6;
-  --acsoft: rgba(124, 93, 249, 0.13);
-  --btn: #ffffff;
-  --btntx: #0a0a0c;
-  --amber: #e4a83c;
-  --ok: #4fd1a5;
-  --font: "Switzer";
-}
-
-html[data-sd-theme="light"] {
+  /* Light is the default. Dark is opt-in via the toggle only — the site does
+     not follow the OS colour scheme. */
   --bg: #f6f6f8;
   --bg2: #ffffff;
   --card: #ffffff;
@@ -29,10 +10,31 @@ html[data-sd-theme="light"] {
   --tx: #0a0a0c;
   --tx2: #5a5c66;
   --tx3: #8a8c96;
+  --ac: #7c5df9;
+  --ac2: #6049c0;
+  --acline: #4b3ad6;
   --acsoft: rgba(124, 93, 249, 0.1);
   --btn: #0a0a0c;
   --btntx: #ffffff;
   --amber: #9a6b08;
+  --ok: #4fd1a5;
+  --font: "Switzer";
+}
+
+html[data-sd-theme="dark"] {
+  --bg: #08090a;
+  --bg2: #0b0b10;
+  --card: #0e0f13;
+  --card2: #14151a;
+  --line: rgba(255, 255, 255, 0.09);
+  --line2: rgba(255, 255, 255, 0.16);
+  --tx: #ffffff;
+  --tx2: #9ea0a8;
+  --tx3: #6b6d75;
+  --acsoft: rgba(124, 93, 249, 0.13);
+  --btn: #ffffff;
+  --btntx: #0a0a0c;
+  --amber: #e4a83c;
 }
 
 html,

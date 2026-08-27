@@ -9,7 +9,8 @@ import { homeCta } from "@/lib/cta";
 
 type Phase = "idle" | "parsing" | "result";
 
-const avatars = ["av1", "av2", "av3", "av4"];
+/* av2 is used by a testimonial below, so the stack borrows av9 instead. */
+const avatars = ["av1", "av9", "av3", "av4"];
 
 const panelBorder: React.CSSProperties = {
   borderRadius: 26,

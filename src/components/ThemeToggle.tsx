@@ -17,8 +17,14 @@ const buttonStyle: React.CSSProperties = {
 export default function ThemeToggle({ size = 20 }: { size?: number }) {
   const toggle = useCallback(() => {
     const root = document.documentElement;
-    const next = root.dataset.sdTheme === "light" ? "dark" : "light";
+    // Light is the default, so anything that is not explicitly dark goes dark.
+    const next = root.dataset.sdTheme === "dark" ? "light" : "dark";
     root.dataset.sdTheme = next;
+
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", next === "dark" ? "#08090A" : "#F6F6F8");
+
     try {
       localStorage.setItem("sd-theme", next);
     } catch {

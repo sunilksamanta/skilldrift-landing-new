@@ -21,11 +21,12 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+/**
+ * A single colour, not a prefers-color-scheme pair: the theme follows the
+ * toggle rather than the OS, and ThemeToggle keeps this tag in step.
+ */
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#08090A" },
-    { media: "(prefers-color-scheme: light)", color: "#F6F6F8" },
-  ],
+  themeColor: "#F6F6F8",
 };
 
 /* Applied before first paint so a stored theme choice does not flash. */
@@ -35,7 +36,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-sd-theme="dark" suppressHydrationWarning>
+    <html lang="en" data-sd-theme="light" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://api.fontshare.com" />
         <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />

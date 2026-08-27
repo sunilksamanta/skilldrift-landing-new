@@ -20,9 +20,11 @@ const stats = [
 
 const strong = (text: string) => <span style={{ color: "var(--tx)" }}>{text}</span>;
 
-const quotes: { avatar: string; body: ReactNode; meta: string }[] = [
+/* Avatars are chosen to match the name and city on each card. */
+const quotes: { avatar: string; name: string; body: ReactNode; meta: string }[] = [
   {
-    avatar: "av5",
+    avatar: "av8",
+    name: "Aditya Kulkarni",
     body: (
       <>
         &ldquo;I went from a {strong("41%")} match on the roles I wanted to{" "}
@@ -34,7 +36,8 @@ const quotes: { avatar: string; body: ReactNode; meta: string }[] = [
     meta: " · Final-year student · Pune",
   },
   {
-    avatar: "av6",
+    avatar: "av2",
+    name: "Karthik Iyer",
     body: (
       <>
         &ldquo;I went from a {strong("38%")} match on product roles to {strong("74%")} in{" "}
@@ -45,7 +48,8 @@ const quotes: { avatar: string; body: ReactNode; meta: string }[] = [
     meta: " · Career switcher · Bengaluru",
   },
   {
-    avatar: "av7",
+    avatar: "av10",
+    name: "Layla Haddad",
     body: (
       <>
         &ldquo;I went from a {strong("55%")} match on director roles to {strong("86%")} in{" "}
@@ -53,7 +57,7 @@ const quotes: { avatar: string; body: ReactNode; meta: string }[] = [
         {strong("Two board-level shortlists I would not have reached before.")}&rdquo;
       </>
     ),
-    meta: " · Senior leader · Gurugram",
+    meta: " · Senior leader · Dubai",
   },
 ];
 
@@ -203,7 +207,7 @@ export default function ProofSection() {
                   }}
                 />
                 <span style={{ fontSize: 14 }}>
-                  <span style={{ color: "var(--tx)" }}>[Name]</span>
+                  <span style={{ color: "var(--tx)" }}>{quote.name}</span>
                   <span style={{ color: "var(--tx3)" }}>{quote.meta}</span>
                 </span>
               </figcaption>
