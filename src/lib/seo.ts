@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { ALL_ROUTES, getRoute } from "./content";
 
-export const SITE_URL = "https://skilldrift.ai";
+/**
+ * The www host, because that is the one that answers 200: the apex issues a
+ * permanent redirect to it. Canonicals, og:url and every sitemap entry are
+ * built from this, so pointing it at the apex made all of them redirect —
+ * which wastes crawl budget and splits signals across two hostnames.
+ */
+export const SITE_URL = "https://www.skilldrift.ai";
 export const SITE_NAME = "SkillDrift";
 /**
  * og:locale takes `language_TERRITORY`, not a bare language code, so plain
