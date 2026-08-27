@@ -86,6 +86,22 @@ export type ContactBlock = {
   channels: { label: string; value: string; href: string; note?: string }[];
 };
 
+/**
+ * Flat company facts — who operates the product, since when, from where, on
+ * which platforms, and who to write to. Deliberately terse: this is the block
+ * an answer engine quotes, and the visible counterpart of the Organization
+ * structured data.
+ */
+export type FactsBlock = {
+  type: "facts";
+  id?: string;
+  alt?: boolean;
+  eyebrow?: string;
+  heading: string;
+  copy?: string;
+  facts: { label: string; value: string }[];
+};
+
 /** Renders the three real plan cards — Free, Top up, Unlimited. */
 export type PlansBlock = {
   type: "plans";
@@ -110,6 +126,7 @@ export type Block =
   | StatsBlock
   | ProseBlock
   | ContactBlock
+  | FactsBlock
   | FeatureRowsBlock
   | PlansBlock;
 

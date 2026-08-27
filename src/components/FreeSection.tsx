@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Regional } from "./Regional";
 import { ArrowRight, Check } from "./icons";
 import { Pill, SectionIntro } from "./SectionBits";
 
@@ -161,7 +162,7 @@ export default function FreeSection() {
                   color: "var(--tx2)",
                 }}
               >
-                IN INDIA, 1 CREDIT = &#8377;1
+                <Regional in="IN INDIA, 1 CREDIT = ₹1" row="299 CREDITS = $6.99" />
               </span>
             </div>
             <p

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight } from "./icons";
 import Wordmark from "./Wordmark";
 import { homeCta } from "@/lib/cta";
 
@@ -116,20 +115,6 @@ export default function CtaSection() {
             }}
           >
             Get started free
-          </a>
-          <a
-            href={homeCta("closing_upload")}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 12,
-              fontSize: 16.5,
-              fontWeight: 500,
-              color: "rgba(255,255,255,.9)",
-            }}
-          >
-            Upload your resume free
-            <ArrowRight size={18} strokeWidth={1.9} />
           </a>
         </div>
         <p style={{ marginTop: 26, fontSize: 13, color: "rgba(255,255,255,.62)" }}>

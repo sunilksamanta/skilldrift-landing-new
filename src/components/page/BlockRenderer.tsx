@@ -3,7 +3,7 @@ import { ArrowRight, Check } from "../icons";
 import PlanCards from "../PlanCards";
 import FeatureRows from "./FeatureRows";
 import RichText from "./RichText";
-import { CardGrid, PriceTable, Section, StepList } from "./blocks";
+import { CardGrid, FactList, PriceTable, Section, StepList } from "./blocks";
 
 /** Maps one `pages.json` block onto its component. */
 export default function BlockRenderer({
@@ -30,6 +30,13 @@ export default function BlockRenderer({
       return (
         <Section {...shell}>
           <PlanCards campaign={campaign} />
+        </Section>
+      );
+
+    case "facts":
+      return (
+        <Section {...shell}>
+          <FactList facts={block.facts} />
         </Section>
       );
 

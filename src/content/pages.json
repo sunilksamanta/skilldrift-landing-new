@@ -52,7 +52,7 @@
             {
               "tag": "Pricing",
               "title": "Free to start, pay when you apply",
-              "body": "Diagnosis is free forever. In India, one credit is one rupee, so every price is already in money you understand."
+              "body": "Diagnosis is free forever. {{In India, one credit is one rupee, so every price is already in money you understand.|Credits are priced up front and never expire, so you always know what a run costs.}}"
             }
           ]
         }
@@ -182,10 +182,6 @@
         "primary": {
           "label": "Get started free",
           "href": "app:sign-in"
-        },
-        "secondary": {
-          "label": "Upload your resume free",
-          "href": "app:sign-in"
         }
       }
     },
@@ -263,7 +259,7 @@
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "Diagnosis is free. Tailoring is 18 credits.",
-          "copy": "In India, one credit is one rupee. Skill gap analysis, job matching and your career path never cost a credit.",
+          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gap analysis, job matching and your career path never cost a credit.",
           "rows": [
             {
               "label": "Tailor your resume to one job",
@@ -278,7 +274,7 @@
               "cost": "54–70 credits"
             }
           ],
-          "note": "One full application costs about 72 credits — 18 to tailor, 54 to download. A 299-credit top-up covers roughly four. Compare that against unlimited on the [pricing page](/pricing)."
+          "note": "One full application costs about 72 credits — 18 to tailor, 54 to download. A 299-credit top-up is {topup} and covers roughly four. Compare that against unlimited on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -377,7 +373,7 @@
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "A full outcome rewrite is 70 credits.",
-          "copy": "In India, one credit is one rupee. Resume and ATS analysis — the diagnosis that tells you whether you need this at all — is free.",
+          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Resume and ATS analysis — the diagnosis that tells you whether you need this at all — is free.",
           "rows": [
             {
               "label": "Resume and ATS analysis",
@@ -512,7 +508,7 @@
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "Diagnosis is free. Practice is where credits go.",
-          "copy": "In India, one credit is one rupee. Skill gaps, job matching and your career path stay free forever — you spend only on the runs you actually take.",
+          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gaps, job matching and your career path stay free forever — you spend only on the runs you actually take.",
           "rows": [
             {
               "label": "Text-based mock interview",
@@ -527,7 +523,7 @@
               "cost": "200 credits"
             }
           ],
-          "note": "Past roughly three live interviews a month, unlimited at ₹599 costs you less than topping up. Compare both on the [pricing page](/pricing)."
+          "note": "Past roughly three live interviews a month, unlimited at {unlimited} costs you less than topping up. Compare both on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -535,10 +531,6 @@
         "copy": "Upload your resume, get your readiness score free, and take your first mock interview against a role you actually want.",
         "primary": {
           "label": "Get started free",
-          "href": "app:sign-in"
-        },
-        "secondary": {
-          "label": "Upload your resume free",
           "href": "app:sign-in"
         }
       }
@@ -958,7 +950,7 @@
               "cost": "50 credits"
             }
           ],
-          "note": "In India, one credit is one rupee. Full table on the [pricing page](/pricing)."
+          "note": "{{In India, one credit is one rupee.|Credits never expire.}} Full table on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -1077,13 +1069,13 @@
     {
       "path": "/pricing",
       "title": "SkillDrift pricing — free to start, pay when you apply",
-      "description": "Skill gaps, career path, job matching and one AI course are free forever. Top up credits or go unlimited when you are ready to apply. In India, 1 credit = ₹1.",
+      "description": "Skill gaps, career path, job matching and one AI course are free forever. Top up credits or go unlimited when you are ready to apply. Credits are priced up front and never expire.",
       "h1": "Diagnosis is free. You pay when you're ready to apply.",
       "priority": 0.9,
       "breadcrumb": "Pricing",
       "hero": {
         "eyebrow": "Pricing",
-        "standfirst": "New accounts get starter credits — enough to rewrite your resume, tailor it to a job and download it. In India, one credit is one rupee, so every price below is already in money you understand.",
+        "standfirst": "New accounts get starter credits — enough to rewrite your resume, tailor it to a job and download it. {{In India, one credit is one rupee, so every price below is already in money you understand.|Every price below is a flat one, with no bundles to decode and nothing that expires.}}",
         "primaryCta": {
           "label": "Start free",
           "href": "app:sign-in"
@@ -1131,8 +1123,8 @@
           "type": "prices",
           "alt": true,
           "eyebrow": "The credit table",
-          "heading": "In India, one credit is one rupee.",
-          "copy": "299 credits cost 299 rupees. No conversion to work out, no bundles to decode.",
+          "heading": "{{In India, one credit is one rupee.|Every credit is priced up front.}}",
+          "copy": "{{299 credits cost 299 rupees. No conversion to work out, no bundles to decode.|299 credits cost {topup}. One flat pack, no bundles to decode, and nothing expires.}}",
           "rows": [
             {
               "label": "Tailor your resume to one job",
@@ -1172,7 +1164,7 @@
               "cost": "200"
             }
           ],
-          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a ₹299 top-up covers about four. Past roughly eight applications a month — or three live mock interviews — unlimited at ₹599 costs you less. If you're mid-search, take unlimited; if you're browsing, take credits."
+          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a {topup} top-up covers about four. Past roughly eight applications a month — or three live mock interviews — unlimited at {unlimited} costs you less. If you're mid-search, take unlimited; if you're browsing, take credits."
         },
         {
           "type": "plans",
@@ -1264,6 +1256,39 @@
               "label": "tailored versions generated"
             }
           ]
+        },
+        {
+          "type": "facts",
+          "id": "company",
+          "alt": true,
+          "eyebrow": "The short version",
+          "heading": "SkillDrift, in facts.",
+          "facts": [
+            {
+              "label": "Operated by",
+              "value": "SkillDrift, Inc."
+            },
+            {
+              "label": "Founded",
+              "value": "2025"
+            },
+            {
+              "label": "Based in",
+              "value": "United States, India and Singapore"
+            },
+            {
+              "label": "Available on",
+              "value": "Web, [iOS](https://apps.apple.com/in/app/skilldrift/id6749856149) and [Android](https://play.google.com/store/apps/details?id=com.skilldrift.app)"
+            },
+            {
+              "label": "Press",
+              "value": "[press@skilldrift.ai](mailto:press@skilldrift.ai)"
+            },
+            {
+              "label": "Partnerships",
+              "value": "[sales@skilldrift.ai](mailto:sales@skilldrift.ai)"
+            }
+          ]
         }
       ],
       "cta": {
@@ -1278,16 +1303,16 @@
     {
       "path": "/contact",
       "title": "Contact SkillDrift",
-      "description": "Questions about SkillDrift, partnerships, or bringing SkillDrift to your university or company. Reach the team directly.",
+      "description": "Questions about SkillDrift, partnerships, or bringing SkillDrift to your institution. Reach the team directly.",
       "h1": "Get in touch",
       "priority": 0.5,
       "breadcrumb": "Contact",
       "hero": {
         "eyebrow": "Contact",
-        "standfirst": "Questions about SkillDrift, partnerships, or bringing SkillDrift to your university or company. Reach the team directly — a person reads every one of these.",
+        "standfirst": "Questions about SkillDrift, partnerships, or bringing SkillDrift to your institution. Reach the team directly — a person reads every one of these.",
         "primaryCta": {
           "label": "Email the team",
-          "href": "mailto:hello@skilldrift.ai"
+          "href": "mailto:support@skilldrift.ai"
         },
         "secondaryCta": {
           "label": "Read the FAQ",
@@ -1302,20 +1327,20 @@
           "channels": [
             {
               "label": "General and support",
-              "value": "hello@skilldrift.ai",
-              "href": "mailto:hello@skilldrift.ai",
+              "value": "support@skilldrift.ai",
+              "href": "mailto:support@skilldrift.ai",
               "note": "Account questions, credits, anything that looks broken."
             },
             {
-              "label": "Universities",
-              "value": "campus@skilldrift.ai",
-              "href": "mailto:campus@skilldrift.ai",
-              "note": "Placement cells and career services bringing SkillDrift to a cohort."
+              "label": "Institutions",
+              "value": "sales@skilldrift.ai",
+              "href": "mailto:sales@skilldrift.ai",
+              "note": "Universities, placement cells and companies bringing SkillDrift to a cohort."
             },
             {
-              "label": "Employers",
-              "value": "employers@skilldrift.ai",
-              "href": "mailto:employers@skilldrift.ai",
+              "label": "Recruiters",
+              "value": "recruiter@skilldrift.ai",
+              "href": "mailto:recruiter@skilldrift.ai",
               "note": "Listing roles and internships, and reaching scored candidates."
             },
             {
@@ -1341,7 +1366,7 @@
             },
             {
               "title": "What does a credit cost?",
-              "body": "In India, one credit is one rupee. 299 credits cost 299 rupees. The full table is on the pricing page."
+              "body": "{{In India, one credit is one rupee — 299 credits cost 299 rupees.|A 299-credit top-up is {topup}, and credits never expire.}} The full table is on the pricing page."
             },
             {
               "title": "What happens to my resume?",

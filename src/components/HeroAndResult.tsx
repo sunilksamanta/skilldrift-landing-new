@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, DocPlus, DocScan } from "./icons";
+import GuestResultSection from "./GuestResultSection";
 import SectionLink from "./SectionLink";
 import { homeCta } from "@/lib/cta";
-
-type Phase = "idle" | "parsing" | "result";
+import { ACCEPTED_TYPES } from "@/lib/guest-api";
+import { useGuestAnalysis } from "@/hooks/useGuestAnalysis";
 
 /* av2 is used by a testimonial below, so the stack borrows av9 instead. */
 const avatars = ["av1", "av9", "av3", "av4"];
@@ -19,48 +20,35 @@ const panelBorder: React.CSSProperties = {
     "linear-gradient(150deg, rgba(255,255,255,.20), rgba(124,93,249,.22) 40%, transparent 72%)",
 };
 
-const gaps = [
-  { label: "Experiment design", pct: 34 },
-  { label: "Dashboard tooling", pct: 21 },
-  { label: "Stakeholder comms", pct: 46 },
-];
-
-const matches = [
-  { score: 88, role: "Product Analyst", meta: "Fintech company · Bengaluru", blur: 0 },
-  { score: 81, role: "Business Analyst", meta: "SaaS company · Remote", blur: 0 },
-  {
-    score: 74,
-    role: "Data Analyst — Internship",
-    meta: "Under 1 yr experience · Remote",
-    blur: 0,
-  },
-  { score: 71, role: "Growth Analyst", meta: "Marketplace · Pune", blur: 4.5 },
-  { score: 69, role: "Operations Analyst", meta: "Logistics · Hyderabad", blur: 6 },
-];
 
 export default function HeroAndResult() {
-  const [phase, setPhase] = useState<Phase>("idle");
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const guest = useGuestAnalysis();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [dragging, setDragging] = useState(false);
 
-  useEffect(() => () => {
-    if (timer.current) clearTimeout(timer.current);
-  }, []);
+  const { phase, status, fileName, error } = guest;
+  const busy = phase === "uploading" || phase === "processing";
+  const done = phase === "ready";
 
-  const startUpload = useCallback(() => {
-    setPhase((current) => {
-      if (current !== "idle") return current;
-      timer.current = setTimeout(() => setPhase("result"), 1700);
-      return "parsing";
-    });
-  }, []);
+  const openPicker = useCallback(() => {
+    if (!busy) inputRef.current?.click();
+  }, [busy]);
 
-  const done = phase === "result";
+  const takeFile = useCallback(
+    (files: FileList | null) => {
+      const file = files?.[0];
+      if (file) guest.upload(file);
+    },
+    [guest],
+  );
 
   const ctaLabel =
-    phase === "result"
-      ? "See your result"
-      : phase === "parsing"
-        ? "Scoring your resume…"
+    phase === "uploading"
+      ? "Uploading\u2026"
+      : phase === "processing"
+        ? status === "analysis_ready"
+          ? "Almost there\u2026"
+          : "Scoring your resume\u2026"
         : "Get my readiness score";
 
   return (
@@ -217,18 +205,22 @@ export default function HeroAndResult() {
                     padding: "34px 40px 40px",
                   }}
                 >
+                  {/* Title and the timing pill share a row so the card stays short. */}
                   <div
                     style={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      justifyContent: "space-between",
-                      gap: 24,
-                      paddingBottom: 26,
+                      paddingBottom: 22,
                       borderBottom: "1px solid var(--line)",
-                      flexWrap: "wrap",
                     }}
                   >
-                    <div>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        gap: 16,
+                        flexWrap: "wrap",
+                      }}
+                    >
                       <h2
                         style={{
                           fontSize: 22,
@@ -238,42 +230,66 @@ export default function HeroAndResult() {
                       >
                         Now do it with your resume.
                       </h2>
-                      <p
+                      <span
                         style={{
-                          marginTop: 10,
-                          fontSize: 15,
-                          lineHeight: 1.6,
-                          color: "var(--tx2)",
-                          maxWidth: 640,
+                          flex: "0 0 auto",
+                          padding: "8px 16px",
+                          borderRadius: 999,
+                          border: "1px solid var(--acline)",
+                          fontSize: 13,
+                          color: "var(--tx)",
                         }}
                       >
-                        Upload it once. You get your readiness score, your closest roles,
-                        your real gaps and week one of a plan built for them.
-                      </p>
+                        Takes about a minute
+                      </span>
                     </div>
-                    <span
+                    <p
                       style={{
-                        flex: "0 0 auto",
-                        padding: "9px 18px",
-                        borderRadius: 999,
-                        border: "1px solid var(--acline)",
-                        fontSize: 13,
-                        color: "var(--tx)",
+                        marginTop: 10,
+                        fontSize: 15,
+                        lineHeight: 1.6,
+                        color: "var(--tx2)",
+                        maxWidth: 640,
                       }}
                     >
-                      Takes about a minute
-                    </span>
+                      Upload it once. You get your readiness score, your closest roles,
+                      your real gaps and week one of a plan built for them.
+                    </p>
                   </div>
+
+                  <input
+                    ref={inputRef}
+                    type="file"
+                    accept={ACCEPTED_TYPES}
+                    hidden
+                    onChange={(e) => {
+                      takeFile(e.target.files);
+                      // Let the same file be chosen twice in a row.
+                      e.target.value = "";
+                    }}
+                  />
 
                   <div
                     role="button"
                     tabIndex={0}
-                    onClick={startUpload}
+                    aria-label="Upload your resume"
+                    aria-busy={busy}
+                    onClick={openPicker}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
                         e.preventDefault();
-                        startUpload();
+                        openPicker();
                       }
+                    }}
+                    onDragOver={(e) => {
+                      e.preventDefault();
+                      if (!busy) setDragging(true);
+                    }}
+                    onDragLeave={() => setDragging(false)}
+                    onDrop={(e) => {
+                      e.preventDefault();
+                      setDragging(false);
+                      if (!busy) takeFile(e.dataTransfer.files);
                     }}
                     style={{
                       marginTop: 26,
@@ -282,16 +298,16 @@ export default function HeroAndResult() {
                       display: "grid",
                       placeItems: "center",
                       padding: 30,
-                      cursor: "pointer",
+                      cursor: busy ? "default" : "pointer",
                       transition: "border-color .2s, background .2s",
                       border:
-                        phase === "idle"
-                          ? "1.5px dashed var(--line2)"
-                          : "1.5px solid var(--ac)",
-                      background: phase === "idle" ? "transparent" : "var(--acsoft)",
+                        busy || dragging
+                          ? "1.5px solid var(--ac)"
+                          : "1.5px dashed var(--line2)",
+                      background: busy || dragging ? "var(--acsoft)" : "transparent",
                     }}
                   >
-                    {phase === "idle" && (
+                    {!busy && (
                       <div
                         style={{
                           display: "grid",
@@ -305,11 +321,12 @@ export default function HeroAndResult() {
                           Drop your resume here
                         </div>
                         <div style={{ fontSize: 14, color: "var(--tx3)" }}>
-                          PDF or DOCX &middot; up to 5 MB &middot; takes about a minute
+                          PDF, DOC or DOCX &middot; up to 5 MB &middot; takes about a
+                          minute
                         </div>
                       </div>
                     )}
-                    {phase === "parsing" && (
+                    {busy && (
                       <div
                         style={{
                           display: "grid",
@@ -329,10 +346,14 @@ export default function HeroAndResult() {
                           }}
                         />
                         <div style={{ fontSize: 17, fontWeight: 500, color: "var(--tx)" }}>
-                          Reading anita-sharma-resume.pdf
+                          {phase === "uploading"
+                            ? "Uploading your resume\u2026"
+                            : `Reading ${fileName ?? "your resume"}`}
                         </div>
                         <div style={{ fontSize: 14, color: "var(--tx3)" }}>
-                          Scoring your skills against Product Analyst&hellip;
+                          {status === "analysis_ready"
+                            ? "Score is in — finding your gaps and matches\u2026"
+                            : "Reading your skills and scoring them\u2026"}
                         </div>
                       </div>
                     )}
@@ -340,7 +361,8 @@ export default function HeroAndResult() {
 
                   <button
                     type="button"
-                    onClick={startUpload}
+                    onClick={openPicker}
+                    disabled={busy}
                     style={{
                       marginTop: 18,
                       width: "100%",
@@ -354,13 +376,58 @@ export default function HeroAndResult() {
                       fontSize: 16,
                       fontWeight: 500,
                       transition: "all .2s",
-                      background: phase === "idle" ? "var(--card2)" : "var(--ac)",
-                      color: phase === "idle" ? "var(--tx3)" : "#FFFFFF",
+                      cursor: busy ? "default" : "pointer",
+                      background: busy ? "var(--ac)" : "var(--card2)",
+                      color: busy ? "#FFFFFF" : "var(--tx3)",
                     }}
                   >
                     <span>{ctaLabel}</span>
                     <ArrowRight size={18} />
                   </button>
+
+                  {error && (
+                    <div
+                      role="alert"
+                      style={{
+                        marginTop: 16,
+                        padding: "14px 16px",
+                        borderRadius: 12,
+                        border: "1px solid var(--acline)",
+                        background: "var(--acsoft)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        gap: 14,
+                        flexWrap: "wrap",
+                        fontSize: 14,
+                        lineHeight: 1.55,
+                        color: "var(--tx)",
+                      }}
+                    >
+                      <span>{error}</span>
+                      {(phase === "failed" || phase === "expired") && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            guest.reset();
+                            openPicker();
+                          }}
+                          style={{
+                            flex: "0 0 auto",
+                            height: 36,
+                            padding: "0 16px",
+                            borderRadius: 10,
+                            border: "1px solid var(--line2)",
+                            background: "transparent",
+                            fontSize: 13.5,
+                            fontWeight: 500,
+                          }}
+                        >
+                          Upload again
+                        </button>
+                      )}
+                    </div>
+                  )}
 
                   <p
                     style={{
@@ -491,318 +558,9 @@ export default function HeroAndResult() {
         </div>
       </section>
 
-      {done && <ResultSection />}
+      {done && (
+        <GuestResultSection state={guest} guestToken={guest.guestToken} />
+      )}
     </>
-  );
-}
-
-function ResultSection() {
-  return (
-    <section
-      id="result"
-      style={{ padding: "0 0 110px", animation: "sd-rise .5s ease both" }}
-    >
-      <div className="wrap">
-        <div
-          className="sd-pad-40"
-          style={{
-            borderRadius: 26,
-            border: "1px solid var(--line)",
-            background: "var(--bg2)",
-            padding: 40,
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              top: -260,
-              right: -160,
-              width: 700,
-              height: 700,
-              pointerEvents: "none",
-              background:
-                "radial-gradient(circle at 50% 50%, rgba(124,93,249,.22), transparent 62%)",
-            }}
-          />
-
-          <div
-            style={{
-              position: "relative",
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))",
-              gap: 36,
-              alignItems: "start",
-            }}
-          >
-            <div>
-              <div
-                style={{
-                  fontSize: 13,
-                  letterSpacing: "0.10em",
-                  textTransform: "uppercase",
-                  color: "var(--tx3)",
-                }}
-              >
-                Scored against
-              </div>
-              <div style={{ marginTop: 8, fontSize: 20, fontWeight: 600 }}>
-                Product Analyst
-              </div>
-              <div
-                style={{ marginTop: 26, position: "relative", width: 190, height: 190 }}
-              >
-                <svg
-                  viewBox="0 0 120 120"
-                  style={{ width: "100%", height: "100%", transform: "rotate(-90deg)" }}
-                >
-                  <circle
-                    cx="60"
-                    cy="60"
-                    r="52"
-                    fill="none"
-                    stroke="var(--line2)"
-                    strokeWidth="9"
-                  />
-                  <circle
-                    cx="60"
-                    cy="60"
-                    r="52"
-                    fill="none"
-                    stroke="var(--ac)"
-                    strokeWidth="9"
-                    strokeLinecap="round"
-                    strokeDasharray="326.7"
-                    strokeDashoffset="104.5"
-                  />
-                </svg>
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    display: "grid",
-                    placeItems: "center",
-                    textAlign: "center",
-                  }}
-                >
-                  <div>
-                    <div
-                      style={{
-                        fontSize: 52,
-                        fontWeight: 600,
-                        lineHeight: 1,
-                        letterSpacing: "-0.03em",
-                      }}
-                    >
-                      68
-                    </div>
-                    <div style={{ marginTop: 4, fontSize: 13, color: "var(--tx3)" }}>
-                      out of 100
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p
-                style={{
-                  marginTop: 22,
-                  maxWidth: 280,
-                  fontSize: 14,
-                  lineHeight: 1.6,
-                  color: "var(--tx2)",
-                }}
-              >
-                Free, and yours &mdash; not a sample. No account, no redirect.
-              </p>
-            </div>
-
-            <div>
-              <h3 style={{ fontSize: 19, fontWeight: 600, letterSpacing: "-0.01em" }}>
-                Three things are holding your score down
-              </h3>
-              <p
-                style={{
-                  marginTop: 8,
-                  fontSize: 14,
-                  lineHeight: 1.6,
-                  color: "var(--tx3)",
-                }}
-              >
-                Named for free. The detail, and what to do about each one, is behind
-                signup.
-              </p>
-              <ul
-                style={{
-                  marginTop: 24,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 20,
-                }}
-              >
-                {gaps.map((gap) => (
-                  <li key={gap.label}>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        fontSize: 15,
-                      }}
-                    >
-                      <span>{gap.label}</span>
-                      <span style={{ color: "var(--tx2)" }}>{gap.pct}%</span>
-                    </div>
-                    <div
-                      style={{
-                        marginTop: 9,
-                        height: 7,
-                        borderRadius: 99,
-                        background: "var(--card2)",
-                        overflow: "hidden",
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: `${gap.pct}%`,
-                          height: "100%",
-                          borderRadius: 99,
-                          background: "var(--ac)",
-                        }}
-                      />
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "baseline",
-                  justifyContent: "space-between",
-                  gap: 12,
-                }}
-              >
-                <h3 style={{ fontSize: 19, fontWeight: 600, letterSpacing: "-0.01em" }}>
-                  Three roles you match right now
-                </h3>
-                <span style={{ flex: "0 0 auto", fontSize: 13, color: "var(--ac)" }}>
-                  24 more found
-                </span>
-              </div>
-              <ul
-                style={{
-                  marginTop: 22,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 10,
-                }}
-              >
-                {matches.map((match) => (
-                  <li
-                    key={match.role}
-                    aria-hidden={match.blur ? true : undefined}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 14,
-                      padding: "14px 16px",
-                      borderRadius: 14,
-                      border: "1px solid var(--line)",
-                      background: "var(--card)",
-                      filter: match.blur ? `blur(${match.blur}px)` : undefined,
-                      opacity: match.blur === 4.5 ? 0.55 : match.blur ? 0.4 : 1,
-                    }}
-                  >
-                    <span
-                      style={{
-                        flex: "0 0 auto",
-                        width: 44,
-                        height: 44,
-                        borderRadius: 12,
-                        display: "grid",
-                        placeItems: "center",
-                        background: "var(--acsoft)",
-                        color: "var(--ac)",
-                        fontSize: 16,
-                        fontWeight: 600,
-                      }}
-                    >
-                      {match.score}
-                    </span>
-                    <span>
-                      <span style={{ display: "block", fontSize: 15, fontWeight: 500 }}>
-                        {match.role}
-                      </span>
-                      <span
-                        style={{
-                          display: "block",
-                          marginTop: 3,
-                          fontSize: 13,
-                          color: "var(--tx3)",
-                        }}
-                      >
-                        {match.meta}
-                      </span>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div
-            style={{
-              position: "relative",
-              marginTop: 36,
-              padding: "28px 32px",
-              borderRadius: 20,
-              border: "1px solid var(--acline)",
-              background: "var(--acsoft)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 28,
-              flexWrap: "wrap",
-            }}
-          >
-            <div>
-              <h3 style={{ fontSize: 21, fontWeight: 600, letterSpacing: "-0.01em" }}>
-                Create a free account to see the rest
-              </h3>
-              <p
-                style={{
-                  marginTop: 8,
-                  fontSize: 15,
-                  lineHeight: 1.6,
-                  color: "var(--tx2)",
-                }}
-              >
-                All 24 matches, the full gap report, and the roadmap that closes it.
-                <br />
-                Your resume is already here &mdash; you will not upload it again.
-              </p>
-            </div>
-            <a
-              href={homeCta("result_create_account")}
-              style={{
-                flex: "0 0 auto",
-                height: 54,
-                padding: "0 32px",
-                borderRadius: 14,
-                background: "var(--btn)",
-                color: "var(--btntx)",
-                fontSize: 16,
-                fontWeight: 500,
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-            >
-              Create free account
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import JsonLd from "@/components/JsonLd";
 import UtmForwarder from "@/components/UtmForwarder";
 import { organizationSchema } from "@/lib/schema";
+import { DEFAULT_REGION, regionBootstrap } from "@/lib/region";
 import { LOCALE, SITE_NAME, SITE_URL, buildMetadata } from "@/lib/seo";
 import "./globals.css";
 
@@ -36,7 +37,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-sd-theme="light" suppressHydrationWarning>
+    <html
+      lang="en"
+      data-sd-theme="light"
+      data-sd-region={DEFAULT_REGION}
+      suppressHydrationWarning
+    >
       <head>
         <link rel="preconnect" href="https://api.fontshare.com" />
         <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
@@ -46,6 +52,7 @@ export default function RootLayout({
         />
         <JsonLd schemas={[organizationSchema]} />
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
+        <script dangerouslySetInnerHTML={{ __html: regionBootstrap }} />
       </head>
       <body>
         <UtmForwarder />

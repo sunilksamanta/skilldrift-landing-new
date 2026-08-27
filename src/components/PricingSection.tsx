@@ -1,4 +1,5 @@
-import PlanCards, { pricing } from "./PlanCards";
+import PlanCards from "./PlanCards";
+import { Price, Regional } from "./Regional";
 import { Pill, SectionIntro } from "./SectionBits";
 
 
@@ -25,7 +26,16 @@ export default function PricingSection() {
         <Pill>Pricing</Pill>
         <SectionIntro
           heading="Diagnosis is free. You pay when you&rsquo;re ready to apply."
-          copy="Your first application is on us — enough credits to rewrite your resume, tailor it to a job and download it. In India, one credit is one rupee, so every price below is already in money you understand."
+          copy={
+            <>
+              Your first application is on us — enough credits to rewrite your
+              resume, tailor it to a job and download it.{" "}
+              <Regional
+                in="In India, one credit is one rupee, so every price below is already in money you understand."
+                row="Every price below is a flat one, with no bundles to decode and nothing that expires."
+              />
+            </>
+          }
         />
 
         <PlanCards />
@@ -51,8 +61,8 @@ export default function PricingSection() {
               maxWidth: 940,
             }}
           >
-            One application costs 72 credits: 18 to tailor, 54 to download. So{" "}
-            {pricing.pack} covers about four. Past roughly eight applications a month
+            One application costs 72 credits: 18 to tailor, 54 to download. So a{" "}
+            <Price kind="topup" /> top-up covers about four. Past roughly eight applications a month
             &mdash; or three live mock interviews &mdash; unlimited costs you less. If
             you&rsquo;re mid-search, take unlimited; if you&rsquo;re browsing, take
             credits.

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Check } from "../icons";
 import { Pill } from "../SectionBits";
+import RichText from "./RichText";
 
 /**
  * The section kit every inner page is assembled from. Adding a page should mean
@@ -50,7 +51,7 @@ export function Section({
                 maxWidth: copy ? undefined : 900,
               }}
             >
-              {heading}
+              <RichText text={heading} />
             </h2>
             {copy && (
               <p style={{ fontSize: 16, lineHeight: 1.62, color: "var(--tx2)" }}>
@@ -192,7 +193,7 @@ export function CardGrid({
               color: "var(--tx2)",
             }}
           >
-            {card.body}
+            <RichText text={card.body} />
           </p>
         </div>
       ))}
@@ -291,5 +292,60 @@ export function PriceTable({
         </p>
       )}
     </div>
+  );
+}
+
+/**
+ * The company facts strip: one label/value row each, no prose. Terse on
+ * purpose — this is what a reader (or an answer engine) comes here to check.
+ */
+export function FactList({ facts }: { facts: { label: string; value: string }[] }) {
+  return (
+    <dl
+      className="sd-pad-34"
+      style={{
+        marginTop: 44,
+        padding: "10px 34px",
+        borderRadius: 22,
+        border: "1px solid var(--line)",
+        background: "var(--card)",
+      }}
+    >
+      {facts.map((fact, i) => (
+        <div
+          key={fact.label}
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "6px 28px",
+            padding: "20px 0",
+            borderBottom: i === facts.length - 1 ? undefined : "1px solid var(--line)",
+          }}
+        >
+          <dt
+            style={{
+              flex: "0 0 200px",
+              fontSize: 12.5,
+              letterSpacing: "0.10em",
+              textTransform: "uppercase",
+              color: "var(--tx3)",
+              lineHeight: 1.9,
+            }}
+          >
+            {fact.label}
+          </dt>
+          <dd
+            style={{
+              flex: "1 1 320px",
+              margin: 0,
+              fontSize: 16,
+              lineHeight: 1.6,
+            }}
+          >
+            <RichText text={fact.value} />
+          </dd>
+        </div>
+      ))}
+    </dl>
   );
 }

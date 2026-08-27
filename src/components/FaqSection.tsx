@@ -1,3 +1,4 @@
+import RichText from "./page/RichText";
 import { Plus } from "./icons";
 import { Pill, SectionIntro } from "./SectionBits";
 
@@ -25,7 +26,7 @@ export const faqs = [
   },
   {
     q: "What does a credit cost, and what does it buy?",
-    a: "In India one credit is one rupee: 299 credits cost 299 rupees. Tailoring your resume to a job is 18 credits, a detailed job analysis is 37, a text-based mock interview is 50, a learning roadmap is 50, a resume download is 54 to 70, and a full outcome rewrite is 70. Unlimited access is 599 rupees a month.",
+    a: "{{In India one credit is one rupee: 299 credits cost 299 rupees.|A 299-credit top-up costs {topup} and credits never expire.}} Tailoring your resume to a job is 18 credits, a detailed job analysis is 37, a text-based mock interview is 50, a learning roadmap is 50, a resume download is 54 to 70, and a full outcome rewrite is 70. Unlimited access is {unlimited} a month.",
   },
   {
     q: "Can I use SkillDrift if I am a student or a fresher?",
@@ -87,7 +88,7 @@ export default function FaqSection() {
                   color: "var(--tx2)",
                 }}
               >
-                {faq.a}
+                <RichText text={faq.a} />
               </p>
             </details>
           ))}

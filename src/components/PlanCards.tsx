@@ -1,14 +1,12 @@
 import Image from "next/image";
 import { Check } from "./icons";
+import { Price } from "./Regional";
 import { signInHref } from "@/lib/cta";
 
+/** The notes beside each price. The amounts themselves come from `Price`. */
 export const pricing = {
-  free: "₹0",
-  topup: "₹299",
   topupNote: "one-time",
-  unlimited: "₹599",
   unlimitedNote: "per month",
-  pack: "₹299",
 };
 
 const freePoints = [
@@ -120,7 +118,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           <span
             style={{ fontSize: 46, fontWeight: 600, letterSpacing: "-0.03em" }}
           >
-            {pricing.free}
+            <Price kind="free" />
           </span>
           <span style={{ fontSize: 15, color: "var(--tx3)" }}>forever</span>
         </div>
@@ -200,7 +198,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           <span
             style={{ fontSize: 46, fontWeight: 600, letterSpacing: "-0.03em" }}
           >
-            {pricing.topup}
+            <Price kind="topup" />
           </span>
           <span style={{ fontSize: 15, color: "var(--tx3)" }}>
             {pricing.topupNote}
@@ -309,7 +307,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           <span
             style={{ fontSize: 46, fontWeight: 600, letterSpacing: "-0.03em" }}
           >
-            {pricing.unlimited}
+            <Price kind="unlimited" />
           </span>
           <span style={{ fontSize: 15, opacity: 0.85 }}>
             {pricing.unlimitedNote}

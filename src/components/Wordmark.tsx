@@ -26,7 +26,17 @@ export default function Wordmark({
         priority
         style={{ height: markSize, width: "auto", display: "block" }}
       />
-      <span style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
+      {/* The lockup sets its own alignment so a centred container — the CTA
+          band — cannot centre "SkillDrift" over the wider tagline. */}
+      <span
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          textAlign: "left",
+          lineHeight: 1,
+        }}
+      >
         <span
           style={{
             fontSize: textSize,

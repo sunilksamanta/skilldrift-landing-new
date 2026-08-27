@@ -7,6 +7,7 @@ import BlockRenderer from "@/components/page/BlockRenderer";
 import Breadcrumbs from "@/components/page/Breadcrumbs";
 import CtaBand from "@/components/page/CtaBand";
 import PageHero from "@/components/page/PageHero";
+import RichText from "@/components/page/RichText";
 import RelatedFeatures from "@/components/page/RelatedFeatures";
 import { CONTENT_ROUTES, getRouteBySlug } from "@/lib/content";
 import { breadcrumbSchema, softwareApplicationSchema, webPageSchema } from "@/lib/schema";
@@ -67,7 +68,7 @@ export default async function ContentPage({
         <PageHero
           eyebrow={route.hero.eyebrow}
           h1={route.h1}
-          standfirst={route.hero.standfirst}
+          standfirst={<RichText text={route.hero.standfirst} />}
           primaryCta={route.hero.primaryCta}
           secondaryCta={route.hero.secondaryCta}
           image={route.hero.image}

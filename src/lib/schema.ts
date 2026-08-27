@@ -1,13 +1,39 @@
 import { getRoute } from "./content";
+import { DEFAULT_REGION, PRICES, resolveRegionalText } from "./region";
 import { SITE_NAME, SITE_URL } from "./seo";
 
-/** Appendix A3 — Organization. Emitted on every route from the root layout. */
+/**
+ * Appendix A3 — Organization. Emitted on every route from the root layout, so
+ * there is exactly one Organization entity for the site. The company facts on
+ * `/about` are its visible counterpart, and `mainEntityOfPage` points there.
+ */
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: SITE_NAME,
+  legalName: "SkillDrift, Inc.",
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
+  foundingDate: "2025",
+  areaServed: ["US", "IN", "SG"],
+  mainEntityOfPage: `${SITE_URL}/about`,
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "support@skilldrift.ai",
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "press",
+      email: "press@skilldrift.ai",
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: "sales@skilldrift.ai",
+    },
+  ],
   sameAs: [
     "https://www.linkedin.com/company/skilldrift",
     "https://www.facebook.com/skilldriftindia",
@@ -22,21 +48,26 @@ export const organizationSchema = {
  * The spec is explicit that the India and rest-of-world offer sets must never
  * both be emitted. `NEXT_PUBLIC_REGION=row` switches to the USD block.
  */
-const OFFERS = {
-  in: [
-    { "@type": "Offer", name: "Free", price: "0", priceCurrency: "INR" },
-    { "@type": "Offer", name: "Top up", price: "299", priceCurrency: "INR" },
-    { "@type": "Offer", name: "Unlimited", price: "599", priceCurrency: "INR" },
-  ],
-  row: [
-    { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
-    { "@type": "Offer", name: "Top up", price: "6.99", priceCurrency: "USD" },
-    { "@type": "Offer", name: "Unlimited", price: "15.99", priceCurrency: "USD" },
-  ],
-} as const;
+const CURRENCY = { in: "INR", row: "USD" } as const;
+
+/** Offers, built from the same price table the pages render. */
+function offers() {
+  const prices = PRICES[DEFAULT_REGION];
+  const priceCurrency = CURRENCY[DEFAULT_REGION];
+  const strip = (price: string) => price.replace(/[^0-9.]/g, "");
+  return [
+    { "@type": "Offer", name: "Free", price: strip(prices.free), priceCurrency },
+    { "@type": "Offer", name: "Top up", price: strip(prices.topup), priceCurrency },
+    {
+      "@type": "Offer",
+      name: "Unlimited",
+      price: strip(prices.unlimited),
+      priceCurrency,
+    },
+  ];
+}
 
 export function softwareApplicationSchema() {
-  const region = process.env.NEXT_PUBLIC_REGION === "row" ? "row" : "in";
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -46,7 +77,7 @@ export function softwareApplicationSchema() {
     url: SITE_URL,
     description:
       "AI career platform that scores your skills against a target role, builds the learning path that closes the gap, and matches you to jobs and internships.",
-    offers: OFFERS[region],
+    offers: offers(),
   };
 }
 
@@ -61,7 +92,7 @@ export function faqPageSchema(faqs: readonly { q: string; a: string }[]) {
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: faq.a },
+      acceptedAnswer: { "@type": "Answer", text: resolveRegionalText(faq.a) },
     })),
   };
 }

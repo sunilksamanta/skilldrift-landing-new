@@ -8,7 +8,7 @@ const nav: { href: string; label: string; external?: boolean }[] = [
   { href: "/how-it-works", label: "How it works" },
   { href: "/features", label: "Features" },
   { href: "/jobs", label: "Jobs" },
-  { href: "/pricing", label: "Price" },
+  { href: "/pricing", label: "Pricing" },
   { href: BLOG_URL, label: "Blog", external: true },
 ];
 
