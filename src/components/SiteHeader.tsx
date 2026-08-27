@@ -35,7 +35,7 @@ export default function SiteHeader({ campaign = "site" }: { campaign?: string })
         }}
       >
         <Link href="/" style={{ display: "block", flex: "0 0 auto" }} aria-label="SkillDrift home">
-          <Wordmark markSize={40} textSize={25} />
+          <Wordmark markSize={46} textSize={29} />
         </Link>
 
         <nav
