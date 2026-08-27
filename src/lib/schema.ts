@@ -1,5 +1,11 @@
 import { getRoute } from "./content";
-import { DEFAULT_REGION, PRICES, resolveRegionalText } from "./region";
+import {
+  PRICES,
+  PRICE_TOKENS,
+  REGIONS,
+  resolveRegionalText,
+  type PriceToken,
+} from "./region";
 import { SITE_NAME, SITE_URL } from "./seo";
 
 /**
@@ -49,26 +55,76 @@ export const organizationSchema = {
 /**
  * Appendix A3 — SoftwareApplication, on `/` and `/pricing` only.
  *
- * The spec is explicit that the India and rest-of-world offer sets must never
- * both be emitted. `NEXT_PUBLIC_REGION=row` switches to the USD block.
+ * Appendix A3 said the India and rest-of-world offer sets must never both be
+ * emitted, and that is deliberately no longer true. That rule assumed the
+ * reader is a browser in a known country, where showing one price set is
+ * right. Structured data has a different audience: Google's rich results and
+ * the AI answer engines read it for price, and an answer engine fetches this
+ * page from its own infrastructure, not from the user's country. Emitting one
+ * currency therefore told every reader on earth the Indian price, no matter
+ * who was asking.
+ *
+ * Both sets now ship, distinguished by `eligibleRegion`, which is the only
+ * form that lets an answer engine say "₹299 in India, $6.99 elsewhere". The
+ * *visible* page is unchanged: it still renders one currency per visitor.
  */
 const CURRENCY = { in: "INR", row: "USD" } as const;
 
-/** Offers, built from the same price table the pages render. */
+const PLAN_NAMES: Record<PriceToken, string> = {
+  free: "Free",
+  topup: "Top up",
+  unlimited: "Unlimited",
+};
+
+/** Unlimited is a monthly subscription; the others are one-off. */
+const RECURRING: Record<PriceToken, boolean> = {
+  free: false,
+  topup: false,
+  unlimited: true,
+};
+
+const strip = (price: string) => price.replace(/[^0-9.]/g, "");
+
+/**
+ * One Offer per plan per currency, built from the same price table the pages
+ * render, so the schema cannot drift from what a visitor is shown.
+ *
+ * The INR offers are scoped to India. The USD offers are left unscoped rather
+ * than enumerating every other country: an Offer with no `eligibleRegion` is
+ * the general case, which is exactly what "everywhere else" means.
+ */
 function offers() {
-  const prices = PRICES[DEFAULT_REGION];
-  const priceCurrency = CURRENCY[DEFAULT_REGION];
-  const strip = (price: string) => price.replace(/[^0-9.]/g, "");
-  return [
-    { "@type": "Offer", name: "Free", price: strip(prices.free), priceCurrency },
-    { "@type": "Offer", name: "Top up", price: strip(prices.topup), priceCurrency },
-    {
-      "@type": "Offer",
-      name: "Unlimited",
-      price: strip(prices.unlimited),
-      priceCurrency,
-    },
-  ];
+  return REGIONS.flatMap((region) =>
+    PRICE_TOKENS.map((token) => {
+      const price = strip(PRICES[region][token]);
+      const priceCurrency = CURRENCY[region];
+
+      return {
+        "@type": "Offer",
+        name: PLAN_NAMES[token],
+        price,
+        priceCurrency,
+        availability: "https://schema.org/InStock",
+        url: `${SITE_URL}/pricing`,
+        ...(region === "in"
+          ? { eligibleRegion: { "@type": "Country", name: "India" } }
+          : {}),
+        // Without this, "Unlimited $15.99" reads as a one-time purchase.
+        ...(RECURRING[token]
+          ? {
+              priceSpecification: {
+                "@type": "UnitPriceSpecification",
+                price,
+                priceCurrency,
+                billingDuration: 1,
+                billingIncrement: 1,
+                unitCode: "MON",
+              },
+            }
+          : {}),
+      };
+    }),
+  );
 }
 
 export function softwareApplicationSchema() {
