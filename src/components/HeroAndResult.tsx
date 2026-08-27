@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, DocPlus, DocScan } from "./icons";
 import SectionLink from "./SectionLink";
+import { homeCta } from "@/lib/cta";
 
 type Phase = "idle" | "parsing" | "result";
 
@@ -411,10 +412,8 @@ export default function HeroAndResult() {
                     </span>
                   </label>
 
-                  {/* TODO: point at the real SkillDrift AI resume builder once
-                      its URL is known; for now it lands on the drop-zone. */}
-                  <SectionLink
-                    to="top"
+                  <a
+                    href={homeCta("hero_build_resume")}
                     style={{
                       marginTop: 24,
                       paddingTop: 24,
@@ -483,7 +482,7 @@ export default function HeroAndResult() {
                       Build my resume
                       <ArrowRight size={16} />
                     </span>
-                  </SectionLink>
+                  </a>
                 </div>
               </div>
             )}
@@ -783,22 +782,23 @@ function ResultSection() {
                 Your resume is already here &mdash; you will not upload it again.
               </p>
             </div>
-            <button
-              type="button"
+            <a
+              href={homeCta("result_create_account")}
               style={{
                 flex: "0 0 auto",
                 height: 54,
                 padding: "0 32px",
                 borderRadius: 14,
-                border: 0,
                 background: "var(--btn)",
                 color: "var(--btntx)",
                 fontSize: 16,
                 fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
               }}
             >
               Create free account
-            </button>
+            </a>
           </div>
         </div>
       </div>

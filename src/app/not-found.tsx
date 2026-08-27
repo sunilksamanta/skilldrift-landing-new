@@ -4,6 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { ArrowRight } from "@/components/icons";
 import { primaryButton } from "@/components/SectionBits";
+import { signInHref } from "@/lib/cta";
 
 /**
  * Appendix A5 — this route returns HTTP 404, carries `noindex`, and links back
@@ -26,7 +27,7 @@ export default function NotFound() {
         overflowX: "hidden",
       }}
     >
-      <SiteHeader />
+      <SiteHeader campaign={"not_found"} />
       <main style={{ flex: "1 1 auto", display: "grid", placeItems: "center" }}>
         <div className="wrap" style={{ padding: "96px 100px", textAlign: "center" }}>
           <div
@@ -72,9 +73,9 @@ export default function NotFound() {
               flexWrap: "wrap",
             }}
           >
-            <Link href="/#top" style={primaryButton}>
+            <a href={signInHref("not_found", "notfound_primary")} style={primaryButton}>
               Upload your resume &mdash; free
-            </Link>
+            </a>
             <Link
               href="/"
               style={{
@@ -92,7 +93,7 @@ export default function NotFound() {
           </div>
         </div>
       </main>
-      <SiteFooter />
+      <SiteFooter campaign={"not_found"} />
     </div>
   );
 }

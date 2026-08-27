@@ -1,18 +1,18 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Wordmark from "./Wordmark";
-import SectionLink from "./SectionLink";
+import { BLOG_URL, signInHref } from "@/lib/cta";
 
-/** `section` links scroll to a homepage section; `href` links are real routes. */
-const nav = [
+/** All nav destinations are real routes now; only the blog leaves the site. */
+const nav: { href: string; label: string; external?: boolean }[] = [
   { href: "/how-it-works", label: "How it works" },
   { href: "/features", label: "Features" },
   { href: "/jobs", label: "Jobs" },
   { href: "/pricing", label: "Price" },
-  { section: "faq", label: "Blog" },
-] as const;
+  { href: BLOG_URL, label: "Blog", external: true },
+];
 
-export default function SiteHeader() {
+export default function SiteHeader({ campaign = "site" }: { campaign?: string }) {
   return (
     <header
       style={{
@@ -50,14 +50,16 @@ export default function SiteHeader() {
           }}
         >
           {nav.map((item) =>
-            "section" in item ? (
-              <SectionLink
+            item.external ? (
+              <a
                 key={item.label}
-                to={item.section}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: "var(--tx)" }}
               >
                 {item.label}
-              </SectionLink>
+              </a>
             ) : (
               <Link key={item.label} href={item.href} style={{ color: "var(--tx)" }}>
                 {item.label}
@@ -75,21 +77,22 @@ export default function SiteHeader() {
           }}
         >
           <ThemeToggle />
-          <button
-            type="button"
+          <a
+            href={signInHref(campaign, "header_sign_up")}
             style={{
               height: 44,
               padding: "0 26px",
               borderRadius: 999,
-              border: 0,
               background: "var(--btn)",
               color: "var(--btntx)",
               fontSize: 16,
               fontWeight: 500,
+              display: "inline-flex",
+              alignItems: "center",
             }}
           >
             Sign up
-          </button>
+          </a>
         </div>
       </div>
     </header>

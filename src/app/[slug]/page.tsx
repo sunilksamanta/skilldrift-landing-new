@@ -11,6 +11,7 @@ import RelatedFeatures from "@/components/page/RelatedFeatures";
 import { CONTENT_ROUTES, getRouteBySlug } from "@/lib/content";
 import { breadcrumbSchema, softwareApplicationSchema, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
+import { campaignFor } from "@/lib/cta";
 
 /** Only the slugs in pages.json exist; anything else 404s. */
 export const dynamicParams = false;
@@ -52,7 +53,7 @@ export default async function ContentPage({
       }}
     >
       <JsonLd schemas={schemas} />
-      <SiteHeader />
+      <SiteHeader campaign={campaignFor(route.path)} />
 
       <main>
         <Breadcrumbs
@@ -71,10 +72,15 @@ export default async function ContentPage({
           secondaryCta={route.hero.secondaryCta}
           image={route.hero.image}
           imageAlt={route.hero.imageAlt}
+          campaign={campaignFor(route.path)}
         />
 
         {route.sections?.map((block, i) => (
-          <BlockRenderer key={block.id ?? `${block.type}-${i}`} block={block} />
+          <BlockRenderer
+            key={block.id ?? `${block.type}-${i}`}
+            block={block}
+            campaign={campaignFor(route.path)}
+          />
         ))}
 
         {route.feature && <RelatedFeatures current={route.path} />}
@@ -86,11 +92,12 @@ export default async function ContentPage({
             primary={route.cta.primary}
             secondary={route.cta.secondary}
             note={route.cta.note}
+            campaign={campaignFor(route.path)}
           />
         )}
       </main>
 
-      <SiteFooter />
+      <SiteFooter campaign={campaignFor(route.path)} />
     </div>
   );
 }

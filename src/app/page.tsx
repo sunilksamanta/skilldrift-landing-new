@@ -42,7 +42,7 @@ export default function Home() {
         ]}
       />
       <ScrollOnLoad />
-      <SiteHeader />
+      <SiteHeader campaign={"home"} />
       <main>
         <HeroAndResult />
         <DoorsSection />
@@ -57,7 +57,7 @@ export default function Home() {
         <FaqSection />
         <CtaSection />
       </main>
-      <SiteFooter />
+      <SiteFooter campaign={"home"} />
     </div>
   );
 }

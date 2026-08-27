@@ -20,7 +20,7 @@
         "standfirst": "Every tool feeds one connected profile, one growing score, and one resume that gets stronger with every skill you build. Start with any of them — they all read the same resume.",
         "primaryCta": {
           "label": "Upload your resume — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "See how the loop works",
@@ -62,7 +62,7 @@
         "copy": "Upload once and every feature on this page starts from what you have actually done.",
         "primary": {
           "label": "Upload your resume — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondary": {
           "label": "See how it works",
@@ -82,7 +82,7 @@
         "standfirst": "Every other product gives you one arc of the circle — a course library, a resume builder, a job board. The loop is why your score moves instead of your bookmarks piling up.",
         "primaryCta": {
           "label": "Upload your resume — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "See what's free",
@@ -181,11 +181,11 @@
         "copy": "Two minutes, one upload, and you'll know exactly where you stand.",
         "primary": {
           "label": "Get started free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondary": {
           "label": "Upload your resume free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -202,7 +202,7 @@
         "standfirst": "Generate an ATS-optimised version of your resume for every job you apply to. Your master copy stays untouched, and every figure on the tailored version is one you gave us.",
         "primaryCta": {
           "label": "Tailor your resume",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "See what it costs",
@@ -286,7 +286,7 @@
         "copy": "Upload once, see your readiness score free, and tailor your first application on your starter credits.",
         "primary": {
           "label": "Get started free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -303,7 +303,7 @@
         "standfirst": "Almost every resume lists duties. Every hiring manager scans for outcomes. SkillDrift asks what actually happened, then rewrites each line around the result — the number, the scale, the change.",
         "primaryCta": {
           "label": "Rewrite my resume",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "See what it costs",
@@ -401,7 +401,7 @@
         "copy": "Upload your resume, get the ATS analysis free, and see what a rewrite would actually change.",
         "primary": {
           "label": "Get started free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -418,7 +418,7 @@
         "standfirst": "Practise for any role with an AI coach. Live voice, recorded practice or text Q&A, each with a scorecard telling you exactly where you lost points.",
         "primaryCta": {
           "label": "Start a mock interview",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "See the scorecard",
@@ -535,11 +535,11 @@
         "copy": "Upload your resume, get your readiness score free, and take your first mock interview against a role you actually want.",
         "primary": {
           "label": "Get started free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondary": {
           "label": "Upload your resume free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -556,7 +556,7 @@
         "standfirst": "Paste any job description — LinkedIn, Indeed, anywhere — and see your match out of 100 before you hit submit. Know your odds before you spend an application.",
         "primaryCta": {
           "label": "Check a job match",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "Browse matched jobs",
@@ -644,7 +644,7 @@
         "copy": "Upload your resume free, then check any posting you are considering against it.",
         "primary": {
           "label": "Get started free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondary": {
           "label": "Browse matched jobs",
@@ -665,7 +665,7 @@
         "standfirst": "Pick a target role and get the exact skills that close the gap, in the order that moves your score. Your career path is built automatically the moment you upload a resume.",
         "primaryCta": {
           "label": "Build my roadmap",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "See how the loop works",
@@ -753,7 +753,7 @@
         "copy": "Upload your resume, name the role you want, and get the path between them free.",
         "primary": {
           "label": "Get started free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -770,7 +770,7 @@
         "standfirst": "Your skills against industry standards and against your peers, scored out of 100, with the blind spots named. Free, and it re-scores every time you learn something.",
         "primaryCta": {
           "label": "Get my score — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "See what's free",
@@ -860,7 +860,7 @@
         "copy": "No account needed to see your first score. Two minutes, one upload.",
         "primary": {
           "label": "Get my score — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -877,7 +877,7 @@
         "standfirst": "Focused micro-lessons on the exact skills your gap report flagged — nothing you already know. Finish one and the certificate writes itself into your resume.",
         "primaryCta": {
           "label": "Find my sprints",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "See how the loop works",
@@ -966,7 +966,7 @@
         "copy": "Upload your resume, get the gap report free, and start the sprint at the top of it.",
         "primary": {
           "label": "Get started free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -982,7 +982,7 @@
         "standfirst": "Including internships and openings for people with under a year of experience — scored the same way as everything else, so you know where you actually stand.",
         "primaryCta": {
           "label": "See my matches — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "How matching works",
@@ -1070,7 +1070,7 @@
         "copy": "Upload your resume free and see every matched role ranked out of 100.",
         "primary": {
           "label": "See my matches — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -1086,7 +1086,7 @@
         "standfirst": "New accounts get starter credits — enough to rewrite your resume, tailor it to a job and download it. In India, one credit is one rupee, so every price below is already in money you understand.",
         "primaryCta": {
           "label": "Start free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "What's free forever",
@@ -1186,7 +1186,7 @@
         "copy": "Your readiness score, your closest roles and your real gaps cost nothing and need no account.",
         "primary": {
           "label": "Upload your resume — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -1202,7 +1202,7 @@
         "standfirst": "SkillDrift closes the loop between the job you want and the skills you have: score the gap, close it, and let your resume update itself as you go.",
         "primaryCta": {
           "label": "Upload your resume — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "secondaryCta": {
           "label": "See how it works",
@@ -1271,7 +1271,7 @@
         "copy": "We'll help you figure out what's next. Two minutes, one upload, no account required.",
         "primary": {
           "label": "Upload your resume — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         }
       }
     },
@@ -1355,7 +1355,7 @@
         "copy": "Most questions answer themselves once you've seen your own score. It takes two minutes.",
         "primary": {
           "label": "Upload your resume — free",
-          "href": "/#top"
+          "href": "app:sign-in"
         },
         "note": "No card required · no account required · takes 2 minutes"
       }

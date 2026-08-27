@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "./icons";
-import SectionLink from "./SectionLink";
+import { homeCta } from "@/lib/cta";
 import { Pill, SectionIntro, primaryButton } from "./SectionBits";
 
 const pairs = [
@@ -227,9 +227,9 @@ export default function RewriteSection() {
             flexWrap: "wrap",
           }}
         >
-          <SectionLink to="top" style={primaryButton}>
+          <a href={homeCta("rewrite_upload")} style={primaryButton}>
             Upload your resume &mdash; free
-          </SectionLink>
+          </a>
           <Link
             href="/resume-rewrite"
             style={{

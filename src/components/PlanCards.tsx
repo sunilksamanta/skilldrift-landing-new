@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Check } from "./icons";
-import SectionLink from "./SectionLink";
+import { signInHref } from "@/lib/cta";
 
 export const pricing = {
   free: "₹0",
@@ -61,7 +61,7 @@ function PlanPoint({
  * The three plan cards. Shared by the landing page's pricing section and the
  * `plans` block on /pricing, so the prices can never disagree between them.
  */
-export default function PlanCards() {
+export default function PlanCards({ campaign = "home" }: { campaign?: string }) {
   return (
     <div
       style={{
@@ -139,8 +139,8 @@ export default function PlanCards() {
             </PlanPoint>
           ))}
         </ul>
-        <SectionLink
-          to="top"
+        <a
+          href={signInHref(campaign, "plan_free")}
           style={{
             marginTop: 28,
             height: 52,
@@ -155,7 +155,7 @@ export default function PlanCards() {
           }}
         >
           Upload your resume &mdash; free
-        </SectionLink>
+        </a>
       </div>
 
       {/* Top up */}
@@ -221,8 +221,8 @@ export default function PlanCards() {
             </PlanPoint>
           ))}
         </ul>
-        <button
-          type="button"
+        <a
+          href={signInHref(campaign, "plan_topup")}
           style={{
             marginTop: 28,
             height: 52,
@@ -232,10 +232,13 @@ export default function PlanCards() {
             color: "var(--tx)",
             fontSize: 16,
             fontWeight: 500,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           Buy 299 credits
-        </button>
+        </a>
       </div>
 
       {/* Unlimited */}
@@ -328,22 +331,24 @@ export default function PlanCards() {
             </PlanPoint>
           ))}
         </ul>
-        <button
-          type="button"
+        <a
+          href={signInHref(campaign, "plan_unlimited")}
           style={{
             position: "relative",
             marginTop: 28,
             height: 52,
             borderRadius: 14,
-            border: 0,
             background: "#FFFFFF",
             color: "#3A2694",
             fontSize: 16,
             fontWeight: 500,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           Go unlimited
-        </button>
+        </a>
       </div>
     </div>
   );

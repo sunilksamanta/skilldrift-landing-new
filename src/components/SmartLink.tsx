@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import SectionLink from "./SectionLink";
+import { isSignIn, signInHref } from "@/lib/cta";
 
 /**
  * Resolves an href from `pages.json` to the right kind of link:
@@ -17,12 +18,30 @@ export default function SmartLink({
   children,
   style,
   ariaLabel,
+  campaign,
+  content,
 }: {
   href: string;
   children: ReactNode;
   style?: CSSProperties;
   ariaLabel?: string;
+  /** Page the click happened on, for the UTM when `href` is the sign-in sentinel. */
+  campaign?: string;
+  /** Which button this is, for the UTM. */
+  content?: string;
 }) {
+  if (isSignIn(href)) {
+    return (
+      <a
+        href={signInHref(campaign ?? "site", content ?? "cta")}
+        aria-label={ariaLabel}
+        style={style}
+      >
+        {children}
+      </a>
+    );
+  }
+
   if (href.startsWith("/#")) {
     return (
       <SectionLink to={href.slice(2)} style={style} ariaLabel={ariaLabel}>

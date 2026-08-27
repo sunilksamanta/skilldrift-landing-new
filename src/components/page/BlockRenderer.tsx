@@ -6,7 +6,13 @@ import RichText from "./RichText";
 import { CardGrid, PriceTable, Section, StepList } from "./blocks";
 
 /** Maps one `pages.json` block onto its component. */
-export default function BlockRenderer({ block }: { block: Block }) {
+export default function BlockRenderer({
+  block,
+  campaign,
+}: {
+  block: Block;
+  campaign?: string;
+}) {
   // featureRows brings its own sections, so it is handled before the shared
   // section shell is built.
   if (block.type === "featureRows") return <FeatureRows />;
@@ -23,7 +29,7 @@ export default function BlockRenderer({ block }: { block: Block }) {
     case "plans":
       return (
         <Section {...shell}>
-          <PlanCards />
+          <PlanCards campaign={campaign} />
         </Section>
       );
 

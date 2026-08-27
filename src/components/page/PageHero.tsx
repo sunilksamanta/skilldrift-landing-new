@@ -18,6 +18,7 @@ export default function PageHero({
   image,
   imageAlt,
   aside,
+  campaign,
 }: {
   eyebrow: string;
   h1: string;
@@ -27,6 +28,7 @@ export default function PageHero({
   image?: string;
   imageAlt?: string;
   aside?: ReactNode;
+  campaign?: string;
 }) {
   const cta = primaryCta ?? { label: "Upload your resume — free", href: "/#top" };
   // The product shots already carry their own purple field, so they need no
@@ -133,12 +135,14 @@ export default function PageHero({
                 flexWrap: "wrap",
               }}
             >
-              <SmartLink href={cta.href} style={primaryButton}>
+              <SmartLink href={cta.href} campaign={campaign} content="hero_primary" style={primaryButton}>
                 {cta.label}
               </SmartLink>
               {secondaryCta && (
                 <SmartLink
                   href={secondaryCta.href}
+                  campaign={campaign}
+                  content="hero_secondary"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",

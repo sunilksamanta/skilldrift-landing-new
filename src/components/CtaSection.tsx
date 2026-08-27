@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "./icons";
 import Wordmark from "./Wordmark";
-import SectionLink from "./SectionLink";
+import { homeCta } from "@/lib/cta";
 
 export default function CtaSection() {
   const host = useRef<HTMLDivElement>(null);
@@ -101,8 +101,8 @@ export default function CtaSection() {
             flexWrap: "wrap",
           }}
         >
-          <SectionLink
-            to="top"
+          <a
+            href={homeCta("closing_get_started")}
             style={{
               height: 58,
               padding: "0 40px",
@@ -116,9 +116,9 @@ export default function CtaSection() {
             }}
           >
             Get started free
-          </SectionLink>
-          <SectionLink
-            to="top"
+          </a>
+          <a
+            href={homeCta("closing_upload")}
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -130,7 +130,7 @@ export default function CtaSection() {
           >
             Upload your resume free
             <ArrowRight size={18} strokeWidth={1.9} />
-          </SectionLink>
+          </a>
         </div>
         <p style={{ marginTop: 26, fontSize: 13, color: "rgba(255,255,255,.62)" }}>
           No card required &middot; first application free &middot; takes 2 minutes

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import JsonLd from "@/components/JsonLd";
+import UtmForwarder from "@/components/UtmForwarder";
 import { organizationSchema } from "@/lib/schema";
 import { LOCALE, SITE_NAME, SITE_URL, buildMetadata } from "@/lib/seo";
 import "./globals.css";
@@ -45,7 +46,10 @@ export default function RootLayout({
         <JsonLd schemas={[organizationSchema]} />
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <UtmForwarder />
+        {children}
+      </body>
     </html>
   );
 }

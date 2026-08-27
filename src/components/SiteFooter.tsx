@@ -2,8 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Wordmark from "./Wordmark";
 import SectionLink from "./SectionLink";
+import { signInHref } from "@/lib/cta";
 
-const columns = [
+type FooterLink =
+  | { href: string; label: string; external?: boolean }
+  | { section: string; label: string }
+  | { signIn: true; label: string };
+
+const columns: { title: string; links: FooterLink[] }[] = [
   {
     title: "Product",
     links: [
@@ -11,7 +17,7 @@ const columns = [
       { href: "/features", label: "Features" },
       { href: "/jobs", label: "Jobs" },
       { href: "/pricing", label: "Pricing" },
-      { section: "top", label: "Sign in" },
+      { signIn: true, label: "Sign in" },
     ],
   },
   {
@@ -40,7 +46,7 @@ const columns = [
       { href: "https://www.facebook.com/skilldriftindia", label: "Facebook Page", external: true },
     ],
   },
-] as const;
+];
 
 const socialStyle: React.CSSProperties = {
   width: 38,
@@ -52,7 +58,7 @@ const socialStyle: React.CSSProperties = {
   color: "var(--tx2)",
 };
 
-export default function SiteFooter() {
+export default function SiteFooter({ campaign = "site" }: { campaign?: string }) {
   return (
     <footer
       id="footer"
@@ -121,7 +127,14 @@ export default function SiteFooter() {
               >
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    {"section" in link ? (
+                    {"signIn" in link ? (
+                      <a
+                        href={signInHref(campaign, "footer_sign_in")}
+                        style={{ color: "var(--tx2)" }}
+                      >
+                        {link.label}
+                      </a>
+                    ) : "section" in link ? (
                       <SectionLink to={link.section} style={{ color: "var(--tx2)" }}>
                         {link.label}
                       </SectionLink>

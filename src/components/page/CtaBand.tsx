@@ -11,12 +11,14 @@ export default function CtaBand({
   primary,
   secondary,
   note,
+  campaign,
 }: {
   heading: string;
   copy: string;
   primary?: { label: string; href: string };
   secondary?: { label: string; href: string };
   note?: string;
+  campaign?: string;
 }) {
   const cta = primary ?? { label: "Upload your resume — free", href: "/#top" };
   const footnote =
@@ -77,6 +79,8 @@ export default function CtaBand({
         >
           <SmartLink
             href={cta.href}
+            campaign={campaign}
+            content="closing_primary"
             style={{
               height: 56,
               padding: "0 36px",
@@ -94,6 +98,8 @@ export default function CtaBand({
           {secondary && (
             <SmartLink
               href={secondary.href}
+              campaign={campaign}
+              content="closing_secondary"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

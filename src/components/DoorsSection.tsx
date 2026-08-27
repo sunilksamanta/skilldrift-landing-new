@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Check } from "./icons";
-import SectionLink from "./SectionLink";
+import { homeCta } from "@/lib/cta";
 
 const doors = [
   {
@@ -186,8 +186,8 @@ export default function DoorsSection() {
               flexWrap: "wrap",
             }}
           >
-            <SectionLink
-              to="top"
+            <a
+              href={homeCta("doors_upload")}
               style={{
                 minHeight: 52,
                 padding: "0 30px",
@@ -201,7 +201,7 @@ export default function DoorsSection() {
               }}
             >
               Upload your resume, free
-            </SectionLink>
+            </a>
           </div>
         </div>
       </div>
