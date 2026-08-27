@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Check } from "./icons";
 import { Price } from "./Regional";
-import { signInHref } from "@/lib/cta";
+import { signUpHref } from "@/lib/cta";
 
 /** The notes beside each price. The amounts themselves come from `Price`. */
 export const pricing = {
@@ -10,7 +10,7 @@ export const pricing = {
 };
 
 const freePoints = [
-  "Your first application, end to end — enough credits to rewrite, tailor and download it",
+  "Your first application, end to end: enough credits to rewrite, tailor and download it",
   "Whichever template you pick",
   "Skill gaps, career path, and free re-scoring every time you upskill",
   "Matched jobs and internships, scored out of 100",
@@ -18,7 +18,7 @@ const freePoints = [
 ];
 
 const topupPoints = [
-  "299 credits — no expiry, no subscription",
+  "299 credits, no expiry, no subscription",
   "Roughly four job applications, tailored and downloaded",
   "Or one live mock interview, with 99 credits left over",
   "Recharge whenever you run out",
@@ -138,7 +138,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           ))}
         </ul>
         <a
-          href={signInHref(campaign, "plan_free")}
+          href={signUpHref(campaign, "plan_free")}
           style={{
             marginTop: 28,
             height: 52,
@@ -152,7 +152,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
             justifyContent: "center",
           }}
         >
-          Upload your resume &mdash; free
+          Upload your resume - free
         </a>
       </div>
 
@@ -220,7 +220,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           ))}
         </ul>
         <a
-          href={signInHref(campaign, "plan_topup")}
+          href={signUpHref(campaign, "plan_topup")}
           style={{
             marginTop: 28,
             height: 52,
@@ -235,7 +235,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
             justifyContent: "center",
           }}
         >
-          Buy 299 credits
+          Buy credits
         </a>
       </div>
 
@@ -330,7 +330,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           ))}
         </ul>
         <a
-          href={signInHref(campaign, "plan_unlimited")}
+          href={signUpHref(campaign, "plan_unlimited")}
           style={{
             position: "relative",
             marginTop: 28,

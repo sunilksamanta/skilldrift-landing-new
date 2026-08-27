@@ -30,11 +30,15 @@ export default function SiteHeader({ campaign = "site" }: { campaign?: string })
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: "20px 32px",
+          flexWrap: "nowrap",
         }}
       >
-        <Link href="/" style={{ display: "block", flex: "0 0 auto" }} aria-label="SkillDrift home">
+        <Link
+          href="/"
+          className="sd-lockup"
+          style={{ display: "block", flex: "0 0 auto", minWidth: 0 }}
+          aria-label="SkillDrift home"
+        >
           <Wordmark markSize={46} textSize={29} />
         </Link>
 
@@ -69,16 +73,13 @@ export default function SiteHeader({ campaign = "site" }: { campaign?: string })
         </nav>
 
         <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 14,
-            flex: "0 0 auto",
-          }}
+          className="sd-headactions"
+          style={{ display: "flex", alignItems: "center", flex: "0 0 auto" }}
         >
           <ThemeToggle />
           <a
-            href={signInHref(campaign, "header_sign_up")}
+            className="sd-header-cta"
+            href={signInHref(campaign, "header_sign_in")}
             style={{
               height: 44,
               padding: "0 26px",
@@ -91,7 +92,7 @@ export default function SiteHeader({ campaign = "site" }: { campaign?: string })
               alignItems: "center",
             }}
           >
-            Sign up
+            Sign in
           </a>
         </div>
       </div>

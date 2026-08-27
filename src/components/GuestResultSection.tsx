@@ -1,7 +1,10 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import type { GuestState } from "@/hooks/useGuestAnalysis";
 import type { GuestJob } from "@/lib/guest-api";
+import { Lock } from "./icons";
+import { AnalyticsEvents, track } from "@/lib/analytics";
 import { homeCta } from "@/lib/cta";
 
 /* ------------------------------------------------------------------ score */
@@ -42,6 +45,21 @@ function categoryFor(score: number): Band {
 
 const clamp = (n: number) => Math.min(100, Math.max(0, n));
 
+/** The scale the gauge is read against, weakest first. */
+const SCALE: { label: string; tone: Band["tone"]; from: number }[] = [
+  { label: "Needs work", tone: "t-red", from: 0 },
+  { label: "Good", tone: "t-amber", from: 50 },
+  { label: "Very good", tone: "t-blue", from: 70 },
+  { label: "Excellent", tone: "t-green", from: 85 },
+];
+
+const POSITIONS: Record<string, string> = {
+  below_average: "Below average",
+  average: "Average",
+  above_average: "Above average",
+  excellent: "Excellent",
+};
+
 /* ------------------------------------------------------------- geometry */
 
 const GAUGE_START = 150;
@@ -72,6 +90,36 @@ function pickGaps(state: GuestState) {
   return [...categories]
     .sort((a, b) => a.skillLevelScore - b.skillLevelScore)
     .slice(0, 3);
+}
+
+/**
+ * The role the analysis points the visitor at next. `targetRole` is often a
+ * full sentence rather than a job title, so the UI clamps it to two lines.
+ */
+function suggestedRole(state: GuestState): string | null {
+  const target = state.skillGap?.domainAnalysis?.targetRole?.trim();
+  if (target) return target;
+  const titles = state.analysis?.analysis?.jobSearchTitles ?? [];
+  const current = state.analysis?.analysis?.jobSearchTitle;
+  return titles.find((title) => title && title !== current) ?? null;
+}
+
+/** Resumes are often typed in caps; anything else is left as the person wrote it. */
+function titleCase(value: string) {
+  if (value !== value.toUpperCase()) return value;
+  return value
+    .toLowerCase()
+    .replace(/(^|[\s'-])([a-z])/g, (_, sep: string, ch: string) => sep + ch.toUpperCase());
+}
+
+/** Who this reading belongs to. The email is deliberately not shown. */
+function person(state: GuestState) {
+  const name = state.analysis?.analysis?.personalInfo?.name?.trim();
+  if (!name) return null;
+
+  const words = titleCase(name).split(/\s+/).filter(Boolean);
+  if (words.length === 0) return null;
+  return { name: words.join(" "), firstName: words[0] };
 }
 
 function scoredAgainst(state: GuestState): string {
@@ -109,13 +157,81 @@ function radarAxes(state: GuestState): RadarAxis[] {
   return [];
 }
 
+/**
+ * Reports the panel once it is genuinely on screen, and again — with how far
+ * down it the visitor got — when they leave it. "Returned" is not "seen": the
+ * panel can be rendered below the fold, or in a background tab.
+ */
+function useResultViewed(node: React.RefObject<HTMLElement | null>, score: number) {
+  const seenAt = useRef(0);
+  const deepest = useRef(0);
+  const reported = useRef(false);
+
+  useEffect(() => {
+    const el = node.current;
+    if (!el || reported.current) return;
+
+    const readyAt = performance.now();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting || reported.current) continue;
+          reported.current = true;
+          seenAt.current = Date.now();
+          track(AnalyticsEvents.ANONYMOUS_RESULT_VIEWED, {
+            readiness_score: score,
+            time_to_view_ms: Math.round(performance.now() - readyAt),
+            scroll_depth_pct: 0,
+          });
+        }
+      },
+      { threshold: 0.25 },
+    );
+    observer.observe(el);
+
+    // How far into the panel they read, sampled as they scroll and sent with
+    // the leave event rather than as a stream of its own.
+    const onScroll = () => {
+      const box = el.getBoundingClientRect();
+      const visible = Math.min(window.innerHeight, box.bottom) - Math.max(0, box.top);
+      const pct = Math.round(((Math.max(0, -box.top) + visible) / box.height) * 100);
+      deepest.current = Math.min(100, Math.max(deepest.current, pct));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const onLeave = () => {
+      if (!seenAt.current) return;
+      track(AnalyticsEvents.ANONYMOUS_RESULT_VIEWED, {
+        readiness_score: score,
+        time_to_view_ms: seenAt.current ? Date.now() - seenAt.current : null,
+        scroll_depth_pct: deepest.current,
+        phase: "left",
+      });
+      seenAt.current = 0;
+    };
+    // pagehide fires where unload does not — bfcache, iOS Safari.
+    window.addEventListener("pagehide", onLeave);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("pagehide", onLeave);
+      onLeave();
+    };
+  }, [node, score]);
+}
+
 /* ------------------------------------------------------------------ view */
 
 const cardStyle: React.CSSProperties = {
-  borderRadius: 20,
+  position: "relative",
+  overflow: "hidden",
+  borderRadius: 16,
   border: "1px solid var(--line)",
   background: "var(--card)",
-  padding: 26,
+  padding: 18,
   display: "flex",
   flexDirection: "column",
 };
@@ -124,7 +240,7 @@ function CardTitle({ children }: { children: React.ReactNode }) {
   return (
     <div
       style={{
-        fontSize: 12.5,
+        fontSize: 11.5,
         fontWeight: 500,
         letterSpacing: "0.10em",
         textTransform: "uppercase",
@@ -143,35 +259,65 @@ export default function GuestResultSection({
   state: GuestState;
   guestToken: string | null;
 }) {
+  const panel = useRef<HTMLElement | null>(null);
   const score = clamp(state.analysis?.analysis?.overall?.atsScore ?? 0);
+  useResultViewed(panel, score);
   const band = categoryFor(score);
   const gaps = pickGaps(state);
   const gapsPending = !state.skillGap && state.status !== "completed";
   const weaknesses = state.analysis?.analysis?.overall?.weaknesses ?? [];
   const axes = radarAxes(state);
+  const nextRole = suggestedRole(state);
+  const who = person(state);
 
-  const allJobs = (state.jobs?.jobs ?? []).filter((job) => job.analysis);
+  // A job the matcher skipped comes back with `analysis: null`. It is still a
+  // real opening, so it is shown without a score rather than dropped — which
+  // used to empty the card and fall through to the locked placeholder.
+  const allJobs = [...(state.jobs?.jobs ?? [])].sort(
+    (a, b) => (b.analysis?.matchScore ?? -1) - (a.analysis?.matchScore ?? -1),
+  );
   const shown = allJobs.slice(0, 3);
-  const teased = allJobs.slice(3, 5);
-  const more = Math.max(0, allJobs.length - shown.length);
+  const teased = allJobs.slice(3, 4);
 
-  const signUpHref = guestToken
-    ? `${homeCta("result_create_account")}&guestToken=${encodeURIComponent(guestToken)}`
-    : homeCta("result_create_account");
+  // The analysis already read their name and email off the resume, so the
+  // sign-up form is filled in for them rather than asking twice.
+  const personal = state.analysis?.analysis?.personalInfo;
+  const signUpHref = homeCta("result_create_account", {
+    name: who?.name ?? personal?.name,
+    email: personal?.email,
+    guestToken,
+  });
 
   return (
     <section
       id="result"
-      style={{ padding: "0 0 110px", animation: "sd-rise .5s ease both" }}
+      ref={panel}
+      style={{ padding: "0 0 64px", animation: "sd-rise .5s ease both" }}
     >
       <div className="wrap">
+        {who && (
+          <h2
+            style={{
+              marginBottom: 16,
+              fontSize: "clamp(22px,2.4vw,30px)",
+              fontWeight: 600,
+              letterSpacing: "-0.025em",
+            }}
+          >
+            Hey <span style={{ color: "var(--ac)" }}>{who.firstName}</span>,{" "}
+            <span style={{ fontWeight: 400, color: "var(--tx3)" }}>
+              here&rsquo;s where you stand.
+            </span>
+          </h2>
+        )}
+
         <div
           className="sd-pad-40"
           style={{
-            borderRadius: 26,
+            borderRadius: 24,
             border: "1px solid var(--line)",
             background: "var(--bg2)",
-            padding: 40,
+            padding: 22,
             position: "relative",
             overflow: "hidden",
           }}
@@ -196,18 +342,18 @@ export default function GuestResultSection({
               display: "flex",
               alignItems: "baseline",
               justifyContent: "space-between",
-              gap: 16,
+              gap: "10px 28px",
               flexWrap: "wrap",
-              paddingBottom: 24,
+              paddingBottom: 14,
               borderBottom: "1px solid var(--line)",
             }}
           >
-            <div>
+            <div style={{ flex: "0 1 auto", minWidth: 0 }}>
               <CardTitle>Scored against</CardTitle>
               <div
                 style={{
-                  marginTop: 8,
-                  fontSize: 22,
+                  marginTop: 5,
+                  fontSize: 19,
                   fontWeight: 600,
                   letterSpacing: "-0.015em",
                 }}
@@ -215,27 +361,54 @@ export default function GuestResultSection({
                 {scoredAgainst(state)}
               </div>
             </div>
-            <span style={{ fontSize: 14, color: "var(--tx3)" }}>
-              Free, and yours &mdash; not a sample. No account, no redirect.
-            </span>
+
+            {nextRole && (
+              <>
+                <span className="sd-split-rule" aria-hidden="true" />
+                <div style={{ flex: "1 1 300px", minWidth: 0 }}>
+                  <CardTitle>Suggested next role</CardTitle>
+                  <div
+                    title={nextRole}
+                    style={{
+                      marginTop: 5,
+                      fontSize: 16,
+                      fontWeight: 600,
+                      lineHeight: 1.4,
+                      letterSpacing: "-0.015em",
+                      display: "-webkit-box",
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                    }}
+                  >
+                    {nextRole}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
 
           <div
             style={{
               position: "relative",
-              marginTop: 26,
+              marginTop: 14,
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(min(320px,100%),1fr))",
-              gap: 20,
+              gridTemplateColumns: "repeat(auto-fit,minmax(min(290px,100%),1fr))",
+              gap: 12,
               alignItems: "stretch",
             }}
           >
-            <ScoreCard band={band} score={score} />
+            <ScoreCard
+              band={band}
+              score={score}
+              position={
+                POSITIONS[state.skillGap?.overallAssessment?.competitivePosition ?? ""]
+              }
+            />
             <RadarCard axes={axes} pending={gapsPending} />
             <JobsCard
               shown={shown}
               teased={teased}
-              more={more}
               total={allJobs.length}
             />
           </div>
@@ -250,47 +423,70 @@ export default function GuestResultSection({
           <div
             style={{
               position: "relative",
-              marginTop: 20,
-              padding: "28px 32px",
-              borderRadius: 20,
-              border: "1px solid var(--acline)",
-              background: "var(--acsoft)",
+              marginTop: 12,
+              padding: "20px 26px",
+              borderRadius: 16,
+              overflow: "hidden",
+              background:
+                "linear-gradient(168deg,#7C5DF9,#5B3FD0 62%,#4A32B4)",
+              color: "#FFFFFF",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              gap: 28,
+              gap: "16px 28px",
               flexWrap: "wrap",
             }}
           >
-            <div>
-              <h3 style={{ fontSize: 21, fontWeight: 600, letterSpacing: "-0.01em" }}>
+            {/* Same grid wash as the Unlimited plan card, so the two closing
+                asks read as one brand rather than two. */}
+            <div
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                inset: 0,
+                pointerEvents: "none",
+                backgroundImage:
+                  "linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px)",
+                backgroundSize: "58px 58px",
+              }}
+            />
+
+            <div
+              style={{
+                position: "relative",
+                flex: "1 1 300px",
+                minWidth: 0,
+                maxWidth: 660,
+              }}
+            >
+              <h3 style={{ fontSize: 19, fontWeight: 600, letterSpacing: "-0.015em" }}>
                 Create a free account to see the rest
               </h3>
               <p
                 style={{
-                  marginTop: 8,
-                  fontSize: 15,
-                  lineHeight: 1.6,
-                  color: "var(--tx2)",
+                  marginTop: 6,
+                  fontSize: 14.5,
+                  lineHeight: 1.55,
+                  color: "rgba(255,255,255,.82)",
                 }}
               >
-                {allJobs.length > 0 ? `All ${allJobs.length} matches, the` : "Every match, the"}{" "}
-                full gap report, and the roadmap that closes it.
-                <br />
-                Your resume is already here &mdash; you will not upload it again.
+                All the matches, the full gap report, and the learning areas that
+                close it. Your resume is already here, and you will not upload
+                it again.
               </p>
             </div>
             <a
               href={signUpHref}
               style={{
+                position: "relative",
                 flex: "0 0 auto",
-                height: 54,
-                padding: "0 32px",
-                borderRadius: 14,
-                background: "var(--btn)",
-                color: "var(--btntx)",
-                fontSize: 16,
-                fontWeight: 500,
+                height: 46,
+                padding: "0 26px",
+                borderRadius: 13,
+                background: "#FFFFFF",
+                color: "#3A2694",
+                fontSize: 15.5,
+                fontWeight: 600,
                 display: "inline-flex",
                 alignItems: "center",
               }}
@@ -306,119 +502,163 @@ export default function GuestResultSection({
 
 /* ------------------------------------------------------------ 1 · gauge */
 
-const BANDS: { from: number; to: number; tone: Band["tone"] }[] = [
-  { from: 0, to: 50, tone: "t-red" },
-  { from: 50, to: 70, tone: "t-amber" },
-  { from: 70, to: 85, tone: "t-blue" },
-  { from: 85, to: 100, tone: "t-green" },
-];
-
-function ScoreCard({ band, score }: { band: Band; score: number }) {
-  const needle = polar(120, 120, 74, atScore(score));
-  const cap = polar(120, 120, 96, atScore(score));
+function ScoreCard({
+  band,
+  score,
+  position,
+}: {
+  band: Band;
+  score: number;
+  /** How the resume reads against the market, when the API has scored it. */
+  position?: string;
+}) {
+  const CX = 100;
+  const CY = 96;
+  const R = 72;
+  const angle = atScore(score);
+  const tip = polar(CX, CY, R - 15, angle);
+  const left = polar(CX, CY, 8, angle - 90);
+  const right = polar(CX, CY, 8, angle + 90);
+  const gradient = `sd-gauge-${band.tone}`;
 
   return (
-    <div style={{ ...cardStyle, alignItems: "center", textAlign: "center" }}>
+    <div
+      className="sd-result-card"
+      style={{ ...cardStyle, alignItems: "center", textAlign: "center" }}
+    >
       <CardTitle>Resume readiness</CardTitle>
 
-      <div style={{ position: "relative", width: "100%", maxWidth: 260, marginTop: 6 }}>
-        <svg viewBox="0 0 240 168" style={{ width: "100%", display: "block" }}>
-          {/* The four bands, drawn faint so the live arc reads on top of them. */}
-          {BANDS.map((b) => (
-            <path
-              key={b.tone}
-              d={arcPath(120, 120, 96, atScore(b.from) + 1.4, atScore(b.to) - 1.4)}
-              fill="none"
-              stroke={`var(--${b.tone})`}
-              strokeWidth={10}
-              strokeLinecap="round"
-              opacity={0.18}
-            />
-          ))}
+      <div style={{ width: "100%", maxWidth: 196, marginTop: 0 }}>
+        <svg viewBox="0 0 200 140" style={{ width: "100%", display: "block" }}>
+          <defs>
+            <linearGradient id={gradient} x1="0" y1="1" x2="1" y2="0">
+              <stop
+                offset="0%"
+                stopColor={`var(--${band.tone})`}
+                stopOpacity="0.45"
+              />
+              <stop offset="100%" stopColor={`var(--${band.tone})`} />
+            </linearGradient>
+          </defs>
 
-          {/* Tick marks every ten points. */}
-          {Array.from({ length: 11 }, (_, i) => i * 10).map((v) => {
-            const a = polar(120, 120, 79, atScore(v));
-            const b2 = polar(120, 120, v % 50 === 0 ? 71 : 74, atScore(v));
+          <path
+            d={arcPath(CX, CY, R, atScore(0), atScore(100))}
+            fill="none"
+            stroke="var(--card2)"
+            strokeWidth={11}
+            strokeLinecap="round"
+          />
+
+          {/* Quarter marks only — enough to read the dial, quiet enough to ignore. */}
+          {[0, 25, 50, 75, 100].map((v) => {
+            const outer = polar(CX, CY, R - 10, atScore(v));
+            const inner = polar(CX, CY, R - 16, atScore(v));
             return (
               <line
                 key={v}
-                x1={a.x}
-                y1={a.y}
-                x2={b2.x}
-                y2={b2.y}
+                x1={outer.x}
+                y1={outer.y}
+                x2={inner.x}
+                y2={inner.y}
                 stroke="var(--line2)"
-                strokeWidth={v % 50 === 0 ? 2 : 1}
+                strokeWidth={1.5}
                 strokeLinecap="round"
               />
             );
           })}
 
           <path
-            d={arcPath(120, 120, 96, atScore(0), atScore(score))}
+            d={arcPath(CX, CY, R, atScore(0), atScore(score))}
             fill="none"
-            stroke={`var(--${band.tone})`}
-            strokeWidth={10}
+            stroke={`url(#${gradient})`}
+            strokeWidth={11}
             strokeLinecap="round"
-            style={{ transition: "d .8s ease" }}
           />
-          <circle cx={cap.x} cy={cap.y} r={7} fill="var(--card)" />
-          <circle cx={cap.x} cy={cap.y} r={4.5} fill={`var(--${band.tone})`} />
 
-          <line
-            x1={120}
-            y1={120}
-            x2={needle.x}
-            y2={needle.y}
-            stroke="var(--tx)"
-            strokeWidth={3}
-            strokeLinecap="round"
-            opacity={0.75}
+          <polygon
+            points={`${left.x},${left.y} ${tip.x},${tip.y} ${right.x},${right.y}`}
+            fill="var(--tx)"
+            opacity={0.82}
           />
-          <circle cx={120} cy={120} r={7} fill="var(--tx)" opacity={0.75} />
-          <circle cx={120} cy={120} r={3} fill="var(--card)" />
+          <circle cx={CX} cy={CY} r={8} fill="var(--tx)" opacity={0.82} />
+          <circle cx={CX} cy={CY} r={3.5} fill="var(--card)" />
         </svg>
-
-        <div
-          style={{
-            position: "absolute",
-            left: 0,
-            right: 0,
-            bottom: 6,
-            display: "grid",
-            placeItems: "center",
-          }}
-        >
-          <span
-            style={{
-              padding: "7px 18px",
-              borderRadius: 999,
-              fontSize: 15,
-              fontWeight: 600,
-              letterSpacing: "-0.01em",
-              background: `var(--${band.tone}-soft)`,
-              color: `var(--${band.tone}-tx)`,
-            }}
-          >
-            {band.label}
-          </span>
-        </div>
       </div>
+
+      <span
+        style={{
+          marginTop: 0,
+          padding: "5px 15px",
+          borderRadius: 999,
+          fontSize: 14.5,
+          fontWeight: 600,
+          letterSpacing: "-0.01em",
+          background: `var(--${band.tone}-soft)`,
+          color: `var(--${band.tone}-tx)`,
+        }}
+      >
+        {band.label}
+      </span>
 
       <p
         style={{
-          marginTop: 18,
-          maxWidth: 230,
-          fontSize: 14,
-          lineHeight: 1.55,
+          marginTop: 10,
+          maxWidth: 220,
+          fontSize: 13,
+          lineHeight: 1.45,
           color: "var(--tx2)",
         }}
       >
         {band.note}
       </p>
-      <p style={{ marginTop: "auto", paddingTop: 16, fontSize: 13, color: "var(--tx3)" }}>
-        The number behind this is in your free account.
-      </p>
+
+      <div style={{ marginTop: "auto", paddingTop: 18, width: "100%" }}>
+        {position && (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              gap: 10,
+              marginBottom: 14,
+              paddingBottom: 12,
+              borderBottom: "1px solid var(--line)",
+              fontSize: 12.5,
+            }}
+          >
+            <span style={{ color: "var(--tx3)" }}>Against your target role</span>
+            <span style={{ fontWeight: 500 }}>{position}</span>
+          </div>
+        )}
+
+        <div style={{ display: "flex", gap: 5 }}>
+          {SCALE.map((step) => {
+            const active = step.tone === band.tone;
+            return (
+              <div key={step.label} style={{ flex: 1, minWidth: 0 }}>
+                <div
+                  style={{
+                    height: 4,
+                    borderRadius: 99,
+                    background: active ? `var(--${step.tone})` : "var(--card2)",
+                  }}
+                />
+                <div
+                  style={{
+                    marginTop: 7,
+                    fontSize: 10.5,
+                    lineHeight: 1.2,
+                    textAlign: "center",
+                    fontWeight: active ? 600 : 400,
+                    color: active ? `var(--${step.tone}-tx)` : "var(--tx3)",
+                  }}
+                >
+                  {step.label}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
@@ -456,7 +696,7 @@ function RadarCard({ axes, pending }: { axes: RadarAxis[]; pending: boolean }) {
     : axes;
 
   return (
-    <div style={{ ...cardStyle, alignItems: "center" }}>
+    <div className="sd-result-card" style={{ ...cardStyle, alignItems: "center" }}>
       <CardTitle>Skill gap map</CardTitle>
 
       <div
@@ -584,18 +824,16 @@ const PLACEHOLDER_JOBS = [
 function JobsCard({
   shown,
   teased,
-  more,
   total,
 }: {
   shown: GuestJob[];
   teased: GuestJob[];
-  more: number;
   total: number;
 }) {
   const locked = total === 0;
 
   return (
-    <div style={{ ...cardStyle, position: "relative", overflow: "hidden" }}>
+    <div className="sd-result-card" style={cardStyle}>
       <div
         style={{
           display: "flex",
@@ -616,16 +854,16 @@ function JobsCard({
             color: "var(--ac)",
           }}
         >
-          {locked ? "20+ jobs" : more > 0 ? `${more} more found` : `${total} found`}
+          {locked ? "20+ jobs available" : "20+ more jobs"}
         </span>
       </div>
 
       <ul
         style={{
-          marginTop: 18,
+          marginTop: 12,
           display: "flex",
           flexDirection: "column",
-          gap: 10,
+          gap: 6,
         }}
       >
         {locked
@@ -637,13 +875,14 @@ function JobsCard({
                 meta={job.meta}
                 blur={4 + i * 0.8}
                 dim={0.6 - i * 0.08}
+                lock={i === 0}
               />
             ))
           : [
               ...shown.map((job) => (
                 <JobRow
                   key={job.jobId}
-                  score={job.analysis?.matchScore ?? 0}
+                  score={job.analysis?.matchScore}
                   title={job.jobTitle}
                   meta={[job.employerName, job.jobLocation].filter(Boolean).join(" · ")}
                 />
@@ -651,17 +890,18 @@ function JobsCard({
               ...teased.map((job, i) => (
                 <JobRow
                   key={job.jobId}
-                  score={job.analysis?.matchScore ?? 0}
+                  score={job.analysis?.matchScore}
                   title={job.jobTitle}
                   meta={[job.employerName, job.jobLocation].filter(Boolean).join(" · ")}
                   blur={i === 0 ? 4.5 : 6}
                   dim={i === 0 ? 0.55 : 0.4}
+                  lock={i === 0}
                 />
               )),
             ]}
       </ul>
 
-      <p style={{ marginTop: "auto", paddingTop: 16, fontSize: 13, color: "var(--tx3)" }}>
+      <p style={{ marginTop: "auto", paddingTop: 14, fontSize: 12, color: "var(--tx3)" }}>
         {locked
           ? "Openings matched to this profile. Names and scores unlock with your account."
           : "Scored against your resume, not keyword-matched."}
@@ -676,71 +916,116 @@ function JobRow({
   meta,
   blur,
   dim,
+  lock,
 }: {
-  score: number;
+  /** Absent when the matcher skipped this job — no score is invented for it. */
+  score?: number | null;
   title: string;
   meta: string;
   blur?: number;
   dim?: number;
+  /** Draws the lock badge. Set on the first blurred row of a list only. */
+  lock?: boolean;
 }) {
   return (
     <li
       aria-hidden={blur ? true : undefined}
       style={{
+        position: "relative",
         display: "flex",
         alignItems: "center",
-        gap: 14,
-        padding: "12px 14px",
-        borderRadius: 14,
+        gap: 11,
+        padding: "8px 10px",
+        borderRadius: 11,
         border: "1px solid var(--line)",
         background: "var(--card2)",
-        filter: blur ? `blur(${blur}px)` : undefined,
-        opacity: dim,
       }}
     >
+      {/* The frame stays sharp; only what is behind the paywall blurs. */}
       <span
         style={{
-          flex: "0 0 auto",
-          width: 42,
-          height: 42,
-          borderRadius: 12,
-          display: "grid",
-          placeItems: "center",
-          background: "var(--acsoft)",
-          color: "var(--ac)",
-          fontSize: 15.5,
-          fontWeight: 600,
+          display: "flex",
+          alignItems: "center",
+          gap: 11,
+          minWidth: 0,
+          width: "100%",
+          filter: blur ? `blur(${blur}px)` : undefined,
+          opacity: dim,
         }}
       >
-        {score}
-      </span>
-      <span style={{ minWidth: 0 }}>
         <span
           style={{
-            display: "block",
-            fontSize: 15,
-            fontWeight: 500,
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
+            flex: "0 0 auto",
+            width: 34,
+            height: 34,
+            borderRadius: 10,
+            display: "grid",
+            placeItems: "center",
+            background: score == null ? "var(--card)" : "var(--acsoft)",
+            border: score == null ? "1px solid var(--line)" : undefined,
+            color: score == null ? "var(--tx3)" : "var(--ac)",
+            fontSize: 14.5,
+            fontWeight: 600,
           }}
         >
-          {title}
+          {score ?? title.slice(0, 1).toUpperCase()}
         </span>
-        <span
-          style={{
-            display: "block",
-            marginTop: 3,
-            fontSize: 13,
-            color: "var(--tx3)",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
-          }}
-        >
-          {meta}
+        <span style={{ minWidth: 0 }}>
+          <span
+            style={{
+              display: "block",
+              fontSize: 14.5,
+              fontWeight: 500,
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {title}
+          </span>
+          <span
+            style={{
+              display: "block",
+              marginTop: 2,
+              fontSize: 12.5,
+              color: "var(--tx3)",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {meta}
+          </span>
         </span>
       </span>
+
+      {lock && (
+        <span
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "grid",
+            placeItems: "center",
+            pointerEvents: "none",
+          }}
+        >
+          <span
+            title="Unlocks with a free account"
+            style={{
+              width: 30,
+              height: 30,
+              borderRadius: 999,
+              display: "grid",
+              placeItems: "center",
+              background: "var(--card)",
+              border: "1px solid var(--line2)",
+              color: "var(--tx2)",
+            }}
+          >
+            <Lock />
+          </span>
+        </span>
+      )}
     </li>
   );
 }
@@ -767,11 +1052,11 @@ function GapsStrip({
     <div
       style={{
         position: "relative",
-        marginTop: 20,
-        borderRadius: 20,
+        marginTop: 12,
+        borderRadius: 16,
         border: "1px solid var(--line)",
         background: "var(--card)",
-        padding: 26,
+        padding: 18,
       }}
     >
       <div
@@ -783,7 +1068,7 @@ function GapsStrip({
           flexWrap: "wrap",
         }}
       >
-        <h3 style={{ fontSize: 17, fontWeight: 600, letterSpacing: "-0.01em" }}>
+        <h3 style={{ fontSize: 16, fontWeight: 600, letterSpacing: "-0.01em" }}>
           {heading}
         </h3>
         <p style={{ fontSize: 13.5, color: "var(--tx3)" }}>
@@ -794,10 +1079,10 @@ function GapsStrip({
       {gaps.length > 0 ? (
         <ul
           style={{
-            marginTop: 20,
+            marginTop: 14,
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))",
-            gap: 14,
+            gridTemplateColumns: "repeat(auto-fit,minmax(min(250px,100%),1fr))",
+            gap: 10,
           }}
         >
           {gaps.map((gap, i) => {
@@ -806,12 +1091,14 @@ function GapsStrip({
               <li
                 key={gap.category}
                 style={{
-                  padding: "16px 18px",
-                  borderRadius: 14,
+                  padding: "12px 14px",
+                  borderRadius: 11,
                   border: "1px solid var(--line)",
                   background: "var(--card2)",
                 }}
               >
+                {/* Two lines are always reserved, so the bars line up across
+                    the three cards however long the category names run. */}
                 <div
                   style={{
                     display: "flex",
@@ -820,19 +1107,31 @@ function GapsStrip({
                     fontSize: 14.5,
                     fontWeight: 500,
                     lineHeight: 1.4,
+                    minHeight: "2.8em",
                   }}
                 >
                   <span style={{ color: "var(--tx3)", flex: "0 0 auto" }}>
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span style={{ minWidth: 0 }}>{gap.category}</span>
+                  <span
+                    title={gap.category}
+                    style={{
+                      minWidth: 0,
+                      display: "-webkit-box",
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                    }}
+                  >
+                    {gap.category}
+                  </span>
                 </div>
 
                 <div
                   style={{
-                    marginTop: 14,
+                    marginTop: 12,
                     position: "relative",
-                    height: 7,
+                    height: 6,
                     borderRadius: 99,
                     background: "var(--line)",
                   }}
@@ -888,10 +1187,10 @@ function GapsStrip({
       ) : pending ? (
         <ul
           style={{
-            marginTop: 20,
+            marginTop: 14,
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))",
-            gap: 14,
+            gridTemplateColumns: "repeat(auto-fit,minmax(min(250px,100%),1fr))",
+            gap: 10,
           }}
         >
           {[0, 1, 2].map((i) => (

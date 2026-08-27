@@ -10,7 +10,7 @@ const steps = [
   {
     n: "02",
     title: "Score",
-    body: "Pick a target role and see your gap out of 100 — skill by skill.",
+    body: "Pick a target role and see your gap out of 100, skill by skill.",
   },
   {
     n: "03",
@@ -51,7 +51,7 @@ export default function LoopSection() {
         <Pill>The closed loop</Pill>
         <SectionIntro
           heading="Most tools hand you one piece. SkillDrift closes the loop."
-          copy="Every other product gives you one arc of this circle — a course library, a resume builder, a job board. The loop is why your score moves instead of your bookmarks piling up."
+          copy="Every other product gives you one arc of this circle: a course library, a resume builder, a job board. The loop is why your score moves instead of your bookmarks piling up."
         />
 
         <div

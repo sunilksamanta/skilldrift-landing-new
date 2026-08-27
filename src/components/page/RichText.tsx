@@ -7,6 +7,7 @@ import type { PriceToken } from "@/lib/region";
  * Content strings in `pages.json` may carry three things, and nothing else —
  * this is deliberately not a markdown renderer:
  *
+ * - bold, as `**like this**`
  * - inline links, as `[label](/href)`
  * - a price, as `{topup}` / `{unlimited}` / `{free}`, in the visitor's currency
  * - a regional variant, as `{{shown in India|shown everywhere else}}`
@@ -21,6 +22,7 @@ export default function RichText({ text }: { text: string }) {
 const VARIANT = /\{\{([\s\S]*?)\|([\s\S]*?)\}\}/g;
 const PRICE = /\{(free|topup|unlimited)\}/g;
 const LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
+const BOLD = /\*\*([^*]+)\*\*/g;
 
 function renderVariants(text: string): ReactNode[] {
   return split(text, VARIANT, (match, key) => (
@@ -41,6 +43,20 @@ function renderVariants(text: string): ReactNode[] {
 function renderPrices(text: string): ReactNode[] {
   return split(text, PRICE, (match, key) => (
     <Price key={key} kind={match[1] as PriceToken} />
+  )).map((part, i) =>
+    typeof part === "string" ? (
+      <Fragment key={i}>{renderBold(part)}</Fragment>
+    ) : (
+      <Fragment key={i}>{part}</Fragment>
+    ),
+  );
+}
+
+function renderBold(text: string): ReactNode[] {
+  return split(text, BOLD, (match, key) => (
+    <strong key={key} style={{ fontWeight: 600, color: "var(--tx)" }}>
+      {renderLinks(match[1])}
+    </strong>
   )).map((part, i) =>
     typeof part === "string" ? (
       <Fragment key={i}>{renderLinks(part)}</Fragment>

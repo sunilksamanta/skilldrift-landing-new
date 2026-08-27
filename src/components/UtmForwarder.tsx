@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-import { APP_SIGN_IN } from "@/lib/cta";
+import { APP_ORIGIN } from "@/lib/cta";
 
 /**
  * Carries acquisition parameters across to the app.
@@ -66,7 +66,7 @@ export default function UtmForwarder() {
     const inbound = readInbound();
     if (Object.keys(inbound).length === 0) return;
 
-    const { host } = new URL(APP_SIGN_IN);
+    const { host } = new URL(APP_ORIGIN);
     document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((anchor) => {
       let url: URL;
       try {

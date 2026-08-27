@@ -184,6 +184,64 @@ button {
   }
 }
 
+/* Below the nav breakpoint the header is only the lockup, the theme toggle and
+   one button. They stay on one row, and the lockup gives up size first: scale,
+   then the tagline, then the button's padding. */
+
+.sd-headpad {
+  gap: 32px;
+}
+
+.sd-headactions {
+  gap: 14px;
+}
+
+@media (max-width: 700px) {
+  .sd-headpad {
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .sd-lockup {
+    --sd-mark: 36px;
+    --sd-text: 22px;
+  }
+  .sd-header-cta {
+    height: 40px;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .sd-headpad {
+    gap: 12px;
+  }
+  .sd-headactions {
+    gap: 10px;
+  }
+  .sd-lockup {
+    --sd-mark: 32px;
+    --sd-text: 20px;
+  }
+  /* The tagline sets the lockup's width; the mark and name still read as the
+     logo without it. */
+  .sd-lockup [data-sd-tagline] {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .sd-lockup {
+    --sd-mark: 28px;
+    --sd-text: 18px;
+  }
+  .sd-header-cta {
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
 /* The design's two-column hero is a fixed 440px auto-fit grid; below that it
    would overflow, so drop to a single column and reclaim the vertical rhythm. */
 @media (max-width: 1000px) {
@@ -280,4 +338,68 @@ details > summary::-webkit-details-marker {
 html[data-sd-region="in"] [data-sd-region-only="in"],
 html[data-sd-region="row"] [data-sd-region-only="row"] {
   display: revert;
+}
+
+/* ---- angled split rule ----
+   Divides the result header into its two halves. Fades out at both ends so it
+   reads as a separator rather than a border, and drops out once the two halves
+   stack. */
+
+.sd-split-rule {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 1.5px;
+  height: 46px;
+  border-radius: 99px;
+  transform: rotate(14deg);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--ac) 30%,
+    var(--ac) 70%,
+    transparent
+  );
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .sd-split-rule {
+    display: none;
+  }
+}
+
+/* ---- result cards, dark only ----
+   A faint grid fading in from one corner, with the brand glow behind it. The
+   light theme already has enough separation from the page; dark needs the
+   cards to feel like objects rather than holes. Both layers sit at z-index -1
+   inside the card's own stacking context, so they paint over its background
+   but under everything in it. */
+
+.sd-result-card {
+  isolation: isolate;
+}
+
+html[data-sd-theme="dark"] .sd-result-card::before,
+html[data-sd-theme="dark"] .sd-result-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+html[data-sd-theme="dark"] .sd-result-card::before {
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(circle at 78% 100%, #000, transparent 70%);
+  mask-image: radial-gradient(circle at 78% 100%, #000, transparent 70%);
+}
+
+html[data-sd-theme="dark"] .sd-result-card::after {
+  right: -90px;
+  bottom: -90px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(124, 93, 249, 0.22), transparent 66%);
 }

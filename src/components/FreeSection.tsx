@@ -4,17 +4,17 @@ import { ArrowRight, Check } from "./icons";
 import { Pill, SectionIntro } from "./SectionBits";
 
 const freeItems: [string, string][] = [
-  ["Skill gap analysis", " — scored against the role you want"],
+  ["Skill gap analysis", ": scored against the role you want"],
   ["A career path", ", built automatically when you upload your resume"],
   [
     "Re-scoring every time you upskill",
-    " — the loop never costs you anything to turn",
+    ": the loop never costs you anything to turn",
   ],
-  ["Resume and ATS analysis", " — the full diagnosis"],
+  ["Resume and ATS analysis", ": the full diagnosis"],
   ["Job matching with match scores", ", out of 100"],
   ["Jobs and internships", " we bring onto the platform"],
   ["Basic job analysis", " on any role"],
-  ["One AI course for your domain", " — the whole course, not a preview"],
+  ["One AI course for your domain", ": the whole course, not a preview"],
   ["Podcasts", " alongside your learning resources"],
   ["Industry news for your field", ", curated daily"],
 ];
@@ -42,7 +42,7 @@ export default function FreeSection() {
         <Pill>What&rsquo;s free</Pill>
         <SectionIntro
           heading="Most of SkillDrift costs nothing."
-          copy="Finding out where you stand is free — permanently. You spend credits only when you’re producing something to send to an employer."
+          copy="Finding out where you stand is free, permanently. You spend credits only when you’re producing something to send to an employer."
         />
 
         <div
@@ -173,7 +173,7 @@ export default function FreeSection() {
                 color: "var(--tx2)",
               }}
             >
-              Everything that produces a finished artefact &mdash; something you send,
+              Everything that produces a finished artefact: something you send,
               download, or put your name on. One of them refunds itself.
             </p>
             <ul style={{ marginTop: 26, display: "flex", flexDirection: "column" }}>

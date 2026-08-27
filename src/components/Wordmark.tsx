@@ -3,6 +3,10 @@ import Image from "next/image";
 /**
  * The brand lockup: mark, "SkillDrift", and the tagline set smaller directly
  * beneath the name so the three read as one logo rather than three elements.
+ *
+ * `markSize` and `textSize` are defaults, not fixed values — a caller can
+ * override either with the `--sd-mark` / `--sd-text` custom properties, which
+ * is how the header shrinks the lockup on narrow screens.
  */
 export default function Wordmark({
   markSize = 38,
@@ -24,7 +28,11 @@ export default function Wordmark({
         width={220}
         height={221}
         priority
-        style={{ height: markSize, width: "auto", display: "block" }}
+        style={{
+          height: `var(--sd-mark, ${markSize}px)`,
+          width: "auto",
+          display: "block",
+        }}
       />
       {/* The lockup sets its own alignment so a centred container — the CTA
           band — cannot centre "SkillDrift" over the wider tagline. */}
@@ -39,7 +47,7 @@ export default function Wordmark({
       >
         <span
           style={{
-            fontSize: textSize,
+            fontSize: `var(--sd-text, ${textSize}px)`,
             fontWeight: 600,
             letterSpacing: "-0.02em",
             color: tone === "onColor" ? "#FFFFFF" : "var(--tx)",
@@ -49,9 +57,10 @@ export default function Wordmark({
         </span>
         {tagline && (
           <span
+            data-sd-tagline=""
             style={{
-              marginTop: Math.round(textSize * 0.18),
-              fontSize: Math.max(10, Math.round(textSize * 0.42)),
+              marginTop: `calc(var(--sd-text, ${textSize}px) * 0.18)`,
+              fontSize: `max(10px, calc(var(--sd-text, ${textSize}px) * 0.42))`,
               fontWeight: 500,
               letterSpacing: "-0.005em",
               whiteSpace: "nowrap",

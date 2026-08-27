@@ -28,7 +28,8 @@ export function SectionIntro({
   copyPadTop,
 }: {
   heading: ReactNode;
-  copy: ReactNode;
+  /** Optional — a section whose heading says it all renders full width. */
+  copy?: ReactNode;
   align?: "end" | "start";
   copyPadTop?: number;
 }) {
@@ -37,7 +38,9 @@ export function SectionIntro({
       style={{
         marginTop: 26,
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit,minmax(min(320px,100%),1fr))",
+        gridTemplateColumns: copy
+          ? "repeat(auto-fit,minmax(min(320px,100%),1fr))"
+          : "minmax(0,1fr)",
         gap: 48,
         alignItems: align,
       }}
@@ -48,20 +51,23 @@ export function SectionIntro({
           lineHeight: 1.13,
           fontWeight: 600,
           letterSpacing: "-0.025em",
+          maxWidth: copy ? undefined : 900,
         }}
       >
         {heading}
       </h2>
-      <p
-        style={{
-          paddingTop: copyPadTop,
-          fontSize: 16,
-          lineHeight: 1.62,
-          color: "var(--tx2)",
-        }}
-      >
-        {copy}
-      </p>
+      {copy && (
+        <p
+          style={{
+            paddingTop: copyPadTop,
+            fontSize: 16,
+            lineHeight: 1.62,
+            color: "var(--tx2)",
+          }}
+        >
+          {copy}
+        </p>
+      )}
     </div>
   );
 }

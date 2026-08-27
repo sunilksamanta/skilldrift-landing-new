@@ -2,6 +2,7 @@ import type { Block } from "@/content/types";
 import { ArrowRight, Check } from "../icons";
 import PlanCards from "../PlanCards";
 import FeatureRows from "./FeatureRows";
+import LegalDoc from "./LegalDoc";
 import RichText from "./RichText";
 import { CardGrid, FactList, PriceTable, Section, StepList } from "./blocks";
 
@@ -16,6 +17,8 @@ export default function BlockRenderer({
   // featureRows brings its own sections, so it is handled before the shared
   // section shell is built.
   if (block.type === "featureRows") return <FeatureRows />;
+  // The legal documents bring their own section shell and heading scale.
+  if (block.type === "legal") return <LegalDoc doc={block.doc} />;
 
   const shell = {
     id: block.id,

@@ -26,24 +26,35 @@ const columns: { title: string; links: FooterLink[] }[] = [
       { href: "/about", label: "About Us" },
       { href: "/contact", label: "Contact Us" },
       { href: "/contact", label: "Careers" },
-      { href: "/contact", label: "For Institutions" },
+      { href: "https://skilldrift.org", label: "For Institutions", external: true },
       { href: "/contact", label: "For employers" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { section: "top", label: "Privacy Policy" },
-      { section: "top", label: "Terms of Use" },
-      { section: "top", label: "Data Protection" },
+      { href: "/privacy-policy", label: "Privacy Policy" },
+      { href: "/terms-of-use", label: "Terms of Use" },
+      { href: "/data-protection", label: "Data Protection" },
     ],
   },
   {
     title: "Follow",
     links: [
       { href: "https://www.linkedin.com/company/skilldrift", label: "LinkedIn", external: true },
+      { href: "https://www.youtube.com/@SkillDrift-AI", label: "YouTube", external: true },
       { href: "https://www.instagram.com/skilldriftindia/", label: "Instagram", external: true },
       { href: "https://www.facebook.com/skilldriftindia", label: "Facebook Page", external: true },
+      {
+        href: "https://theresanaiforthat.com/ai/skilldrift/",
+        label: "There's An AI For That",
+        external: true,
+      },
+      {
+        href: "https://alternativeto.net/software/skilldrift/",
+        label: "AlternativeTo",
+        external: true,
+      },
     ],
   },
 ];

@@ -1,0 +1,412 @@
+{
+  "updated": "Effective Date/Last Modified: 6th June 2025",
+  "standfirst": null,
+  "intro": [],
+  "sections": [
+    {
+      "heading": "Overview",
+      "body": [
+        {
+          "p": "This Privacy Policy describes:"
+        },
+        {
+          "list": [
+            "Information that we receive from you when you interact with the Services",
+            "How we use and process the information that we receive",
+            "If and why Personal Information may be disclosed to third parties",
+            "Your choices regarding the collection and processing of your Personal Information"
+          ]
+        },
+        {
+          "p": "Please note that this Privacy Policy does not apply to information collected through third-party websites or services that you may access through the Services or that you submit to us through e-mail, text message, other electronic message or offline."
+        },
+        {
+          "panel": "warn",
+          "body": [
+            {
+              "p": "PLEASE REVIEW THIS PRIVACY POLICY CAREFULLY."
+            },
+            {
+              "p": "When you submit information to or through the Services, you consent to the collection and processing of your information as described in this Privacy Policy."
+            }
+          ]
+        },
+        {
+          "p": "By using the Services, you accept the terms of this Privacy Policy and our Terms of Use and consent to our collection, use, disclosure and retention of your information as described in this Privacy Policy."
+        },
+        {
+          "p": "This Privacy Policy is incorporated into and made a part of our Terms of Use."
+        },
+        {
+          "panel": "alert",
+          "body": [
+            {
+              "p": "IF YOU DO NOT AGREE WITH ANY PART OF THIS PRIVACY POLICY OR OUR TERMS OF USE, PLEASE DO NOT USE ANY OF THE SERVICES."
+            }
+          ]
+        },
+        {
+          "p": "The Effective Date of this Privacy Policy is set forth at the top of this Policy. Whenever possible, we will provide you with advance written notice of our changes to this Privacy Policy. We will not make retroactive changes that reduce your privacy rights unless we are legally required to do so. Your continued use of the Services after the Effective Date constitutes your acceptance of the amended Privacy Policy. The amended Privacy Policy supersedes all previous versions."
+        }
+      ]
+    },
+    {
+      "heading": "1. Information We Collect",
+      "body": [
+        {
+          "h3": "Types of Information"
+        },
+        {
+          "p": "We collect various kinds of information that you provide to us as well as information we obtain from your use of the Services. Some of the types of information that we collect include:"
+        },
+        {
+          "panel": "panel",
+          "body": [
+            {
+              "p": "\"Personal Information\""
+            },
+            {
+              "p": "Information associated with or used to identify or contact a specific person. Personal Information includes:"
+            },
+            {
+              "list": [
+                "Contact data (such as e-mail address, telephone number and employer)",
+                "Demographic data (such as gender, date of birth and zip code)",
+                "Certain Usage Data (defined below), such as IP address",
+                "Your current skillsets derived using AI from your on & off job activities as mentioned in your resume or LinkedIn profile and any such information that you agree to share with us through your personnel website among others",
+                "Your aspirations that you agree to share with us",
+                "Your educational background including the certificates that you may upload on our platform from time to time"
+              ]
+            }
+          ]
+        },
+        {
+          "p": "Certain Personal Information, such as information about personal health or finances, is characterized as Sensitive and subject to stricter regulation than other personal information. Before providing it to use, we urge you to carefully consider whether to disclose your Sensitive Personal Information to us. If you do provide Sensitive Personal Information to us, you consent to its use and disclosure for the purposes and in the manner described in this Privacy Policy."
+        },
+        {
+          "panel": "panel",
+          "body": [
+            {
+              "p": "\"Usage Data\""
+            },
+            {
+              "p": "Information about an individual's online activity that, by itself, does not identify the individual, such as:"
+            },
+            {
+              "list": [
+                "Technical information, including your browser type, service provider, IP address, operating system and webpages visited",
+                "Information about what you've searched for and looked at while using the Services",
+                "Metadata, which means information related to items you made available through the Services, such as the date, time or location that a shared photograph or video was taken or posted"
+              ]
+            }
+          ]
+        },
+        {
+          "p": "(Generally, we do not consider Usage Data as Personal Information because Usage Data by itself usually does not identify an individual. Personal Information and Usage Data may be linked together. Different types of Usage Information also may be linked together and, once linked, may identify an individual person. Some Usage Data may be Personal Information under applicable law.)"
+        },
+        {
+          "panel": "panel",
+          "body": [
+            {
+              "p": "\"Location Data\""
+            },
+            {
+              "p": "A category of Personal Information collected about the location of a mobile device or computer, including:"
+            },
+            {
+              "list": [
+                "The location of the mobile device or computer used to access the Services derived from GPS or WiFi use",
+                "The IP address of the mobile device or computer or internet service used to access the Services",
+                "Other information made available by a user or others that indicates the current or prior location of the user, such as information that you or others post indicating your location or geotag information in photographs"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "2. How We Collect Information",
+      "body": [
+        {
+          "p": "Whether we collect certain types of information and how we process it depends on how you use and access the Services. Some information is collected automatically through use of cookies and similar data collection tools. We collect information about you in the following ways:"
+        },
+        {
+          "h3": "From You"
+        },
+        {
+          "p": "We collect information from you when you:"
+        },
+        {
+          "list": [
+            "**Use the Services.** We collect Personal Information from you when you create an account to use one of the Services, contact us for help or information or otherwise voluntarily provide your Personal Information. We collect the information and content that you submit to us, such as when you enter comments or submit a review.",
+            "**Connect with social media though the Services.** The Services may offer you the ability to use Facebook Connect or other social media services (collectively, \"social media\") in conjunction with certain Services. When you access the Services through your Facebook or other Social Media account, the Services may, depending on your privacy settings, have access to information that you have provided to the Social Media platform. We may use this information for the purposes described in this Privacy Policy or at the time the information was collected."
+          ]
+        },
+        {
+          "h3": "From Our Business Partners and Service Providers"
+        },
+        {
+          "p": "Third parties that assist us with our business operations also collect information (including Personal Information and Usage Data) about you through the Services and share it with us. For example, our vendors collect and share information with us to help us detect and prevent fraud."
+        },
+        {
+          "p": "We may combine the information we collect from you with information from other sources and use the combined information as described in this Privacy Policy."
+        },
+        {
+          "h3": "Usage Data"
+        },
+        {
+          "p": "We also automatically collect Usage Data when you interact with the Services."
+        },
+        {
+          "h3": "From cookies and other data collection tools"
+        },
+        {
+          "p": "We, along with the service providers that help us provide the Services, use small text files called \"cookies\", which are small computer files sent to or accessed from your web browser or your computer's or tablet's hard drive that contain information about your computer, such as a user ID, user settings, browsing history and activities conducted while using the Services. Cookies are not themselves personally identifiable, but may be linked to Personal Information that you provide to us through your interaction with the Services."
+        },
+        {
+          "p": "Cookies help us improve the Services by tracking users' navigation habits and storing users' password, customizing users' experience with the Services; enabling us to analyze technical and navigational information about the Services; and helping to detect and prevent fraud."
+        },
+        {
+          "p": "We also use other cookies and other data collection tools (such as web beacons and server logs), which we collectively refer to as \"data collection tools,\" to help improve your experience with the Services."
+        },
+        {
+          "p": "Web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to manage and delete cookies, visit [www.allaboutcookies.org](http://www.allaboutcookies.org). Although users are not required to accept cookies or mobile device identifiers, blocking or rejecting them may prevent access to some features available through the Services."
+        }
+      ]
+    },
+    {
+      "heading": "Resumes uploaded without an account",
+      "body": [
+        {
+          "p": "You can upload a resume on our website without signing in or creating an account. We process that file to produce your readiness score, the skill gaps holding it down and your matched roles, and we show them to you in place. We do not email you as a result of that upload."
+        },
+        {
+          "p": "The upload creates a temporary guest session, identified by a token held in your browser's local storage. That session lasts **48 hours**, after which it expires and the results can no longer be retrieved. If you create an account or sign in while the session is still live, the resume and the analysis generated from it are transferred to your account, and are from that point covered by the rest of this Privacy Policy."
+        },
+        {
+          "p": "If you never create an account, the uploaded file and everything derived from it are deleted within **30 days**."
+        },
+        {
+          "panel": "panel",
+          "body": [
+            {
+              "h3": "Limits on this upload"
+            },
+            {
+              "list": [
+                "Accepted formats are PDF, DOC and DOCX, up to 5 MB per file",
+                "Uploads are rate limited by IP address to protect the service from abuse",
+                "One analysis is produced per upload; uploading again starts a new session"
+              ]
+            }
+          ]
+        },
+        {
+          "p": "To stop automated abuse of this upload we use **Google reCAPTCHA v3**, which collects hardware and software information from your device and browser and sends it to Google for analysis. Your use of reCAPTCHA is subject to Google's [Privacy Policy](https://policies.google.com/privacy) and [Terms of Service](https://policies.google.com/terms)."
+        }
+      ]
+    },
+    {
+      "heading": "3. How We Use Your Information",
+      "body": [
+        {
+          "p": "We may use the information we collect for any of the following purposes:"
+        },
+        {
+          "list": [
+            "To provide the Services to you",
+            "To operate, improve and personalize the products and services we offer, and to give each user a more consistent and personalized experience when interacting with us",
+            "For customer service, security, to detect fraud or illegal activities, or for archival and backup purposes in connection with the provision of the Services",
+            "To communicate with users",
+            "To better understand how users access and use the Services, for the purposes of trying to improve the Services and to respond to user preferences, including language and location customization, personalized help and instructions, or other responses to users' usage of the Services",
+            "To help us develop our new products and services and improve our existing products and services",
+            "To provide users with advertising and direct marketing that is more relevant to you",
+            "To enforce our Terms of Use or other applicable policies",
+            "To assess the effectiveness of and improve advertising and other marketing and promotional activities on or in connection with the Services"
+          ]
+        },
+        {
+          "p": "Please note that, in order to provide you with a better experience and to improve the Services, information collected through the Services may be used in an aggregated or individualized manner."
+        },
+        {
+          "p": "For example, personal information collected during use of one of the services may be used to suggest particular content that can be made available to the user on another of the Services or be used to try to present more relevant advertising in another of the Services."
+        }
+      ]
+    },
+    {
+      "heading": "4. How We Share and Disclose Your Information",
+      "body": [
+        {
+          "p": "We may share and disclose information as described at the time information is collected or as follows:"
+        },
+        {
+          "h3": "When you consent"
+        },
+        {
+          "p": "We may share Personal Information with third parties if you have given us your consent to do so. We will only share Sensitive Personal Information when you have given us your opt-in consent."
+        },
+        {
+          "h3": "With Analytics Service Providers"
+        },
+        {
+          "p": "We use Mixpanel, a third-party analytics service, to understand how users interact with our app. Mixpanel collects information such as device identifiers, approximate location (city/country level), and usage data (app sessions, feature interactions). This data helps us improve app performance and user experience. Mixpanel processes this data in accordance with their privacy policy at [mixpanel.com/legal/privacy-policy](https://mixpanel.com/legal/privacy-policy). You can learn more about Mixpanel's data practices at [mixpanel.com/legal/app-store-privacy-details](https://mixpanel.com/legal/app-store-privacy-details)."
+        },
+        {
+          "h3": "To perform services"
+        },
+        {
+          "p": "We may disclose Personal Information to third parties in order to perform services requested or functions initiated by users, such as URL redirection to Learning & Development websites such as Coursera, Udemy among others. In addition, we may disclose Personal Information in order to identify a user in connection with communications sent through the Services. We also may offer users the opportunity to share information with friends and other users through the Services."
+        },
+        {
+          "h3": "With third party service providers performing services on our behalf"
+        },
+        {
+          "p": "We share information, including Personal Information, with our service providers to perform the functions for which we engage them (such as hosting and data analyses). We may share information as needed to operate other related services."
+        },
+        {
+          "h3": "With Payment Processors:"
+        },
+        {
+          "p": "We share payment and transaction information with Razorpay, Stripe, Apple (for iOS purchases), and Google (for Android purchases) as necessary to process your transactions."
+        },
+        {
+          "h3": "For legal purposes"
+        },
+        {
+          "p": "We also may share information that we collect from users, as needed, to enforce our rights, protect our property or protect the rights, property or safety of others, or as needed to support external auditing, compliance and corporate governance functions. We will disclose Personal Information as we deem necessary to respond to a subpoena, regulation, binding order of a data protection agency, legal process, governmental request or other legal or regulatory process. We may also share Personal Information as required to pursue available remedies or limit damages we may sustain."
+        },
+        {
+          "h3": "In aggregated form"
+        },
+        {
+          "p": "We may share Personal Information about you in an aggregated form - that is, in a statistical or summary form that does not include any personal identifiers - with third parties in order to discover and reveal trends about how users like you interact with our services."
+        },
+        {
+          "h3": "With Mobile Platform Providers"
+        },
+        {
+          "p": "We share necessary data with Apple (for iOS users) and Google (for Android users) to facilitate in-app purchases, analytics, and app store compliance."
+        },
+        {
+          "h3": "During corporate changes"
+        },
+        {
+          "p": "We may transfer information, including your Personal Information, in connection with a merger, sale, acquisition or other change of ownership or control by or of us or any affiliated company (in each case whether in whole or in part). When one of these events occurs, we will use reasonable efforts to notify users before your information is transferred or becomes subject to a different privacy policy."
+        }
+      ]
+    },
+    {
+      "heading": "5. Payment Processing and Platform-Specific Data Collection",
+      "body": [
+        {
+          "h3": "Web Platform:"
+        },
+        {
+          "list": [
+            "Payments are processed by Razorpay (for Indian users) and Stripe (for Non Indian Users)",
+            "We share necessary payment information with these processors",
+            "We do not store payment card details on our servers"
+          ]
+        },
+        {
+          "h3": "iOS Mobile App:"
+        },
+        {
+          "list": [
+            "All purchases are processed by Apple through the App Store",
+            "Purchase data is shared with Apple according to their App Store terms",
+            "We may receive limited transaction receipts from Apple for verification"
+          ]
+        },
+        {
+          "h3": "Android Mobile App:"
+        },
+        {
+          "list": [
+            "All purchases are processed by Google through Google Play Store",
+            "Purchase data is shared with Google according to their Play Store terms",
+            "We may receive limited transaction receipts from Google for verification"
+          ]
+        },
+        {
+          "h3": "Cross-Platform Account Data:"
+        },
+        {
+          "list": [
+            "Account information syncs between web and mobile platforms",
+            "Usage analytics may differ between platforms",
+            "Mobile apps may collect additional device-specific data (device ID, app usage patterns)"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "6. Information Storage and Security",
+      "body": [
+        {
+          "p": "We retain information as long as it is necessary and relevant for our operations. We also retain Personal Information from closed accounts to comply with applicable law, prevent fraud, resolve disputes, troubleshoot problems, assist with any investigation, enforce our Terms of Use, collect any fees owed and other actions permitted by law. After it is no longer necessary for us to retain information, we dispose of it according to our data retention and deletion policies."
+        },
+        {
+          "p": "We employ industry-standard security measures designed to protect the security of all information submitted through the Services. However, the security of information transmitted through the internet can never be guaranteed. We are not responsible for any interception or interruption of any communications through the internet or for changes to or losses of data. Users of the Services are responsible for maintaining the security of any password, user ID or other form of authentication involved in obtaining access to password protected or secure areas of any of our digital services. In order to protect you and your data, we may suspend your use of any of the Services, without notice, pending an investigation, if any breach of security is suspected. Access to and use of password protected and/or secure areas of any of the Services are restricted to authorized users only. Unauthorized access to such areas is prohibited and may lead to criminal prosecution."
+        }
+      ]
+    },
+    {
+      "heading": "7. Your Rights",
+      "body": [
+        {
+          "p": "It is important to us that you are able to access and review the Personal Information we have about you and make corrections to it or delete it, as necessary. You can visit your account to manage and correct the information we have on file about you. If you have any questions about how to access your Personal Information, please contact us at the email address provided below."
+        }
+      ]
+    },
+    {
+      "heading": "8. Links to Third Party Services",
+      "body": [
+        {
+          "p": "The Services may contain links to third-party websites and services \"Third Party Services\" with which we have no affiliation. A link to any Third Party Service does not mean that we endorse it or the quality or accuracy of information presented on it. If you decide to visit a Third Party Service, you are subject to its privacy policy and practices and not this Privacy Policy. We encourage you to carefully review the legal and privacy notices of all other digital services that you visit."
+        }
+      ]
+    },
+    {
+      "heading": "9. Disclaimer: Not Child-Directed",
+      "body": [
+        {
+          "p": "The Services are not intended for use by children. If you are under the age of majority in your place of residence, you may use the Services only with the consent of or under the supervision of your parent or legal guardian."
+        },
+        {
+          "p": "Consistent with the requirements of the Children's Online Privacy Protection Act (COPPA), if we learn that we have received any information directly from a child under age 13 without first receiving his or her parent's verified consent, we will use that information only to respond directly to that child (or his or her parent or legal guardian) to inform the child that he or she cannot use the Services and subsequently we will delete that information."
+        }
+      ]
+    },
+    {
+      "heading": "10. U.S./EU/Swiss Data Privacy Framework Certification",
+      "body": [
+        {
+          "p": "We comply with the EU-U.S. Data Privacy Framework (DPF) and the Swiss-U.S. Data Privacy Framework (DPF), as set forth by the U.S. Department of Commerce, regarding the collection, use, and retention of personal information from European Union member countries and Switzerland. We have certified that we adhere to the DPF Principles of notice, choice, accountability for onward transfer, security, data integrity and purpose limitation, access, and recourse, enforcement, and liability. To learn more about the DPF program, and to view our certification, please visit [https://www.dataprivacyframework.gov](https://www.dataprivacyframework.gov)."
+        },
+        {
+          "p": "Any personal information collected about EU visitors through the Services is processed in the United States by us or by a party acting on our behalf. When you provide personal information to us through the Services, you consent to the processing of your data in the United States. The Services are hosted in the United States."
+        }
+      ]
+    },
+    {
+      "heading": "11. Contact",
+      "body": [
+        {
+          "p": "If you have any questions or comments about these terms and conditions, then feel free to contact us by electronic mail to [legal@skilldrift.ai](mailto:legal@skilldrift.ai) or by hard copy:"
+        },
+        {
+          "panel": "panel",
+          "body": [
+            {
+              "p": "Four Calvert Street, Newport, Rhode Island, 02849 (USA)"
+            }
+          ]
+        },
+        {
+          "p": "Last updated: 6th June 2025"
+        }
+      ]
+    }
+  ]
+}

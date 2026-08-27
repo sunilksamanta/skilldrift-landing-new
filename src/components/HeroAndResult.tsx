@@ -5,10 +5,11 @@ import { useCallback, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, DocPlus, DocScan } from "./icons";
 import GuestResultSection from "./GuestResultSection";
-import SectionLink from "./SectionLink";
 import { homeCta } from "@/lib/cta";
 import { ACCEPTED_TYPES } from "@/lib/guest-api";
 import { useGuestAnalysis } from "@/hooks/useGuestAnalysis";
+import { AnalyticsEvents, track } from "@/lib/analytics";
+import { markUploadStarted } from "@/lib/anon-session";
 
 /* av2 is used by a testimonial below, so the stack borrows av9 instead. */
 const avatars = ["av1", "av9", "av3", "av4"];
@@ -25,21 +26,43 @@ export default function HeroAndResult() {
   const guest = useGuestAnalysis();
   const inputRef = useRef<HTMLInputElement>(null);
   const [dragging, setDragging] = useState(false);
+  // The marketing opt-in checkbox is commented out in the markup below, so
+  // this is always false today. Re-enabling it means making this state again
+  // and pointing the box's `checked`/`onChange` at it.
+  const optIn = false;
+  // Which control the file came from. Read at upload time, not at click time,
+  // because the picker opens from two different buttons.
+  const entryMethod = useRef<"drag_drop" | "file_picker">("file_picker");
 
   const { phase, status, fileName, error } = guest;
   const busy = phase === "uploading" || phase === "processing";
   const done = phase === "ready";
 
   const openPicker = useCallback(() => {
-    if (!busy) inputRef.current?.click();
+    if (busy) return;
+    entryMethod.current = "file_picker";
+    inputRef.current?.click();
   }, [busy]);
 
   const takeFile = useCallback(
     (files: FileList | null) => {
       const file = files?.[0];
-      if (file) guest.upload(file);
+      if (!file) return;
+
+      // Fires the moment the file lands, before any processing — so the
+      // denominator counts every attempt, including ones we reject.
+      const extension = file.name.split(".").pop()?.toLowerCase() ?? null;
+      markUploadStarted();
+      track(AnalyticsEvents.ANONYMOUS_UPLOAD_STARTED, {
+        file_type: extension,
+        file_size_bytes: file.size,
+        entry_method: entryMethod.current,
+        marketing_opt_in: optIn,
+      });
+
+      guest.upload(file);
     },
-    [guest],
+    [guest, optIn],
   );
 
   const ctaLabel =
@@ -57,7 +80,7 @@ export default function HeroAndResult() {
         id="top"
         style={{
           position: "relative",
-          padding: done ? "110px 0 0" : "64px 0 110px",
+          padding: done ? "36px 0 0" : "64px 0 110px",
         }}
       >
         <div
@@ -228,7 +251,7 @@ export default function HeroAndResult() {
                           letterSpacing: "-0.01em",
                         }}
                       >
-                        Now do it with your resume.
+                        Start with your resume.
                       </h2>
                       <span
                         style={{
@@ -289,7 +312,9 @@ export default function HeroAndResult() {
                     onDrop={(e) => {
                       e.preventDefault();
                       setDragging(false);
-                      if (!busy) takeFile(e.dataTransfer.files);
+                      if (busy) return;
+                      entryMethod.current = "drag_drop";
+                      takeFile(e.dataTransfer.files);
                     }}
                     style={{
                       marginTop: 26,
@@ -352,7 +377,7 @@ export default function HeroAndResult() {
                         </div>
                         <div style={{ fontSize: 14, color: "var(--tx3)" }}>
                           {status === "analysis_ready"
-                            ? "Score is in — finding your gaps and matches\u2026"
+                            ? "Score is in, finding your gaps and matches\u2026"
                             : "Reading your skills and scoring them\u2026"}
                         </div>
                       </div>
@@ -441,8 +466,8 @@ export default function HeroAndResult() {
                     We read your resume to score it and find matches. We store it so you
                     don&rsquo;t have to upload it again if you make an account, and delete
                     it after 30 days if you don&rsquo;t.{" "}
-                    <SectionLink
-                      to="footer"
+                    <Link
+                      href="/privacy-policy"
                       style={{
                         color: "var(--tx2)",
                         textDecoration: "underline",
@@ -450,10 +475,10 @@ export default function HeroAndResult() {
                       }}
                     >
                       Privacy policy
-                    </SectionLink>
+                    </Link>
                     .
                   </p>
-                  <label
+                  {/* <label
                     style={{
                       marginTop: 14,
                       display: "flex",
@@ -475,13 +500,20 @@ export default function HeroAndResult() {
                       }}
                     />
                     <span>
-                      Send me occasional email about roles that match my profile. Unticked
-                      on purpose &mdash; separate from the score above.
+                      Send me occasional email about roles that match my profile.
                     </span>
-                  </label>
+                  </label> */}
 
                   <a
                     href={homeCta("hero_build_resume")}
+                    onClick={() =>
+                      track(AnalyticsEvents.ANONYMOUS_UPLOAD_STARTED, {
+                        file_type: null,
+                        file_size_bytes: null,
+                        entry_method: "build_resume_instead",
+                        marketing_opt_in: optIn,
+                      })
+                    }
                     style={{
                       marginTop: 24,
                       paddingTop: 24,

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import AnalyticsBootstrap from "@/components/AnalyticsBootstrap";
 import JsonLd from "@/components/JsonLd";
 import UtmForwarder from "@/components/UtmForwarder";
 import { organizationSchema } from "@/lib/schema";
@@ -55,6 +56,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: regionBootstrap }} />
       </head>
       <body>
+        <AnalyticsBootstrap />
         <UtmForwarder />
         {children}
       </body>

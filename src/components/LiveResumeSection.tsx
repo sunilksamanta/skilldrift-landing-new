@@ -4,7 +4,7 @@ import { Pill, SectionIntro } from "./SectionBits";
 
 const claims = [
   "Certificate written into the resume the moment you finish",
-  "One click to LinkedIn — and the 50 credits come back",
+  "One click to LinkedIn, and the 50 credits come back",
   "Your match score re-scores itself, free, every time",
 ];
 
@@ -15,7 +15,7 @@ export default function LiveResumeSection() {
         <Pill>Nobody else does this</Pill>
         <SectionIntro
           heading="Your resume stops going stale."
-          copy="Finish a course on SkillDrift and the certificate is added to your resume automatically — no re-uploading, no re-formatting, no forgetting it existed. Share it to LinkedIn in one click and the 50 credits it cost to issue land straight back in your balance."
+          copy="Finish a course on SkillDrift and the certificate is added to your resume automatically: no re-uploading, no re-formatting, no forgetting it existed. Share it to LinkedIn in one click and the 50 credits it cost to issue land straight back in your balance."
         />
 
         <div
@@ -162,7 +162,7 @@ export default function LiveResumeSection() {
                   color: "var(--ac)",
                 }}
               >
-                After &mdash; automatic
+                After - automatic
               </div>
               <div
                 style={{
@@ -220,7 +220,7 @@ export default function LiveResumeSection() {
                 <span style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                   <span style={{ fontSize: 12, color: "var(--ok)" }}>&#9650;</span>
                   <span style={{ fontSize: 22, fontWeight: 600, color: "var(--ac)" }}>
-                    79
+                    78
                   </span>
                 </span>
               </div>

@@ -71,6 +71,7 @@ export default async function ContentPage({
           standfirst={<RichText text={route.hero.standfirst} />}
           primaryCta={route.hero.primaryCta}
           secondaryCta={route.hero.secondaryCta}
+          noCta={route.hero.noCta}
           image={route.hero.image}
           imageAlt={route.hero.imageAlt}
           campaign={campaignFor(route.path)}

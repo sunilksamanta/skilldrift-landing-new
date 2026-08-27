@@ -14,6 +14,8 @@ import {
   type ResumeAnalysis,
   type SkillGapAnalysis,
 } from "@/lib/guest-api";
+import { AnalyticsEvents, track } from "@/lib/analytics";
+import { setReadinessScore } from "@/lib/anon-session";
 import {
   clearResult,
   clearSession,
@@ -26,6 +28,8 @@ import {
 
 const STATUS_POLL_MS = 3000;
 const JOBS_POLL_MS = 5000;
+/** Transient failures tolerated before the jobs card gives up. */
+const JOBS_MAX_FAILURES = 3;
 
 export type Phase =
   | "idle"
@@ -79,6 +83,12 @@ export function useGuestAnalysis() {
   const resultsStarted = useRef(false);
   /** Guards against a second upload starting while one is still in flight. */
   const uploading = useRef(false);
+  /** Consecutive job-poll failures. A tunnel blip must not empty the card. */
+  const jobFailures = useRef(0);
+  /** When this upload began, for the duration on the failure event. */
+  const startedAt = useRef(0);
+  /** Guards against reporting the same failure twice across pollers. */
+  const failureReported = useRef(false);
   const pollStatusRef = useRef<() => void>(() => {});
   const pollJobsRef = useRef<() => void>(() => {});
 
@@ -111,12 +121,24 @@ export function useGuestAnalysis() {
     timers.current = [];
   }, []);
 
+  /** Reported once per upload, whatever raised it. */
+  const reportFailure = useCallback((code: string, file?: string | null) => {
+    if (failureReported.current) return;
+    failureReported.current = true;
+    track(AnalyticsEvents.ANONYMOUS_ANALYSIS_FAILED, {
+      error_code: code,
+      file_type: file ? (file.split(".").pop()?.toLowerCase() ?? null) : null,
+      duration_ms: startedAt.current ? Date.now() - startedAt.current : null,
+    });
+  }, []);
+
   /** 410 is the only failure allowed to destroy the token. */
   const handleFatal = useCallback(
     (err: unknown) => {
       if (err instanceof GuestApiError && err.isExpired) {
         clearSession();
         session.current = null;
+        reportFailure("GUEST_SESSION_EXPIRED");
         patch({
           phase: "expired",
           guestToken: null,
@@ -125,12 +147,13 @@ export function useGuestAnalysis() {
         return true;
       }
       if (err instanceof GuestApiError && err.isAnalysisFailed) {
+        reportFailure(err.code);
         patch({ phase: "failed", error: err.message });
         return true;
       }
       return false;
     },
-    [patch],
+    [patch, reportFailure],
   );
 
   const pollJobs = useCallback(() => {
@@ -139,8 +162,8 @@ export function useGuestAnalysis() {
 
     fetchJobs(current.guestToken)
       .then((jobs) => {
+        jobFailures.current = 0;
         patch({ jobs });
-        // `failed` or an empty list simply hides the section.
         if (jobs.status === "processing") {
           later(() => pollJobsRef.current(), JOBS_POLL_MS);
         }
@@ -155,7 +178,12 @@ export function useGuestAnalysis() {
           handleFatal(err);
           return;
         }
-        // Anything else: drop the jobs section quietly, the rest of the page stands.
+        // A 502 from the tunnel is not "no jobs" — retry before giving up.
+        jobFailures.current += 1;
+        if (jobFailures.current < JOBS_MAX_FAILURES) {
+          later(() => pollJobsRef.current(), JOBS_POLL_MS);
+          return;
+        }
         patch({ jobs: { status: "failed", jobs: [] } });
       });
   }, [handleFatal, later, patch]);
@@ -164,7 +192,13 @@ export function useGuestAnalysis() {
     const current = session.current;
     if (!current) return;
     fetchResumeAnalysis(current.guestToken)
-      .then((analysis) => patch({ analysis, phase: "ready" }))
+      .then((analysis) => {
+        // Carried in a cookie the app can read, so the sign-up event on the
+        // other side of the hop can report the score this visitor saw.
+        const score = analysis?.analysis?.overall?.atsScore;
+        if (typeof score === "number") setReadinessScore(score);
+        patch({ analysis, phase: "ready" });
+      })
       .catch((err) => {
         if (err instanceof GuestApiError && err.isPending) return;
         handleFatal(err);
@@ -192,6 +226,7 @@ export function useGuestAnalysis() {
         patch({ status: res.status });
 
         if (res.status === "failed") {
+          reportFailure(res.error ?? "ANALYSIS_FAILED", current.fileName);
           patch({
             phase: "failed",
             error: res.error ?? "We couldn't read that resume. Try uploading it again.",
@@ -222,7 +257,7 @@ export function useGuestAnalysis() {
         if (handleFatal(err)) return;
         later(() => pollStatusRef.current(), STATUS_POLL_MS);
       });
-  }, [handleFatal, later, loadAnalysis, loadSkillGap, patch]);
+  }, [handleFatal, later, loadAnalysis, loadSkillGap, patch, reportFailure]);
 
   // Kept current after every render so the pollers can recurse through a ref
   // without either callback having to depend on the other.
@@ -235,6 +270,12 @@ export function useGuestAnalysis() {
     async (file: File) => {
       const invalid = validateFile(file);
       if (invalid) {
+        track(AnalyticsEvents.ANONYMOUS_ANALYSIS_FAILED, {
+          error_code: "CLIENT_VALIDATION",
+          file_type: file.name.split(".").pop()?.toLowerCase() ?? null,
+          file_size_bytes: file.size,
+          duration_ms: 0,
+        });
         patch({ phase: "idle", error: invalid });
         return;
       }
@@ -244,6 +285,9 @@ export function useGuestAnalysis() {
 
       stopTimers();
       resultsStarted.current = false;
+      jobFailures.current = 0;
+      failureReported.current = false;
+      startedAt.current = Date.now();
       session.current = null;
       clearResult();
       patch({ ...INITIAL, phase: "uploading", fileName: file.name });
@@ -264,12 +308,16 @@ export function useGuestAnalysis() {
           err instanceof GuestApiError
             ? err.message
             : "We couldn't reach the server. Check your connection and try again.";
+        reportFailure(
+          err instanceof GuestApiError ? err.code : "NETWORK_ERROR",
+          file.name,
+        );
         patch({ phase: "idle", error: message, fileName: null });
       } finally {
         uploading.current = false;
       }
     },
-    [patch, stopTimers],
+    [patch, reportFailure, stopTimers],
   );
 
   const reset = useCallback(() => {

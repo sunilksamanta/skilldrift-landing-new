@@ -7,6 +7,9 @@
  * sits under `data`; this module unwraps it so callers see the payload only.
  */
 
+import { anonSessionId } from "./anon-session";
+import { getRecaptchaToken } from "./recaptcha";
+
 const BASE = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "").replace(/\/+$/, "");
 
 export const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
@@ -28,7 +31,7 @@ export type ResumeAnalysis = {
   analysisCompleted: boolean;
   industryType?: string;
   analysis: {
-    personalInfo?: { name?: string; region?: string };
+    personalInfo?: { name?: string; email?: string; region?: string };
     totalYearsOfExperience?: number;
     jobSearchTitle?: string;
     jobSearchTitles?: string[];
@@ -182,10 +185,28 @@ function guestHeaders(token: string): HeadersInit {
  */
 export async function uploadResume(file: File): Promise<GuestSession> {
   const form = new FormData();
-  // Content-Type is deliberately unset: the browser adds the multipart boundary.
   form.append("file", file);
 
-  const res = await fetch(`${BASE}/api/guest/upload`, { method: "POST", body: form });
+  // Sent as a header, not a form field: the server checks it before parsing
+  // the upload, so a bot is turned away without the file being read.
+  const captchaToken = await getRecaptchaToken("guest_upload");
+
+  // The analytics join key travels with the upload so the API can attribute
+  // the events only it can fire — scoring finished, session merged — to the
+  // same anonymous visitor the browser events came from.
+  const anonId = anonSessionId();
+
+  const headers: Record<string, string> = {};
+  if (captchaToken) headers["x-recaptcha-token"] = captchaToken;
+  if (anonId) headers["x-anon-session-id"] = anonId;
+
+  const res = await fetch(`${BASE}/api/guest/upload`, {
+    method: "POST",
+    body: form,
+    // Content-Type is deliberately unset: the browser writes it, with the
+    // multipart boundary the server needs to parse the file.
+    headers,
+  });
   return parse<GuestSession>(res);
 }
 

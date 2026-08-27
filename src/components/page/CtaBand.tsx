@@ -20,7 +20,7 @@ export default function CtaBand({
   note?: string;
   campaign?: string;
 }) {
-  const cta = primary ?? { label: "Upload your resume — free", href: "/#top" };
+  const cta = primary ?? { label: "Upload your resume - free", href: "/#top" };
   const footnote =
     note ?? "No card required · first application free · takes 2 minutes";
   return (

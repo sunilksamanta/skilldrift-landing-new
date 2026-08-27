@@ -11,7 +11,9 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: SITE_NAME,
-  legalName: "SkillDrift, Inc.",
+  // The registered Delaware name, exactly as Article I spells it: lowercase d,
+  // no comma, one trailing period. The brand everywhere else is "SkillDrift".
+  legalName: "Skilldrift Inc.",
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   foundingDate: "2025",
@@ -26,7 +28,7 @@ export const organizationSchema = {
     {
       "@type": "ContactPoint",
       contactType: "press",
-      email: "press@skilldrift.ai",
+      email: "sales@skilldrift.ai",
     },
     {
       "@type": "ContactPoint",
@@ -39,6 +41,8 @@ export const organizationSchema = {
     "https://www.facebook.com/skilldriftindia",
     "https://www.instagram.com/skilldriftindia/",
     "https://www.youtube.com/@SkillDrift-AI",
+    "https://theresanaiforthat.com/ai/skilldrift/",
+    "https://alternativeto.net/software/skilldrift/",
   ],
 } as const;
 

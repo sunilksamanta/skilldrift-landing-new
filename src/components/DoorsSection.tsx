@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Check } from "./icons";
 import { homeCta } from "@/lib/cta";
+import { setIntent as rememberIntent } from "@/lib/anon-session";
 
 const doors = [
   {
@@ -92,7 +93,12 @@ export default function DoorsSection() {
                 role="tab"
                 aria-selected={on}
                 aria-controls="door-panel"
-                onClick={() => setIntent(i)}
+                onClick={() => {
+                  setIntent(i);
+                  // Remembered for the anonymous funnel: every later event,
+                  // including the upload, reports which door they picked.
+                  rememberIntent(door.title);
+                }}
                 style={{
                   textAlign: "left",
                   color: "var(--tx)",

@@ -3,7 +3,13 @@ import { ALL_ROUTES, getRoute } from "./content";
 
 export const SITE_URL = "https://skilldrift.ai";
 export const SITE_NAME = "SkillDrift";
-export const LOCALE = "en_IN";
+/**
+ * og:locale takes `language_TERRITORY`, not a bare language code, so plain
+ * "en" is not valid and gets ignored. `en_US` is the Open Graph default and
+ * the neutral choice for a product sold worldwide; `en_IN` was pinning every
+ * route to one market. The page's own `lang` attribute stays "en".
+ */
+export const LOCALE = "en_US";
 
 /**
  * Route metadata lives in `src/content/pages.json` — the same file the page

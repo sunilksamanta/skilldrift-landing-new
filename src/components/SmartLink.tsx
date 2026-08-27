@@ -3,7 +3,7 @@
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import SectionLink from "./SectionLink";
-import { isSignIn, signInHref } from "@/lib/cta";
+import { isSignIn, signUpHref } from "@/lib/cta";
 
 /**
  * Resolves an href from `pages.json` to the right kind of link:
@@ -33,7 +33,7 @@ export default function SmartLink({
   if (isSignIn(href)) {
     return (
       <a
-        href={signInHref(campaign ?? "site", content ?? "cta")}
+        href={signUpHref(campaign ?? "site", content ?? "cta")}
         aria-label={ariaLabel}
         style={style}
       >

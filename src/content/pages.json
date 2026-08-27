@@ -2,7 +2,7 @@
   "routes": [
     {
       "path": "/",
-      "title": "SkillDrift — see the skills between you and the job you want",
+      "title": "SkillDrift - see the skills between you and the job you want",
       "description": "Upload your resume free and get a readiness score out of 100, the skills holding you back, and matched jobs and internships. No account needed to see it.",
       "h1": "See exactly what's missing between you and the role you want",
       "priority": 1.0,
@@ -10,16 +10,16 @@
     },
     {
       "path": "/features",
-      "title": "SkillDrift features — every tool in the career loop",
+      "title": "SkillDrift features - every tool in the career loop",
       "description": "Score your skills, close the gap, tailor your resume, practise the interview and match to jobs out of 100. Seven connected tools, free to start.",
       "h1": "Seven tools. One loop. One score that moves.",
       "priority": 0.9,
       "breadcrumb": "Features",
       "hero": {
         "eyebrow": "Features",
-        "standfirst": "Every tool feeds one connected profile, one growing score, and one resume that gets stronger with every skill you build. Start with any of them — they all read the same resume.",
+        "standfirst": "Every tool feeds one connected profile, one growing score, and one resume that gets stronger with every skill you build. Start with any of them; they all read the same resume.",
         "primaryCta": {
-          "label": "Upload your resume — free",
+          "label": "Upload your resume - free",
           "href": "app:sign-in"
         },
         "secondaryCta": {
@@ -41,7 +41,7 @@
             {
               "tag": "How it works",
               "title": "The closed loop, end to end",
-              "body": "Upload, score, roadmap, learn, certify, rise — and then round again. The six steps and why joining them is the product.",
+              "body": "Upload, score, roadmap, learn, certify, rise, and then round again. The six steps and why joining them is the product.",
               "accent": true
             },
             {
@@ -61,7 +61,7 @@
         "heading": "Seven tools are no use until one of them has your resume.",
         "copy": "Upload once and every feature on this page starts from what you have actually done.",
         "primary": {
-          "label": "Upload your resume — free",
+          "label": "Upload your resume - free",
           "href": "app:sign-in"
         },
         "secondary": {
@@ -72,16 +72,16 @@
     },
     {
       "path": "/how-it-works",
-      "title": "How SkillDrift works — the closed career loop",
+      "title": "How SkillDrift works - the closed career loop",
       "description": "Upload, get scored out of 100, follow a roadmap, earn certificates that write themselves into your resume, and watch your match score rise. Free to start.",
       "h1": "Most tools hand you one piece. SkillDrift closes the loop.",
       "priority": 0.9,
       "breadcrumb": "How it works",
       "hero": {
         "eyebrow": "The closed loop",
-        "standfirst": "Every other product gives you one arc of the circle — a course library, a resume builder, a job board. The loop is why your score moves instead of your bookmarks piling up.",
+        "standfirst": "Every other product gives you one arc of the circle: a course library, a resume builder, a job board. The loop is why your score moves instead of your bookmarks piling up.",
         "primaryCta": {
-          "label": "Upload your resume — free",
+          "label": "Upload your resume - free",
           "href": "app:sign-in"
         },
         "secondaryCta": {
@@ -102,7 +102,7 @@
             },
             {
               "title": "Score",
-              "body": "Pick a target role and see your gap out of 100 — skill by skill."
+              "body": "Pick a target role and see your gap out of 100, skill by skill."
             },
             {
               "title": "Roadmap",
@@ -160,7 +160,7 @@
             {
               "tag": "Free, no account",
               "title": "Your readiness score",
-              "body": "Drop a PDF or DOCX on the homepage and get your score out of 100, the three skills holding it down, and three matched roles — in place, with no redirect.",
+              "body": "Drop a PDF or DOCX on the homepage and get your score out of 100, the three skills holding it down, and three matched roles, in place, with no redirect.",
               "accent": true
             },
             {
@@ -171,7 +171,7 @@
             {
               "tag": "Costs credits",
               "title": "Anything you send an employer",
-              "body": "Tailoring, downloads, rewrites and mock interviews. New accounts get starter credits — enough for a full first application."
+              "body": "Tailoring, downloads, rewrites and mock interviews. New accounts get starter credits, enough for a full first application."
             }
           ]
         }
@@ -216,7 +216,7 @@
           "steps": [
             {
               "title": "Paste the job",
-              "body": "Any posting — LinkedIn, Indeed, a careers page, or one of your matched roles."
+              "body": "Any posting: LinkedIn, Indeed, a careers page, or one of your matched roles."
             },
             {
               "title": "We read both sides",
@@ -274,7 +274,7 @@
               "cost": "54–70 credits"
             }
           ],
-          "note": "One full application costs about 72 credits — 18 to tailor, 54 to download. A 299-credit top-up is {topup} and covers roughly four. Compare that against unlimited on the [pricing page](/pricing)."
+          "note": "One full application costs about 72 credits: 18 to tailor, 54 to download. A 299-credit top-up is {topup} and covers roughly four. Compare that against unlimited on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -289,14 +289,14 @@
     {
       "path": "/resume-rewrite",
       "title": "Rewrite your resume around outcomes, not duties | SkillDrift",
-      "description": "Most resumes list duties. SkillDrift asks what actually happened and rewrites each line around the result. Every figure is one you supplied — nothing invented.",
+      "description": "Most resumes list duties. SkillDrift asks what actually happened and rewrites each line around the result. Every figure is one you supplied, nothing invented.",
       "h1": "Your resume says what you did. It should say what happened.",
       "priority": 0.8,
       "breadcrumb": "Resume rewrite",
       "feature": true,
       "hero": {
         "eyebrow": "Outcome rewrite",
-        "standfirst": "Almost every resume lists duties. Every hiring manager scans for outcomes. SkillDrift asks what actually happened, then rewrites each line around the result — the number, the scale, the change.",
+        "standfirst": "Almost every resume lists duties. Every hiring manager scans for outcomes. SkillDrift asks what actually happened, then rewrites each line around the result: the number, the scale, the change.",
         "primaryCta": {
           "label": "Rewrite my resume",
           "href": "app:sign-in"
@@ -306,7 +306,7 @@
           "href": "#cost"
         },
         "image": "/assets/resume-rewrite.png",
-        "imageAlt": "SkillDrift asking what a Product Designer role actually produced — quantified results, team size and tools — before rewriting the section"
+        "imageAlt": "SkillDrift asking what a Product Designer role actually produced (quantified results, team size and tools) before rewriting the section"
       },
       "sections": [
         {
@@ -324,7 +324,7 @@
             {
               "tag": "After",
               "title": "The outcome version",
-              "body": "“Built a churn-prediction model in Python across 40,000 customer records, reaching 82% precision — shipped as capstone for a six-person team.”",
+              "body": "“Built a churn-prediction model in Python across 40,000 customer records, reaching 82% precision, shipped as capstone for a six-person team.”",
               "accent": true
             },
             {
@@ -351,7 +351,7 @@
               "title": "What you get back",
               "accent": true,
               "items": [
-                "Each line rebuilt around the result — the number, the scale, the change",
+                "Each line rebuilt around the result: the number, the scale, the change",
                 "Structure and parsing fixed at the same time, so your ATS score moves with it",
                 "A side-by-side comparison before you accept anything",
                 "Your original untouched until you make the rewrite your master copy"
@@ -373,7 +373,7 @@
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "A full outcome rewrite is 70 credits.",
-          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Resume and ATS analysis — the diagnosis that tells you whether you need this at all — is free.",
+          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Resume and ATS analysis, the diagnosis that tells you whether you need this at all, is free.",
           "rows": [
             {
               "label": "Resume and ATS analysis",
@@ -403,7 +403,7 @@
     },
     {
       "path": "/interview-prep",
-      "title": "AI mock interviews — voice, recorded and text | SkillDrift",
+      "title": "AI mock interviews - voice, recorded and text | SkillDrift",
       "description": "Practise for any role with an AI coach. Live voice, recorded practice or text Q&A, each with a scorecard telling you exactly where you lost points.",
       "h1": "Practise until it's boring.",
       "priority": 0.8,
@@ -440,7 +440,7 @@
             {
               "tag": "Recorded practice",
               "title": "Watch yourself back",
-              "body": "Answer on camera in your own time, then review the recording alongside the scorecard — filler words, pacing and structure included."
+              "body": "Answer on camera in your own time, then review the recording alongside the scorecard: filler words, pacing and structure included."
             },
             {
               "tag": "Text Q&A",
@@ -479,13 +479,13 @@
           "id": "scorecard",
           "eyebrow": "The scorecard",
           "heading": "A grade tells you nothing. This tells you what to fix.",
-          "copy": "Every mode ends the same way — with the specific places your answer fell short, and what a stronger version would have covered.",
+          "copy": "Every mode ends the same way: with the specific places your answer fell short, and what a stronger version would have covered.",
           "panels": [
             {
               "title": "What comes back",
               "accent": true,
               "items": [
-                "Where you lost points, question by question — not a single overall grade",
+                "Where you lost points, question by question, not a single overall grade",
                 "A hire verdict out of 10 on the live voice interview",
                 "The answers you gave, so you can compare a second run against the first",
                 "Which gaps from your skill report showed up in the room"
@@ -493,7 +493,7 @@
             },
             {
               "title": "It closes the loop",
-              "body": "The gaps the interview exposes are the same gaps your skill report already named. Close one with a learning sprint and your match score re-scores itself, free — so the next run starts from a stronger position than the last.",
+              "body": "The gaps the interview exposes are the same gaps your skill report already named. Close one with a learning sprint and your match score re-scores itself, free, so the next run starts from a stronger position than the last.",
               "items": [
                 "Scored against the role, the same way your resume is",
                 "Feeds the gap report your roadmap is built from",
@@ -508,7 +508,7 @@
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "Diagnosis is free. Practice is where credits go.",
-          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gaps, job matching and your career path stay free forever — you spend only on the runs you actually take.",
+          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gaps, job matching and your career path stay free forever; you spend only on the runs you actually take.",
           "rows": [
             {
               "label": "Text-based mock interview",
@@ -545,7 +545,7 @@
       "feature": true,
       "hero": {
         "eyebrow": "Job fit analysis",
-        "standfirst": "Paste any job description — LinkedIn, Indeed, anywhere — and see your match out of 100 before you hit submit. Know your odds before you spend an application.",
+        "standfirst": "Paste any job description (LinkedIn, Indeed, anywhere) and see your match out of 100 before you hit submit. Know your odds before you spend an application.",
         "primaryCta": {
           "label": "Check a job match",
           "href": "app:sign-in"
@@ -574,7 +574,7 @@
             },
             {
               "title": "See what is missing",
-              "body": "The specific requirements you do not yet meet, named — not a vague percentage."
+              "body": "The specific requirements you do not yet meet, named. Not a vague percentage."
             },
             {
               "title": "Decide, then act",
@@ -602,9 +602,9 @@
             {
               "title": "Costs credits",
               "items": [
-                "Detailed job analysis on one posting — 37 credits",
-                "Tailoring your resume to that posting — 18 credits",
-                "Downloading the tailored version — 54 to 70 credits"
+                "Detailed job analysis on one posting - 37 credits",
+                "Tailoring your resume to that posting - 18 credits",
+                "Downloading the tailored version - 54 to 70 credits"
               ]
             }
           ]
@@ -679,7 +679,7 @@
             },
             {
               "title": "See the gap, scored",
-              "body": "Skill by skill, out of 100, against that role — not against strangers."
+              "body": "Skill by skill, out of 100, against that role, not against strangers."
             },
             {
               "title": "Get the order",
@@ -696,7 +696,7 @@
           "alt": true,
           "eyebrow": "Three starting points",
           "heading": "The same first step, whichever journey you are on.",
-          "copy": "The roadmap adapts to where you actually are — the sample data, the matched roles and the target level all shift with it.",
+          "copy": "The roadmap adapts to where you actually are: the sample data, the matched roles and the target level all shift with it.",
           "min": 300,
           "cards": [
             {
@@ -761,7 +761,7 @@
         "eyebrow": "Skill benchmarking",
         "standfirst": "Your skills against industry standards and against your peers, scored out of 100, with the blind spots named. Free, and it re-scores every time you learn something.",
         "primaryCta": {
-          "label": "Get my score — free",
+          "label": "Get my score - free",
           "href": "app:sign-in"
         },
         "secondaryCta": {
@@ -792,7 +792,7 @@
               "title": "Scored against your peers",
               "items": [
                 "Where you sit among people chasing the same role",
-                "The blind spots — strengths you have that you are underselling",
+                "The blind spots: strengths you have that you are underselling",
                 "Re-scored free, every time you close a gap",
                 "Feeds straight into your roadmap and your matched jobs"
               ]
@@ -833,7 +833,7 @@
           "cards": [
             {
               "title": "Skill gap analysis",
-              "body": "Scored against the role you want, with the gaps named — no account required to see your first score.",
+              "body": "Scored against the role you want, with the gaps named. No account required to see your first score.",
               "accent": true
             },
             {
@@ -851,7 +851,7 @@
         "heading": "Find out where you actually stand.",
         "copy": "No account needed to see your first score. Two minutes, one upload.",
         "primary": {
-          "label": "Get my score — free",
+          "label": "Get my score - free",
           "href": "app:sign-in"
         }
       }
@@ -866,7 +866,7 @@
       "feature": true,
       "hero": {
         "eyebrow": "Learning sprints",
-        "standfirst": "Focused micro-lessons on the exact skills your gap report flagged — nothing you already know. Finish one and the certificate writes itself into your resume.",
+        "standfirst": "Focused micro-lessons on the exact skills your gap report flagged, nothing you already know. Finish one and the certificate writes itself into your resume.",
         "primaryCta": {
           "label": "Find my sprints",
           "href": "app:sign-in"
@@ -906,14 +906,14 @@
           "alt": true,
           "eyebrow": "The certificate moat",
           "heading": "Your resume stops going stale.",
-          "copy": "Finish a course on SkillDrift and the certificate is added to your resume automatically — no re-uploading, no re-formatting, no forgetting it existed.",
+          "copy": "Finish a course on SkillDrift and the certificate is added to your resume automatically: no re-uploading, no re-formatting, no forgetting it existed.",
           "panels": [
             {
               "title": "What happens when you finish",
               "accent": true,
               "items": [
                 "The certificate is written into your resume the moment you finish",
-                "One click to LinkedIn — as a post or into your certifications section",
+                "One click to LinkedIn, as a post or into your certifications section",
                 "The 50 credits it cost to issue come straight back",
                 "Your match score re-scores itself, free, and better roles unlock"
               ]
@@ -921,7 +921,7 @@
             {
               "title": "What is free here",
               "items": [
-                "One full AI course for your domain — the whole course, not a preview",
+                "One full AI course for your domain: the whole course, not a preview",
                 "Podcasts alongside your learning resources",
                 "Industry news for your field, curated daily",
                 "Re-scoring every time you finish something"
@@ -971,9 +971,9 @@
       "breadcrumb": "Jobs",
       "hero": {
         "eyebrow": "Jobs & internships",
-        "standfirst": "Including internships and openings for people with under a year of experience — scored the same way as everything else, so you know where you actually stand.",
+        "standfirst": "Including internships and openings for people with under a year of experience, scored the same way as everything else, so you know where you actually stand.",
         "primaryCta": {
-          "label": "See my matches — free",
+          "label": "See my matches - free",
           "href": "app:sign-in"
         },
         "secondaryCta": {
@@ -1025,7 +1025,7 @@
             },
             {
               "title": "Tailor before you apply",
-              "body": "Generate an ATS-optimised version for that specific posting — 18 credits."
+              "body": "Generate an ATS-optimised version for that specific posting - 18 credits."
             },
             {
               "title": "Close a gap, re-rank",
@@ -1061,21 +1061,21 @@
         "heading": "Stop guessing which roles are worth an application.",
         "copy": "Upload your resume free and see every matched role ranked out of 100.",
         "primary": {
-          "label": "See my matches — free",
+          "label": "See my matches - free",
           "href": "app:sign-in"
         }
       }
     },
     {
       "path": "/pricing",
-      "title": "SkillDrift pricing — free to start, pay when you apply",
+      "title": "SkillDrift pricing - free to start, pay when you apply",
       "description": "Skill gaps, career path, job matching and one AI course are free forever. Top up credits or go unlimited when you are ready to apply. Credits are priced up front and never expire.",
       "h1": "Diagnosis is free. You pay when you're ready to apply.",
       "priority": 0.9,
       "breadcrumb": "Pricing",
       "hero": {
         "eyebrow": "Pricing",
-        "standfirst": "New accounts get starter credits — enough to rewrite your resume, tailor it to a job and download it. {{In India, one credit is one rupee, so every price below is already in money you understand.|Every price below is a flat one, with no bundles to decode and nothing that expires.}}",
+        "standfirst": "New accounts get starter credits, enough to rewrite your resume, tailor it to a job and download it. {{In India, one credit is one rupee, so every price below is already in money you understand.|Every price below is a flat one, with no bundles to decode and nothing that expires.}}",
         "primaryCta": {
           "label": "Start free",
           "href": "app:sign-in"
@@ -1100,7 +1100,7 @@
                 "Skill gap analysis, scored against the role you want",
                 "A career path, built automatically when you upload your resume",
                 "Re-scoring every time you upskill",
-                "Resume and ATS analysis — the full diagnosis",
+                "Resume and ATS analysis: the full diagnosis",
                 "Job matching with match scores, out of 100",
                 "Jobs and internships we bring onto the platform",
                 "Basic job analysis on any role",
@@ -1109,11 +1109,11 @@
             },
             {
               "title": "Costs credits",
-              "body": "Everything that produces a finished artefact — something you send, download, or put your name on. One of them refunds itself.",
+              "body": "Everything that produces a finished artefact: something you send, download, or put your name on. One of them refunds itself.",
               "items": [
                 "Tailoring, downloads and outcome rewrites",
                 "Detailed job analysis on a single posting",
-                "Mock interviews — text, recorded and live voice",
+                "Mock interviews: text, recorded and live voice",
                 "Learning roadmaps and certificate issuance"
               ]
             }
@@ -1164,27 +1164,27 @@
               "cost": "200"
             }
           ],
-          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a {topup} top-up covers about four. Past roughly eight applications a month — or three live mock interviews — unlimited at {unlimited} costs you less. If you're mid-search, take unlimited; if you're browsing, take credits."
+          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a {topup} top-up covers about four. Past roughly eight applications a month, or three live mock interviews, unlimited at {unlimited} costs you less. If you're mid-search, take unlimited; if you're browsing, take credits."
         },
         {
           "type": "plans",
           "eyebrow": "Two ways to pay",
           "heading": "Top up when you need it, or stop counting.",
-          "copy": "Start free — new accounts get starter credits, enough for a full first application. After that, buy credits as you go or stop counting altogether."
+          "copy": "Start free: new accounts get starter credits, enough for a full first application. After that, buy credits as you go or stop counting altogether."
         }
       ],
       "cta": {
         "heading": "Find out where you stand before you spend anything.",
         "copy": "Your readiness score, your closest roles and your real gaps cost nothing and need no account.",
         "primary": {
-          "label": "Upload your resume — free",
+          "label": "Upload your resume - free",
           "href": "app:sign-in"
         }
       }
     },
     {
       "path": "/about",
-      "title": "About SkillDrift — the end-to-end career platform",
+      "title": "About SkillDrift - the end-to-end career platform",
       "description": "SkillDrift closes the loop between the job you want and the skills you have: score the gap, close it, and let your resume update itself as you go.",
       "h1": "About SkillDrift",
       "priority": 0.5,
@@ -1193,7 +1193,7 @@
         "eyebrow": "About us",
         "standfirst": "SkillDrift closes the loop between the job you want and the skills you have: score the gap, close it, and let your resume update itself as you go.",
         "primaryCta": {
-          "label": "Upload your resume — free",
+          "label": "Upload your resume - free",
           "href": "app:sign-in"
         },
         "secondaryCta": {
@@ -1207,7 +1207,7 @@
           "eyebrow": "Why we built it",
           "heading": "Career advice is everywhere. Career measurement is not.",
           "paragraphs": [
-            "Most people looking for work are not short of advice. They are short of a number — some honest measure of the distance between where they are and the role they want, and a sense of which move closes the most of it.",
+            "Most people looking for work are not short of advice. They are short of a number: some honest measure of the distance between where they are and the role they want, and a sense of which move closes the most of it.",
             "Every tool in this market hands you one arc of the circle. A course library that knows nothing about the job you want. A resume builder that formats what you already wrote. A job board that ranks by recency rather than fit. Each is useful; none of them tells you whether anything is working.",
             "SkillDrift exists to join them. Upload a resume, and the gap between you and a target role is scored out of 100. The roadmap that closes it is built from that score. Finish a sprint and the certificate writes itself back into the resume, the score re-scores itself free, and better roles unlock. Then it goes round again."
           ]
@@ -1266,7 +1266,7 @@
           "facts": [
             {
               "label": "Operated by",
-              "value": "SkillDrift, Inc."
+              "value": "Skilldrift Inc."
             },
             {
               "label": "Founded",
@@ -1295,7 +1295,7 @@
         "heading": "Start with where you are.",
         "copy": "We'll help you figure out what's next. Two minutes, one upload, no account required.",
         "primary": {
-          "label": "Upload your resume — free",
+          "label": "Upload your resume - free",
           "href": "app:sign-in"
         }
       }
@@ -1309,7 +1309,7 @@
       "breadcrumb": "Contact",
       "hero": {
         "eyebrow": "Contact",
-        "standfirst": "Questions about SkillDrift, partnerships, or bringing SkillDrift to your institution. Reach the team directly — a person reads every one of these.",
+        "standfirst": "Questions about SkillDrift, partnerships, or bringing SkillDrift to your institution. Reach the team directly; a person reads every one of these.",
         "primaryCta": {
           "label": "Email the team",
           "href": "mailto:support@skilldrift.ai"
@@ -1345,8 +1345,8 @@
             },
             {
               "label": "Press and partnerships",
-              "value": "press@skilldrift.ai",
-              "href": "mailto:press@skilldrift.ai",
+              "value": "sales@skilldrift.ai",
+              "href": "mailto:sales@skilldrift.ai",
               "note": "Media enquiries and partnership proposals."
             }
           ]
@@ -1361,12 +1361,12 @@
           "cards": [
             {
               "title": "Can I try it without an account?",
-              "body": "Yes. Drop a resume on the homepage and your readiness score, the three skills holding it down and three matched roles come back in place — no account, no email.",
+              "body": "Yes. Drop a resume on the homepage and your readiness score, the three skills holding it down and three matched roles come back in place: no account, no email.",
               "accent": true
             },
             {
               "title": "What does a credit cost?",
-              "body": "{{In India, one credit is one rupee — 299 credits cost 299 rupees.|A 299-credit top-up is {topup}, and credits never expire.}} The full table is on the pricing page."
+              "body": "{{In India, one credit is one rupee: 299 credits cost 299 rupees.|A 299-credit top-up is {topup}, and credits never expire.}} The full table is on the pricing page."
             },
             {
               "title": "What happens to my resume?",
@@ -1379,11 +1379,68 @@
         "heading": "Or just try it first.",
         "copy": "Most questions answer themselves once you've seen your own score. It takes two minutes.",
         "primary": {
-          "label": "Upload your resume — free",
+          "label": "Upload your resume - free",
           "href": "app:sign-in"
         },
         "note": "No card required · no account required · takes 2 minutes"
       }
+    },
+    {
+      "path": "/privacy-policy",
+      "title": "Privacy Policy | SkillDrift",
+      "description": "How SkillDrift collects, uses, shares and protects your information, including resumes uploaded without an account.",
+      "h1": "Privacy Policy",
+      "priority": 0.3,
+      "breadcrumb": "Privacy Policy",
+      "hero": {
+        "eyebrow": "Legal",
+        "standfirst": "How we collect, use, share and protect your information, and the choices you have over it.",
+        "noCta": true
+      },
+      "sections": [
+        {
+          "type": "legal",
+          "doc": "privacy"
+        }
+      ]
+    },
+    {
+      "path": "/terms-of-use",
+      "title": "Terms of Use | SkillDrift",
+      "description": "The terms that govern your access to and use of the SkillDrift platform, website, mobile applications and related services.",
+      "h1": "Terms of Use",
+      "priority": 0.3,
+      "breadcrumb": "Terms of Use",
+      "hero": {
+        "eyebrow": "Legal",
+        "standfirst": "Please read these terms and conditions carefully before using our platform and services.",
+        "noCta": true
+      },
+      "sections": [
+        {
+          "type": "legal",
+          "doc": "terms"
+        }
+      ]
+    },
+    {
+      "path": "/data-protection",
+      "title": "Data Protection Policy | SkillDrift",
+      "description": "How SkillDrift processes, stores and protects personal and professional data under GDPR, CCPA and other privacy regulations.",
+      "h1": "Data Protection Policy",
+      "priority": 0.3,
+      "breadcrumb": "Data Protection",
+      "hero": {
+        "eyebrow": "Legal",
+        "standfirst": "Learn how we protect and handle your personal and professional data",
+        "noCta": true
+      },
+      "sections": [
+        {
+          "type": "legal",
+          "doc": "data-protection"
+        }
+      ]
     }
   ]
 }

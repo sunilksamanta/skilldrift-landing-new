@@ -112,7 +112,7 @@ export async function renderOgImage({
         >
           <span>{footer}</span>
           <span style={{ color: "#FFFFFF" }}>
-            Upload your resume &mdash; free
+            Upload your resume - free
           </span>
         </div>
       </div>

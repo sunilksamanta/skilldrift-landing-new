@@ -47,12 +47,7 @@ export default function FaqSection() {
     <section id="faq" className="sect">
       <div className="wrap">
         <Pill>FAQ</Pill>
-        <SectionIntro
-          align="start"
-          copyPadTop={8}
-          heading="The questions people actually ask before signing up."
-          copy="Every answer here is also the source for the FAQPage structured data — write them once, use them twice."
-        />
+        <SectionIntro heading="The questions people actually ask before signing up." />
 
         <div style={{ marginTop: 52 }}>
           {faqs.map((faq, i) => (

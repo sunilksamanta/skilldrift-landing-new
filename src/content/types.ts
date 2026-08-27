@@ -112,6 +112,17 @@ export type PlansBlock = {
   copy?: string;
 };
 
+/**
+ * A legal document, rendered from `src/content/legal/<doc>.json`. The text is
+ * kept out of `pages.json` because it is long, and because it is copied
+ * verbatim from the source policies rather than written as marketing copy.
+ */
+export type LegalBlock = {
+  type: "legal";
+  id?: string;
+  doc: "privacy" | "terms" | "data-protection";
+};
+
 /** Renders every feature page as an alternating showcase row. */
 export type FeatureRowsBlock = {
   type: "featureRows";
@@ -127,6 +138,7 @@ export type Block =
   | ProseBlock
   | ContactBlock
   | FactsBlock
+  | LegalBlock
   | FeatureRowsBlock
   | PlansBlock;
 
@@ -147,6 +159,9 @@ export type RouteContent = {
   hero?: {
     eyebrow: string;
     standfirst: string;
+    /** Suppresses the default "Upload your resume" button — legal pages are
+     *  not a place to sell. */
+    noCta?: boolean;
     primaryCta?: Cta;
     secondaryCta?: Cta;
     /** Product shot shown beside the hero copy. Already carries its own field. */
@@ -164,3 +179,19 @@ export type RouteContent = {
 };
 
 export type PagesFile = { routes: RouteContent[] };
+
+/** One node inside a legal section: a paragraph, a sub-heading, a list, or a
+ *  boxed aside holding more of the same. */
+export type LegalNode =
+  | { p: string }
+  | { h3: string }
+  | { list: string[] }
+  | { panel: "panel" | "warn" | "alert"; body: LegalNode[] };
+
+export type LegalDocument = {
+  /** "Last Updated: …" exactly as the source document states it. */
+  updated: string | null;
+  standfirst: string | null;
+  intro: string[];
+  sections: { heading: string; body: LegalNode[] }[];
+};

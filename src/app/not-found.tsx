@@ -4,7 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { ArrowRight } from "@/components/icons";
 import { primaryButton } from "@/components/SectionBits";
-import { signInHref } from "@/lib/cta";
+import { signUpHref } from "@/lib/cta";
 
 /**
  * Appendix A5 — this route returns HTTP 404, carries `noindex`, and links back
@@ -73,8 +73,8 @@ export default function NotFound() {
               flexWrap: "wrap",
             }}
           >
-            <a href={signInHref("not_found", "notfound_primary")} style={primaryButton}>
-              Upload your resume &mdash; free
+            <a href={signUpHref("not_found", "notfound_primary")} style={primaryButton}>
+              Upload your resume - free
             </a>
             <Link
               href="/"

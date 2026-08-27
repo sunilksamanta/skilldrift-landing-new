@@ -7,7 +7,7 @@ const pairs = [
   {
     before: "“Worked on a college project using Python and machine learning.”",
     after:
-      "“Built a churn-prediction model in Python across 40,000 customer records, reaching 82% precision — shipped as capstone for a six-person team.”",
+      "“Built a churn-prediction model in Python across 40,000 customer records, reaching 82% precision, shipped as capstone for a six-person team.”",
   },
   {
     before: "“Responsible for managing vendor relationships and procurement.”",
@@ -39,7 +39,7 @@ const assurances = [
       </svg>
     ),
     title: "It asks you. It never invents.",
-    body: "SkillDrift asks a short set of questions and rewrites from your answers. Every figure on your resume is one you supplied — nothing is generated, so nothing can surprise you in an interview.",
+    body: "SkillDrift asks a short set of questions and rewrites from your answers. Every figure on your resume is one you supplied, nothing is generated, so nothing can surprise you in an interview.",
   },
   {
     icon: (
@@ -87,7 +87,7 @@ export default function RewriteSection() {
         <Pill>Resume rewrite</Pill>
         <SectionIntro
           heading="Your resume says what you did. It should say what happened."
-          copy="Almost every resume lists duties. Every hiring manager scans for outcomes. SkillDrift asks you what actually happened, then rewrites each line around the result — the number, the scale, the change — and formats it so the ATS can read it."
+          copy="Almost every resume lists duties. Every hiring manager scans for outcomes. SkillDrift asks you what actually happened, then rewrites each line around the result (the number, the scale, the change) and formats it so the ATS can read it."
         />
 
         <div
@@ -228,7 +228,7 @@ export default function RewriteSection() {
           }}
         >
           <a href={homeCta("rewrite_upload")} style={primaryButton}>
-            Upload your resume &mdash; free
+            Upload your resume - free
           </a>
           <Link
             href="/resume-rewrite"

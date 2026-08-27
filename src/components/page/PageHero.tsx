@@ -15,6 +15,7 @@ export default function PageHero({
   standfirst,
   primaryCta,
   secondaryCta,
+  noCta,
   image,
   imageAlt,
   aside,
@@ -25,12 +26,16 @@ export default function PageHero({
   standfirst: ReactNode;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
+  /** Skip the hero's calls to action entirely. */
+  noCta?: boolean;
   image?: string;
   imageAlt?: string;
   aside?: ReactNode;
   campaign?: string;
 }) {
-  const cta = primaryCta ?? { label: "Upload your resume — free", href: "/#top" };
+  const cta = noCta
+    ? null
+    : (primaryCta ?? { label: "Upload your resume - free", href: "/#top" });
   // The product shots already carry their own purple field, so they need no
   // frame — only a matching radius and a lift off the page.
   const shot = image ? (
@@ -126,6 +131,7 @@ export default function PageHero({
             >
               {standfirst}
             </p>
+            {(cta || secondaryCta) && (
             <div
               style={{
                 marginTop: 32,
@@ -135,9 +141,16 @@ export default function PageHero({
                 flexWrap: "wrap",
               }}
             >
-              <SmartLink href={cta.href} campaign={campaign} content="hero_primary" style={primaryButton}>
-                {cta.label}
-              </SmartLink>
+              {cta && (
+                <SmartLink
+                  href={cta.href}
+                  campaign={campaign}
+                  content="hero_primary"
+                  style={primaryButton}
+                >
+                  {cta.label}
+                </SmartLink>
+              )}
               {secondaryCta && (
                 <SmartLink
                   href={secondaryCta.href}
@@ -157,6 +170,7 @@ export default function PageHero({
                 </SmartLink>
               )}
             </div>
+            )}
           </div>
 
           {side}

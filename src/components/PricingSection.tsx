@@ -28,7 +28,7 @@ export default function PricingSection() {
           heading="Diagnosis is free. You pay when you&rsquo;re ready to apply."
           copy={
             <>
-              Your first application is on us — enough credits to rewrite your
+              Your first application is on us: enough credits to rewrite your
               resume, tailor it to a job and download it.{" "}
               <Regional
                 in="In India, one credit is one rupee, so every price below is already in money you understand."
@@ -50,7 +50,7 @@ export default function PricingSection() {
           }}
         >
           <h3 style={{ fontSize: 19, fontWeight: 600 }}>
-            Which one is cheaper for you &mdash; honestly
+            Which one is cheaper for you, honestly
           </h3>
           <p
             style={{
@@ -63,7 +63,7 @@ export default function PricingSection() {
           >
             One application costs 72 credits: 18 to tailor, 54 to download. So a{" "}
             <Price kind="topup" /> top-up covers about four. Past roughly eight applications a month
-            &mdash; or three live mock interviews &mdash; unlimited costs you less. If
+            , or three live mock interviews, unlimited costs you less. If
             you&rsquo;re mid-search, take unlimited; if you&rsquo;re browsing, take
             credits.
           </p>

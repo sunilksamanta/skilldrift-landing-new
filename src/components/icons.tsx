@@ -85,3 +85,12 @@ export function DocPlus({ size = 19, strokeWidth = 1.7, style }: IconProps) {
     </svg>
   );
 }
+
+export function Lock({ size = 14, strokeWidth = 1.8, style }: IconProps) {
+  return (
+    <svg {...base} width={size} height={size} strokeWidth={strokeWidth} style={style}>
+      <rect x="4.5" y="10.5" width="15" height="10" rx="2.6" />
+      <path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9" />
+    </svg>
+  );
+}
