@@ -122,5 +122,14 @@ export function track(
     intent: readIntent(),
     ...acquisition(),
   };
-  whenReady(() => mixpanel.track(event, { ...base, ...properties }));
+  const payload = { ...base, ...properties };
+
+  // Development only: a readable log of what was fired, so duplicate-event
+  // bugs can be counted in the console instead of guessed at from Mixpanel.
+  if (process.env.NODE_ENV === "development" && typeof window !== "undefined") {
+    const w = window as unknown as { __sdAnalytics?: unknown[] };
+    (w.__sdAnalytics ??= []).push({ event, ...payload });
+  }
+
+  whenReady(() => mixpanel.track(event, payload));
 }

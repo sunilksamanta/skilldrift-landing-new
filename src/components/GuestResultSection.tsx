@@ -5,6 +5,7 @@ import type { GuestState } from "@/hooks/useGuestAnalysis";
 import type { GuestJob } from "@/lib/guest-api";
 import { Lock } from "./icons";
 import { AnalyticsEvents, track } from "@/lib/analytics";
+import { anonSessionId } from "@/lib/anon-session";
 import { homeCta } from "@/lib/cta";
 
 /* ------------------------------------------------------------------ score */
@@ -162,65 +163,86 @@ function radarAxes(state: GuestState): RadarAxis[] {
  * down it the visitor got — when they leave it. "Returned" is not "seen": the
  * panel can be rendered below the fold, or in a background tab.
  */
-function useResultViewed(node: React.RefObject<HTMLElement | null>, score: number) {
-  const seenAt = useRef(0);
-  const deepest = useRef(0);
-  const reported = useRef(false);
-
+function useResultViewed(
+  node: React.RefObject<HTMLElement | null>,
+  score: number,
+  analysisId: string | null,
+) {
   useEffect(() => {
     const el = node.current;
-    if (!el || reported.current) return;
+    // No analysis id means the analysis has not landed yet, and there is
+    // nothing to key the guard on.
+    if (!el || !analysisId) return;
+
+    // One event per completed analysis, not per render, per mount or per
+    // reload. The effect re-runs whenever the score arrives, React remounts in
+    // development, and a reload rebuilds the panel from cache — a ref-only
+    // guard survived none of those, which is what turned one view into seven.
+    const key = viewKey(analysisId);
+    if (alreadyViewed(key)) return;
 
     const readyAt = performance.now();
+    let fired = false;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting || reported.current) continue;
-          reported.current = true;
-          seenAt.current = Date.now();
-          track(AnalyticsEvents.ANONYMOUS_RESULT_VIEWED, {
-            readiness_score: score,
-            time_to_view_ms: Math.round(performance.now() - readyAt),
-            scroll_depth_pct: 0,
-          });
-        }
-      },
-      { threshold: 0.25 },
-    );
-    observer.observe(el);
-
-    // How far into the panel they read, sampled as they scroll and sent with
-    // the leave event rather than as a stream of its own.
-    const onScroll = () => {
+    const check = () => {
+      if (fired) return;
       const box = el.getBoundingClientRect();
-      const visible = Math.min(window.innerHeight, box.bottom) - Math.max(0, box.top);
-      const pct = Math.round(((Math.max(0, -box.top) + visible) / box.height) * 100);
-      deepest.current = Math.min(100, Math.max(deepest.current, pct));
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
+      const onScreen =
+        Math.min(window.innerHeight, box.bottom) - Math.max(0, box.top);
+      // A quarter of the panel, or a quarter of the screen for a panel taller
+      // than the viewport.
+      if (onScreen < Math.min(box.height, window.innerHeight) * 0.25) return;
 
-    const onLeave = () => {
-      if (!seenAt.current) return;
+      fired = true;
+      // Written before the event, so a second mount racing this one in the
+      // same tick reads the guard rather than firing again.
+      markViewed(key);
+
+      const read = Math.max(0, -box.top) + onScreen;
       track(AnalyticsEvents.ANONYMOUS_RESULT_VIEWED, {
         readiness_score: score,
-        time_to_view_ms: seenAt.current ? Date.now() - seenAt.current : null,
-        scroll_depth_pct: deepest.current,
-        phase: "left",
+        time_to_view_ms: Math.round(performance.now() - readyAt),
+        scroll_depth_pct: Math.min(100, Math.round((read / box.height) * 100)),
       });
-      seenAt.current = 0;
+      detach();
     };
-    // pagehide fires where unload does not — bfcache, iOS Safari.
-    window.addEventListener("pagehide", onLeave);
 
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("pagehide", onLeave);
-      onLeave();
+    const detach = () => {
+      window.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
     };
-  }, [node, score]);
+
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    return detach;
+  }, [node, score, analysisId]);
+}
+
+/**
+ * The one view already reported, as `<anon session>:<analysis>`. Persisted
+ * rather than held in a ref so it survives a reload of the same result.
+ */
+const VIEWED_KEY = "sd-anon-result-viewed";
+
+function viewKey(analysisId: string) {
+  return `${anonSessionId() ?? "anon"}:${analysisId}`;
+}
+
+function alreadyViewed(key: string): boolean {
+  try {
+    return localStorage.getItem(VIEWED_KEY) === key;
+  } catch {
+    return false;
+  }
+}
+
+function markViewed(key: string): void {
+  try {
+    localStorage.setItem(VIEWED_KEY, key);
+  } catch {
+    /* private mode — the guard degrades to once per mount */
+  }
 }
 
 /* ------------------------------------------------------------------ view */
@@ -261,7 +283,7 @@ export default function GuestResultSection({
 }) {
   const panel = useRef<HTMLElement | null>(null);
   const score = clamp(state.analysis?.analysis?.overall?.atsScore ?? 0);
-  useResultViewed(panel, score);
+  useResultViewed(panel, score, state.analysis?.sessionId ?? null);
   const band = categoryFor(score);
   const gaps = pickGaps(state);
   const gapsPending = !state.skillGap && state.status !== "completed";
