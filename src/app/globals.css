@@ -1,0 +1,244 @@
+:root {
+  --bg: #08090a;
+  --bg2: #0b0b10;
+  --card: #0e0f13;
+  --card2: #14151a;
+  --line: rgba(255, 255, 255, 0.09);
+  --line2: rgba(255, 255, 255, 0.16);
+  --tx: #ffffff;
+  --tx2: #9ea0a8;
+  --tx3: #6b6d75;
+  --ac: #7c5df9;
+  --ac2: #6049c0;
+  --acline: #4b3ad6;
+  --acsoft: rgba(124, 93, 249, 0.13);
+  --btn: #ffffff;
+  --btntx: #0a0a0c;
+  --amber: #e4a83c;
+  --ok: #4fd1a5;
+  --font: "Switzer";
+}
+
+html[data-sd-theme="light"] {
+  --bg: #f6f6f8;
+  --bg2: #ffffff;
+  --card: #ffffff;
+  --card2: #f0f0f4;
+  --line: rgba(10, 10, 14, 0.1);
+  --line2: rgba(10, 10, 14, 0.18);
+  --tx: #0a0a0c;
+  --tx2: #5a5c66;
+  --tx3: #8a8c96;
+  --acsoft: rgba(124, 93, 249, 0.1);
+  --btn: #0a0a0c;
+  --btntx: #ffffff;
+  --amber: #9a6b08;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--tx);
+  font-family: var(--font), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--ac);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--tx);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+@keyframes sd-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sd-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes sd-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+/* ---- layout primitives lifted out of the design's inline styles so the
+       page can breathe on narrow viewports ---- */
+
+.wrap {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.sect {
+  padding: 120px 0;
+  border-top: 1px solid var(--line);
+}
+
+.sect--tight {
+  padding: 110px 0;
+  border-top: 1px solid var(--line);
+}
+
+.sect--alt {
+  background: var(--bg2);
+}
+
+@media (max-width: 1200px) {
+  .wrap {
+    padding: 0 56px;
+  }
+}
+
+@media (max-width: 860px) {
+  .wrap {
+    padding: 0 20px;
+  }
+  .sect,
+  .sect--tight {
+    padding: 72px 0;
+  }
+}
+
+.sd-headpad {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+/* Header collapses its centred nav on small screens. */
+@media (max-width: 1024px) {
+  .sd-nav {
+    display: none !important;
+  }
+}
+
+/* The design's two-column hero is a fixed 440px auto-fit grid; below that it
+   would overflow, so drop to a single column and reclaim the vertical rhythm. */
+@media (max-width: 1000px) {
+  .sd-hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 48px !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .sd-pad-40 {
+    padding: 24px 20px 28px !important;
+  }
+  .sd-pad-48 {
+    padding: 26px !important;
+  }
+  .sd-pad-34 {
+    padding: 24px !important;
+  }
+  .sd-cta-top {
+    padding: 64px 20px 0 !important;
+  }
+}
+
+/* Proof stat strip: the 190px flex basis wraps on its own, but the divider
+   rules have to follow the wrap. */
+@media (max-width: 640px) {
+  .sd-stat + .sd-stat {
+    border-left: 0 !important;
+    border-top: 1px solid var(--line);
+  }
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* The showcase's five-column strip (panel → arrow → panel → arrow → dial)
+   only fits at wide sizes; below that it stacks and the arrows rotate. */
+@media (max-width: 760px) {
+  .sd-showcase {
+    padding: 28px 18px !important;
+  }
+  .sd-showcase-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    justify-items: center;
+  }
+  .sd-showcase-grid > div {
+    width: 100%;
+  }
+  .sd-showcase-arrow {
+    width: auto !important;
+    transform: rotate(90deg);
+  }
+}
+
+/* The footer's lead column plus four link columns needs a plain two-up grid
+   once the lead column alone fills the row. */
+@media (max-width: 860px) {
+  .sd-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 32px !important;
+  }
+  .sd-footer-grid > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Sections are scrolled to by SectionLink; keep the sticky header off the
+   heading it lands on. */
+[id] {
+  scroll-margin-top: 96px;
+}
