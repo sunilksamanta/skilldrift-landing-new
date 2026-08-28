@@ -5,8 +5,7 @@ import { useState } from "react";
 import { ArrowRight } from "./icons";
 import { Pill, SectionIntro } from "./SectionBits";
 import TrackedLink from "./TrackedLink";
-import { FEATURE_ROUTES } from "@/lib/content";
-import { campaignFor } from "@/lib/cta";
+import { FEATURE_ROUTES, ctaLabelFor } from "@/lib/content";
 
 /**
  * The same seven feature pages `/features` shows, read from `pages.json`
@@ -25,8 +24,8 @@ const features = FEATURE_ROUTES.map((route, i) => {
     body: route.hero?.standfirst ?? route.description,
     cta: `See ${label.toLowerCase()}`,
     href: route.path,
-    /** `/skill-benchmarking` -> `skill_benchmarking`, the CTA label. */
-    slug: campaignFor(route.path),
+    /** What this card reports as its CTA label. */
+    slug: ctaLabelFor(route),
     image: route.hero?.image,
     alt: route.hero?.imageAlt ?? "",
   };

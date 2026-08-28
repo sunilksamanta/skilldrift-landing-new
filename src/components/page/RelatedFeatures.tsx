@@ -1,7 +1,6 @@
 import { ArrowRight } from "../icons";
 import TrackedLink from "../TrackedLink";
-import { FEATURE_ROUTES } from "@/lib/content";
-import { campaignFor } from "@/lib/cta";
+import { FEATURE_ROUTES, ctaLabelFor } from "@/lib/content";
 
 /**
  * Internal linking between the seven feature pages. Every feature page links to
@@ -51,7 +50,7 @@ export default function RelatedFeatures({ current }: { current: string }) {
                 key={route.path}
                 href={route.path}
                 section="related_features"
-                label={campaignFor(route.path)}
+                label={ctaLabelFor(route)}
                 style={{
                   display: "flex",
                   flexDirection: "column",

@@ -10,7 +10,7 @@
 import { track } from "./index";
 import { AnalyticsEvents } from "./events";
 import type { AnalyticsEventProperties } from "./events";
-import { setIntent } from "../anon-session";
+import { readIntent, setIntent } from "../anon-session";
 
 /**
  * Where on the page the CTA sits. A closed set, so a typo is a build failure
@@ -39,13 +39,26 @@ export type CtaSection =
 /**
  * `anon_session_id`, `page_path` and the UTMs are added by `track()`, so a
  * call site only has to say which button was pressed.
+ *
+ * `intent_door` is the door the visitor had chosen when they clicked, read
+ * from the `sd_anon_intent` cookie, and is null until they choose one. It
+ * carries the same value as the `intent` property `track()` puts on every
+ * event; both names are sent because the CTA reports are written against
+ * `intent_door` while the rest of the anonymous funnel — including the two
+ * events the API fires server-side — has always keyed on `intent`. Renaming
+ * either one would break a report that already exists.
  */
 export function trackCta(
   section: CtaSection,
   label: string,
   extra?: AnalyticsEventProperties,
 ): void {
-  track(AnalyticsEvents.CTA_CLICKED, { section, label, ...extra });
+  track(AnalyticsEvents.CTA_CLICKED, {
+    section,
+    label,
+    intent_door: readIntent(),
+    ...extra,
+  });
 }
 
 /** One per browsing session, so re-clicks can be told apart from the first pick. */

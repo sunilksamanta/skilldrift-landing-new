@@ -200,7 +200,10 @@ export default function DoorsSection() {
               href={homeCta("doors_upload")}
               section="intent_cards"
               label="upload_free"
-              extra={{ intent: active.title }}
+              // The panel's own door, which is the default one until the
+              // visitor picks. The cookie is still empty in that case, so this
+              // is more accurate here than the value trackCta would read.
+              extra={{ intent_door: active.title }}
               style={{
                 minHeight: 52,
                 padding: "0 30px",

@@ -156,6 +156,14 @@ export type RouteContent = {
   custom?: boolean;
   /** True for the seven pages that sit under Features. */
   feature?: boolean;
+  /**
+   * The `label` this page reports as a CTA target, in the feature grid and in
+   * "The rest of the loop". Declared rather than derived from the path, so
+   * renaming a URL or retitling a card never silently renames a metric the
+   * client is already reporting on. Falls back to the slug when unset, which
+   * is correct for every page whose card name matches its URL.
+   */
+  ctaLabel?: string;
   hero?: {
     eyebrow: string;
     standfirst: string;

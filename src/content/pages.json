@@ -642,7 +642,8 @@
           "label": "Browse matched jobs",
           "href": "/jobs"
         }
-      }
+      },
+      "ctaLabel": "job_fit"
     },
     {
       "path": "/career-roadmap",
