@@ -51,6 +51,18 @@ const columns: { title: string; links: FooterLink[] }[] = [
       { href: "https://www.youtube.com/@SkillDrift-AI", label: "YouTube", external: true },
       { href: "https://www.instagram.com/skilldriftindia/", label: "Instagram", external: true },
       { href: "https://www.facebook.com/skilldriftindia", label: "Facebook Page", external: true },
+    ],
+  },
+  /*
+   * Split out of "Follow", which is where the directory listings had ended up.
+   * Nobody follows a Capterra page, and lumping ten links under one heading
+   * made the column longer than the four beside it. These are also the entries
+   * that matter for `sameAs` in schema.ts — every URL in this column appears
+   * there and vice versa, so keep the two lists in step when either changes.
+   */
+  {
+    title: "Listed on",
+    links: [
       {
         href: "https://theresanaiforthat.com/ai/skilldrift/",
         label: "There's An AI For That",
@@ -59,6 +71,18 @@ const columns: { title: string; links: FooterLink[] }[] = [
       {
         href: "https://alternativeto.net/software/skilldrift/",
         label: "AlternativeTo",
+        external: true,
+      },
+      { href: "https://www.capterra.com/p/10166550/SkillDrift/", label: "Capterra", external: true },
+      { href: "https://www.getapp.com/all-software/a/skilldrift/", label: "GetApp", external: true },
+      {
+        href: "https://www.softwareadvice.com/product/674176-SkillDrift/",
+        label: "Software Advice",
+        external: true,
+      },
+      {
+        href: "https://www.crunchbase.com/organization/skilldrift",
+        label: "Crunchbase",
         external: true,
       },
     ],

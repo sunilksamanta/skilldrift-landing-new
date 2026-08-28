@@ -49,6 +49,10 @@ export const organizationSchema = {
     "https://www.youtube.com/@SkillDrift-AI",
     "https://theresanaiforthat.com/ai/skilldrift/",
     "https://alternativeto.net/software/skilldrift/",
+    "https://www.capterra.com/p/10166550/SkillDrift/",
+    "https://www.getapp.com/all-software/a/skilldrift/",
+    "https://www.softwareadvice.com/product/674176-SkillDrift/",
+    "https://www.crunchbase.com/organization/skilldrift",
   ],
 } as const;
 
