@@ -1,0 +1,47 @@
+# Tell IndexNow what changed, once the production deploy is actually live.
+#
+# The trigger is deliberately not `push`. Vercel's build finishes before the
+# deployment is promoted, so a push-triggered run would submit URLs that still
+# serve the previous content — and IndexNow fetches what you submit. Vercel's
+# GitHub integration reports each deployment back as a GitHub deployment status,
+# and `state == success` on the Production environment is the first moment the
+# new content is genuinely reachable at www.skilldrift.ai.
+#
+# No secrets. The IndexNow key is public by design — it is served at the site
+# root so Bing can fetch it to prove ownership — so there is nothing to add in
+# repository settings for this to work.
+name: IndexNow
+
+on:
+  deployment_status:
+  # Manual escape hatch, from the Actions tab. Useful after a rollback, or when
+  # Bing has clearly missed something and you want to re-announce it.
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Space-separated paths, e.g. /pricing /jobs. Blank = whole sitemap."
+        required: false
+        default: ""
+
+jobs:
+  submit:
+    # Production only. Preview deploys would submit the production sitemap,
+    # which is both wrong and the quickest way to get the key rate-limited.
+    # `contains` rather than `==`: Vercel has shipped this field as both
+    # "Production" and "Production - <project>" over time, and a strict equality
+    # check silently stops firing the day that changes. "Preview" never matches.
+    # A manual run skips the check entirely.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       contains(github.event.deployment.environment, 'Production'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # The script reads the live sitemap and verifies the key file before it
+      # submits, so a botched deploy fails loudly here instead of silently
+      # having its submission rejected by Bing.
+      - run: node scripts/indexnow.mjs ${{ github.event.inputs.urls }}
