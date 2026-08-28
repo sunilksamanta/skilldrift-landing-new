@@ -132,6 +132,68 @@ button {
   }
 }
 
+/* ---- ProcessTicker: the pulse on the step that is currently running, and the
+       fade as each new step replaces the last. Both are decoration, so the
+       prefers-reduced-motion reset further down flattens them to nothing while
+       the step text itself keeps advancing. ---- */
+
+@keyframes sd-tick-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.55);
+    opacity: 0.45;
+  }
+}
+
+.sd-tick-dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--ac);
+  animation: sd-tick-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes sd-tick-in {
+  from {
+    /* Not 0: a compact ticker is a single line, and fading it from nothing
+       leaves the card looking empty for the length of the fade. */
+    opacity: 0.3;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sd-tick-line {
+  animation: sd-tick-in 0.35s ease both;
+}
+
+/* A moving sheen over a skeleton block, so a placeholder reads as "loading"
+   rather than "empty". */
+@keyframes sd-shimmer {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.sd-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    var(--card2) 0%,
+    color-mix(in oklab, var(--card2) 60%, var(--ac) 12%) 50%,
+    var(--card2) 100%
+  );
+  background-size: 200% 100%;
+  animation: sd-shimmer 1.6s linear infinite;
+}
+
 /* ---- layout primitives lifted out of the design's inline styles so the
        page can breathe on narrow viewports ---- */
 

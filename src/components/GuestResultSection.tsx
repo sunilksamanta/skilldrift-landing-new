@@ -4,10 +4,49 @@ import { useEffect, useRef } from "react";
 import type { GuestState } from "@/hooks/useGuestAnalysis";
 import type { GuestJob } from "@/lib/guest-api";
 import { Lock } from "./icons";
+import ProcessTicker from "./ProcessTicker";
 import TrackedLink from "./TrackedLink";
 import { AnalyticsEvents, track } from "@/lib/analytics";
 import { anonSessionId } from "@/lib/anon-session";
 import { homeCta } from "@/lib/cta";
+
+/*
+ * What the waiting panels narrate. These name the stages the API really works
+ * through, but their timing is invented — the API reports one pending state,
+ * not per-stage progress. Read `ProcessTicker` before changing them: the last
+ * line is where the ticker rests indefinitely, so it has to be a step that can
+ * plausibly still be running a minute later.
+ */
+const MAP_STEPS = [
+  "Extracting skills from your resume",
+  "Grouping them into skill categories",
+  "Loading the benchmark for your target role",
+  "Benchmarking each category against it",
+  "Scoring the distance to each requirement",
+  "Building your gap map",
+];
+
+/*
+ * Deliberately not the same lines as MAP_STEPS. The radar and this strip sit
+ * on screen together and start together, so sharing a list would show the same
+ * sentence twice at once — which reads as one broken component rather than two
+ * stages of real work.
+ */
+const GAP_STEPS = [
+  "Comparing your skills to the role",
+  "Working out how far each gap is",
+  "Checking which ones a course can close",
+  "Ranking them by what moves your score most",
+];
+
+const JOB_STEPS = [
+  "Reading your roles and seniority",
+  "Shortlisting openings that fit your profile",
+  "Parsing what each posting asks for",
+  "Scoring each one against your resume",
+  "Weighting by recency and location",
+  "Ranking your strongest matches",
+];
 
 /* ------------------------------------------------------------------ score */
 
@@ -302,6 +341,14 @@ export default function GuestResultSection({
   const shown = allJobs.slice(0, 3);
   const teased = allJobs.slice(3, 4);
 
+  // Matching still running, as opposed to finished with nothing to show. The
+  // card used to conflate the two and render the locked upsell the moment the
+  // results panel appeared — so a visitor whose jobs were seconds away was told
+  // to make an account to see matches that were about to arrive on their own.
+  const jobsPending =
+    allJobs.length === 0 &&
+    (state.jobs === null || state.jobs.status === "processing");
+
   // The analysis already read their name and email off the resume, so the
   // sign-up form is filled in for them rather than asking twice.
   const personal = state.analysis?.analysis?.personalInfo;
@@ -433,6 +480,7 @@ export default function GuestResultSection({
               shown={shown}
               teased={teased}
               total={allJobs.length}
+              pending={jobsPending}
             />
           </div>
 
@@ -800,11 +848,15 @@ function RadarCard({ axes, pending }: { axes: RadarAxis[]; pending: boolean }) {
       </div>
 
       {skeleton ? (
-        <p style={{ marginTop: "auto", fontSize: 13.5, color: "var(--tx3)" }}>
-          {pending
-            ? "Mapping your skills against the role…"
-            : "Your map is waiting in your free account."}
-        </p>
+        pending ? (
+          // Compact: the blurred radar above already fills the card, so a full
+          // checklist here would push it out of shape.
+          <ProcessTicker steps={MAP_STEPS} compact intervalMs={3000} />
+        ) : (
+          <p style={{ marginTop: "auto", fontSize: 13.5, color: "var(--tx3)" }}>
+            Your map is waiting in your free account.
+          </p>
+        )
       ) : (
         <div
           style={{
@@ -850,12 +902,15 @@ function JobsCard({
   shown,
   teased,
   total,
+  pending,
 }: {
   shown: GuestJob[];
   teased: GuestJob[];
   total: number;
+  /** Matching is still running. Distinct from `locked`, which means it is not. */
+  pending: boolean;
 }) {
-  const locked = total === 0;
+  const locked = total === 0 && !pending;
 
   return (
     <div className="sd-result-card" style={cardStyle}>
@@ -867,7 +922,13 @@ function JobsCard({
           gap: 12,
         }}
       >
-        <CardTitle>{locked ? "Probable matches" : "Roles you match now"}</CardTitle>
+        <CardTitle>
+          {pending
+            ? "Matching you to roles"
+            : locked
+              ? "Probable matches"
+              : "Roles you match now"}
+        </CardTitle>
         <span
           style={{
             flex: "0 0 auto",
@@ -879,7 +940,7 @@ function JobsCard({
             color: "var(--ac)",
           }}
         >
-          {locked ? "20+ jobs available" : "20+ more jobs"}
+          {pending ? "Scoring now" : locked ? "20+ jobs available" : "20+ more jobs"}
         </span>
       </div>
 
@@ -891,7 +952,16 @@ function JobsCard({
           gap: 6,
         }}
       >
-        {locked
+        {pending
+          ? [0, 1, 2].map((i) => (
+              <li
+                key={i}
+                className="sd-shimmer"
+                aria-hidden="true"
+                style={{ height: 52, borderRadius: 12, border: "1px solid var(--line)" }}
+              />
+            ))
+          : locked
           ? PLACEHOLDER_JOBS.map((job, i) => (
               <JobRow
                 key={job.title}
@@ -926,11 +996,15 @@ function JobsCard({
             ]}
       </ul>
 
-      <p style={{ marginTop: "auto", paddingTop: 14, fontSize: 12, color: "var(--tx3)" }}>
-        {locked
-          ? "Openings matched to this profile. Names and scores unlock with your account."
-          : "Scored against your resume, not keyword-matched."}
-      </p>
+      {pending ? (
+        <ProcessTicker steps={JOB_STEPS} compact intervalMs={3400} />
+      ) : (
+        <p style={{ marginTop: "auto", paddingTop: 14, fontSize: 12, color: "var(--tx3)" }}>
+          {locked
+            ? "Openings matched to this profile. Names and scores unlock with your account."
+            : "Scored against your resume, not keyword-matched."}
+        </p>
+      )}
     </div>
   );
 }
@@ -1221,22 +1295,16 @@ function GapsStrip({
           {[0, 1, 2].map((i) => (
             <li
               key={i}
+              className="sd-shimmer"
               style={{
                 height: 104,
                 borderRadius: 14,
                 border: "1px solid var(--line)",
-                background: "var(--card2)",
               }}
             />
           ))}
-          <li
-            style={{
-              gridColumn: "1 / -1",
-              fontSize: 13,
-              color: "var(--tx3)",
-            }}
-          >
-            Still scoring your skill gaps&hellip;
+          <li style={{ gridColumn: "1 / -1" }}>
+            <ProcessTicker steps={GAP_STEPS} intervalMs={3200} />
           </li>
         </ul>
       ) : (
