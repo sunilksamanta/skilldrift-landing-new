@@ -7,6 +7,18 @@ import Image from "next/image";
  * `markSize` and `textSize` are defaults, not fixed values — a caller can
  * override either with the `--sd-mark` / `--sd-text` custom properties, which
  * is how the header shrinks the lockup on narrow screens.
+ *
+ * The brand name is carried by the mark's `alt` and the visible "SkillDrift"
+ * text is `aria-hidden`, rather than the other way round. Both orderings
+ * announce the name exactly once — the two elements say the same word, so
+ * whichever is exposed, assistive tech reads "SkillDrift" and then the tagline.
+ * This ordering is the one a crawler can also read: an empty `alt` is correct
+ * for a decorative image, but Bing and Google report it as a missing alt and
+ * the logo is the one image on the page worth having in image search.
+ *
+ * The tagline stays exposed. It is the only part of the lockup that is not a
+ * restatement of the name, so hiding it would cost a screen-reader user real
+ * information.
  */
 export default function Wordmark({
   markSize = 38,
@@ -24,7 +36,7 @@ export default function Wordmark({
     <span style={{ display: "inline-flex", alignItems: "center", gap: 11 }}>
       <Image
         src="/assets/mark.png"
-        alt=""
+        alt="SkillDrift"
         width={220}
         height={221}
         priority
@@ -46,6 +58,7 @@ export default function Wordmark({
         }}
       >
         <span
+          aria-hidden="true"
           style={{
             fontSize: `var(--sd-text, ${textSize}px)`,
             fontWeight: 600,

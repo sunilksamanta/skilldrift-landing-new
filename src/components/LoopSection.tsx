@@ -153,7 +153,7 @@ export default function LoopSection() {
             >
               <Image
                 src="/assets/mark.png"
-                alt=""
+                alt="SkillDrift"
                 width={220}
                 height={221}
                 style={{ height: "6cqw", width: "auto", display: "block", margin: "0 auto 1.6cqw" }}
