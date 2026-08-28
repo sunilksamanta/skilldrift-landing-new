@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Regional } from "./Regional";
+import TrackedLink from "./TrackedLink";
 import { ArrowRight, Check } from "./icons";
 import { Pill, SectionIntro } from "./SectionBits";
 
@@ -212,8 +212,10 @@ export default function FreeSection() {
                 </li>
               ))}
             </ul>
-            <Link
+            <TrackedLink
               href="/pricing"
+              section="credits"
+              label="see_plans"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -226,7 +228,7 @@ export default function FreeSection() {
             >
               See plans and what credits cost
               <ArrowRight size={16} />
-            </Link>
+            </TrackedLink>
           </div>
         </div>
 

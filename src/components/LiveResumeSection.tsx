@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight, Check } from "./icons";
+import TrackedLink from "./TrackedLink";
 import { Pill, SectionIntro } from "./SectionBits";
 
 const claims = [
@@ -59,8 +59,10 @@ export default function LiveResumeSection() {
               </li>
             ))}
             <li style={{ marginTop: 8 }}>
-              <Link
+              <TrackedLink
                 href="/how-it-works"
+                section="live_resume"
+                label="how_it_works"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -72,7 +74,7 @@ export default function LiveResumeSection() {
               >
                 See how it works
                 <ArrowRight />
-              </Link>
+              </TrackedLink>
             </li>
           </ul>
 

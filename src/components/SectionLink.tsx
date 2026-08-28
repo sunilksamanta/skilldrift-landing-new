@@ -20,6 +20,7 @@ export default function SectionLink({
   style,
   className,
   ariaLabel,
+  onNavigate,
 }: {
   /** `id` of the target section on the homepage. */
   to: string;
@@ -27,6 +28,8 @@ export default function SectionLink({
   style?: CSSProperties;
   className?: string;
   ariaLabel?: string;
+  /** Runs on click, before the scroll or the route change. */
+  onNavigate?: () => void;
 }) {
   const router = useRouter();
 
@@ -56,6 +59,7 @@ export default function SectionLink({
         if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) {
           return;
         }
+        onNavigate?.();
         event.preventDefault();
 
         if (window.location.pathname === "/") {

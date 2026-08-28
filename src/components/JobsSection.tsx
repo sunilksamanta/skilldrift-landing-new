@@ -1,4 +1,4 @@
-import Link from "next/link";
+import TrackedLink from "./TrackedLink";
 import { Pill, SectionIntro, primaryButton } from "./SectionBits";
 
 /* stroke-dashoffset for r=19 (circumference 119.4) at the listed match score. */
@@ -169,9 +169,14 @@ export default function JobsSection() {
             flexWrap: "wrap",
           }}
         >
-          <Link href="/jobs" style={primaryButton}>
+          <TrackedLink
+            href="/jobs"
+            section="jobs"
+            label="browse_jobs"
+            style={primaryButton}
+          >
             Browse matched jobs
-          </Link>
+          </TrackedLink>
         </div>
       </div>
     </section>

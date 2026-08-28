@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight } from "./icons";
 import { Pill, SectionIntro } from "./SectionBits";
+import TrackedLink from "./TrackedLink";
 import { FEATURE_ROUTES } from "@/lib/content";
+import { campaignFor } from "@/lib/cta";
 
 /**
  * The same seven feature pages `/features` shows, read from `pages.json`
@@ -24,6 +25,8 @@ const features = FEATURE_ROUTES.map((route, i) => {
     body: route.hero?.standfirst ?? route.description,
     cta: `See ${label.toLowerCase()}`,
     href: route.path,
+    /** `/skill-benchmarking` -> `skill_benchmarking`, the CTA label. */
+    slug: campaignFor(route.path),
     image: route.hero?.image,
     alt: route.hero?.imageAlt ?? "",
   };
@@ -122,8 +125,10 @@ export default function FeaturesSection() {
                     >
                       {feature.body}
                     </p>
-                    <Link
+                    <TrackedLink
                       href={feature.href}
+                      section="feature_grid"
+                      label={feature.slug}
                       style={{
                         display: "inline-flex",
                         alignItems: "center",
@@ -136,7 +141,7 @@ export default function FeaturesSection() {
                     >
                       {feature.cta}
                       <ArrowRight size={16} />
-                    </Link>
+                    </TrackedLink>
                   </div>
                 </div>
               );
@@ -146,9 +151,11 @@ export default function FeaturesSection() {
           {/* The artwork already carries the purple field and grid, so it needs
               no frame of its own — only a matching radius. */}
           {active.image && (
-            <Link
+            <TrackedLink
               href={active.href}
-              aria-label={active.cta}
+              section="feature_grid"
+              label={active.slug}
+              ariaLabel={active.cta}
               style={{
                 display: "block",
                 position: "relative",
@@ -167,7 +174,7 @@ export default function FeaturesSection() {
                 sizes="(max-width: 900px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
               />
-            </Link>
+            </TrackedLink>
           )}
         </div>
       </div>

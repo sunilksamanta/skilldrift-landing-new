@@ -81,6 +81,8 @@ export default function CtaBand({
             href={cta.href}
             campaign={campaign}
             content="closing_primary"
+            section="final_cta"
+            label="get_started"
             style={{
               height: 56,
               padding: "0 36px",
@@ -100,6 +102,8 @@ export default function CtaBand({
               href={secondary.href}
               campaign={campaign}
               content="closing_secondary"
+              section="final_cta"
+              label="secondary"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

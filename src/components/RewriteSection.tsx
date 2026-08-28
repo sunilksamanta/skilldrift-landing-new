@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight } from "./icons";
+import TrackedLink from "./TrackedLink";
 import { homeCta } from "@/lib/cta";
 import { Pill, SectionIntro, primaryButton } from "./SectionBits";
 
@@ -227,11 +227,18 @@ export default function RewriteSection() {
             flexWrap: "wrap",
           }}
         >
-          <a href={homeCta("rewrite_upload")} style={primaryButton}>
+          <TrackedLink
+            href={homeCta("rewrite_upload")}
+            section="resume_rewrite"
+            label="upload_free"
+            style={primaryButton}
+          >
             Upload your resume - free
-          </a>
-          <Link
+          </TrackedLink>
+          <TrackedLink
             href="/resume-rewrite"
+            section="resume_rewrite"
+            label="see_rewrite"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -243,7 +250,7 @@ export default function RewriteSection() {
           >
             See a real rewrite, before and after
             <ArrowRight />
-          </Link>
+          </TrackedLink>
         </div>
       </div>
     </section>

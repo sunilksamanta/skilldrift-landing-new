@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useCallback, useRef, useState } from "react";
-import Link from "next/link";
 import { ArrowRight, DocPlus, DocScan } from "./icons";
+import TrackedLink from "./TrackedLink";
 import GuestResultSection from "./GuestResultSection";
 import StickyUploadCta from "./StickyUploadCta";
 import UploadProgress from "./UploadProgress";
@@ -11,6 +11,7 @@ import { homeCta } from "@/lib/cta";
 import { ACCEPTED_TYPES } from "@/lib/guest-api";
 import { useGuestAnalysis } from "@/hooks/useGuestAnalysis";
 import { AnalyticsEvents, track } from "@/lib/analytics";
+import { trackCta } from "@/lib/analytics/cta";
 import { markUploadStarted } from "@/lib/anon-session";
 
 /* av2 is used by a testimonial below, so the stack borrows av9 instead. */
@@ -163,8 +164,10 @@ export default function HeroAndResult() {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Link
+                  <TrackedLink
                     href="/how-it-works"
+                    section="hero"
+                    label="how_it_works"
                     style={{
                       display: "inline-flex",
                       alignItems: "center",
@@ -176,7 +179,7 @@ export default function HeroAndResult() {
                   >
                     See how it works
                     <ArrowRight />
-                  </Link>
+                  </TrackedLink>
                   <span style={{ fontSize: 14, color: "var(--tx3)" }}>
                     No account required to see your score &middot; first application free
                   </span>
@@ -446,8 +449,10 @@ export default function HeroAndResult() {
                     We read your resume to score it and find matches. We store it so you
                     don&rsquo;t have to upload it again if you make an account, and delete
                     it after 30 days if you don&rsquo;t.{" "}
-                    <Link
+                    <TrackedLink
                       href="/privacy-policy"
+                      section="upload_widget"
+                      label="privacy_policy"
                       style={{
                         color: "var(--tx2)",
                         textDecoration: "underline",
@@ -455,7 +460,7 @@ export default function HeroAndResult() {
                       }}
                     >
                       Privacy policy
-                    </Link>
+                    </TrackedLink>
                     .
                   </p>
                   {/* <label
@@ -486,14 +491,15 @@ export default function HeroAndResult() {
 
                   <a
                     href={homeCta("hero_build_resume")}
-                    onClick={() =>
+                    onClick={() => {
+                      trackCta("hero", "build_resume");
                       track(AnalyticsEvents.ANONYMOUS_UPLOAD_STARTED, {
                         file_type: null,
                         file_size_bytes: null,
                         entry_method: "build_resume_instead",
                         marketing_opt_in: optIn,
-                      })
-                    }
+                      });
+                    }}
                     style={{
                       marginTop: 24,
                       paddingTop: 24,

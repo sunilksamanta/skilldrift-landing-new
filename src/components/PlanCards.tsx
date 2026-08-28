@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Check } from "./icons";
 import { Price } from "./Regional";
+import TrackedLink from "./TrackedLink";
 import { signUpHref } from "@/lib/cta";
 
 /** The notes beside each price. The amounts themselves come from `Price`. */
@@ -137,8 +138,10 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
             </PlanPoint>
           ))}
         </ul>
-        <a
+        <TrackedLink
           href={signUpHref(campaign, "plan_free")}
+          section="pricing_free"
+          label="upload_free"
           style={{
             marginTop: 28,
             height: 52,
@@ -153,7 +156,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           }}
         >
           Upload your resume - free
-        </a>
+        </TrackedLink>
       </div>
 
       {/* Top up */}
@@ -219,8 +222,10 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
             </PlanPoint>
           ))}
         </ul>
-        <a
+        <TrackedLink
           href={signUpHref(campaign, "plan_topup")}
+          section="pricing_topup"
+          label="buy_credits"
           style={{
             marginTop: 28,
             height: 52,
@@ -236,7 +241,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           }}
         >
           Buy credits
-        </a>
+        </TrackedLink>
       </div>
 
       {/* Unlimited */}
@@ -329,8 +334,10 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
             </PlanPoint>
           ))}
         </ul>
-        <a
+        <TrackedLink
           href={signUpHref(campaign, "plan_unlimited")}
+          section="pricing_unlimited"
+          label="go_unlimited"
           style={{
             position: "relative",
             marginTop: 28,
@@ -346,7 +353,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           }}
         >
           Go unlimited
-        </a>
+        </TrackedLink>
       </div>
     </div>
   );

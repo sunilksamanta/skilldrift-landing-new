@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
+import TrackedLink from "./TrackedLink";
 import ThemeToggle from "./ThemeToggle";
 import Wordmark from "./Wordmark";
 import { BLOG_URL, signInHref } from "@/lib/cta";
@@ -78,9 +79,11 @@ export default function SiteHeader({ campaign = "site" }: { campaign?: string })
           style={{ display: "flex", alignItems: "center", flex: "0 0 auto" }}
         >
           <ThemeToggle />
-          <a
+          <TrackedLink
             className="sd-header-cta"
             href={signInHref(campaign, "header_sign_in")}
+            section="header"
+            label="sign_in"
             style={{
               height: 44,
               padding: "0 26px",
@@ -94,7 +97,7 @@ export default function SiteHeader({ campaign = "site" }: { campaign?: string })
             }}
           >
             Sign in
-          </a>
+          </TrackedLink>
           <MobileMenu
             items={nav}
             signInLabel="Sign in"

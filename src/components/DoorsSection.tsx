@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { Check } from "./icons";
+import TrackedLink from "./TrackedLink";
 import { homeCta } from "@/lib/cta";
-import { setIntent as rememberIntent } from "@/lib/anon-session";
+import { trackIntentSelected } from "@/lib/analytics/cta";
 
 const doors = [
   {
@@ -94,10 +95,13 @@ export default function DoorsSection() {
                 aria-selected={on}
                 aria-controls="door-panel"
                 onClick={() => {
+                  // Reported before the panel swaps, so the event names the
+                  // card that was actually pressed rather than the one that
+                  // ends up selected. The same call writes `sd_anon_intent`,
+                  // which is what carries the choice onto every later event —
+                  // the upload above all — so the two can never disagree.
+                  trackIntentSelected(door.title);
                   setIntent(i);
-                  // Remembered for the anonymous funnel: every later event,
-                  // including the upload, reports which door they picked.
-                  rememberIntent(door.title);
                 }}
                 style={{
                   textAlign: "left",
@@ -192,8 +196,11 @@ export default function DoorsSection() {
               flexWrap: "wrap",
             }}
           >
-            <a
+            <TrackedLink
               href={homeCta("doors_upload")}
+              section="intent_cards"
+              label="upload_free"
+              extra={{ intent: active.title }}
               style={{
                 minHeight: 52,
                 padding: "0 30px",
@@ -207,7 +214,7 @@ export default function DoorsSection() {
               }}
             >
               Upload your resume, free
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </div>

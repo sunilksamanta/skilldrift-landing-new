@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import type { GuestState } from "@/hooks/useGuestAnalysis";
 import type { GuestJob } from "@/lib/guest-api";
 import { Lock } from "./icons";
+import TrackedLink from "./TrackedLink";
 import { AnalyticsEvents, track } from "@/lib/analytics";
 import { anonSessionId } from "@/lib/anon-session";
 import { homeCta } from "@/lib/cta";
@@ -497,8 +498,10 @@ export default function GuestResultSection({
                 it again.
               </p>
             </div>
-            <a
+            <TrackedLink
               href={signUpHref}
+              section="anon_result"
+              label="create_account"
               style={{
                 position: "relative",
                 flex: "0 0 auto",
@@ -514,7 +517,7 @@ export default function GuestResultSection({
               }}
             >
               Create free account
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </div>

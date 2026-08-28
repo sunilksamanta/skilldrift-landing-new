@@ -1,13 +1,22 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowRight } from "./icons";
 import { Pill, SectionIntro } from "./SectionBits";
+import TrackedLink from "./TrackedLink";
 
+/** `cta` is the analytics label; it names the artefact, not the page. */
 const samples = [
-  { href: "/skill-benchmarking", label: "See a real gap report" },
-  { href: "/interview-prep", label: "See a real interview scorecard" },
-  { href: "/resume-rewrite", label: "A real tailored resume, before and after" },
+  { href: "/skill-benchmarking", label: "See a real gap report", cta: "gap_report" },
+  {
+    href: "/interview-prep",
+    label: "See a real interview scorecard",
+    cta: "interview_scorecard",
+  },
+  {
+    href: "/resume-rewrite",
+    label: "A real tailored resume, before and after",
+    cta: "tailored_resume",
+  },
 ];
 
 const stats = [
@@ -82,9 +91,11 @@ export default function ProofSection() {
           }}
         >
           {samples.map((sample) => (
-            <Link
+            <TrackedLink
               key={sample.label}
               href={sample.href}
+              section="proof"
+              label={sample.cta}
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -112,7 +123,7 @@ export default function ProofSection() {
                 Open sample
                 <ArrowRight size={15} strokeWidth={2} />
               </span>
-            </Link>
+            </TrackedLink>
           ))}
         </div>
 

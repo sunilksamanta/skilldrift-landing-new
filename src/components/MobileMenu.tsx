@@ -1,9 +1,17 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import TrackedLink from "./TrackedLink";
 
 export type NavItem = { href: string; label: string; external?: boolean };
+
+/** "How it works" -> "how_it_works", so the label reads the same in a report. */
+function slugify(label: string): string {
+  return label
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_|_$/g, "");
+}
 
 /**
  * The nav for screens too narrow to carry it inline. The desktop nav is hidden
@@ -119,33 +127,25 @@ export default function MobileMenu({
           }}
         >
           <nav>
-            {items.map((item) =>
-              item.external ? (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={itemStyle}
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ) : (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  style={itemStyle}
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ),
-            )}
+            {items.map((item) => (
+              <TrackedLink
+                key={item.label}
+                href={item.href}
+                section="mobile_menu"
+                label={slugify(item.label)}
+                newTab={item.external}
+                style={itemStyle}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </TrackedLink>
+            ))}
           </nav>
 
-          <a
+          <TrackedLink
             href={signInHref}
+            section="mobile_menu"
+            label="sign_in"
             onClick={() => setOpen(false)}
             style={{
               marginTop: 16,
@@ -161,7 +161,7 @@ export default function MobileMenu({
             }}
           >
             {signInLabel}
-          </a>
+          </TrackedLink>
         </div>
       )}
     </div>

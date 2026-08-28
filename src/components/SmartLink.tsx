@@ -4,6 +4,8 @@ import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import SectionLink from "./SectionLink";
 import { isSignIn, signUpHref } from "@/lib/cta";
+import { trackCta } from "@/lib/analytics/cta";
+import type { CtaSection } from "@/lib/analytics/cta";
 
 /**
  * Resolves an href from `pages.json` to the right kind of link:
@@ -20,6 +22,8 @@ export default function SmartLink({
   ariaLabel,
   campaign,
   content,
+  section,
+  label,
 }: {
   href: string;
   children: ReactNode;
@@ -29,13 +33,24 @@ export default function SmartLink({
   campaign?: string;
   /** Which button this is, for the UTM. */
   content?: string;
+  /**
+   * Set both to report the click as a CTA. Omitted on links that are
+   * navigation rather than a call to action, which stay silent.
+   */
+  section?: CtaSection;
+  label?: string;
 }) {
+  const report = () => {
+    if (section && label) trackCta(section, label);
+  };
+
   if (isSignIn(href)) {
     return (
       <a
         href={signUpHref(campaign ?? "site", content ?? "cta")}
         aria-label={ariaLabel}
         style={style}
+        onClick={report}
       >
         {children}
       </a>
@@ -44,7 +59,12 @@ export default function SmartLink({
 
   if (href.startsWith("/#")) {
     return (
-      <SectionLink to={href.slice(2)} style={style} ariaLabel={ariaLabel}>
+      <SectionLink
+        to={href.slice(2)}
+        style={style}
+        ariaLabel={ariaLabel}
+        onNavigate={report}
+      >
         {children}
       </SectionLink>
     );
@@ -58,6 +78,7 @@ export default function SmartLink({
         aria-label={ariaLabel}
         style={style}
         onClick={(event) => {
+          report();
           if (event.metaKey || event.ctrlKey || event.shiftKey) return;
           const target = document.getElementById(id);
           if (!target) return;
@@ -83,6 +104,7 @@ export default function SmartLink({
         href={href}
         aria-label={ariaLabel}
         style={style}
+        onClick={report}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {children}
@@ -91,7 +113,7 @@ export default function SmartLink({
   }
 
   return (
-    <Link href={href} aria-label={ariaLabel} style={style}>
+    <Link href={href} aria-label={ariaLabel} style={style} onClick={report}>
       {children}
     </Link>
   );

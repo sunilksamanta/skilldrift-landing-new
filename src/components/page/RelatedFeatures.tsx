@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { ArrowRight } from "../icons";
+import TrackedLink from "../TrackedLink";
 import { FEATURE_ROUTES } from "@/lib/content";
+import { campaignFor } from "@/lib/cta";
 
 /**
  * Internal linking between the seven feature pages. Every feature page links to
@@ -46,9 +47,11 @@ export default function RelatedFeatures({ current }: { current: string }) {
         >
           {others.map((route) => {
             return (
-              <Link
+              <TrackedLink
                 key={route.path}
                 href={route.path}
+                section="related_features"
+                label={campaignFor(route.path)}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -94,7 +97,7 @@ export default function RelatedFeatures({ current }: { current: string }) {
                   Read more
                   <ArrowRight size={15} strokeWidth={2} />
                 </span>
-              </Link>
+              </TrackedLink>
             );
           })}
         </div>

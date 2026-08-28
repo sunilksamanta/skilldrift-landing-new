@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import TrackedLink from "./TrackedLink";
 import Wordmark from "./Wordmark";
 import { homeCta } from "@/lib/cta";
 
@@ -100,8 +101,10 @@ export default function CtaSection() {
             flexWrap: "wrap",
           }}
         >
-          <a
+          <TrackedLink
             href={homeCta("closing_get_started")}
+            section="final_cta"
+            label="get_started"
             style={{
               height: 58,
               padding: "0 40px",
@@ -115,7 +118,7 @@ export default function CtaSection() {
             }}
           >
             Get started free
-          </a>
+          </TrackedLink>
         </div>
         <p style={{ marginTop: 26, fontSize: 13, color: "rgba(255,255,255,.62)" }}>
           No card required &middot; first application free &middot; takes 2 minutes
@@ -140,10 +143,11 @@ export default function CtaSection() {
             flexWrap: "wrap",
           }}
         >
-          <a
+          <TrackedLink
             href="https://apps.apple.com/in/app/skilldrift/id6749856149"
-            target="_blank"
-            rel="noopener noreferrer"
+            section="footer"
+            label="app_store"
+            newTab
             style={{ display: "block" }}
           >
             <Image
@@ -153,11 +157,12 @@ export default function CtaSection() {
               height={328}
               style={{ height: 48, width: "auto", display: "block" }}
             />
-          </a>
-          <a
+          </TrackedLink>
+          <TrackedLink
             href="https://play.google.com/store/apps/details?id=com.skilldrift.app"
-            target="_blank"
-            rel="noopener noreferrer"
+            section="footer"
+            label="play_store"
+            newTab
             style={{ display: "block" }}
           >
             <Image
@@ -167,7 +172,7 @@ export default function CtaSection() {
               height={328}
               style={{ height: 48, width: "auto", display: "block" }}
             />
-          </a>
+          </TrackedLink>
         </div>
       </div>
 

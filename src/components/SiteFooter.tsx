@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Wordmark from "./Wordmark";
 import SectionLink from "./SectionLink";
+import TrackedLink from "./TrackedLink";
 import { signInHref } from "@/lib/cta";
 
 type FooterLink =
-  | { href: string; label: string; external?: boolean }
+  | { href: string; label: string; external?: boolean; cta?: string }
   | { section: string; label: string }
   | { signIn: true; label: string };
 
@@ -26,7 +27,12 @@ const columns: { title: string; links: FooterLink[] }[] = [
       { href: "/about", label: "About Us" },
       { href: "/contact", label: "Contact Us" },
       { href: "/contact", label: "Careers" },
-      { href: "https://skilldrift.org", label: "For Institutions", external: true },
+      {
+        href: "https://skilldrift.org",
+        label: "For Institutions",
+        external: true,
+        cta: "institutions",
+      },
       { href: "/contact", label: "For employers" },
     ],
   },
@@ -149,6 +155,16 @@ export default function SiteFooter({ campaign = "site" }: { campaign?: string })
                       <SectionLink to={link.section} style={{ color: "var(--tx2)" }}>
                         {link.label}
                       </SectionLink>
+                    ) : "cta" in link && link.cta ? (
+                      <TrackedLink
+                        href={link.href}
+                        section="footer"
+                        label={link.cta}
+                        newTab={link.external}
+                        style={{ color: "var(--tx2)" }}
+                      >
+                        {link.label}
+                      </TrackedLink>
                     ) : "external" in link && link.external ? (
                       <a
                         href={link.href}
