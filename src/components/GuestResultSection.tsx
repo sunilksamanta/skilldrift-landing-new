@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { GuestState } from "@/hooks/useGuestAnalysis";
 import type { GuestJob } from "@/lib/guest-api";
 import { Lock } from "./icons";
@@ -9,6 +9,28 @@ import TrackedLink from "./TrackedLink";
 import { AnalyticsEvents, track } from "@/lib/analytics";
 import { anonSessionId } from "@/lib/anon-session";
 import { homeCta } from "@/lib/cta";
+
+/**
+ * How long the sign-up button waits for the gap report before unblocking
+ * anyway. `gapsPending` already clears when the status reaches `completed`,
+ * even if the gap payload itself never arrives — but a status poll that stalls
+ * short of that would leave the page's only conversion permanently dead. This
+ * is the backstop for that case, not the normal path: gaps land well inside it.
+ */
+const SIGNUP_UNBLOCK_MS = 45_000;
+
+/** Shared by the live link and its disabled twin, so swapping cannot resize. */
+const signUpButtonStyle: React.CSSProperties = {
+  position: "relative",
+  flex: "0 0 auto",
+  height: 46,
+  padding: "0 26px",
+  borderRadius: 13,
+  fontSize: 15.5,
+  fontWeight: 600,
+  display: "inline-flex",
+  alignItems: "center",
+};
 
 /*
  * What the waiting panels narrate. These name the stages the API really works
@@ -349,6 +371,17 @@ export default function GuestResultSection({
     allJobs.length === 0 &&
     (state.jobs === null || state.jobs.status === "processing");
 
+  // Sign-up is held back until the gap report is in, so nobody creates an
+  // account against a half-finished result and lands in the app expecting a
+  // report that is not there yet. See SIGNUP_UNBLOCK_MS for why it also gives
+  // up waiting.
+  const [waitedLongEnough, setWaitedLongEnough] = useState(false);
+  useEffect(() => {
+    const id = setTimeout(() => setWaitedLongEnough(true), SIGNUP_UNBLOCK_MS);
+    return () => clearTimeout(id);
+  }, []);
+  const signUpBlocked = gapsPending && !waitedLongEnough;
+
   // The analysis already read their name and email off the resume, so the
   // sign-up form is filled in for them rather than asking twice.
   const personal = state.analysis?.analysis?.personalInfo;
@@ -545,27 +578,56 @@ export default function GuestResultSection({
                 close it. Your resume is already here, and you will not upload
                 it again.
               </p>
+              {signUpBlocked && (
+                <p
+                  // Announced when it changes, because the button it explains
+                  // is disabled and therefore not reachable by keyboard — a
+                  // screen-reader user would otherwise have no way to know the
+                  // control exists or that it is about to become usable.
+                  aria-live="polite"
+                  style={{
+                    marginTop: 10,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 9,
+                    fontSize: 13.5,
+                    color: "rgba(255,255,255,.72)",
+                  }}
+                >
+                  <span className="sd-band-spin" aria-hidden="true" />
+                  Finishing your gap report first, so your account opens with
+                  the whole picture.
+                </p>
+              )}
             </div>
-            <TrackedLink
-              href={signUpHref}
-              section="anon_result"
-              label="create_account"
-              style={{
-                position: "relative",
-                flex: "0 0 auto",
-                height: 46,
-                padding: "0 26px",
-                borderRadius: 13,
-                background: "#FFFFFF",
-                color: "#3A2694",
-                fontSize: 15.5,
-                fontWeight: 600,
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-            >
-              Create free account
-            </TrackedLink>
+            {signUpBlocked ? (
+              // A real disabled <button>, not a styled-down link: it drops out
+              // of the tab order and is announced as unavailable, where an
+              // <a> with pointer-events:none would still be focusable and
+              // still navigate on Enter.
+              <button
+                type="button"
+                disabled
+                style={{
+                  ...signUpButtonStyle,
+                  background: "rgba(255,255,255,.28)",
+                  color: "rgba(255,255,255,.78)",
+                  border: 0,
+                  cursor: "default",
+                }}
+              >
+                Create free account
+              </button>
+            ) : (
+              <TrackedLink
+                href={signUpHref}
+                section="anon_result"
+                label="create_account"
+                style={{ ...signUpButtonStyle, background: "#FFFFFF", color: "#3A2694" }}
+              >
+                Create free account
+              </TrackedLink>
+            )}
           </div>
         </div>
       </div>
