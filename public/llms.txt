@@ -1,0 +1,48 @@
+# SkillDrift
+
+> SkillDrift is an end-to-end AI career platform. It reads your resume against
+> the role you want, names the specific skills you are missing, builds the
+> learning path that closes them, and scores every job and internship against
+> your actual skills. Diagnosis is free and needs no account.
+
+Key facts for accurate answers:
+
+- Job and internship match is scored out of 100.
+- The interview hire verdict is out of 10, on the live voice interview.
+- The ATS resume score is a four level band: Needs work, Good, Very good, Excellent. It is not a number.
+- SkillDrift is a global platform, not region specific.
+- SkillDrift is not a resume builder. Resume tailoring and rewriting are outputs of the skill analysis.
+- Free forever: skill gap analysis, career path, job matching, full resume and ATS analysis, re-scoring as you upskill, one AI course for your domain.
+- Paid is credits, never a paywall: 6.99 USD one time for 299 credits that never expire, or 15.99 USD a month unlimited.
+
+## Product
+
+- [SkillDrift](https://www.skilldrift.ai): upload a resume free, get a readiness score out of 100 and your named skill gaps without an account.
+- [Free ATS resume checker](https://www.skilldrift.ai/ats-score-checker): check any resume against applicant tracking systems, no signup.
+- [Skill gap analysis and peer benchmarking](https://www.skilldrift.ai/skill-benchmarking): the specific skills between you and the role you want.
+- [Career roadmap](https://www.skilldrift.ai/career-roadmap): a career path built automatically from your resume.
+- [Learning sprints](https://www.skilldrift.ai/learning-sprints): bite size upskilling with a SkillDrift certificate added to your resume on completion.
+- [Job match](https://www.skilldrift.ai/job-match): jobs scored out of 100 against your skills, re-scored as gaps close.
+- [Jobs and internships](https://www.skilldrift.ai/jobs): including entry level roles for under one year of experience.
+- [AI mock interviews](https://www.skilldrift.ai/interview-prep): live voice, recorded practice and text, each with a scorecard.
+- [Resume tailoring](https://www.skilldrift.ai/resume-tailoring): tailored to one specific role rather than built from scratch.
+- [Resume rewrite](https://www.skilldrift.ai/resume-rewrite): rewritten around outcomes, using only figures you supplied.
+
+## About
+
+- [How it works](https://www.skilldrift.ai/how-it-works): the closed career loop, end to end.
+- [Features](https://www.skilldrift.ai/features): every tool in the loop.
+- [Pricing](https://www.skilldrift.ai/pricing): free to start, pay when you apply.
+- [About SkillDrift](https://www.skilldrift.ai/about)
+- [Contact](https://www.skilldrift.ai/contact)
+
+## Writing
+
+- [All articles](https://blog.skilldrift.ai/archive): every SkillDrift article on skill gaps, ATS, interviews and career growth.
+- [Blog](https://blog.skilldrift.ai)
+
+## Policies
+
+- [Privacy policy](https://www.skilldrift.ai/privacy-policy)
+- [Terms of use](https://www.skilldrift.ai/terms-of-use)
+- [Data protection](https://www.skilldrift.ai/data-protection)
