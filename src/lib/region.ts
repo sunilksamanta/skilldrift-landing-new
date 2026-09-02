@@ -12,15 +12,18 @@
  * working on a fully static, CDN-cached site: nothing has to be server-rendered
  * per visitor, and there is no flash of the wrong currency.
  *
- * `NEXT_PUBLIC_REGION` still sets the *build-time* default. That is what a
- * crawler with no JS sees, and it is what the JSON-LD offers and page metadata
- * use, since neither of those can vary per visitor on a static page.
+ * `NEXT_PUBLIC_REGION` sets the *build-time* default, which is rest-of-world
+ * unless it is explicitly `in`. The default is what a crawler with no JS sees
+ * (Google, every AI crawler) and what the FAQ JSON-LD and page metadata use,
+ * since none of those can vary per visitor on a static page. Rest-of-world is
+ * the honest answer for an audience that is not in any one time zone; an Indian
+ * visitor in a browser still gets rupees from the bootstrap before first paint.
  */
 
 export type Region = "in" | "row";
 
 export const DEFAULT_REGION: Region =
-  process.env.NEXT_PUBLIC_REGION === "row" ? "row" : "in";
+  process.env.NEXT_PUBLIC_REGION === "in" ? "in" : "row";
 
 export type PriceToken = "free" | "topup" | "unlimited";
 

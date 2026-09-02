@@ -202,6 +202,6 @@ export function webPageSchema(path: string) {
     description: route.description,
     url: path === "/" ? SITE_URL : `${SITE_URL}${path}`,
     isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
-    inLanguage: "en-IN",
+    inLanguage: "en",
   };
 }

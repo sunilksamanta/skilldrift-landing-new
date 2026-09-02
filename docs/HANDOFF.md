@@ -60,8 +60,9 @@ FAQPage JSON-LD. Feature-page copy feeds the `/features` showcase rows.
 
 - **14 routes**, all SSR/SSG, 200 with their H1 in the served HTML; unknown paths return a real 404.
 - **SEO**: per-route title/description/canonical, Organization + WebPage + BreadcrumbList
-  (3-level on feature pages) + FAQPage + SoftwareApplication (INR; `NEXT_PUBLIC_REGION=row`
-  switches to USD), `sitemap.ts`, `robots.ts`.
+  (3-level on feature pages) + FAQPage + SoftwareApplication (offers in both INR and USD;
+  FAQ text and `<html data-sd-region>` default to rest-of-world, `NEXT_PUBLIC_REGION=in`
+  switches the no-JS/crawler view to India), `sitemap.ts`, `robots.ts`.
 - **OG images generated at build time** via `next/og` (`src/lib/og.tsx`), one per route,
   using bundled Switzer TTFs in `src/assets/fonts/`.
 - **Favicon** is the SkillDrift mark: `favicon.ico`, `icon.png`, and `apple-icon.tsx`
