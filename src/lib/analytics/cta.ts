@@ -33,6 +33,7 @@ export type CtaSection =
   | "pricing_topup"
   | "pricing_unlimited"
   | "related_features"
+  | "ats_checker"
   | "final_cta"
   | "footer";
 

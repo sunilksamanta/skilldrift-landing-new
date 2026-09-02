@@ -720,9 +720,25 @@ function ScoreCard({
         </svg>
       </div>
 
+      {/* Named plainly so someone who came for an ATS check knows this is it.
+          The rating stays a band, never a number — every ATS parses
+          differently, and a number would pretend to a precision nobody has. */}
       <span
         style={{
           marginTop: 0,
+          fontSize: 11.5,
+          fontWeight: 600,
+          letterSpacing: "0.09em",
+          textTransform: "uppercase",
+          color: "var(--tx3)",
+        }}
+      >
+        ATS rating
+      </span>
+
+      <span
+        style={{
+          marginTop: 6,
           padding: "5px 15px",
           borderRadius: 999,
           fontSize: 14.5,

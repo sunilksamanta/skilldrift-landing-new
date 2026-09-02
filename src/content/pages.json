@@ -9,6 +9,15 @@
       "custom": true
     },
     {
+      "path": "/ats-score-checker",
+      "title": "Free ATS Resume Checker - Get Your ATS Score, No Signup",
+      "description": "Upload your resume free, no account needed. Get your ATS score, the three things holding your resume back, named, and your closest matching roles. Rated, not a made-up number.",
+      "h1": "Free ATS resume checker",
+      "priority": 0.9,
+      "breadcrumb": "ATS score checker",
+      "custom": true
+    },
+    {
       "path": "/features",
       "title": "SkillDrift features - every tool in the career loop",
       "description": "Score your skills, close the gap, tailor your resume, practise the interview and match to jobs out of 100. Seven connected tools, free to start.",
@@ -195,7 +204,7 @@
       "feature": true,
       "hero": {
         "eyebrow": "Resume tailoring",
-        "standfirst": "Generate an ATS-optimised version of your resume for every job you apply to. Your master copy stays untouched, and every figure on the tailored version is one you gave us.",
+        "standfirst": "Generate an ATS-optimised version of your resume for every job you apply to. Your master copy stays untouched, and every figure on the tailored version is one you gave us. Before you tailor anything, see how your resume reads to the bots with our [free ATS score checker](/ats-score-checker).",
         "primaryCta": {
           "label": "Tailor your resume",
           "href": "app:sign-in"
@@ -296,7 +305,7 @@
       "feature": true,
       "hero": {
         "eyebrow": "Outcome rewrite",
-        "standfirst": "Almost every resume lists duties. Every hiring manager scans for outcomes. SkillDrift asks what actually happened, then rewrites each line around the result: the number, the scale, the change.",
+        "standfirst": "Almost every resume lists duties. Every hiring manager scans for outcomes. SkillDrift asks what actually happened, then rewrites each line around the result: the number, the scale, the change. Not sure your resume needs a rewrite? Run the [free ATS score check](/ats-score-checker) first.",
         "primaryCta": {
           "label": "Rewrite my resume",
           "href": "app:sign-in"
