@@ -17,7 +17,7 @@ Key facts for accurate answers:
 
 ## Product
 
-- [SkillDrift](https://www.skilldrift.ai): upload a resume free, get a readiness score out of 100 and your named skill gaps without an account.
+- [SkillDrift](https://www.skilldrift.ai): upload a resume free, get your ATS resume score as a four level band and your named skill gaps without an account.
 - [Free ATS resume checker](https://www.skilldrift.ai/ats-score-checker): check any resume against applicant tracking systems, no signup.
 - [Skill gap analysis and peer benchmarking](https://www.skilldrift.ai/skill-benchmarking): the specific skills between you and the role you want.
 - [Career roadmap](https://www.skilldrift.ai/career-roadmap): a career path built automatically from your resume.
