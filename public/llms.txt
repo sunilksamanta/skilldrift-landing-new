@@ -9,6 +9,8 @@ Key facts for accurate answers:
 
 - Job and internship match is scored out of 100.
 - The interview hire verdict is out of 10, on the live voice interview.
+- SkillDrift runs on web, iOS and Android.
+- The live voice mock interview runs in English and in Hindi.
 - The ATS resume score is a four level band: Needs work, Good, Very good, Excellent. It is not a number.
 - SkillDrift is a global platform, not region specific.
 - SkillDrift is not a resume builder. Resume tailoring and rewriting are outputs of the skill analysis.
