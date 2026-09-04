@@ -6,7 +6,7 @@ import TrackedLink from "./TrackedLink";
 import GuestResultSection from "./GuestResultSection";
 import StickyUploadCta from "./StickyUploadCta";
 import UploadProgress from "./UploadProgress";
-import { homeCta } from "@/lib/cta";
+import { signUpHref } from "@/lib/cta";
 import { ACCEPTED_TYPES } from "@/lib/guest-api";
 import { useGuestAnalysis } from "@/hooks/useGuestAnalysis";
 import { AnalyticsEvents, track } from "@/lib/analytics";
@@ -21,9 +21,10 @@ import { markUploadStarted } from "@/lib/anon-session";
  *  - `UploadCard` (named): the card alone, driven by a guest-analysis instance
  *    the caller owns. HeroAndResult uses this so the homepage hero can react
  *    to the same state (hide the copy, show the result section).
- *  - default `ResumeUploadCard`: no props. Owns its own guest-analysis state
- *    and swaps itself for the result section when the analysis is ready.
- *    Used on /ats-score-checker.
+ *  - default `ResumeUploadCard`: owns its own guest-analysis state and swaps
+ *    itself for the result section when the analysis is ready. Used on
+ *    /ats-score-checker, which passes its own `campaign` so its sign-ups are
+ *    not filed under the homepage.
  */
 
 const panelBorder: React.CSSProperties = {
@@ -35,7 +36,14 @@ const panelBorder: React.CSSProperties = {
 
 type Guest = ReturnType<typeof useGuestAnalysis>;
 
-export function UploadCard({ guest }: { guest: Guest }) {
+export function UploadCard({
+  guest,
+  campaign = "home",
+}: {
+  guest: Guest;
+  /** Page the card is rendered on, for the UTM. Defaults to the homepage. */
+  campaign?: string;
+}) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [dragging, setDragging] = useState(false);
   // The marketing opt-in checkbox is commented out in the markup below, so
@@ -353,7 +361,7 @@ export function UploadCard({ guest }: { guest: Guest }) {
           </label> */}
 
           <a
-            href={homeCta("hero_build_resume")}
+            href={signUpHref(campaign, "hero_build_resume")}
             onClick={() => {
               trackCta("hero", "build_resume");
               track(AnalyticsEvents.ANONYMOUS_UPLOAD_STARTED, {
@@ -440,11 +448,22 @@ export function UploadCard({ guest }: { guest: Guest }) {
   );
 }
 
-export default function ResumeUploadCard() {
+export default function ResumeUploadCard({
+  campaign = "home",
+}: {
+  /** Page the card is rendered on, for the UTM. Defaults to the homepage. */
+  campaign?: string;
+} = {}) {
   const guest = useGuestAnalysis();
 
   if (guest.phase === "ready") {
-    return <GuestResultSection state={guest} guestToken={guest.guestToken} />;
+    return (
+      <GuestResultSection
+        state={guest}
+        guestToken={guest.guestToken}
+        campaign={campaign}
+      />
+    );
   }
 
   // Owns its section so the result view above (which brings its own section
@@ -453,7 +472,7 @@ export default function ResumeUploadCard() {
     <section id="top" style={{ padding: "8px 0 26px" }}>
       <div className="wrap">
         <div style={{ maxWidth: 860 }}>
-          <UploadCard guest={guest} />
+          <UploadCard guest={guest} campaign={campaign} />
         </div>
       </div>
     </section>

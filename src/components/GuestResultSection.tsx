@@ -8,7 +8,7 @@ import ProcessTicker from "./ProcessTicker";
 import TrackedLink from "./TrackedLink";
 import { AnalyticsEvents, track } from "@/lib/analytics";
 import { anonSessionId } from "@/lib/anon-session";
-import { homeCta } from "@/lib/cta";
+import { signUpHref } from "@/lib/cta";
 
 /**
  * How long the sign-up button waits for the gap report before unblocking
@@ -339,9 +339,12 @@ function CardTitle({ children }: { children: React.ReactNode }) {
 export default function GuestResultSection({
   state,
   guestToken,
+  campaign = "home",
 }: {
   state: GuestState;
   guestToken: string | null;
+  /** Page the upload happened on, for the UTM. Defaults to the homepage. */
+  campaign?: string;
 }) {
   const panel = useRef<HTMLElement | null>(null);
   const score = clamp(state.analysis?.analysis?.overall?.atsScore ?? 0);
@@ -385,7 +388,7 @@ export default function GuestResultSection({
   // The analysis already read their name and email off the resume, so the
   // sign-up form is filled in for them rather than asking twice.
   const personal = state.analysis?.analysis?.personalInfo;
-  const signUpHref = homeCta("result_create_account", {
+  const signUpUrl = signUpHref(campaign, "result_create_account", {
     name: who?.name ?? personal?.name,
     email: personal?.email,
     guestToken,
@@ -620,7 +623,7 @@ export default function GuestResultSection({
               </button>
             ) : (
               <TrackedLink
-                href={signUpHref}
+                href={signUpUrl}
                 section="anon_result"
                 label="create_account"
                 style={{ ...signUpButtonStyle, background: "#FFFFFF", color: "#3A2694" }}

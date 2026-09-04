@@ -5,10 +5,11 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import TrackedLink from "@/components/TrackedLink";
 import Breadcrumbs from "@/components/page/Breadcrumbs";
+import CtaBand from "@/components/page/CtaBand";
 import { Plus } from "@/components/icons";
 import { CardGrid, Section, StepList } from "@/components/page/blocks";
 import { getRoute } from "@/lib/content";
-import { campaignFor } from "@/lib/cta";
+import { SIGN_IN, campaignFor } from "@/lib/cta";
 import { breadcrumbSchema, faqPageSchema, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
@@ -170,8 +171,9 @@ export default function AtsScoreCheckerPage() {
           </div>
         </section>
 
-        {/* The existing homepage upload card. No props, no behaviour changes. */}
-        <ResumeUploadCard />
+        {/* The existing homepage upload card, told which page it is on so its
+            sign-up links report as `ats_score_checker` rather than `home`. */}
+        <ResumeUploadCard campaign={campaign} />
 
         <Section
           alt
@@ -275,6 +277,13 @@ export default function AtsScoreCheckerPage() {
           </p>
         </Section>
       </main>
+
+      <CtaBand
+        heading="Find out how your resume actually reads."
+        copy="Your ATS rating, the three things holding it down, and the skills between you and the role you want. No account needed to see it."
+        primary={{ label: "Check my resume - free", href: SIGN_IN }}
+        campaign={campaign}
+      />
 
       <SiteFooter campaign={campaign} />
     </div>
