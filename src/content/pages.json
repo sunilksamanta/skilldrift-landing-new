@@ -763,13 +763,13 @@
       "path": "/skill-benchmarking",
       "title": "Free skill gap analysis and peer benchmarking | SkillDrift",
       "description": "See your skills against industry standards and against your peers, scored out of 100, with the blind spots named. Free, and it re-scores as you learn.",
-      "h1": "See how you stack up.",
+      "h1": "See exactly which skills are missing between you and the role you want.",
       "priority": 0.8,
       "breadcrumb": "Skill benchmarking",
       "feature": true,
       "hero": {
         "eyebrow": "Skill benchmarking",
-        "standfirst": "Your skills against industry standards and against your peers, scored out of 100, with the blind spots named. Free, and it re-scores every time you learn something.",
+        "standfirst": "SkillDrift reads your resume against the role you actually want and names every missing skill individually, rather than returning one overall percentage. Your named gaps and your ATS resume score as a four level band come back without creating an account, and every job and internship is scored out of 100 against your actual skills.",
         "primaryCta": {
           "label": "Get my score - free",
           "href": "app:sign-in"
@@ -785,7 +785,7 @@
         {
           "type": "split",
           "eyebrow": "What you get",
-          "heading": "A number you can argue with.",
+          "heading": "How do you find out which skills you are missing?",
           "copy": "The score is only useful if you can see what produced it. Every point traces to a named skill and a named benchmark.",
           "panels": [
             {
@@ -813,7 +813,7 @@
           "type": "steps",
           "alt": true,
           "eyebrow": "How it runs",
-          "heading": "No forms. No self-assessment sliders.",
+          "heading": "Do I have to fill in a skills questionnaire?",
           "copy": "Self-rated skill surveys measure confidence, not competence. This reads what you have actually done.",
           "steps": [
             {
@@ -837,7 +837,7 @@
         {
           "type": "cards",
           "eyebrow": "Always free",
-          "heading": "This one never costs a credit.",
+          "heading": "Is skill gap analysis free?",
           "copy": "Finding out where you stand is free permanently. Credits only appear when you are producing something to send to an employer.",
           "min": 300,
           "cards": [
@@ -864,7 +864,26 @@
           "label": "Get my score - free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "relatedHeading": "What happens after you know your gaps?",
+      "faq": [
+        {
+          "q": "How do you find out which skills you are missing?",
+          "a": "SkillDrift reads your resume and scores you out of 100 against the role you actually want. Every point traces to a named skill and a named benchmark, so you get the specific skills holding the number down named individually, measured against industry standards for that role and against the people chasing it alongside you."
+        },
+        {
+          "q": "Do I have to fill in a skills questionnaire?",
+          "a": "No. There are no forms and no self-assessment sliders. Self-rated skill surveys measure confidence, not competence, so SkillDrift reads your skills, roles and tools straight from your resume, a PDF or DOCX up to 5 MB, and benchmarks them against the target role you pick."
+        },
+        {
+          "q": "Is skill gap analysis free?",
+          "a": "Yes, permanently. The skill gap analysis, the full resume and ATS analysis, and unlimited re-scoring after you upskill are all free, and no account is needed to see your first score. Credits only appear when you are producing something to send to an employer."
+        },
+        {
+          "q": "What happens after you know your gaps?",
+          "a": "Your named gaps feed the rest of the loop: a career roadmap built from them, learning sprints that close them, jobs and internships scored out of 100 and re-scored as you go, and resume tailoring for a specific role. Every tool feeds one connected profile, one growing score, and one resume that gets stronger with every skill you build."
+        }
+      ]
     },
     {
       "path": "/learning-sprints",

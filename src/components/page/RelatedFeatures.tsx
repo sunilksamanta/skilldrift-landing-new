@@ -6,7 +6,14 @@ import { FEATURE_ROUTES, ctaLabelFor } from "@/lib/content";
  * Internal linking between the seven feature pages. Every feature page links to
  * the other six, which is what stops them being crawl islands.
  */
-export default function RelatedFeatures({ current }: { current: string }) {
+export default function RelatedFeatures({
+  current,
+  heading,
+}: {
+  current: string;
+  /** Defaults to "The rest of the loop"; see `relatedHeading` in pages.json. */
+  heading?: string;
+}) {
   const others = FEATURE_ROUTES.filter((route) => route.path !== current);
 
   return (
@@ -21,7 +28,7 @@ export default function RelatedFeatures({ current }: { current: string }) {
             letterSpacing: "-0.02em",
           }}
         >
-          The rest of the loop
+          {heading ?? "The rest of the loop"}
         </h2>
         <p
           style={{

@@ -10,7 +10,12 @@ import PageHero from "@/components/page/PageHero";
 import RichText from "@/components/page/RichText";
 import RelatedFeatures from "@/components/page/RelatedFeatures";
 import { CONTENT_ROUTES, getRouteBySlug } from "@/lib/content";
-import { breadcrumbSchema, softwareApplicationSchema, webPageSchema } from "@/lib/schema";
+import {
+  breadcrumbSchema,
+  faqPageSchema,
+  softwareApplicationSchema,
+  webPageSchema,
+} from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { campaignFor } from "@/lib/cta";
 
@@ -43,6 +48,7 @@ export default async function ContentPage({
 
   const schemas: object[] = [webPageSchema(route.path), breadcrumbSchema(route.path)];
   if (route.path === "/pricing") schemas.push(softwareApplicationSchema());
+  if (route.faq?.length) schemas.push(faqPageSchema(route.faq));
 
   return (
     <div
@@ -85,7 +91,9 @@ export default async function ContentPage({
           />
         ))}
 
-        {route.feature && <RelatedFeatures current={route.path} />}
+        {route.feature && (
+          <RelatedFeatures current={route.path} heading={route.relatedHeading} />
+        )}
 
         {route.cta && (
           <CtaBand

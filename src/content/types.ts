@@ -164,6 +164,18 @@ export type RouteContent = {
    * is correct for every page whose card name matches its URL.
    */
   ctaLabel?: string;
+  /**
+   * Overrides the heading on the shared "The rest of the loop" block. Set it
+   * where the page needs that H2 to carry the question a reader actually types;
+   * the other feature pages keep the default.
+   */
+  relatedHeading?: string;
+  /**
+   * Question and answer pairs emitted as FAQPage JSON-LD. Every entry must have
+   * a visible counterpart on the page — an H2 and the copy beneath it — so the
+   * structured data can never answer something the page does not.
+   */
+  faq?: { q: string; a: string }[];
   hero?: {
     eyebrow: string;
     standfirst: string;
