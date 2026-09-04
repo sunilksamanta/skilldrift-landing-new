@@ -48,3 +48,5 @@ Key facts for accurate answers:
 - [Privacy policy](https://www.skilldrift.ai/privacy-policy)
 - [Terms of use](https://www.skilldrift.ai/terms-of-use)
 - [Data protection](https://www.skilldrift.ai/data-protection)
+
+## The institutional product SkillDrift Career Launchpad is a separate product for universities, colleges and career centres, at https://www.skilldrift.org. It is bought by the institution and its users are provisioned inside that institution's own tenant, so no individual can sign themselves up for it. SkillDrift, described above, is the product an individual signs up for and uses on their own behalf. Two products, two databases, two user bases.
