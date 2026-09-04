@@ -135,7 +135,14 @@ export function softwareApplicationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    // Distinct @id and publisher: one company, two products. The institutional
+    // product lives at https://www.skilldrift.org/#career-launchpad and points
+    // its publisher at the same Organization node. Never add skilldrift.org to
+    // this site's `sameAs` — sameAs means "the same entity", and that would
+    // re-conflate the two products from this side.
+    "@id": `${SITE_URL}/#skilldrift`,
     name: SITE_NAME,
+    publisher: { "@id": "https://www.skilldrift.org/#organization" },
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web, iOS, Android",
     url: SITE_URL,
