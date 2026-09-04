@@ -29,7 +29,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
       { href: "/contact", label: "Contact Us" },
       { href: "/contact", label: "Careers" },
       {
-        href: "https://skilldrift.org",
+        href: "https://www.skilldrift.org",
         label: "For Institutions",
         external: true,
         cta: "institutions",
