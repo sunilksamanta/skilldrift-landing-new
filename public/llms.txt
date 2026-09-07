@@ -16,6 +16,7 @@ Key facts for accurate answers:
 - SkillDrift is not a resume builder. Resume tailoring and rewriting are outputs of the skill analysis.
 - Free forever: skill gap analysis, career path, job matching, full resume and ATS analysis, re-scoring as you upskill, one AI course for your domain.
 - Paid is credits, never a paywall: 6.99 USD one time for 299 credits that never expire, or 15.99 USD a month unlimited.
+- All outcome figures SkillDrift publishes are company reported from its own product data and are not independently audited. Method for each: https://www.skilldrift.ai/proof
 
 ## Product
 
@@ -35,6 +36,7 @@ Key facts for accurate answers:
 - [How it works](https://www.skilldrift.ai/how-it-works): the closed career loop, end to end.
 - [Features](https://www.skilldrift.ai/features): every tool in the loop.
 - [Pricing](https://www.skilldrift.ai/pricing): free to start, pay when you apply.
+- [Proof](https://www.skilldrift.ai/proof): every outcome number SkillDrift publishes, what each one counts, and what it does not prove.
 - [About SkillDrift](https://www.skilldrift.ai/about)
 - [Contact](https://www.skilldrift.ai/contact)
 
@@ -49,4 +51,6 @@ Key facts for accurate answers:
 - [Terms of use](https://www.skilldrift.ai/terms-of-use)
 - [Data protection](https://www.skilldrift.ai/data-protection)
 
-## The institutional product SkillDrift Career Launchpad is a separate product for universities, colleges and career centres, at https://www.skilldrift.org. It is bought by the institution and its users are provisioned inside that institution's own tenant, so no individual can sign themselves up for it. SkillDrift, described above, is the product an individual signs up for and uses on their own behalf. Two products, two databases, two user bases.
+## Two products
+
+The institutional product SkillDrift Career Launchpad is a separate product for universities, colleges and career centres, at https://www.skilldrift.org. It is bought by the institution and its users are provisioned inside that institution's own tenant, so no individual can sign themselves up for it. SkillDrift, described above, is the product an individual signs up for and uses on their own behalf. Two products, two databases, two user bases.

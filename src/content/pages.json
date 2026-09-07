@@ -198,13 +198,13 @@
       "path": "/resume-tailoring",
       "title": "AI resume tailoring for every job you apply to | SkillDrift",
       "description": "Generate an ATS-optimised version of your resume for every application, for 18 credits. Your master copy stays untouched. Skill gap analysis is free.",
-      "h1": "Beat the bots. Land the interview.",
+      "h1": "Tailor your resume to one job without rewriting it from scratch.",
       "priority": 0.8,
       "breadcrumb": "Resume tailoring",
       "feature": true,
       "hero": {
         "eyebrow": "Resume tailoring",
-        "standfirst": "Generate an ATS-optimised version of your resume for every job you apply to. Your master copy stays untouched, and every figure on the tailored version is one you gave us. Before you tailor anything, see how your resume reads to the bots with our [free ATS score checker](/ats-score-checker).",
+        "standfirst": "SkillDrift keeps one master resume and generates a fresh ATS-optimised version for each job you apply to. What changes is emphasis and ordering. Every figure on the tailored version is one you supplied, and your master copy is never altered. Seeing how your resume reads to the bots, as a four level ATS band, costs nothing.",
         "primaryCta": {
           "label": "Tailor your resume",
           "href": "app:sign-in"
@@ -220,7 +220,7 @@
         {
           "type": "steps",
           "eyebrow": "How it runs",
-          "heading": "One master copy. A fresh version for every posting.",
+          "heading": "Should you tailor your resume for every job application?",
           "copy": "The posting decides the emphasis. You decide what is true. Nothing is invented in between.",
           "steps": [
             {
@@ -245,7 +245,7 @@
           "type": "cards",
           "alt": true,
           "eyebrow": "What changes, and what never does",
-          "heading": "Emphasis is tailored. Facts are not.",
+          "heading": "Does SkillDrift invent things to put on your resume?",
           "min": 300,
           "cards": [
             {
@@ -267,7 +267,7 @@
           "type": "prices",
           "id": "cost",
           "eyebrow": "What it costs",
-          "heading": "Diagnosis is free. Tailoring is 18 credits.",
+          "heading": "What does tailoring a resume cost?",
           "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gap analysis, job matching and your career path never cost a credit.",
           "rows": [
             {
@@ -293,19 +293,38 @@
           "label": "Get started free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "relatedHeading": "How do you know if your resume is ATS friendly?",
+      "faq": [
+        {
+          "q": "Should you tailor your resume for every job application?",
+          "a": "Yes, and the reason is mechanical rather than stylistic: applicant tracking systems read a resume against one specific job description. SkillDrift keeps a master copy and produces a tailored version per posting, so the emphasis matches the role without you rebuilding the document."
+        },
+        {
+          "q": "Does SkillDrift invent things to put on your resume?",
+          "a": "No. It re-emphasises and reorders what you already supplied and it asks you when something is missing. Every figure on a tailored version is one you gave it."
+        },
+        {
+          "q": "What does tailoring a resume cost?",
+          "a": "A tailored version is 18 credits. A full outcome rewrite is 70. An ATS rewrite is 70. Every new account is granted 160 credits, and the diagnosis itself is free."
+        },
+        {
+          "q": "How do you know if your resume is ATS friendly?",
+          "a": "Run it through the free ATS score checker. SkillDrift returns your resume readiness as a four level band, with the specific problems named, and it does not require an account."
+        }
+      ]
     },
     {
       "path": "/resume-rewrite",
       "title": "Rewrite your resume around outcomes, not duties | SkillDrift",
       "description": "Most resumes list duties. SkillDrift asks what actually happened and rewrites each line around the result. Every figure is one you supplied, nothing invented.",
-      "h1": "Your resume says what you did. It should say what happened.",
+      "h1": "Rewrite your resume around what happened, not what you were responsible for.",
       "priority": 0.8,
       "breadcrumb": "Resume rewrite",
       "feature": true,
       "hero": {
         "eyebrow": "Outcome rewrite",
-        "standfirst": "Almost every resume lists duties. Every hiring manager scans for outcomes. SkillDrift asks what actually happened, then rewrites each line around the result: the number, the scale, the change. Not sure your resume needs a rewrite? Run the [free ATS score check](/ats-score-checker) first.",
+        "standfirst": "Most resumes list duties. SkillDrift reads each line, asks what actually resulted from it, and rewrites it around the outcome. It never invents a number: every figure comes from you. The result is the same job history reading as evidence rather than as a job description.",
         "primaryCta": {
           "label": "Rewrite my resume",
           "href": "app:sign-in"
@@ -321,7 +340,7 @@
         {
           "type": "cards",
           "eyebrow": "Before and after",
-          "heading": "Same job. Same year. Different resume.",
+          "heading": "Why does listing your responsibilities weaken your resume?",
           "copy": "Nothing below was invented. Each rewrite came from a short set of questions about what the work actually produced.",
           "min": 320,
           "cards": [
@@ -353,7 +372,7 @@
           "type": "split",
           "alt": true,
           "eyebrow": "How it works",
-          "heading": "It asks you. It never invents.",
+          "heading": "Will an AI resume rewrite invent things about you?",
           "copy": "The rewrite is an interview, not a generator. You supply the facts; SkillDrift supplies the phrasing and the structure.",
           "panels": [
             {
@@ -381,7 +400,7 @@
           "type": "prices",
           "id": "cost",
           "eyebrow": "What it costs",
-          "heading": "A full outcome rewrite is 70 credits.",
+          "heading": "What does a resume rewrite cost?",
           "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Resume and ATS analysis, the diagnosis that tells you whether you need this at all, is free.",
           "rows": [
             {
@@ -408,19 +427,38 @@
           "label": "Get started free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "relatedHeading": "How do you turn a duty into an outcome on a resume?",
+      "faq": [
+        {
+          "q": "Why does listing your responsibilities weaken your resume?",
+          "a": "Because a responsibility describes the job, not you. Two people with the same title write the same bullet. An outcome, with a number attached, is the only part of a resume that separates one candidate from another, and it is also what an applicant tracking system can weight."
+        },
+        {
+          "q": "Will an AI resume rewrite invent things about you?",
+          "a": "No. SkillDrift asks you for anything it does not already have on your resume, and every figure in the rewritten version is one you supplied."
+        },
+        {
+          "q": "What does a resume rewrite cost?",
+          "a": "A full outcome rewrite is 70 credits and an ATS rewrite is 70. Every new account is granted 160 credits. The diagnosis, including your ATS readiness band, is free."
+        },
+        {
+          "q": "How do you turn a duty into an outcome on a resume?",
+          "a": "Take the duty, ask what changed because of it, and put the change first. SkillDrift does this line by line and asks you for the figure when it is missing rather than estimating one."
+        }
+      ]
     },
     {
       "path": "/interview-prep",
       "title": "AI mock interviews - voice, recorded and text | SkillDrift",
       "description": "Practise for any role with an AI coach. Live voice, recorded practice or text Q&A, each with a scorecard telling you exactly where you lost points.",
-      "h1": "Practise until it's boring.",
+      "h1": "Practise the interview in the format you will actually face.",
       "priority": 0.8,
       "breadcrumb": "Interview prep",
       "feature": true,
       "hero": {
         "eyebrow": "Interview prep",
-        "standfirst": "Practise for any role with an AI coach. Live voice, recorded practice or text Q&A, each with a scorecard telling you exactly where you lost points.",
+        "standfirst": "SkillDrift runs mock interviews in three formats: text, recorded voice, and live realtime voice. The realtime voice interview runs in English and in Hindi, so you can practise in the language you will be interviewed in. Every format returns a scorecard naming where you lost points, and every gap it finds can be turned into a learning roadmap.",
         "primaryCta": {
           "label": "Start a mock interview",
           "href": "app:sign-in"
@@ -436,7 +474,7 @@
         {
           "type": "cards",
           "eyebrow": "Three ways to practise",
-          "heading": "Pick the pressure you need today.",
+          "heading": "What is the best way to practise for an interview?",
           "copy": "The same coach and the same scorecard behind all three. Start where it is cheap and move up as the real interview gets closer.",
           "min": 320,
           "cards": [
@@ -462,7 +500,7 @@
           "type": "steps",
           "alt": true,
           "eyebrow": "How it runs",
-          "heading": "Four steps, and none of them is a question bank.",
+          "heading": "Can you practise an interview in Hindi?",
           "copy": "Questions are generated from the role you are actually chasing, so the practice transfers to the room you are actually walking into.",
           "steps": [
             {
@@ -487,7 +525,7 @@
           "type": "split",
           "id": "scorecard",
           "eyebrow": "The scorecard",
-          "heading": "A grade tells you nothing. This tells you what to fix.",
+          "heading": "What does an AI mock interview report actually tell you?",
           "copy": "Every mode ends the same way: with the specific places your answer fell short, and what a stronger version would have covered.",
           "panels": [
             {
@@ -516,7 +554,7 @@
           "alt": true,
           "id": "cost",
           "eyebrow": "What it costs",
-          "heading": "Diagnosis is free. Practice is where credits go.",
+          "heading": "What does an AI mock interview cost?",
           "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gaps, job matching and your career path stay free forever; you spend only on the runs you actually take.",
           "rows": [
             {
@@ -542,19 +580,37 @@
           "label": "Get started free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "What is the best way to practise for an interview?",
+          "a": "Practise in the format that is failing you. If the problem is what you say, a text interview surfaces it fastest. If the problem is how you say it, a recorded or live voice interview does. SkillDrift runs all three against the role you are actually applying for rather than against a generic question bank."
+        },
+        {
+          "q": "Can you practise an interview in Hindi?",
+          "a": "Yes. The realtime voice interview runs in English and in Hindi, so you can practise in the language you will actually be interviewed in."
+        },
+        {
+          "q": "What does an AI mock interview report actually tell you?",
+          "a": "Where you lost points, question by question. A text interview returns an overall score out of 100 with per-question feedback. The voice and realtime formats add a hire verdict out of 10 and an assessment of delivery. Every weakness it names can be turned into a learning roadmap."
+        },
+        {
+          "q": "What does an AI mock interview cost?",
+          "a": "A text interview is 50 credits, a recorded practice interview is 150, and a live voice interview is 200. Every new account is granted 160 credits, and the skill gap analysis that tells you what to practise is free."
+        }
+      ]
     },
     {
       "path": "/job-match",
       "title": "Jobs matched to your resume, scored out of 100 | SkillDrift",
       "description": "Stop scrolling job boards. See roles ranked by how well you actually match, out of 100, including internships and entry-level openings. Free to use.",
-      "h1": "Stop scrolling job boards.",
+      "h1": "See which jobs you actually match, scored out of 100.",
       "priority": 0.8,
       "breadcrumb": "Job fit analysis",
       "feature": true,
       "hero": {
         "eyebrow": "Job fit analysis",
-        "standfirst": "Paste any job description (LinkedIn, Indeed, anywhere) and see your match out of 100 before you hit submit. Know your odds before you spend an application.",
+        "standfirst": "SkillDrift reads your resume against each open role and scores the match out of 100, with the reasons behind the number named rather than hidden. Internships and entry level roles are included for anyone with under a year of experience. Basic analysis on any role costs nothing.",
         "primaryCta": {
           "label": "Check a job match",
           "href": "app:sign-in"
@@ -570,7 +626,7 @@
         {
           "type": "steps",
           "eyebrow": "How it runs",
-          "heading": "One number, and the reasons behind it.",
+          "heading": "How do you know if you are a good match for a job?",
           "copy": "A match score you cannot interrogate is a horoscope. Every point here traces back to a named skill.",
           "steps": [
             {
@@ -595,7 +651,7 @@
           "type": "split",
           "alt": true,
           "eyebrow": "Free versus credits",
-          "heading": "Basic analysis on any role costs nothing.",
+          "heading": "Is job matching free?",
           "copy": "The score, and matching against roles we carry, are free forever. The deep breakdown of a single posting is where a credit comes in.",
           "panels": [
             {
@@ -621,7 +677,7 @@
         {
           "type": "cards",
           "eyebrow": "Why it beats scrolling",
-          "heading": "A board ranks by recency. This ranks by you.",
+          "heading": "What does a job match score out of 100 actually measure?",
           "min": 300,
           "cards": [
             {
@@ -652,19 +708,38 @@
           "href": "/jobs"
         }
       },
-      "ctaLabel": "job_fit"
+      "ctaLabel": "job_fit",
+      "relatedHeading": "Does the score change as you learn?",
+      "faq": [
+        {
+          "q": "How do you know if you are a good match for a job?",
+          "a": "By reading your resume against that specific job description rather than against a job title. SkillDrift returns a match out of 100 for each role, with a band from Stretch through Workable and Good fit to Strong fit, and names the skills that produced the number."
+        },
+        {
+          "q": "Is job matching free?",
+          "a": "Yes. Job and internship matches are scored for free, and a basic analysis of any individual role costs nothing. A detailed job analysis is 37 credits."
+        },
+        {
+          "q": "What does a job match score out of 100 actually measure?",
+          "a": "The overlap between the skills the role requires and the skills your resume evidences, weighted by how central each one is to that role. Every point traces to a named skill, so the score can be interrogated rather than trusted."
+        },
+        {
+          "q": "Does the score change as you learn?",
+          "a": "Yes. Match scores are recomputed against the same job descriptions when your skills change, so closing a named gap moves the number on every role that needed it."
+        }
+      ]
     },
     {
       "path": "/career-roadmap",
       "title": "Build a career roadmap from your resume | SkillDrift",
       "description": "Pick a target role and get the exact skills that close the gap, in the order that moves your score. Your first career path is free when you upload a resume.",
-      "h1": "From target role to job offer.",
+      "h1": "How to build a career roadmap from the role you actually want.",
       "priority": 0.8,
       "breadcrumb": "Career roadmap",
       "feature": true,
       "hero": {
         "eyebrow": "Career roadmap",
-        "standfirst": "Pick a target role and get the exact skills that close the gap, in the order that moves your score. Your career path is built automatically the moment you upload a resume.",
+        "standfirst": "Pick the role you want and SkillDrift reads your current resume against it, names every skill standing between the two, and orders them by which one moves your readiness most. The path itself is free. Building the full roadmap, with the learning attached to each gap, is 50 credits.",
         "primaryCta": {
           "label": "Build my roadmap",
           "href": "app:sign-in"
@@ -680,7 +755,7 @@
         {
           "type": "steps",
           "eyebrow": "How it runs",
-          "heading": "Ordered by what moves the number.",
+          "heading": "How do you build a career roadmap for yourself?",
           "copy": "A list of everything you are missing is not a plan. The order is the product.",
           "steps": [
             {
@@ -705,7 +780,7 @@
           "type": "cards",
           "alt": true,
           "eyebrow": "Three starting points",
-          "heading": "The same first step, whichever journey you are on.",
+          "heading": "What order should you close your skill gaps in?",
           "copy": "The roadmap adapts to where you actually are: the sample data, the matched roles and the target level all shift with it.",
           "min": 300,
           "cards": [
@@ -730,7 +805,7 @@
         {
           "type": "prices",
           "eyebrow": "What it costs",
-          "heading": "The path is free. Building the full roadmap is 50 credits.",
+          "heading": "Is a career roadmap free on SkillDrift?",
           "copy": "A career path is generated automatically and free when you upload your resume. The detailed, ordered roadmap is the paid artefact.",
           "rows": [
             {
@@ -757,7 +832,26 @@
           "label": "Get started free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "relatedHeading": "What happens to the roadmap as you learn?",
+      "faq": [
+        {
+          "q": "How do you build a career roadmap for yourself?",
+          "a": "Start from the target role rather than from a course catalogue. SkillDrift reads your resume against that role, names each missing skill individually, and builds the path from your actual starting point rather than from a generic template."
+        },
+        {
+          "q": "What order should you close your skill gaps in?",
+          "a": "In the order that moves your readiness percentage most, which is rarely the order a course catalogue would suggest. Each gap is ranked by its effect on the score rather than by difficulty or popularity."
+        },
+        {
+          "q": "Is a career roadmap free on SkillDrift?",
+          "a": "The path is free once you upload a resume. Building the full roadmap, with learning attached to every gap, costs 50 credits, and every new account is granted 160 credits."
+        },
+        {
+          "q": "What happens to the roadmap as you learn?",
+          "a": "It re-scores. As you complete learning the gap closes, your readiness percentage moves, and the jobs matched to you are re-scored out of 100 against the skills you now have."
+        }
+      ]
     },
     {
       "path": "/skill-benchmarking",
@@ -889,13 +983,13 @@
       "path": "/learning-sprints",
       "title": "Bite-size upskilling sprints with certificates | SkillDrift",
       "description": "Learn the exact skills your gap report flagged in short sprints, not 40-hour courses. Finish one and the certificate writes itself into your resume.",
-      "h1": "Learn in sprints, not semesters.",
+      "h1": "Close one named skill gap at a time, in short sprints.",
       "priority": 0.8,
       "breadcrumb": "Learning sprints",
       "feature": true,
       "hero": {
         "eyebrow": "Learning sprints",
-        "standfirst": "Focused micro-lessons on the exact skills your gap report flagged, nothing you already know. Finish one and the certificate writes itself into your resume.",
+        "standfirst": "A learning sprint is built from a gap your own report named, not from a catalogue. It is short enough to finish, and when you finish it the certificate writes itself into your resume and your readiness percentage moves. Building the roadmap that produces the sprints is 50 credits, the learning content itself is free, and the certificate is 50.",
         "primaryCta": {
           "label": "Find my sprints",
           "href": "app:sign-in"
@@ -911,7 +1005,7 @@
         {
           "type": "cards",
           "eyebrow": "Why sprints",
-          "heading": "A 40-hour course is where good intentions go to die.",
+          "heading": "Why do people not finish online courses?",
           "copy": "You do not need a syllabus. You need the four things standing between you and the role, in the order that moves your score.",
           "min": 300,
           "cards": [
@@ -934,7 +1028,7 @@
           "type": "split",
           "alt": true,
           "eyebrow": "The certificate moat",
-          "heading": "Your resume stops going stale.",
+          "heading": "What happens when you finish a sprint?",
           "copy": "Finish a course on SkillDrift and the certificate is added to your resume automatically: no re-uploading, no re-formatting, no forgetting it existed.",
           "panels": [
             {
@@ -961,7 +1055,7 @@
         {
           "type": "prices",
           "eyebrow": "What it costs",
-          "heading": "The certificate pays for itself.",
+          "heading": "What does a certificate cost, and where does it go?",
           "copy": "Issuing a certificate to your resume costs 50 credits. Share it on LinkedIn and all 50 come back. Finish the course, put it on your profile, spend nothing.",
           "rows": [
             {
@@ -989,7 +1083,26 @@
           "label": "Get started free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "relatedHeading": "How do you decide what to learn next?",
+      "faq": [
+        {
+          "q": "Why do people not finish online courses?",
+          "a": "Because the unit is too large. A forty hour course asks for a commitment before it has proved it is the right thing to learn. A sprint built from a named gap in your own report is short enough to finish and specific enough to be worth finishing."
+        },
+        {
+          "q": "What happens when you finish a sprint?",
+          "a": "The gap closes and everything downstream re-scores. Your readiness percentage moves, jobs are re-matched out of 100 against your new skills, and the certificate is written into your resume automatically rather than being something you have to add."
+        },
+        {
+          "q": "What does a certificate cost, and where does it go?",
+          "a": "The learning content is free. Building the roadmap is 50 credits and the certificate is 50, so a first course and a first certificate together cost 100 against the 160 credits every new account is granted."
+        },
+        {
+          "q": "How do you decide what to learn next?",
+          "a": "Start from the gap that moves your readiness most, which SkillDrift ranks for you rather than leaving to a catalogue. Each sprint maps to one named missing skill for the role you actually want."
+        }
+      ]
     },
     {
       "path": "/jobs",
@@ -1210,6 +1323,92 @@
           "href": "app:sign-in"
         }
       }
+    },
+    {
+      "path": "/proof",
+      "title": "Does SkillDrift work? The evidence, and its limits | SkillDrift",
+      "description": "Every outcome number SkillDrift publishes, what each one counts, and what it does not prove. Company reported, method stated, none of it independently audited.",
+      "h1": "Does SkillDrift actually work, and how would you know?",
+      "priority": 0.7,
+      "breadcrumb": "Proof",
+      "hero": {
+        "eyebrow": "Proof",
+        "standfirst": "SkillDrift publishes five outcome numbers. All five are company reported, measured from our own product data, and none of them has been independently audited. This page states what each number counts, over what window, and what it does not prove. The short version: we can show that readiness scores move as people learn, and that resumes and certificates update automatically when they do. We cannot yet show that a higher SkillDrift score causes a job offer, and we do not claim it.",
+        "primaryCta": {
+          "label": "Get my score - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "See how it works",
+          "href": "/how-it-works"
+        }
+      },
+      "sections": [
+        {
+          "type": "prose",
+          "eyebrow": "What is measured",
+          "heading": "What can SkillDrift actually prove today?",
+          "paragraphs": [
+            "Three things, all of them measured inside the product rather than reported by users. First, that a readiness score changes over time for people who complete learning, because the score is recomputed from the same resume every time it is read. Second, that a completed course writes a certificate into the resume without the user doing anything, because that write is the product mechanic rather than a manual step. Third, that a job match score out of 100 moves when the underlying skills change, because the match is recomputed against the same job description.",
+            "All three are statements about the machinery. None of them is a statement about employment."
+          ]
+        },
+        {
+          "type": "prose",
+          "alt": true,
+          "eyebrow": "What is counted",
+          "heading": "What does SkillDrift count as a result, and what does it deliberately not count?",
+          "paragraphs": [
+            "We count things the product does: a readiness score recomputed, a named gap closed, a certificate written into a resume, a tailored version generated, a job match re-scored. We do not count applications sent, interviews attended, offers received or salary changes, because we do not observe any of them.",
+            "A user can be hired the week after they close a gap and we would never know, and a user can close every gap and not get hired. Anyone claiming a career platform has measured your employment outcome is either integrated with your employer or guessing."
+          ]
+        },
+        {
+          "type": "prose",
+          "eyebrow": "The limitation",
+          "heading": "Is any of this independently verified?",
+          "paragraphs": [
+            "No. Every number on this page is measured by SkillDrift from SkillDrift’s own data, and none of it has been audited by a third party. That is a real limitation and it applies to every AI career product currently on the market, ours included.",
+            "The reason to state it rather than bury it is that a score you cannot interrogate is worth less than a score you can: our numbers are worth exactly as much as the method behind them, which is why the method is on this page."
+          ]
+        },
+        {
+          "type": "prose",
+          "alt": true,
+          "eyebrow": "What would change it",
+          "heading": "What would actually prove it, and what would have to be true?",
+          "paragraphs": [
+            "Outcome validation needs three things we do not have yet: a large enough cohort followed for long enough, a control group of comparable people not using the product, and a reliable signal of what happened to them afterwards. The honest position is that none of the three exists today.",
+            "What we can do in the meantime is publish the method for every number we quote, correct anything found wrong, and never present a company reported figure as an independent one."
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See where you actually stand, before you take our word for anything.",
+        "copy": "No account needed to see your first score. Two minutes, one upload.",
+        "primary": {
+          "label": "Get my score, free.",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "What can SkillDrift actually prove today?",
+          "a": "Three things, all measured inside the product: that a readiness score changes over time for people who complete learning, that a completed course writes a certificate into the resume automatically, and that a job match score out of 100 moves when the underlying skills change. All three are statements about the machinery, not about employment."
+        },
+        {
+          "q": "What does SkillDrift count as a result, and what does it not count?",
+          "a": "SkillDrift counts what the product does: a readiness score recomputed, a named gap closed, a certificate written into a resume, a tailored version generated, a job match re-scored. It does not count applications sent, interviews attended, offers received or salary changes, because it does not observe them."
+        },
+        {
+          "q": "Are SkillDrift’s outcome numbers independently verified?",
+          "a": "No. Every published number is measured by SkillDrift from its own product data and none has been audited by a third party. That limitation applies to every AI career product currently on the market. SkillDrift publishes the method behind each number so it can be interrogated."
+        },
+        {
+          "q": "What would it take to prove an AI career platform works?",
+          "a": "Three things: a large enough cohort followed long enough, a control group of comparable people not using the product, and a reliable signal of what happened to them afterwards. None of the three exists today for SkillDrift or for its competitors."
+        }
+      ]
     },
     {
       "path": "/about",
