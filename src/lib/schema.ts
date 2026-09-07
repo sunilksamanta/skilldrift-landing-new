@@ -23,7 +23,9 @@ export const organizationSchema = {
   // The registered Delaware name, exactly as Article I spells it: lowercase d,
   // no comma, one trailing period. The brand everywhere else is "SkillDrift".
   legalName: "Skilldrift Inc.",
-  url: SITE_URL,
+  // The company's home is the .org site on both products, so the node merges
+  // cleanly by @id. This product's own url lives on its SoftwareApplication.
+  url: "https://www.skilldrift.org",
   logo: `${SITE_URL}/logo.png`,
   foundingDate: "2025",
   areaServed: ["US", "IN", "SG"],
