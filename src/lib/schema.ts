@@ -16,7 +16,10 @@ import { SITE_NAME, SITE_URL } from "./seo";
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: SITE_NAME,
+  // The one company node for both products. skilldrift.org publishes the same
+  // @id; both SoftwareApplication nodes point their publisher at it.
+  "@id": "https://www.skilldrift.org/#organization",
+  name: "SkillDrift Inc",
   // The registered Delaware name, exactly as Article I spells it: lowercase d,
   // no comma, one trailing period. The brand everywhere else is "SkillDrift".
   legalName: "Skilldrift Inc.",
