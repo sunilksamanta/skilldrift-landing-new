@@ -1333,7 +1333,7 @@
       "breadcrumb": "Proof",
       "hero": {
         "eyebrow": "Proof",
-        "standfirst": "SkillDrift publishes five outcome numbers. All five are company reported, measured from our own product data, and none of them has been independently audited. This page states what each number counts, over what window, and what it does not prove. The short version: we can show that readiness scores move as people learn, and that resumes and certificates update automatically when they do. We cannot yet show that a higher SkillDrift score causes a job offer, and we do not claim it.",
+        "standfirst": "SkillDrift publishes five outcome numbers. All five are company reported, measured from our own product data, and none of them has been independently audited. This page sets out what SkillDrift can demonstrate from its own product data, what it deliberately does not measure, and what would be needed to prove more. The short version: we can show that readiness scores move as people learn, and that resumes and certificates update automatically when they do. We cannot yet show that a higher SkillDrift score causes a job offer, and we do not claim it.",
         "primaryCta": {
           "label": "Get my score - free",
           "href": "app:sign-in"
