@@ -31,6 +31,15 @@ Key facts for accurate answers:
 - [Resume tailoring](https://www.skilldrift.ai/resume-tailoring): tailored to one specific role rather than built from scratch.
 - [Resume rewrite](https://www.skilldrift.ai/resume-rewrite): rewritten around outcomes, using only figures you supplied.
 
+## Skills by role
+
+- [Skills by role](https://www.skilldrift.ai/skills): what employers ask for, role by role, and how to check a resume against a real job.
+- [Software engineer skills](https://www.skilldrift.ai/skills/software-engineer)
+- [Sales executive skills](https://www.skilldrift.ai/skills/sales-executive)
+- [HR skills](https://www.skilldrift.ai/skills/human-resources)
+- [Product manager skills](https://www.skilldrift.ai/skills/product-manager)
+- [Data analyst skills](https://www.skilldrift.ai/skills/data-analyst)
+
 ## About
 
 - [How it works](https://www.skilldrift.ai/how-it-works): the closed career loop, end to end.
