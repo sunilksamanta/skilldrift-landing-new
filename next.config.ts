@@ -20,6 +20,24 @@ const nextConfig: NextConfig = {
         destination: "/terms-of-use",
         statusCode: 301,
       },
+      // The blog moved to its own subdomain, where posts live under /posts.
+      // `:slug*` also matches bare /blog, which lands on the posts index.
+      {
+        source: "/blog/:slug*",
+        destination: "https://blog.skilldrift.ai/posts/:slug*",
+        statusCode: 301,
+      },
+      // Some clients percent-encode the bang, and matching runs on the raw path.
+      {
+        source: "/%21",
+        destination: "/",
+        statusCode: 301,
+      },
+      {
+        source: "/!",
+        destination: "/",
+        statusCode: 301,
+      },
     ];
   },
 };
