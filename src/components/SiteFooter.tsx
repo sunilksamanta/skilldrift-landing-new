@@ -15,6 +15,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
     title: "Product",
     links: [
       { href: "/how-it-works", label: "How it works" },
+      { href: "/closed-loop-career-development", label: "Closed loop career development" },
       { href: "/features", label: "Features" },
       { href: "/ats-score-checker", label: "Free ATS score checker" },
       { href: "/skills", label: "Skills by role" },

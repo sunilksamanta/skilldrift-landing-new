@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     // Skills-by-role hub plus one entry per live role (lib/roles.ts).
     {
+      url: `${SITE_URL}/closed-loop-career-development`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
       url: `${SITE_URL}/skills`,
       lastModified,
       changeFrequency: "monthly" as const,

@@ -88,7 +88,7 @@
       "breadcrumb": "How it works",
       "hero": {
         "eyebrow": "The closed loop",
-        "standfirst": "Every other product gives you one arc of the circle: a course library, a resume builder, a job board. The loop is why your score moves instead of your bookmarks piling up.",
+        "standfirst": "Every other product gives you one arc of the circle: a course library, a resume builder, a job board. The loop is why your score moves instead of your bookmarks piling up. [What is closed loop career development?](/closed-loop-career-development)",
         "primaryCta": {
           "label": "Upload your resume - free",
           "href": "app:sign-in"
@@ -739,7 +739,7 @@
       "feature": true,
       "hero": {
         "eyebrow": "Career roadmap",
-        "standfirst": "Pick the role you want and SkillDrift reads your current resume against it, names every skill standing between the two, and orders them by which one moves your readiness most. The path itself is free. Building the full roadmap, with the learning attached to each gap, is 50 credits.",
+        "standfirst": "Pick the role you want and SkillDrift reads your current resume against it, names every skill standing between the two, and orders them by which one moves your readiness most. The path itself is free. Building the full roadmap, with the learning attached to each gap, is 50 credits. [What is closed loop career development?](/closed-loop-career-development)",
         "primaryCta": {
           "label": "Build my roadmap",
           "href": "app:sign-in"
@@ -989,7 +989,7 @@
       "feature": true,
       "hero": {
         "eyebrow": "Learning sprints",
-        "standfirst": "A learning sprint is built from a gap your own report named, not from a catalogue. It is short enough to finish, and when you finish it the certificate writes itself into your resume and your readiness percentage moves. Building the roadmap that produces the sprints is 50 credits, the learning content itself is free, and the certificate is 50.",
+        "standfirst": "A learning sprint is built from a gap your own report named, not from a catalogue. It is short enough to finish, and when you finish it the certificate writes itself into your resume and your readiness percentage moves. Building the roadmap that produces the sprints is 50 credits, the learning content itself is free, and the certificate is 50. [What is closed loop career development?](/closed-loop-career-development)",
         "primaryCta": {
           "label": "Find my sprints",
           "href": "app:sign-in"

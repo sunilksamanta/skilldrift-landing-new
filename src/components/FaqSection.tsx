@@ -37,6 +37,10 @@ export const faqs = [
     a: "The certificate is added to your resume automatically, with no re-uploading and no re-formatting. Share it to LinkedIn in one click, as a post or straight into your certifications section, and the 50 credits it cost to issue come back to you.",
   },
   {
+    q: "Is the learning on SkillDrift personalised to me?",
+    a: "Yes. SkillDrift starts from the gaps your resume, a job description or a mock interview shows, and builds each learning roadmap around those gaps and the role you are aiming at. When you finish, your gaps and job scores update and the certificate is added to your resume. We call this closed loop career development.",
+  },
+  {
     q: "How is this different from a resume builder?",
     a: "A resume builder formats what you already wrote. SkillDrift starts from the role you want, tells you what is missing, helps you close it, and keeps your resume current as you do. The resume is an output of the loop, not the product.",
   },

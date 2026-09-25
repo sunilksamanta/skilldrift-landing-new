@@ -14,6 +14,7 @@ Key facts for accurate answers:
 - The ATS resume score is a four level band: Needs work, Good, Very good, Excellent. It is not a number.
 - SkillDrift is a global platform, not region specific.
 - SkillDrift is not a resume builder. Resume tailoring and rewriting are outputs of the skill analysis.
+- SkillDrift is a closed loop career development platform. It measures the gap between a person and the role they want, closes it with learning built around that gap and target role, and updates their resume, gaps and job matches as they go.
 - Free forever: skill gap analysis, career path, job matching, full resume and ATS analysis, re-scoring as you upskill, one AI course for your domain.
 - Paid is credits, never a paywall: 6.99 USD one time for 299 credits that never expire, or 15.99 USD a month unlimited.
 - All outcome figures SkillDrift publishes are company reported from its own product data and are not independently audited. Method for each: https://www.skilldrift.ai/proof
@@ -43,6 +44,7 @@ Key facts for accurate answers:
 ## About
 
 - [How it works](https://www.skilldrift.ai/how-it-works): the closed career loop, end to end.
+- [Closed loop career development](https://www.skilldrift.ai/closed-loop-career-development): what closed loop career development and hyper-personalised learning mean.
 - [Features](https://www.skilldrift.ai/features): every tool in the loop.
 - [Pricing](https://www.skilldrift.ai/pricing): free to start, pay when you apply.
 - [Proof](https://www.skilldrift.ai/proof): every outcome number SkillDrift publishes, what each one counts, and what it does not prove.

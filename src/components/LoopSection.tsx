@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Pill, SectionIntro } from "./SectionBits";
 
 const steps = [
@@ -51,7 +52,19 @@ export default function LoopSection() {
         <Pill>The closed loop</Pill>
         <SectionIntro
           heading="Most tools hand you one piece. SkillDrift closes the loop."
-          copy="Every other product gives you one arc of this circle: a course library, a resume builder, a job board. The loop is why your score moves instead of your bookmarks piling up."
+          copy={
+            <>
+              Every other product gives you one arc of this circle: a course library, a resume
+              builder, a job board. The loop is why your score moves instead of your bookmarks
+              piling up.{" "}
+              <Link
+                href="/closed-loop-career-development"
+                style={{ textDecoration: "underline", textUnderlineOffset: 3 }}
+              >
+                What is closed loop career development?
+              </Link>
+            </>
+          }
         />
 
         <div
