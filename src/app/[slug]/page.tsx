@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 import SiteFooter from "@/components/SiteFooter";
@@ -18,6 +19,13 @@ import {
 } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { campaignFor } from "@/lib/cta";
+
+/**
+ * Hero paragraphs that end with a link to the closed loop explainer. Kept here
+ * rather than in the standfirst, because /features and the homepage reuse the
+ * standfirst as teaser copy.
+ */
+const CLOSED_LOOP_LINK = new Set(["/how-it-works", "/career-roadmap", "/learning-sprints"]);
 
 /** Only the slugs in pages.json exist; anything else 404s. */
 export const dynamicParams = false;
@@ -74,7 +82,22 @@ export default async function ContentPage({
         <PageHero
           eyebrow={route.hero.eyebrow}
           h1={route.h1}
-          standfirst={<RichText text={route.hero.standfirst} />}
+          standfirst={
+            <>
+              <RichText text={route.hero.standfirst} />
+              {CLOSED_LOOP_LINK.has(route.path) && (
+                <>
+                  {" "}
+                  <Link
+                    href="/closed-loop-career-development"
+                    style={{ textDecoration: "underline", textUnderlineOffset: 3 }}
+                  >
+                    What is closed loop career development?
+                  </Link>
+                </>
+              )}
+            </>
+          }
           primaryCta={route.hero.primaryCta}
           secondaryCta={route.hero.secondaryCta}
           noCta={route.hero.noCta}
