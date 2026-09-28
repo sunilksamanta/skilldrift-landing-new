@@ -40,6 +40,11 @@ Key facts for accurate answers:
 - [HR skills](https://www.skilldrift.ai/skills/human-resources)
 - [Product manager skills](https://www.skilldrift.ai/skills/product-manager)
 - [Data analyst skills](https://www.skilldrift.ai/skills/data-analyst)
+- [Customer service skills](https://www.skilldrift.ai/skills/customer-service)
+- [Marketing skills](https://www.skilldrift.ai/skills/marketing)
+- [Business analyst skills](https://www.skilldrift.ai/skills/business-analyst)
+- [Data scientist skills](https://www.skilldrift.ai/skills/data-scientist)
+- [Accountant skills](https://www.skilldrift.ai/skills/accountant)
 
 ## About
 
