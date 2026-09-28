@@ -196,7 +196,7 @@
     },
     {
       "path": "/resume-tailoring",
-      "title": "AI resume tailoring for every job you apply to | SkillDrift",
+      "title": "Tailor Your Resume to a Job Description with AI | SkillDrift",
       "description": "Generate an ATS-optimised version of your resume for every application, for 18 credits. Your master copy stays untouched. Skill gap analysis is free.",
       "h1": "Tailor your resume to one job without rewriting it from scratch.",
       "priority": 0.8,
@@ -450,8 +450,8 @@
     },
     {
       "path": "/interview-prep",
-      "title": "AI mock interviews - voice, recorded and text | SkillDrift",
-      "description": "Practise for any role with an AI coach. Live voice, recorded practice or text Q&A, each with a scorecard telling you exactly where you lost points.",
+      "title": "AI Interview Practice and Mock Interviews | SkillDrift",
+      "description": "Practice any interview with an AI coach by live voice, recorded answers or text. Every mock interview ends with a scorecard showing where you lost points.",
       "h1": "Practise the interview in the format you will actually face.",
       "priority": 0.8,
       "breadcrumb": "Interview prep",
