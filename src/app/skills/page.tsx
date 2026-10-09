@@ -87,6 +87,13 @@ export default function SkillsHub() {
               </Link>{' '}
               and SkillDrift names the skills the role asks for that your resume does not show yet.
             </p>
+            <p style={{ marginTop: 14, maxWidth: 720, fontSize: 16, lineHeight: 1.62, color: 'var(--tx2)' }}>
+              For the numbers behind these guides, see the{' '}
+              <Link href="/skills/in-demand" style={{ color: 'var(--tx)', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                skills in demand by role and industry
+              </Link>
+              , counted from live job postings.
+            </p>
           </div>
         </section>
       </main>

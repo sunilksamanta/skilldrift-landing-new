@@ -46,6 +46,23 @@ Key facts for accurate answers:
 - [Data scientist skills](https://www.skilldrift.ai/skills/data-scientist)
 - [Accountant skills](https://www.skilldrift.ai/skills/accountant)
 
+## Skills in demand
+
+- [Skills in demand by role and industry](https://www.skilldrift.ai/skills/in-demand)
+- [Skills employers ask for in creative jobs](https://www.skilldrift.ai/skills/in-demand/creative-jobs)
+- [Skills employers ask for in customer support jobs](https://www.skilldrift.ai/skills/in-demand/customer-support-jobs)
+- [Skills employers ask for in data and AI jobs](https://www.skilldrift.ai/skills/in-demand/data-ai-jobs)
+- [Skills employers ask for in design jobs](https://www.skilldrift.ai/skills/in-demand/design-jobs)
+- [Skills employers ask for in education jobs](https://www.skilldrift.ai/skills/in-demand/education-jobs)
+- [Skills employers ask for in engineering jobs](https://www.skilldrift.ai/skills/in-demand/engineering-jobs)
+- [Skills employers ask for in finance jobs](https://www.skilldrift.ai/skills/in-demand/finance-jobs)
+- [Skills employers ask for in HR jobs](https://www.skilldrift.ai/skills/in-demand/hr-jobs)
+- [Skills employers ask for in legal jobs](https://www.skilldrift.ai/skills/in-demand/legal-jobs)
+- [Skills employers ask for in marketing jobs](https://www.skilldrift.ai/skills/in-demand/marketing-jobs)
+- [Skills employers ask for in product jobs](https://www.skilldrift.ai/skills/in-demand/product-jobs)
+- [Skills employers ask for in research jobs](https://www.skilldrift.ai/skills/in-demand/research-jobs)
+- [Skills employers ask for in sales jobs](https://www.skilldrift.ai/skills/in-demand/sales-jobs)
+
 ## About
 
 - [How it works](https://www.skilldrift.ai/how-it-works): the closed career loop, end to end.

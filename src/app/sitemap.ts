@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { ALL_ROUTES } from "@/lib/content";
 import { LIVE_ROLES } from "@/lib/roles";
+import { DEMAND_PAGES, SNAPSHOT_DATE } from "@/lib/skillsDemand";
 import { SITE_URL } from "@/lib/seo";
 
 /** Appendix A4, generated from pages.json. `lastmod` comes from the build. */
@@ -37,6 +38,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    // Skills-in-demand hub plus one entry per job-index slice (lib/skillsDemand.ts).
+    {
+      url: `${SITE_URL}/skills/in-demand`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    ...DEMAND_PAGES.map((p) => ({
+      url: `${SITE_URL}/skills/in-demand/${p.slug}`,
+      lastModified: new Date(SNAPSHOT_DATE),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
   ];
 }
