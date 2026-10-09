@@ -19,6 +19,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
       { href: "/features", label: "Features" },
       { href: "/ats-score-checker", label: "Free ATS score checker" },
       { href: "/skills", label: "Skills by role" },
+      { href: "/skills/in-demand", label: "Skills in demand" },
       { href: "/jobs", label: "Jobs" },
       { href: "/pricing", label: "Pricing" },
       { signIn: true, label: "Sign in" },
