@@ -5,7 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { campaignFor } from "@/lib/cta";
 import { ArrowRight } from "@/components/icons";
-import { Pill } from "@/components/SectionBits";
+import { Pill, primaryButton } from "@/components/SectionBits";
 import { LIVE_ROLES } from '@/lib/roles';
 
 const URL = 'https://www.skilldrift.ai/skills';
@@ -36,6 +36,35 @@ export default function SkillsHub() {
               The skills a job needs depend on the role and on the posting. Pick a role to see what employers ask for,
               which skills decide the offer, and how to show them on your resume.
             </p>
+            <div
+              style={{
+                marginTop: 32,
+                marginBottom: 24,
+                maxWidth: 900,
+                padding: '26px 26px 24px',
+                borderRadius: 18,
+                border: '1px solid var(--line)',
+                background: 'var(--card)',
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 22,
+              }}
+            >
+              <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+                <h2 style={{ fontSize: 21, fontWeight: 600, letterSpacing: '-0.015em', lineHeight: 1.2 }}>
+                  Skills in demand, by role and industry
+                </h2>
+                <p style={{ marginTop: 10, fontSize: 15, lineHeight: 1.6, color: 'var(--tx2)' }}>
+                  64 pages counted from live job postings: the skills employers name most often in engineering, data and
+                  AI, sales, marketing, finance, design, HR and more.
+                </p>
+              </div>
+              <Link href="/skills/in-demand" style={{ ...primaryButton, flex: '0 0 auto' }}>
+                See the skills in demand
+              </Link>
+            </div>
           </div>
         </section>
         <section className="sect sect--alt">
