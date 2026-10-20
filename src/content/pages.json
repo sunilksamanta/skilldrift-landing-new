@@ -668,8 +668,8 @@
               "title": "Costs credits",
               "items": [
                 "Deep fit analysis on one posting: 37 credits",
-                "Tailoring your resume to that posting - 18 credits",
-                "Downloading the tailored version - 54 to 70 credits"
+                "Tailoring your resume to that posting: 18 credits",
+                "Downloading the tailored version: 54 to 70 credits"
               ]
             }
           ]
@@ -692,6 +692,10 @@
             {
               "title": "It moves as you learn",
               "body": "Close a gap and the score re-scores itself free. Roles that were out of reach become reachable."
+            },
+            {
+              "title": "One score, everywhere",
+              "body": "A job has one match score out of 100, the same on your board, the job page and your dashboard. Closed jobs drop off, and you are never charged for one."
             }
           ]
         }
@@ -1025,6 +1029,33 @@
           ]
         },
         {
+          "type": "cards",
+          "id": "compounding",
+          "eyebrow": "Skill compounding",
+          "min": 260,
+          "heading": "What does finishing a roadmap do to your scores?",
+          "copy": "Every real step adds up. Learning, a new role and time in your current role all raise the same skill scores, and everything that depends on them updates by itself.",
+          "cards": [
+            {
+              "title": "The number you were promised",
+              "body": "Before you start, a roadmap shows how much your readiness will rise. Finish and verify it, and readiness rises by exactly that amount, once.",
+              "accent": true
+            },
+            {
+              "title": "Only the jobs that ask for it",
+              "body": "Jobs that ask for the skill you learned move up. Jobs that do not ask for it stay where they are. No job goes down."
+            },
+            {
+              "title": "Your work counts too",
+              "body": "Add a new role to your resume and your skills grow by the time you spent in it. While the role is current, each month adds to the skills it uses."
+            },
+            {
+              "title": "Nothing goes backwards by accident",
+              "body": "Practising an interview never lowers your readiness or your match scores, and neither does improving your resume."
+            }
+          ]
+        },
+        {
           "type": "split",
           "alt": true,
           "eyebrow": "The certificate moat",
@@ -1167,11 +1198,63 @@
             },
             {
               "title": "Tailor before you apply",
-              "body": "Generate an ATS-optimised version for that specific posting - 18 credits."
+              "body": "Generate an ATS-optimised version for that specific posting: 18 credits."
             },
             {
               "title": "Close a gap, re-rank",
               "body": "Finish a sprint and the whole list re-scores itself, free. Better roles surface."
+            }
+          ]
+        },
+        {
+          "type": "split",
+          "alt": true,
+          "id": "job-board",
+          "eyebrow": "Your job board",
+          "heading": "What happens after you find a job you like?",
+          "copy": "Every job you keep sits on one board, from Shortlisted to Applied, Interviewing and Outcome. Its match score out of 100 is the same on the board, on the job page and on your dashboard.",
+          "panels": [
+            {
+              "title": "On your board",
+              "accent": true,
+              "items": [
+                "Shortlist a job, then move it to Applied, Interviewing and Outcome",
+                "One match score out of 100 for each job, the same everywhere you see it",
+                "A requirement check on every job, such as 12 of 18 requirements met",
+                "Not for me hides a job everywhere, and you can undo it"
+              ]
+            },
+            {
+              "title": "What you never pay for",
+              "items": [
+                "Closed jobs and jobs posted more than 30 days ago are not shown",
+                "Nothing is ever charged on a job that has closed",
+                "The basic analysis of any job is free",
+                "Re-scoring as you learn is free"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "apply-kit",
+          "eyebrow": "The Apply Kit",
+          "min": 260,
+          "heading": "What do you need ready before you apply?",
+          "copy": "Open the Apply Kit on any job and SkillDrift prepares what the application asks for. You apply on the employer's own site.",
+          "cards": [
+            {
+              "title": "A resume tailored to the job",
+              "body": "Rewritten for that posting, charged once at 18 credits. Opening it again is free.",
+              "accent": true
+            },
+            {
+              "title": "A cover note and your answers",
+              "body": "A short cover note and drafts for the questions the application asks."
+            },
+            {
+              "title": "A follow up that keeps your board right",
+              "body": "Within a day or two SkillDrift asks whether you finished applying, and moves the job to Applied."
             }
           ]
         },

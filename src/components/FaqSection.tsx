@@ -44,6 +44,18 @@ export const faqs = [
     q: "How is this different from a resume builder?",
     a: "A resume builder formats what you already wrote. SkillDrift starts from the role you want, tells you what is missing, helps you close it, and keeps your resume current as you do. The resume is an output of the loop, not the product.",
   },
+  {
+    q: "Will one course make me job ready?",
+    a: "No single course does, and SkillDrift never says it will. Each roadmap shows how much it will raise your readiness before you start. Finish and verify it, and readiness rises by that amount, once, along with the jobs that ask for that skill. Jobs that do not ask for it stay where they are.",
+  },
+  {
+    q: "Can SkillDrift apply for jobs for me?",
+    a: "No. SkillDrift prepares the application: a resume tailored to the job, a cover note and answers to the questions. You apply on the employer's own site, so you stay in control of every application.",
+  },
+  {
+    q: "Why did a job disappear from my matches?",
+    a: "It closed, or it was posted more than 30 days ago. SkillDrift hides those jobs and never charges for one. Jobs you have already applied to stay on your board.",
+  },
 ];
 
 export default function FaqSection() {
