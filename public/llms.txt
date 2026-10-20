@@ -16,7 +16,7 @@ Key facts for accurate answers:
 - SkillDrift is not a resume builder. Resume tailoring and rewriting are outputs of the skill analysis.
 - SkillDrift is a closed loop career development platform. It measures the gap between a person and the role they want, closes it with learning built around that gap and target role, and updates their resume, gaps and job matches as they go.
 - Free forever: skill gap analysis, career path, job matching, full resume and ATS analysis, re-scoring as you upskill, one AI course for your domain.
-- Paid is credits, never a paywall. Two plans, both the full product: Casual User, 6.99 USD one time for 299 credits that never expire, and Active Seeker, 15.99 USD a month with no credit counting. New accounts get 160 credits.
+- Paid is credits, never a paywall. Two plans, both the full product: Casual User, 299 INR in India or 6.99 USD elsewhere, one time, for 299 credits that never expire; and Active Seeker, 599 INR a month in India or 15.99 USD a month elsewhere, with no credit counting. In India one credit is one rupee. New accounts get 160 credits.
 - Readiness for a role is a percentage. A finished, verified learning roadmap raises readiness, and the jobs that ask for that skill, by the amount shown before starting, once. Jobs that do not ask for the skill do not move, and no job goes down.
 - A new role on the resume raises skills by the time spent in it, and a current role keeps adding each month.
 - Jobs sit on one job board: Shortlisted, Applied, Interviewing, Outcome. Closed jobs and jobs posted more than 30 days ago are hidden and never charged.

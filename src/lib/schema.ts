@@ -3,7 +3,7 @@ import {
   PRICES,
   PRICE_TOKENS,
   REGIONS,
-  resolveRegionalText,
+  resolveRegionalTextForMachines,
   type PriceToken,
 } from "./region";
 import { SITE_NAME, SITE_URL } from "./seo";
@@ -168,7 +168,7 @@ export function faqPageSchema(faqs: readonly { q: string; a: string }[]) {
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: resolveRegionalText(faq.a) },
+      acceptedAnswer: { "@type": "Answer", text: resolveRegionalTextForMachines(faq.a) },
     })),
   };
 }
