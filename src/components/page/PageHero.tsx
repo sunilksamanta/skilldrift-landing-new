@@ -46,7 +46,7 @@ export default function PageHero({
         aspectRatio: "1800 / 1290",
         borderRadius: 22,
         overflow: "hidden",
-        boxShadow: "0 30px 70px rgba(20,10,60,.30)",
+        boxShadow: "0 30px 70px rgba(15,23,70,.30)",
       }}
     >
       <Image
@@ -78,7 +78,7 @@ export default function PageHero({
           height: 1100,
           pointerEvents: "none",
           background:
-            "linear-gradient(206deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,.42) 7%, rgba(150,124,255,.26) 16%, rgba(96,73,192,.11) 30%, transparent 46%)",
+            "linear-gradient(206deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,.42) 7%, rgba(99,102,241,.26) 16%, rgba(37,99,235,.11) 30%, transparent 46%)",
           transform: "rotate(-2deg)",
           opacity: 0.9,
         }}

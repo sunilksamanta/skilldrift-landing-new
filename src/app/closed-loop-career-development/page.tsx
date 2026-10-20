@@ -130,7 +130,7 @@ function Arrow() {
 function LoopDiagram() {
   const nodes = [
     { x: 220.0, y: 56.0, w: 128, t: "1. Measure", s: "the gap to a role", c: "#0A0A0C" },
-    { x: 353.1, y: 152.7, w: 124, t: "2. Build", s: "learning for you", c: "#7C5DF9" },
+    { x: 353.1, y: 152.7, w: 124, t: "2. Build", s: "learning for you", c: "#5B60F1" },
     { x: 302.3, y: 309.3, w: 128, t: "3. Prove", s: "sprint, certificate", c: "#0A0A0C" },
     { x: 137.7, y: 309.3, w: 132, t: "4. Update", s: "resume, gaps, jobs", c: "#0A0A0C" },
     { x: 86.9, y: 152.7, w: 112, t: "5. Measure", s: "again", c: "#0A0A0C" },
@@ -221,7 +221,7 @@ export default function ClosedLoopCareerDevelopmentPage() {
 
       {/* Hero */}
       <section style={{ position: "relative", padding: "56px 0 96px", overflow: "hidden" }}>
-        <div aria-hidden="true" style={{ position: "absolute", top: -320, right: -120, width: 1400, height: 1100, pointerEvents: "none", background: "linear-gradient(206deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,.42) 7%, rgba(150,124,255,.26) 16%, rgba(96,73,192,.11) 30%, transparent 46%)", transform: "rotate(-2deg)", opacity: 0.9 }} />
+        <div aria-hidden="true" style={{ position: "absolute", top: -320, right: -120, width: 1400, height: 1100, pointerEvents: "none", background: "linear-gradient(206deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,.42) 7%, rgba(99,102,241,.26) 16%, rgba(37,99,235,.11) 30%, transparent 46%)", transform: "rotate(-2deg)", opacity: 0.9 }} />
         <div className="wrap" style={{ position: "relative" }}>
           <div className="sd-page-hero" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(420px,100%),1fr))", gap: 72, alignItems: "center" }}>
             <div>
@@ -242,7 +242,7 @@ export default function ClosedLoopCareerDevelopmentPage() {
                 </a>
               </div>
             </div>
-            <div style={{ position: "relative", borderRadius: 22, padding: 30, overflow: "hidden", boxShadow: "0 30px 70px rgba(20,10,60,.30)", backgroundColor: "#5B49B4", backgroundImage: "linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(160deg, #8C6CFF 0%, #7C5DF9 45%, #6049C0 100%)", backgroundSize: "28px 28px, 28px 28px, 100% 100%" }}>
+            <div style={{ position: "relative", borderRadius: 22, padding: 30, overflow: "hidden", boxShadow: "0 30px 70px rgba(15,23,70,.30)", backgroundColor: "#3730A3", backgroundImage: "linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(160deg, #3B82F6 0%, #5B60F1 45%, #4338CA 100%)", backgroundSize: "28px 28px, 28px 28px, 100% 100%" }}>
               <LoopDiagram />
             </div>
           </div>
@@ -407,14 +407,14 @@ export default function ClosedLoopCareerDevelopmentPage() {
       </section>
 
       {/* Closing CTA, same band as the other feature pages */}
-      <section aria-label="Get started with SkillDrift" style={{ position: "relative", width: "100%", overflow: "hidden", backgroundColor: "#5B49B4", backgroundImage: "linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(180deg, #6A55C8 0%, #5B49B6 46%, #4B3C99 100%)", backgroundSize: "120px 120px, 120px 120px, 100% 100%" }}>
+      <section aria-label="Get started with SkillDrift" style={{ position: "relative", width: "100%", overflow: "hidden", backgroundColor: "#3730A3", backgroundImage: "linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(180deg, #2563EB 0%, #4338CA 46%, #312E81 100%)", backgroundSize: "120px 120px, 120px 120px, 100% 100%" }}>
         <div className="wrap" style={{ position: "relative", paddingTop: 88, paddingBottom: 88, textAlign: "center" }}>
           <h2 style={{ fontSize: "clamp(28px,3.2vw,44px)", lineHeight: 1.14, fontWeight: 600, letterSpacing: "-0.025em", color: "#FFFFFF" }}>Start the loop with your resume.</h2>
           <p style={{ margin: "20px auto 0", maxWidth: 560, fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.80)" }}>
             See your gaps against the role you want, then start the first lesson built for your gap.
           </p>
           <div style={{ marginTop: 34, display: "flex", alignItems: "center", justifyContent: "center", gap: 30, flexWrap: "wrap" }}>
-            <a href={cta("closing_primary")} style={{ height: 56, padding: "0 36px", borderRadius: 14, background: "#FFFFFF", color: "#1A1330", fontSize: 16.5, fontWeight: 500, display: "inline-flex", alignItems: "center" }}>
+            <a href={cta("closing_primary")} style={{ height: 56, padding: "0 36px", borderRadius: 14, background: "#FFFFFF", color: "#1E1B4B", fontSize: 16.5, fontWeight: 500, display: "inline-flex", alignItems: "center" }}>
               See your gaps
             </a>
           </div>

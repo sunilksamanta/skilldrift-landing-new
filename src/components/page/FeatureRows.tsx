@@ -105,7 +105,7 @@ export default function FeatureRows() {
                         aspectRatio: "1800 / 1290",
                         borderRadius: 22,
                         overflow: "hidden",
-                        boxShadow: "0 30px 70px rgba(20,10,60,.30)",
+                        boxShadow: "0 30px 70px rgba(15,23,70,.30)",
                       }}
                     >
                       <Image
@@ -144,11 +144,11 @@ function FeaturePanel({ n, label }: { n: string; label: string }) {
         overflow: "hidden",
         display: "grid",
         placeItems: "center",
-        backgroundColor: "#6A55C8",
+        backgroundColor: "#2563EB",
         backgroundImage:
-          "linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),linear-gradient(160deg,#7B63E0,#5B49B6 62%,#4A3C99)",
+          "linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),linear-gradient(160deg,#3B82F6,#4338CA 62%,#312E81)",
         backgroundSize: "74px 74px, 74px 74px, 100% 100%",
-        boxShadow: "0 30px 70px rgba(20,10,60,.30)",
+        boxShadow: "0 30px 70px rgba(15,23,70,.30)",
       }}
     >
       <div style={{ textAlign: "center", padding: 32 }}>

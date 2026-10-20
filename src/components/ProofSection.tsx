@@ -187,7 +187,7 @@ export default function ProofSection() {
                   width: 260,
                   height: 260,
                   background:
-                    "radial-gradient(circle,rgba(124,93,249,.30),transparent 66%)",
+                    "radial-gradient(circle,rgba(91,96,241,.30),transparent 66%)",
                   pointerEvents: "none",
                 }}
               />

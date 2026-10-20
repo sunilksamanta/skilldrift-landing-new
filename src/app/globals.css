@@ -1,21 +1,27 @@
 :root {
   /* Light is the default. Dark is opt-in via the toggle only — the site does
      not follow the OS colour scheme. */
-  --bg: #f6f6f8;
+  --bg: #f5f7fd;
   --bg2: #ffffff;
   --card: #ffffff;
-  --card2: #f0f0f4;
+  --card2: #eef1fb;
   --line: rgba(10, 10, 14, 0.1);
   --line2: rgba(10, 10, 14, 0.18);
   --tx: #0a0a0c;
   --tx2: #5a5c66;
   --tx3: #8a8c96;
-  --ac: #7c5df9;
-  --ac2: #6049c0;
-  --acline: #4b3ad6;
-  --acsoft: rgba(124, 93, 249, 0.1);
-  --btn: #0a0a0c;
+  --ac: #5b60f1;
+  --ac2: #4338ca;
+  --acline: #4f46e5;
+  --acsoft: rgba(91, 96, 241, 0.1);
+  --btn: #4f46e5;
   --btntx: #ffffff;
+  /* Platform blues (app.skilldrift.ai --primary is hsl(238 84% 65%) = --ac).
+     Used for tinted bands, chips and gradients next to the indigo accent. */
+  --blue: #2563eb;
+  --sky: #0ea5e9;
+  --blue-soft: #eaf1ff;
+  --indigo-deep: #312e81;
   --amber: #9a6b08;
   --ok: #4fd1a5;
   --font: "Switzer";
@@ -46,9 +52,10 @@ html[data-sd-theme="dark"] {
   --tx: #ffffff;
   --tx2: #9ea0a8;
   --tx3: #6b6d75;
-  --acsoft: rgba(124, 93, 249, 0.13);
-  --btn: #ffffff;
-  --btntx: #0a0a0c;
+  --acsoft: rgba(91, 96, 241, 0.13);
+  --btn: #5b60f1;
+  --btntx: #ffffff;
+  --blue-soft: rgba(37, 99, 235, 0.14);
   --amber: #e4a83c;
   --t-green-soft: rgba(34, 197, 94, 0.18);
   --t-green-tx: #4ade80;
@@ -493,7 +500,7 @@ html[data-sd-theme="dark"] .sd-result-card::after {
   bottom: -90px;
   width: 260px;
   height: 260px;
-  background: radial-gradient(circle, rgba(124, 93, 249, 0.22), transparent 66%);
+  background: radial-gradient(circle, rgba(91, 96, 241, 0.22), transparent 66%);
 }
 
 /* ---- sticky upload CTA ----

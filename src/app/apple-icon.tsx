@@ -24,7 +24,7 @@ export default async function AppleIcon() {
           justifyContent: "center",
           backgroundColor: "#08090A",
           backgroundImage:
-            "radial-gradient(120% 120% at 78% 6%, rgba(124,93,249,0.34) 0%, rgba(8,9,10,0) 62%)",
+            "radial-gradient(120% 120% at 78% 6%, rgba(91,96,241,0.34) 0%, rgba(8,9,10,0) 62%)",
         }}
       >
         <img

@@ -30,9 +30,9 @@ export default function CtaBand({
         position: "relative",
         width: "100%",
         overflow: "hidden",
-        backgroundColor: "#5B49B4",
+        backgroundColor: "#3730A3",
         backgroundImage:
-          "linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(180deg, #6A55C8 0%, #5B49B6 46%, #4B3C99 100%)",
+          "linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(180deg, #2563EB 0%, #4338CA 46%, #312E81 100%)",
         backgroundSize: "120px 120px, 120px 120px, 100% 100%",
       }}
     >
@@ -88,7 +88,7 @@ export default function CtaBand({
               padding: "0 36px",
               borderRadius: 14,
               background: "#FFFFFF",
-              color: "#1A1330",
+              color: "#1E1B4B",
               fontSize: 16.5,
               fontWeight: 500,
               display: "inline-flex",

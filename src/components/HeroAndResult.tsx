@@ -31,7 +31,7 @@ export default function HeroAndResult() {
             height: 900,
             pointerEvents: "none",
             background:
-              "radial-gradient(58% 46% at 76% 16%, rgba(255,255,255,.62) 0%, rgba(168,146,255,.42) 26%, rgba(96,73,192,.20) 52%, transparent 74%)",
+              "radial-gradient(58% 46% at 76% 16%, rgba(255,255,255,.62) 0%, rgba(129,140,248,.42) 26%, rgba(37,99,235,.20) 52%, transparent 74%)",
             filter: "blur(4px)",
           }}
         />
@@ -44,7 +44,7 @@ export default function HeroAndResult() {
             height: 1300,
             pointerEvents: "none",
             background:
-              "linear-gradient(206deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.55) 7%, rgba(150,124,255,.30) 16%, rgba(96,73,192,.13) 30%, transparent 46%)",
+              "linear-gradient(206deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.55) 7%, rgba(99,102,241,.30) 16%, rgba(37,99,235,.13) 30%, transparent 46%)",
             transform: "rotate(-2deg)",
             opacity: 0.9,
           }}

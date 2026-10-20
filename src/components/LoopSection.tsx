@@ -74,7 +74,7 @@ export default function LoopSection() {
             borderRadius: 26,
             border: "1px solid var(--line)",
             background:
-              "linear-gradient(160deg, rgba(124,93,249,.10), transparent 46%), var(--bg2)",
+              "linear-gradient(160deg, rgba(37,99,235,.10), rgba(91,96,241,.05) 30%, transparent 50%), var(--bg2)",
             padding: 48,
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit,minmax(min(380px,100%),1fr))",
@@ -110,8 +110,8 @@ export default function LoopSection() {
                   <path d="M0 0.5 L9 5 L0 9.5 z" fill="var(--ac)" />
                 </marker>
                 <radialGradient id="sdCore2" cx="50%" cy="50%">
-                  <stop offset="0%" stopColor="rgba(124,93,249,.30)" />
-                  <stop offset="100%" stopColor="rgba(124,93,249,0)" />
+                  <stop offset="0%" stopColor="rgba(91,96,241,.30)" />
+                  <stop offset="100%" stopColor="rgba(91,96,241,0)" />
                 </radialGradient>
               </defs>
               <circle

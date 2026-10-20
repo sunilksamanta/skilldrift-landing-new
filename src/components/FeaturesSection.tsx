@@ -162,7 +162,7 @@ export default function FeaturesSection() {
                 aspectRatio: "1800 / 1290",
                 borderRadius: 24,
                 overflow: "hidden",
-                boxShadow: "0 30px 70px rgba(20,10,60,.28)",
+                boxShadow: "0 30px 70px rgba(15,23,70,.28)",
               }}
             >
               <Image
