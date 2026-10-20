@@ -61,11 +61,11 @@ export default function PricingSection() {
               maxWidth: 940,
             }}
           >
-            One application costs 72 credits: 18 to tailor, 54 to download. So a{" "}
-            <Price kind="topup" /> top-up covers about four. Past roughly eight applications a month
-            , or three live mock interviews, unlimited costs you less. If
-            you&rsquo;re mid-search, take unlimited; if you&rsquo;re browsing, take
-            credits.
+            One application costs 72 credits: 18 to tailor, 54 to download. So a Casual User
+            pack of <Price kind="topup" /> covers about four. Past roughly eight applications a
+            month, or three live mock interviews, Active Seeker costs you less. If you are in an
+            active search, take Active Seeker; if you are learning at your own pace, take Casual
+            User.
           </p>
         </div>
 

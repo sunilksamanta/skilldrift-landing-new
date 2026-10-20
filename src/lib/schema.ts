@@ -81,11 +81,11 @@ const CURRENCY = { in: "INR", row: "USD" } as const;
 
 const PLAN_NAMES: Record<PriceToken, string> = {
   free: "Free",
-  topup: "Top up",
-  unlimited: "Unlimited",
+  topup: "Casual User",
+  unlimited: "Active Seeker",
 };
 
-/** Unlimited is a monthly subscription; the others are one-off. */
+/** Active Seeker is a monthly subscription; the others are one-off. */
 const RECURRING: Record<PriceToken, boolean> = {
   free: false,
   topup: false,

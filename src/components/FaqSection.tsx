@@ -14,7 +14,7 @@ export const faqs = [
   },
   {
     q: "Is SkillDrift free?",
-    a: "The parts that tell you where you stand are free forever: skill gap analysis, a career path, resume and ATS analysis, job matching, jobs and internships, one AI course for your domain, industry news and podcasts. New accounts also get starter credits, enough to rewrite your resume, tailor it to a job and download it.",
+    a: "The parts that tell you where you stand are free forever: skill gap analysis, a career path, resume and ATS analysis, job matching, jobs and internships, one AI course for your domain, industry news and podcasts. New accounts also get 160 credits, enough to rewrite your resume, tailor it to a job and download it.",
   },
   {
     q: "Can SkillDrift analyse my resume without signing up?",
@@ -26,7 +26,7 @@ export const faqs = [
   },
   {
     q: "What does a credit cost, and what does it buy?",
-    a: "{{In India one credit is one rupee: 299 credits cost 299 rupees.|A 299-credit top-up costs {topup} and credits never expire.}} Tailoring your resume to a job is 18 credits, a detailed job analysis is 37, a text-based mock interview is 50, a learning roadmap is 50, a resume download is 54 to 70, and a full outcome rewrite is 70. Unlimited access is {unlimited} a month.",
+    a: "{{In India one credit is one rupee: 299 credits cost 299 rupees.|A Casual User pack of 299 credits costs {topup}, and credits you buy never expire.}} Tailoring your resume to a job is 18 credits, a Deep fit analysis is 37, a text-based mock interview is 50, a learning roadmap is 50, a resume download is 54 to 70, and a full outcome rewrite is 70. Active Seeker, with no credit counting, is {unlimited} a month.",
   },
   {
     q: "Can I use SkillDrift if I am a student or a fresher?",

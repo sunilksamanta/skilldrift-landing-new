@@ -3,7 +3,7 @@
     {
       "path": "/",
       "title": "SkillDrift - see the skills between you and the job you want",
-      "description": "Upload your resume free and get a readiness score out of 100, the skills holding you back, and matched jobs and internships. No account needed to see it.",
+      "description": "Upload your resume free and get a readiness score, the skills holding you back, and matched jobs and internships. No account needed to see it.",
       "h1": "See exactly what's missing between you and the role you want",
       "priority": 1.0,
       "custom": true
@@ -61,7 +61,7 @@
             {
               "tag": "Pricing",
               "title": "Free to start, pay when you apply",
-              "body": "Diagnosis is free forever. {{In India, one credit is one rupee, so every price is already in money you understand.|Credits are priced up front and never expire, so you always know what a run costs.}}"
+              "body": "Diagnosis is free forever. {{In India, one credit is one rupee, so every price is already in money you understand.|Credits are priced up front, and credits you buy never expire, so you always know what a run costs.}}"
             }
           ]
         }
@@ -169,7 +169,7 @@
             {
               "tag": "Free, no account",
               "title": "Your readiness score",
-              "body": "Drop a PDF or DOCX on the homepage and get your score out of 100, the three skills holding it down, and three matched roles, in place, with no redirect.",
+              "body": "Drop a PDF or DOCX on the homepage and get your readiness score, the three skills holding it down, and three matched roles, in place, with no redirect.",
               "accent": true
             },
             {
@@ -180,7 +180,7 @@
             {
               "tag": "Costs credits",
               "title": "Anything you send an employer",
-              "body": "Tailoring, downloads, rewrites and mock interviews. New accounts get starter credits, enough for a full first application."
+              "body": "Tailoring, downloads, rewrites and mock interviews. New accounts get 160 credits, enough for a full first application."
             }
           ]
         }
@@ -268,27 +268,27 @@
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "What does tailoring a resume cost?",
-          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gap analysis, job matching and your career path never cost a credit.",
+          "copy": "{{In India, one credit is one rupee.|Credits you buy never expire.}} Skill gap analysis, job matching and your career path never cost a credit.",
           "rows": [
             {
               "label": "Tailor your resume to one job",
               "cost": "18 credits"
             },
             {
-              "label": "Detailed job analysis",
+              "label": "Deep fit analysis",
               "cost": "37 credits"
             },
             {
               "label": "Download your resume",
-              "cost": "54–70 credits"
+              "cost": "54 to 70 credits"
             }
           ],
-          "note": "One full application costs about 72 credits: 18 to tailor, 54 to download. A 299-credit top-up is {topup} and covers roughly four. Compare that against unlimited on the [pricing page](/pricing)."
+          "note": "One full application costs about 72 credits: 18 to tailor, 54 to download. A Casual User pack of 299 credits is {topup} and covers roughly four. Compare that against Active Seeker on the [pricing page](/pricing)."
         }
       ],
       "cta": {
         "heading": "Stop sending the same resume to every job.",
-        "copy": "Upload once, see your readiness score free, and tailor your first application on your starter credits.",
+        "copy": "Upload once, see your readiness score free, and tailor your first application on your 160 sign-up credits.",
         "primary": {
           "label": "Get started free",
           "href": "app:sign-in"
@@ -401,7 +401,7 @@
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "What does a resume rewrite cost?",
-          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Resume and ATS analysis, the diagnosis that tells you whether you need this at all, is free.",
+          "copy": "{{In India, one credit is one rupee.|Credits you buy never expire.}} Resume and ATS analysis, the diagnosis that tells you whether you need this at all, is free.",
           "rows": [
             {
               "label": "Resume and ATS analysis",
@@ -414,7 +414,7 @@
             },
             {
               "label": "Download your resume",
-              "cost": "54–70 credits"
+              "cost": "54 to 70 credits"
             }
           ],
           "note": "Run the free analysis first. If your resume already leads with outcomes, it will tell you so and you can spend the credits elsewhere. Full prices on the [pricing page](/pricing)."
@@ -555,7 +555,7 @@
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "What does an AI mock interview cost?",
-          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gaps, job matching and your career path stay free forever; you spend only on the runs you actually take.",
+          "copy": "{{In India, one credit is one rupee.|Credits you buy never expire.}} Skill gaps, job matching and your career path stay free forever; you spend only on the runs you actually take.",
           "rows": [
             {
               "label": "Text-based mock interview",
@@ -570,7 +570,7 @@
               "cost": "200 credits"
             }
           ],
-          "note": "Past roughly three live interviews a month, unlimited at {unlimited} costs you less than topping up. Compare both on the [pricing page](/pricing)."
+          "note": "Past roughly three live interviews a month, Active Seeker at {unlimited} costs you less than buying credits. Compare both on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -592,7 +592,7 @@
         },
         {
           "q": "What does an AI mock interview report actually tell you?",
-          "a": "Where you lost points, question by question. A text interview returns an overall score out of 100 with per-question feedback. The voice and realtime formats add a hire verdict out of 10 and an assessment of delivery. Every weakness it names can be turned into a learning roadmap."
+          "a": "Where you lost points, question by question. A text interview returns an overall score out of 10, to one decimal, with per-question feedback. The voice and realtime formats add a hire verdict out of 10 and an assessment of delivery. Every weakness it names can be turned into a learning roadmap."
         },
         {
           "q": "What does an AI mock interview cost?",
@@ -606,10 +606,10 @@
       "description": "Stop scrolling job boards. See roles ranked by how well you actually match, out of 100, including internships and entry-level openings. Free to use.",
       "h1": "See which jobs you actually match, scored out of 100.",
       "priority": 0.8,
-      "breadcrumb": "Job fit analysis",
+      "breadcrumb": "Job matching",
       "feature": true,
       "hero": {
-        "eyebrow": "Job fit analysis",
+        "eyebrow": "Job matching",
         "standfirst": "SkillDrift reads your resume against each open role and scores the match out of 100, with the reasons behind the number named rather than hidden. Internships and entry level roles are included for anyone with under a year of experience. Basic analysis on any role costs nothing.",
         "primaryCta": {
           "label": "Check a job match",
@@ -667,7 +667,7 @@
             {
               "title": "Costs credits",
               "items": [
-                "Detailed job analysis on one posting - 37 credits",
+                "Deep fit analysis on one posting: 37 credits",
                 "Tailoring your resume to that posting - 18 credits",
                 "Downloading the tailored version - 54 to 70 credits"
               ]
@@ -717,7 +717,7 @@
         },
         {
           "q": "Is job matching free?",
-          "a": "Yes. Job and internship matches are scored for free, and a basic analysis of any individual role costs nothing. A detailed job analysis is 37 credits."
+          "a": "Yes. Job and internship matches are scored for free, and a basic analysis of any individual role costs nothing. A Deep fit analysis is 37 credits, and it also works on a job you paste from another site."
         },
         {
           "q": "What does a job match score out of 100 actually measure?",
@@ -822,7 +822,7 @@
               "cost": "50 credits"
             }
           ],
-          "note": "New accounts get starter credits, so your first roadmap can come out of those. See the full table on the [pricing page](/pricing)."
+          "note": "New accounts get 160 credits, so your first roadmap can come out of those. See the full table on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -886,7 +886,7 @@
               "title": "Scored against the role",
               "accent": true,
               "items": [
-                "Your readiness out of 100 for the role you actually want",
+                "Your readiness, as a percentage, for the role you actually want",
                 "The specific skills holding the number down, named",
                 "Industry standards for that role, not a generic profile",
                 "Benchmarks against the level above you, not against strangers"
@@ -1073,7 +1073,7 @@
               "cost": "50 credits"
             }
           ],
-          "note": "{{In India, one credit is one rupee.|Credits never expire.}} Full table on the [pricing page](/pricing)."
+          "note": "{{In India, one credit is one rupee.|Credits you buy never expire.}} Full table on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -1211,13 +1211,13 @@
     {
       "path": "/pricing",
       "title": "SkillDrift pricing - free to start, pay when you apply",
-      "description": "Skill gaps, career path, job matching and one AI course are free forever. Top up credits or go unlimited when you're ready to apply. Credits never expire.",
+      "description": "Skill gaps, career path, job matching and one AI course are free forever. Buy credits as a Casual User or go unlimited with Active Seeker when you are ready to apply. Credits you buy never expire.",
       "h1": "Diagnosis is free. You pay when you're ready to apply.",
       "priority": 0.9,
       "breadcrumb": "Pricing",
       "hero": {
         "eyebrow": "Pricing",
-        "standfirst": "New accounts get starter credits, enough to rewrite your resume, tailor it to a job and download it. {{In India, one credit is one rupee, so every price below is already in money you understand.|Every price below is a flat one, with no bundles to decode and nothing that expires.}}",
+        "standfirst": "New accounts get 160 credits, enough to rewrite your resume, tailor it to a job and download it. {{In India, one credit is one rupee, so every price below is already in money you understand.|Every price below is a flat one, with no bundles to decode and nothing that expires.}}",
         "primaryCta": {
           "label": "Start free",
           "href": "app:sign-in"
@@ -1254,7 +1254,7 @@
               "body": "Everything that produces a finished artefact: something you send, download, or put your name on. One of them refunds itself.",
               "items": [
                 "Tailoring, downloads and outcome rewrites",
-                "Detailed job analysis on a single posting",
+                "Deep fit analysis on a single posting",
                 "Mock interviews: text, recorded and live voice",
                 "Learning roadmaps and certificate issuance"
               ]
@@ -1266,14 +1266,14 @@
           "alt": true,
           "eyebrow": "The credit table",
           "heading": "{{In India, one credit is one rupee.|Every credit is priced up front.}}",
-          "copy": "{{299 credits cost 299 rupees. No conversion to work out, no bundles to decode.|299 credits cost {topup}. One flat pack, no bundles to decode, and nothing expires.}}",
+          "copy": "{{299 credits cost 299 rupees. No conversion to work out, no bundles to decode.|299 credits cost {topup}. One flat pack, no bundles to decode, and credits you buy never expire.}}",
           "rows": [
             {
               "label": "Tailor your resume to one job",
               "cost": "18"
             },
             {
-              "label": "Detailed job analysis",
+              "label": "Deep fit analysis",
               "cost": "37"
             },
             {
@@ -1291,7 +1291,7 @@
             },
             {
               "label": "Download your resume",
-              "cost": "54–70"
+              "cost": "54 to 70"
             },
             {
               "label": "Rewrite your resume around outcomes",
@@ -1306,13 +1306,13 @@
               "cost": "200"
             }
           ],
-          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a {topup} top-up covers about four. Past roughly eight applications a month, or three live mock interviews, unlimited at {unlimited} costs you less. If you're mid-search, take unlimited; if you're browsing, take credits."
+          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a Casual User pack of {topup} covers about four. Past roughly eight applications a month, or three live mock interviews, Active Seeker at {unlimited} costs you less. If you are in an active search, take Active Seeker; if you are learning at your own pace, take Casual User."
         },
         {
           "type": "plans",
           "eyebrow": "Two ways to pay",
-          "heading": "Top up when you need it, or stop counting.",
-          "copy": "Start free: new accounts get starter credits, enough for a full first application. After that, buy credits as you go or stop counting altogether."
+          "heading": "Pay as you go, or stop counting.",
+          "copy": "Start free: new accounts get 160 credits, enough for a full first application. After that, buy credits as a Casual User, or stop counting altogether with Active Seeker. Both are the full SkillDrift."
         }
       ],
       "cta": {
@@ -1594,7 +1594,7 @@
             },
             {
               "title": "What does a credit cost?",
-              "body": "{{In India, one credit is one rupee: 299 credits cost 299 rupees.|A 299-credit top-up is {topup}, and credits never expire.}} The full table is on the pricing page."
+              "body": "{{In India, one credit is one rupee: 299 credits cost 299 rupees.|A Casual User pack of 299 credits is {topup}, and credits you buy never expire.}} The full table is on the pricing page."
             },
             {
               "title": "What happens to my resume?",

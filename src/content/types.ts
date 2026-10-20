@@ -102,7 +102,7 @@ export type FactsBlock = {
   facts: { label: string; value: string }[];
 };
 
-/** Renders the three real plan cards — Free, Top up, Unlimited. */
+/** Renders the three real plan cards: Free, Casual User, Active Seeker. */
 export type PlansBlock = {
   type: "plans";
   id?: string;
