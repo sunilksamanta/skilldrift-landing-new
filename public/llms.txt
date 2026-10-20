@@ -45,6 +45,11 @@ Key facts for accurate answers:
 - [Business analyst skills](https://www.skilldrift.ai/skills/business-analyst)
 - [Data scientist skills](https://www.skilldrift.ai/skills/data-scientist)
 - [Accountant skills](https://www.skilldrift.ai/skills/accountant)
+- [Data engineer skills](https://www.skilldrift.ai/skills/data-engineer)
+- [Teacher skills](https://www.skilldrift.ai/skills/teacher)
+- [Administrative assistant skills](https://www.skilldrift.ai/skills/administrative-assistant)
+- [Project manager skills](https://www.skilldrift.ai/skills/project-manager)
+- [Graphic designer skills](https://www.skilldrift.ai/skills/graphic-designer)
 
 ## Skills in demand
 

@@ -1,4 +1,4 @@
-// lib/roles.ts  (updated 28 September 2026: five roles added, data analyst live)
+// lib/roles.ts  (updated 20 October 2026: five more roles added)
 //
 // Content for the /skills/<role> pages. One object per role.
 // To add a role later: add one object here. The page, the hub, the sitemap entry and the
@@ -663,6 +663,329 @@ export const ROLES: Role[] = [
     related: [
       { href: `${BLOG}the-invisible-career-killer-are-you-suffering-from-skill-decay`, label: 'Are you suffering from skill decay?' },
       { href: `${BLOG}the-rise-of-micro-credentials-how-to-leverage-them-for-rapid-promotion`, label: 'How to use micro credentials for a faster promotion' },
+      { href: `${BLOG}how-to-build-a-career-roadmap-step-by-step`, label: 'How to build a career roadmap step by step' },
+    ],
+  },
+  // ---- Added 20 October 2026: five new roles. Everything from here to the closing ]; is new. ----
+  {
+    slug: 'data-engineer',
+    live: true,
+    role: 'data engineer',
+    roleTitle: 'Data Engineer',
+    title: 'Data Engineer Skills: What the Job Asks For in 2026 | SkillDrift',
+    description:
+      'The skills a data engineer needs in 2026, from SQL and Python to pipelines, Spark and cloud platforms, which ones decide the offer, and how to check your own gap.',
+    h1: 'Data engineer skills in 2026',
+    answer:
+      'A data engineer needs SQL and Python used to a professional standard, the ability to build and run ETL and data pipelines, a distributed processing tool such as Apache Spark, one cloud data platform, data modelling, and an orchestration tool to schedule and monitor the work. Around those sit the human skills of clear communication with the analysts and data scientists who use the data, and ownership when a pipeline fails.',
+    intro:
+      'Most data engineering resumes list tools. The offer usually turns on whether the resume shows data that arrived on time, stayed correct and was used by someone.',
+    groups: [
+      {
+        heading: 'Technical skills most postings ask for',
+        kind: 'technical',
+        skills: [
+          { name: 'SQL', why: 'Complex joins, window functions and query tuning on large tables.' },
+          { name: 'Python', why: 'Pipeline code that is tested, readable and safe to run again.' },
+          { name: 'ETL and data pipelines', why: 'Moving data from source systems into a warehouse or lake, in batches or as a stream, and handling late or bad records.' },
+          { name: 'Apache Spark', why: 'Processing data too large for one machine, and knowing how partitions and joins affect speed and cost.' },
+          { name: 'Cloud data platforms', why: 'One of AWS, Azure or Google Cloud, plus a warehouse such as Snowflake, BigQuery, Redshift or Databricks.' },
+          { name: 'Data modelling', why: 'Designing tables and schemas, such as a star schema, that analysts can query without help.' },
+          { name: 'Orchestration', why: 'Airflow, Dagster or a similar tool to schedule jobs, manage dependencies and retry failures.' },
+          { name: 'Data quality and testing', why: 'Checks that catch missing, duplicated or wrong data before anyone reports on it.' },
+        ],
+      },
+      {
+        heading: 'Human skills that decide the job',
+        kind: 'human',
+        skills: [
+          { name: 'Communication', why: 'Agreeing with analysts and data scientists what the data means and when it will arrive.' },
+          { name: 'Ownership', why: 'Fixing a failed pipeline quickly and writing down what caused it.' },
+          { name: 'Attention to detail', why: 'Noticing when a number looks wrong before it reaches a report.' },
+        ],
+      },
+    ],
+    decidesHeading: 'The skills that decide the offer',
+    decides: [
+      { heading: 'Reliability you can show', body: 'Interviewers often ask about a pipeline that broke. A clear account of how you found the cause, fixed it and stopped it from happening again carries a lot of weight.' },
+      { heading: 'Data modelling', body: 'Many interviews include a design exercise. Candidates who ask how the data will be used before they draw any tables tend to do well.' },
+      { heading: 'Cost and performance', body: 'Cloud processing is billed by use. Employers value engineers who can make a slow or expensive job faster and cheaper, and explain how they did it.' },
+    ],
+    resume: {
+      before: 'Built ETL pipelines using Spark and Airflow.',
+      after: 'Built and ran Spark pipelines in Airflow that load sales data into Snowflake each morning, added data quality checks, and halved the nightly run time.',
+      note: 'The second line shows the tools, the platform, data quality and a result. Use your own real numbers. A screening system matches words, so a skill that is not written down is a skill that does not count.',
+    },
+    variants: {
+      heading: 'Data engineer, data analyst or data scientist?',
+      body: 'A data engineer builds and runs the systems that collect, clean and store data. A data analyst uses that data to answer business questions. A data scientist builds models that predict or classify. An analytics engineer works between engineering and analysis, and focuses on data modelling inside the warehouse. Many roles blend two of these, so read the posting to see which mix the employer wants.',
+    },
+    faqs: [
+      { q: 'What skills are needed for a data engineer?', a: 'SQL, Python, ETL and data pipelines, Apache Spark, a cloud data platform, data modelling, an orchestration tool such as Airflow, data quality checks, and clear communication with the people who use the data.' },
+      { q: 'Does a data engineer need to know Python?', a: 'Most roles expect Python, and some accept Scala or Java. SQL is expected in nearly every data engineering role.' },
+      { q: 'What skills does a data engineer need for a first job?', a: 'SQL and Python used well, one cloud platform, and one project that moves data from a source into a database on a schedule. Show that the project ran more than once and that you checked the data it produced.' },
+      { q: 'How do I check my skills against a data engineer job?', a: 'Upload your resume to SkillDrift and pick the job. It names the skills the posting asks for that your resume does not show, scores the job out of 100, and builds a learning path for each gap.' },
+    ],
+    related: [
+      { href: 'https://www.skilldrift.ai/skills/in-demand/data-ai-jobs', label: 'Skills employers ask for in data and AI jobs' },
+      { href: 'https://www.skilldrift.ai/skills/data-scientist', label: 'Data scientist skills in 2026' },
+      { href: `${BLOG}how-to-build-a-career-roadmap-step-by-step`, label: 'How to build a career roadmap step by step' },
+    ],
+  },
+  {
+    slug: 'teacher',
+    live: true,
+    role: 'teacher',
+    roleTitle: 'Teacher',
+    title: 'Teacher Skills: What the Job Asks For in 2026 | SkillDrift',
+    description:
+      'The skills a teacher needs in 2026, from lesson planning to classroom management and assessment, which ones decide the offer, and how to check your own gap.',
+    h1: 'Teacher skills in 2026',
+    answer:
+      'A teacher needs strong knowledge of their subject, the ability to plan lessons that build on each other, classroom management, assessment that shows what each student has learned, and differentiation so that students at different levels can all make progress. Schools also ask for confident use of education technology and clear communication with parents and colleagues. Patience and care for students matter in every part of the job.',
+    intro:
+      'Most teaching resumes list the subjects and age groups taught. The offer usually turns on whether the resume shows how students progressed, and how the teacher knew.',
+    groups: [
+      {
+        heading: 'Teaching skills most postings ask for',
+        kind: 'technical',
+        skills: [
+          { name: 'Subject knowledge', why: 'Knowing the subject well enough to explain it in more than one way and to answer unexpected questions.' },
+          { name: 'Lesson planning', why: 'Lessons with a clear goal, in a sequence that builds over a term.' },
+          { name: 'Classroom management', why: 'Setting routines and expectations so that the class can focus on learning.' },
+          { name: 'Assessment', why: 'Using quizzes, tasks and questions to check understanding, then changing the next lesson based on what you find.' },
+          { name: 'Differentiation', why: 'Adapting tasks and support so that students at different levels, including students with additional needs, can all make progress.' },
+          { name: 'Education technology', why: 'A learning management system, presentation tools and online resources, and running a lesson online when needed.' },
+        ],
+      },
+      {
+        heading: 'Human skills that decide the classroom',
+        kind: 'human',
+        skills: [
+          { name: 'Communication with parents', why: 'Explaining progress and concerns clearly and respectfully, in meetings and in writing.' },
+          { name: 'Patience', why: 'Explaining an idea again, in a new way, for a student who has not understood it yet.' },
+          { name: 'Working with colleagues', why: 'Sharing plans and resources, and agreeing assessment standards with other teachers.' },
+          { name: 'Reflection', why: 'Reviewing what worked in a lesson and changing the next one.' },
+        ],
+      },
+    ],
+    decidesHeading: 'The skills that decide the offer',
+    decides: [
+      { heading: 'Classroom management in practice', body: 'Interviews often include a demonstration lesson or a question about behaviour. A calm, specific answer about routines and follow up carries more weight than general principles.' },
+      { heading: 'Evidence of progress', body: 'Schools want teachers who can show how they know students are learning. Describe one way you tracked progress and what you changed as a result.' },
+      { heading: 'Meeting different needs', body: 'Interviewers often ask how you would support a student who is far ahead of the class or far behind it. A concrete example of differentiation stands out.' },
+    ],
+    resume: {
+      before: 'Taught mathematics to students aged 12 to 14.',
+      after: 'Planned and taught mathematics to three classes aged 12 to 14, used short weekly quizzes to find gaps, and regrouped students for targeted practice, which raised end of term results in all three classes.',
+      note: 'The second line shows planning, assessment, differentiation and a result. Use your own real results. A screening system matches words, so a skill that is not written down is a skill that does not count.',
+    },
+    variants: {
+      heading: 'Teaching assistant, teacher and head of department skills',
+      body: 'A teaching assistant role leans on supporting individual students and small groups, and on following the plan of the lead teacher. A teacher role adds lesson planning, assessment and full responsibility for a class. A head of department or lead teacher role adds planning the curriculum for a subject, guiding other teachers and reviewing results. The step up is usually decided by evidence that you improved results beyond your own classes.',
+    },
+    faqs: [
+      { q: 'What skills does a teacher need?', a: 'Subject knowledge, lesson planning, classroom management, assessment, differentiation, education technology, clear communication with parents and colleagues, and patience.' },
+      { q: 'What teacher skills should I put on my resume?', a: 'Name the subjects and age groups you taught, the assessment and technology tools you used, and one result that shows students progressed. Add classroom management and communication, each backed by a line in your experience.' },
+      { q: 'What skills help someone move into teaching from another career?', a: 'Subject knowledge from the previous job, experience of explaining ideas to others through training or mentoring, and organisation. Most schools also require a recognised teaching qualification for the place where they are based.' },
+      { q: 'How do I check my skills against a teaching job?', a: 'Upload your resume to SkillDrift and pick the job. It names the skills the posting asks for that your resume does not show, scores the job out of 100, and builds a learning path for each gap.' },
+    ],
+    related: [
+      { href: 'https://www.skilldrift.ai/skills/in-demand/education-jobs', label: 'Skills employers ask for in education jobs' },
+      { href: `${BLOG}what-is-a-skill-gap-analysis-and-how-to-run-one-on-yourself`, label: 'How to run a skill gap analysis on yourself' },
+      { href: `${BLOG}how-to-build-a-career-roadmap-step-by-step`, label: 'How to build a career roadmap step by step' },
+    ],
+  },
+  {
+    slug: 'administrative-assistant',
+    live: true,
+    role: 'administrative assistant',
+    roleTitle: 'Administrative Assistant',
+    title: 'Administrative Assistant Skills: What the Job Asks For in 2026 | SkillDrift',
+    description:
+      'The skills an administrative assistant needs in 2026, from scheduling and office software to record keeping, which ones decide the offer, and how to check your own gap.',
+    h1: 'Administrative assistant skills in 2026',
+    answer:
+      'An administrative assistant needs confident use of Microsoft Office or Google Workspace, scheduling and calendar management, clear written communication, accurate record keeping and strong organisation. Employers also look for discretion with confidential information, and the judgment to handle several requests at once in the right order.',
+    intro:
+      'Most administrative resumes describe the role as general office support. A hiring manager looks for the specific calendars, records and systems the candidate kept running.',
+    groups: [
+      {
+        heading: 'Office skills most postings ask for',
+        kind: 'technical',
+        skills: [
+          { name: 'Microsoft Office or Google Workspace', why: 'Word or Docs for letters and reports, Excel or Sheets for lists and simple tracking, and Outlook or Gmail for email.' },
+          { name: 'Scheduling and calendar management', why: 'Booking meetings across several calendars and time zones, and handling changes without double booking.' },
+          { name: 'Record keeping', why: 'Filing documents, invoices and contacts so that anyone on the team can find them.' },
+          { name: 'Travel and event arrangements', why: 'Booking travel, rooms and catering within budget and company policy.' },
+          { name: 'Data entry and basic bookkeeping', why: 'Entering data accurately, tracking expenses and preparing simple reports.' },
+          { name: 'Collaboration tools', why: 'Shared drives, video calls, and tools such as Teams, Slack or a CRM.' },
+        ],
+      },
+      {
+        heading: 'Human skills that decide the job',
+        kind: 'human',
+        skills: [
+          { name: 'Written communication', why: 'Clear, polite emails and messages on behalf of a manager or a team.' },
+          { name: 'Organisation', why: 'Keeping track of many small tasks and deadlines at once.' },
+          { name: 'Discretion', why: 'Handling confidential information, such as salaries or personal records, with care.' },
+          { name: 'Prioritisation', why: 'Deciding which request to deal with first when several arrive at the same time.' },
+        ],
+      },
+    ],
+    decidesHeading: 'The skills that decide the offer',
+    decides: [
+      { heading: 'Handling competing requests', body: 'Interviewers often ask what you did when two managers needed something at the same time. A clear account of how you decided, and how you told both people, carries a lot of weight.' },
+      { heading: 'Accuracy', body: 'A wrong meeting time or a misfiled invoice causes problems later. Candidates who can describe how they check their own work stand out.' },
+      { heading: 'Learning new tools', body: 'Offices change their software often. Employers value assistants who learn a new system quickly, including AI tools for drafting and note taking, and who help others use it.' },
+    ],
+    resume: {
+      before: 'Provided administrative support to the management team.',
+      after: 'Managed calendars and travel for four senior managers in Outlook, kept the contracts register current in SharePoint, and set up a shared request tracker that reduced repeat questions to the team.',
+      note: 'The second line shows the software, the scope, record keeping and a process improvement. A screening system matches words, so a skill that is not written down is a skill that does not count.',
+    },
+    variants: {
+      heading: 'Administrative assistant, executive assistant and office manager skills',
+      body: 'An administrative assistant role supports a team with scheduling, records and correspondence. An executive assistant role supports one or two senior leaders closely, and adds managing their priorities, preparing meeting papers and handling sensitive matters. An office manager role adds suppliers, budgets, facilities and sometimes a small team. The step up is usually decided by judgment and by owning outcomes, such as an office move or an event that ran to plan.',
+    },
+    faqs: [
+      { q: 'What skills does an administrative assistant need?', a: 'Microsoft Office or Google Workspace, scheduling and calendar management, written communication, record keeping, organisation, prioritisation and discretion.' },
+      { q: 'What should I put under skills on an administrative assistant resume?', a: 'Name the software you use, the calendars and records you manage, and one process you improved. Add organisation and discretion, each backed by a line in your experience.' },
+      { q: 'What is the difference between an administrative assistant and an executive assistant?', a: 'An administrative assistant usually supports a team. An executive assistant usually supports one or two senior leaders and handles more of their priorities and confidential work.' },
+      { q: 'How do I check my skills against an administrative assistant job?', a: 'Upload your resume to SkillDrift and pick the job. It names the skills the posting asks for that your resume does not show, scores the job out of 100, and builds a learning path for each gap.' },
+    ],
+    related: [
+      { href: `${BLOG}10-resume-mistakes-that-cost-you-interviews`, label: '10 resume mistakes that cost you interviews' },
+      { href: `${BLOG}what-is-a-skill-gap-analysis-and-how-to-run-one-on-yourself`, label: 'How to run a skill gap analysis on yourself' },
+      { href: `${BLOG}how-to-build-a-career-roadmap-step-by-step`, label: 'How to build a career roadmap step by step' },
+    ],
+  },
+  {
+    slug: 'project-manager',
+    live: true,
+    role: 'project manager',
+    roleTitle: 'Project Manager',
+    title: 'Skills Required for a Project Manager in 2026 | SkillDrift',
+    description:
+      'The skills required for a project manager in 2026, from planning and risk to budgets and agile methods, which ones decide the offer, and how to check your own gap.',
+    h1: 'Project manager skills in 2026',
+    answer:
+      'A project manager needs to plan and schedule work, manage risks and issues, control a budget, keep stakeholders informed and in agreement, and run the project with a suitable method, whether agile, waterfall or a mix of the two. Most roles also expect confident use of a project tool such as Jira, Asana or Microsoft Project, along with clear communication and the ability to lead a team.',
+    intro:
+      'Most project manager resumes list the projects delivered. The offer usually turns on whether the resume shows what was at risk, and how the project still finished on time and on budget.',
+    groups: [
+      {
+        heading: 'Project skills most postings ask for',
+        kind: 'technical',
+        skills: [
+          { name: 'Planning and scheduling', why: 'Breaking work into tasks, estimating it, and building a schedule with clear milestones and dependencies.' },
+          { name: 'Risk and issue management', why: 'Spotting what could go wrong early, keeping a risk log, and acting while there is still time.' },
+          { name: 'Budgeting and cost control', why: 'Building a project budget, tracking spend against it, and explaining any difference.' },
+          { name: 'Agile and waterfall methods', why: 'Scrum or Kanban for work that changes often, a staged plan for work with fixed requirements, and knowing which one fits the project.' },
+          { name: 'Project tools', why: 'Jira, Asana, Microsoft Project, Smartsheet or similar, kept current so that the plan matches the actual state of the work.' },
+          { name: 'Scope and change control', why: 'Agreeing what is in the project, and handling requests to change it through a clear process.' },
+        ],
+      },
+      {
+        heading: 'Human skills that decide the project',
+        kind: 'human',
+        skills: [
+          { name: 'Stakeholder management', why: 'Keeping sponsors, clients and teams informed and in agreement, especially when the news is bad.' },
+          { name: 'Communication', why: 'Status reports, meeting notes and decisions that people can act on.' },
+          { name: 'Leadership', why: 'Getting a team to commit to a plan, often when the team members do not report to you.' },
+          { name: 'Problem solving', why: 'Finding a workable option when a deadline, a budget or a resource changes.' },
+        ],
+      },
+    ],
+    decidesHeading: 'The skills that decide the offer',
+    decides: [
+      { heading: 'Recovering a project', body: 'Interviewers often ask about a project that went off track. A clear account of what you noticed, what you changed and how the project finished carries a lot of weight.' },
+      { heading: 'Raising problems early', body: 'Sponsors value project managers who raise a risk while there is still time to act. Show one example where an early warning changed the outcome.' },
+      { heading: 'Choosing the method', body: 'Employers want project managers who can explain why a project used agile, waterfall or a mix. A reason based on the work itself is a strong answer.' },
+    ],
+    resume: {
+      before: 'Managed IT projects from start to finish.',
+      after: 'Led a 12 month system migration for three departments, kept a weekly risk log, brought a delayed data transfer back on schedule, and delivered within the agreed budget.',
+      note: 'The second line shows scope, risk management, recovery and budget control. Use your own real figures. A screening system matches words, so a skill that is not written down is a skill that does not count.',
+    },
+    variants: {
+      heading: 'Project coordinator, project manager and program manager skills',
+      body: 'A project coordinator role supports the plan by scheduling meetings, tracking tasks and keeping documents current. A project manager role owns the plan, the budget, the risks and the result. A program manager role oversees several related projects, and adds tracking of benefits and managing senior stakeholders. A recognised project management certification helps in many postings, and evidence of projects delivered usually carries the most weight.',
+    },
+    faqs: [
+      { q: 'What skills are required for a project manager?', a: 'Planning and scheduling, risk management, budgeting, scope control, agile and waterfall methods, a project tool, stakeholder management, communication and leadership.' },
+      { q: 'Do I need a certification to become a project manager?', a: 'Many postings list a project management certification as preferred, and some require one. Evidence that you delivered real projects usually matters more, and a certification is strongest when it comes with that evidence.' },
+      { q: 'What skills does a first time project manager need?', a: 'Organisation, clear communication, a working knowledge of one project tool, and evidence of coordinating work with others, even outside a formal project role.' },
+      { q: 'How do I check my skills against a project manager job?', a: 'Upload your resume to SkillDrift and pick the job. It names the skills the posting asks for that your resume does not show, scores the job out of 100, and builds a learning path for each gap.' },
+    ],
+    related: [
+      { href: 'https://www.skilldrift.ai/skills/product-manager', label: 'Product manager skills in 2026' },
+      { href: 'https://www.skilldrift.ai/skills/business-analyst', label: 'Business analyst skills in 2026' },
+      { href: `${BLOG}how-to-build-a-career-roadmap-step-by-step`, label: 'How to build a career roadmap step by step' },
+    ],
+  },
+  {
+    slug: 'graphic-designer',
+    live: true,
+    role: 'graphic designer',
+    roleTitle: 'Graphic Designer',
+    title: 'Graphic Designer Skills: What the Job Asks For in 2026 | SkillDrift',
+    description:
+      'The skills a graphic designer needs in 2026, from Adobe tools and Figma to typography and brand systems, which ones decide the offer, and how to check your own gap.',
+    h1: 'Graphic designer skills in 2026',
+    answer:
+      'A graphic designer needs professional use of Adobe Illustrator, Photoshop and InDesign, and often Figma as well. They also need a strong command of typography, layout and colour, and the ability to work within a brand system and extend it. Employers expect a portfolio that shows the work and the thinking behind it, and the ability to take feedback and turn it into a better design.',
+    intro:
+      'Most graphic design resumes list software. Hiring managers look at the portfolio first, then read the resume for the brief, the audience and the result behind each piece.',
+    groups: [
+      {
+        heading: 'Design skills most postings ask for',
+        kind: 'technical',
+        skills: [
+          { name: 'Adobe Illustrator', why: 'Logos, icons and illustrations built as clean vector files.' },
+          { name: 'Adobe Photoshop', why: 'Editing and combining images for print and for screens.' },
+          { name: 'Adobe InDesign', why: 'Multi page layouts such as brochures, reports and books, set up correctly for print.' },
+          { name: 'Figma', why: 'Designing for screens, building shared components and working with product teams.' },
+          { name: 'Typography and layout', why: 'Choosing and pairing typefaces, and arranging content on a grid so that the most important message is read first.' },
+          { name: 'Brand systems', why: 'Applying brand guidelines consistently, and extending them to new formats.' },
+          { name: 'Preparing files for production', why: 'Colour modes, bleed, resolution and export settings for print, web and social media.' },
+        ],
+      },
+      {
+        heading: 'Human skills that decide the job',
+        kind: 'human',
+        skills: [
+          { name: 'Taking feedback', why: 'Listening to comments, asking what problem each one points to, and revising the design with that in mind.' },
+          { name: 'Understanding the brief', why: 'Asking who the design is for and what it needs to achieve before starting.' },
+          { name: 'Presenting work', why: 'Explaining design choices in terms the client or the team cares about.' },
+          { name: 'Time management', why: 'Delivering several projects on deadline, with time left for revisions.' },
+        ],
+      },
+    ],
+    decidesHeading: 'The skills that decide the offer',
+    decides: [
+      { heading: 'A focused portfolio', body: 'Hiring managers often look at the portfolio before the resume. A small set of strong projects, each with the brief and the result, tends to do better than a long gallery.' },
+      { heading: 'Explaining design decisions', body: 'Interviews often include a portfolio review. Candidates who can say why they chose a layout or a typeface, and who it was for, stand out.' },
+      { heading: 'Working with AI tools', body: 'Many teams now use AI tools for images and layouts. Employers want designers who can use them and still judge quality, accuracy and fit with the brand.' },
+    ],
+    resume: {
+      before: 'Designed marketing materials using Adobe Creative Suite.',
+      after: 'Designed a new event identity in Illustrator and InDesign, built templates the marketing team reused for a year of campaigns, and prepared all print and social files to the brand guidelines.',
+      note: 'The second line shows the tools, brand system work, production skills and a result that lasted. A screening system matches words, so a skill that is not written down is a skill that does not count.',
+    },
+    variants: {
+      heading: 'Graphic designer, visual designer or UI designer?',
+      body: 'A graphic designer works across print, digital and brand materials. A visual designer usually focuses on digital products and campaigns, often in Figma. A UI designer designs the screens and controls of an app or a website, and works closely with product and engineering teams. Many roles blend these, so read the posting to see which tools and outputs it names.',
+    },
+    faqs: [
+      { q: 'What skills does a graphic designer need?', a: 'Adobe Illustrator, Photoshop and InDesign, Figma, typography, layout, colour, brand systems, preparing files for print and screen, and taking feedback well.' },
+      { q: 'What graphic design skills should I put on my resume?', a: 'Name the tools and the kinds of work you produced, such as brand identities, packaging or social campaigns, and link to your portfolio. Add one result for each main project where you can.' },
+      { q: 'Do graphic designers need to learn Figma?', a: 'Many postings now ask for it, especially digital and brand roles that work with product teams. The Adobe tools remain the core requirement for most print and brand work.' },
+      { q: 'How do I check my skills against a graphic design job?', a: 'Upload your resume to SkillDrift and pick the job. It names the skills the posting asks for that your resume does not show, scores the job out of 100, and builds a learning path for each gap.' },
+    ],
+    related: [
+      { href: 'https://www.skilldrift.ai/skills/in-demand/design-jobs', label: 'Skills employers ask for in design jobs' },
+      { href: 'https://www.skilldrift.ai/skills/in-demand/creative-jobs', label: 'Skills employers ask for in creative jobs' },
       { href: `${BLOG}how-to-build-a-career-roadmap-step-by-step`, label: 'How to build a career roadmap step by step' },
     ],
   },
