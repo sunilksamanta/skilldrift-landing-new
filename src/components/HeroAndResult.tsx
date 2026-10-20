@@ -87,9 +87,10 @@ export default function HeroAndResult() {
                     color: "var(--tx2)",
                   }}
                 >
-                  Upload your resume. SkillDrift scores your skills against your target
-                  role, builds the path to close the gap, and updates your resume
-                  automatically as you go.
+                  Upload your resume. SkillDrift scores your skills against the role you
+                  want, builds the path to close the gap and matches you to jobs out of
+                  100. After you get the role, it keeps tracking your growth towards the
+                  next one.
                 </p>
                 <div
                   style={{

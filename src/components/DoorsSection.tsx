@@ -34,7 +34,7 @@ const doors = [
     points: [
       "Benchmark yourself against the level above you, not against strangers.",
       "Your score re-scores itself every time you close a gap, at no cost.",
-      "Practise the panel with a live voice interview and get a hire verdict out of 10.",
+      "Log a win each week, and before your review get a draft self-review built from them.",
     ],
   },
 ];
