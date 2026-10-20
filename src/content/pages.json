@@ -223,7 +223,7 @@
           "label": "See what it costs",
           "href": "#cost"
         },
-        "image": "/assets/tailor-resume-v2.png",
+        "image": "/assets/tailor-resume.png",
         "imageAlt": "Side-by-side comparison of an original resume and the AI-tailored version for a Senior Product Designer role"
       },
       "sections": [
@@ -343,7 +343,7 @@
           "label": "See what it costs",
           "href": "#cost"
         },
-        "image": "/assets/resume-rewrite-v2.png",
+        "image": "/assets/resume-rewrite.png",
         "imageAlt": "SkillDrift asking what a Product Designer role actually produced (quantified results, team size and tools) before rewriting the section"
       },
       "sections": [
@@ -477,7 +477,7 @@
           "label": "See the scorecard",
           "href": "#scorecard"
         },
-        "image": "/assets/interview-v2.png",
+        "image": "/assets/interview.png",
         "imageAlt": "A SkillDrift mock interview in progress with its scorecard"
       },
       "sections": [
@@ -629,7 +629,7 @@
           "label": "Browse matched jobs",
           "href": "/jobs"
         },
-        "image": "/assets/job-match-v2.png",
+        "image": "/assets/job-match.png",
         "imageAlt": "A pasted job description scored against a resume, showing the match out of 100"
       },
       "sections": [
@@ -762,7 +762,7 @@
           "label": "See how the loop works",
           "href": "/how-it-works"
         },
-        "image": "/assets/career-roadmap-v2.png",
+        "image": "/assets/career-roadmap.png",
         "imageAlt": "A Senior Product Designer career path: target role, readiness, and a skill gap radar comparing current level against required level"
       },
       "sections": [
@@ -886,7 +886,7 @@
           "label": "See what's free",
           "href": "/pricing"
         },
-        "image": "/assets/benchmarking-v2.png",
+        "image": "/assets/benchmarking.png",
         "imageAlt": "Skills benchmarked against industry standards and peers, scored out of 100"
       },
       "sections": [
@@ -1012,7 +1012,7 @@
           "label": "See how the loop works",
           "href": "/how-it-works"
         },
-        "image": "/assets/learning-v2.png",
+        "image": "/assets/learning.png",
         "imageAlt": "A SkillDrift learning sprint with its lessons and progress"
       },
       "sections": [
@@ -1163,7 +1163,7 @@
           "label": "How matching works",
           "href": "/job-match"
         },
-        "image": "/assets/jobs-v2.png",
+        "image": "/assets/jobs.png",
         "imageAlt": "A list of matched roles, each ranked out of 100"
       },
       "sections": [

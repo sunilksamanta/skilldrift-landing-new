@@ -31,7 +31,7 @@ const panelBorder: React.CSSProperties = {
   borderRadius: 26,
   padding: 1,
   background:
-    "linear-gradient(150deg, rgba(255,255,255,.20), rgba(91,96,241,.22) 40%, transparent 72%)",
+    "linear-gradient(150deg, rgba(255,255,255,.20), rgba(124,93,249,.22) 40%, transparent 72%)",
 };
 
 type Guest = ReturnType<typeof useGuestAnalysis>;

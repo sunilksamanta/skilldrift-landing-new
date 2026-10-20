@@ -81,7 +81,7 @@ export default function CareerLifeSection() {
             borderRadius: 26,
             border: "1px solid var(--line)",
             background:
-              "linear-gradient(200deg, rgba(14,165,233,.10), rgba(91,96,241,.07) 38%, transparent 62%), var(--bg2)",
+              "linear-gradient(200deg, rgba(124,93,249,.10), transparent 50%), var(--bg2)",
             padding: 48,
           }}
         >

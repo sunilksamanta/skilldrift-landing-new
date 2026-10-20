@@ -38,9 +38,9 @@ export default function CtaSection() {
         position: "relative",
         width: "100%",
         overflow: "hidden",
-        backgroundColor: "#3730A3",
+        backgroundColor: "#5B49B4",
         backgroundImage:
-          "linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(180deg, #2563EB 0%, #4338CA 40%, #312E81 74%, #1E1B4B 100%)",
+          "linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(180deg, #6A55C8 0%, #5B49B6 40%, #4B3C99 74%, #382C6D 100%)",
         backgroundSize: "120px 120px, 120px 120px, 100% 100%",
       }}
     >
@@ -71,7 +71,7 @@ export default function CtaSection() {
           You may as well{" "}
           <span
             style={{
-              background: "linear-gradient(96deg,#E0E7FF,#BFDBFE 62%,#BAE6FD)",
+              background: "linear-gradient(96deg,#EDE7FF,#BFE9E4 62%,#A8DFF4)",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               color: "transparent",
@@ -110,7 +110,7 @@ export default function CtaSection() {
               padding: "0 40px",
               borderRadius: 14,
               background: "#FFFFFF",
-              color: "#1E1B4B",
+              color: "#1A1330",
               fontSize: 16.5,
               fontWeight: 500,
               display: "inline-flex",
@@ -200,7 +200,7 @@ export default function CtaSection() {
             display: "block",
             transform: risen ? "translate(-50%,0)" : "translate(-50%,102%)",
             transition: "transform 1.25s cubic-bezier(.16,.84,.24,1)",
-            filter: "drop-shadow(0 -30px 70px rgba(15,23,70,.45))",
+            filter: "drop-shadow(0 -30px 70px rgba(20,10,60,.45))",
           }}
         />
       </div>

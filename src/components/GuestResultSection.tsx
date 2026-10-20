@@ -438,7 +438,7 @@ export default function GuestResultSection({
               height: 760,
               pointerEvents: "none",
               background:
-                "radial-gradient(circle at 50% 50%, rgba(91,96,241,.20), transparent 62%)",
+                "radial-gradient(circle at 50% 50%, rgba(124,93,249,.20), transparent 62%)",
             }}
           />
 
@@ -535,7 +535,7 @@ export default function GuestResultSection({
               borderRadius: 16,
               overflow: "hidden",
               background:
-                "linear-gradient(168deg,#3B82F6,#4F46E5 52%,#312E81)",
+                "linear-gradient(168deg,#7C5DF9,#5B3FD0 62%,#4A32B4)",
               color: "#FFFFFF",
               display: "flex",
               alignItems: "center",
@@ -626,7 +626,7 @@ export default function GuestResultSection({
                 href={signUpUrl}
                 section="anon_result"
                 label="create_account"
-                style={{ ...signUpButtonStyle, background: "#FFFFFF", color: "#312E81" }}
+                style={{ ...signUpButtonStyle, background: "#FFFFFF", color: "#3A2694" }}
               >
                 Create free account
               </TrackedLink>

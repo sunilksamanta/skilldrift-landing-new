@@ -142,7 +142,7 @@ export default async function SkillsDemandPage({ params }: { params: Promise<{ s
                 </span>
                 <span style={{ fontSize: 16, fontWeight: 600 }}>{pct(s.pct)}</span>
                 <span aria-hidden="true" style={{ gridColumn: '1 / -1', height: 6, borderRadius: 999, background: 'var(--line)', overflow: 'hidden' }}>
-                  <span style={{ display: 'block', height: '100%', width: `${s.pct}%`, borderRadius: 999, background: 'var(--ac, #5b60f1)' }} />
+                  <span style={{ display: 'block', height: '100%', width: `${s.pct}%`, borderRadius: 999, background: 'var(--ac, #7c5df9)' }} />
                 </span>
                 <span style={{ gridColumn: '1 / -1', fontSize: 13.5, color: 'var(--tx3)' }}>{fmt(s.count)} of {fmt(p.sample)} postings</span>
               </li>

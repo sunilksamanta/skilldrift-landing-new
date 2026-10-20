@@ -54,7 +54,7 @@ export async function renderOgImage({
           padding: "72px 76px",
           backgroundColor: "#08090A",
           backgroundImage:
-            "radial-gradient(1100px 620px at 88% -12%, rgba(129,140,248,0.42) 0%, rgba(37,99,235,0.18) 42%, rgba(8,9,10,0) 72%), linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
+            "radial-gradient(1100px 620px at 88% -12%, rgba(168,146,255,0.42) 0%, rgba(96,73,192,0.18) 42%, rgba(8,9,10,0) 72%), linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
           backgroundSize: "100% 100%, 88px 88px, 88px 88px",
           fontFamily: "Switzer",
           color: "#FFFFFF",
@@ -67,7 +67,7 @@ export async function renderOgImage({
             <span style={{ fontSize: 38, fontWeight: 600, letterSpacing: "-0.02em" }}>
               SkillDrift
             </span>
-            <span style={{ fontSize: 17, fontWeight: 500, color: "#818CF8" }}>
+            <span style={{ fontSize: 17, fontWeight: 500, color: "#9C86FF" }}>
               Your Personal Career Coach!
             </span>
           </div>
@@ -80,7 +80,7 @@ export async function renderOgImage({
               fontWeight: 500,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#818CF8",
+              color: "#9C86FF",
             }}
           >
             {kicker}
