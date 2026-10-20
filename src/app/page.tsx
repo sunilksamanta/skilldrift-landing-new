@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CareerLifeSection from "@/components/CareerLifeSection";
 import CtaSection from "@/components/CtaSection";
 import DoorsSection from "@/components/DoorsSection";
 import FaqSection, { faqs } from "@/components/FaqSection";
@@ -47,6 +48,7 @@ export default function Home() {
         <HeroAndResult />
         <DoorsSection />
         <LoopSection />
+        <CareerLifeSection />
         <RewriteSection />
         <LiveResumeSection />
         <FeaturesSection />

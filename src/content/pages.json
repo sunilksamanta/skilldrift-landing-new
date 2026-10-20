@@ -132,6 +132,16 @@
           ]
         },
         {
+          "type": "prose",
+          "id": "whole-career",
+          "eyebrow": "After the loop",
+          "heading": "What happens after you get the job?",
+          "paragraphs": [
+            "The loop does not stop at an offer. Tap I got the role and SkillDrift adds it to your resume, checks a month later that you started, counts each month in the role toward your skills, and helps you prepare for your review with a draft self-review built from your weekly wins.",
+            "It works for every goal, from your first internship to your next promotion. [See how SkillDrift follows your career](/career-progression)."
+          ]
+        },
+        {
           "type": "split",
           "alt": true,
           "eyebrow": "Why the loop matters",
@@ -1255,6 +1265,38 @@
             {
               "title": "A follow up that keeps your board right",
               "body": "Within a day or two SkillDrift asks whether you finished applying, and moves the job to Applied."
+            },
+            {
+              "title": "Help asking for a referral",
+              "body": "Who usually decides on the role, the recruiter, and someone doing the job now, with searches you run in your own LinkedIn. A connection note of up to 180 characters: your first one is free, then 15 credits. SkillDrift never contacts anyone for you."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "alt": true,
+          "id": "trusted-jobs",
+          "eyebrow": "Jobs you can act on",
+          "min": 260,
+          "heading": "Which jobs does SkillDrift show you?",
+          "copy": "Only jobs you can actually apply to, chosen by the goal you picked.",
+          "cards": [
+            {
+              "title": "Trusted apply links only",
+              "body": "A job shows only when it links to a main job board, an applicant system or the employer's own site. Copies on suspicious sites are hidden.",
+              "accent": true
+            },
+            {
+              "title": "Checked before you apply",
+              "body": "Before the Apply Kit opens, SkillDrift checks the job page. If the job has closed, it tells you."
+            },
+            {
+              "title": "Your goal decides",
+              "body": "Looking for an internship puts internships first. Looking for your first full-time job shows full-time roles only."
+            },
+            {
+              "title": "Experience you already have counts",
+              "body": "Some asks, such as years in a role or a language, cannot be learned on a course. Add one line of proof, or add the language to your resume, and the job counts it as met."
             }
           ]
         },
@@ -1290,6 +1332,168 @@
           "href": "app:sign-in"
         }
       }
+    },
+    {
+      "path": "/career-progression",
+      "title": "Career Progression, Tracked: A Career Guide for Every Goal | SkillDrift",
+      "description": "Pick a goal and SkillDrift plans the steps. It stays with you after you get there: the new role, your reviews, your next move. Every course and every month in a role adds to your skill scores.",
+      "h1": "One career guide for every goal, from your first internship to your next promotion.",
+      "priority": 0.8,
+      "breadcrumb": "Career progression",
+      "hero": {
+        "eyebrow": "Career progression",
+        "standfirst": "Most career tools stop when you get the job. SkillDrift starts from the goal you pick today and stays with you after you reach it: when you get the role, when you start, through every review and into your next move. Every course you finish and every month in a role adds to the same skill scores, so your progress is tracked, not guessed.",
+        "primaryCta": {
+          "label": "Start from your goal",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "See how the loop works",
+          "href": "/how-it-works"
+        }
+      },
+      "sections": [
+        {
+          "type": "split",
+          "id": "every-goal",
+          "eyebrow": "Every goal",
+          "heading": "Which goals does SkillDrift cover?",
+          "copy": "You pick a goal when you start. Your dashboard, the jobs you see first and your next step all follow it, and you can change it at any time in Settings.",
+          "panels": [
+            {
+              "title": "Starting out",
+              "accent": true,
+              "items": [
+                "Get an internship",
+                "Land my first full-time job",
+                "Clear my placement interviews",
+                "Build my skills before I start applying"
+              ]
+            },
+            {
+              "title": "Already working",
+              "items": [
+                "Find a new job in my field",
+                "Get more interview calls from my applications",
+                "Prepare for interviews I have coming up",
+                "Get better at my current job"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "steps",
+          "alt": true,
+          "id": "after-the-offer",
+          "eyebrow": "After you get the job",
+          "heading": "How does SkillDrift stay with you after you get the job?",
+          "copy": "Getting the role is one step, not the end. SkillDrift keeps your resume, your plan and your next goal in step with what happens next.",
+          "steps": [
+            {
+              "title": "You get the role",
+              "body": "Tap I got the role and SkillDrift adds it to your resume. About a month later it checks you started. With more than one offer, your resume keeps only the one you joined."
+            },
+            {
+              "title": "You grow in the role",
+              "body": "Each month in a current role adds to the skills it uses. Log one win a week, and add the best ones to your resume."
+            },
+            {
+              "title": "You prepare for your review",
+              "body": "Before your review month, see how ready you are for the next level, practise, and get a draft self-review built from your wins."
+            },
+            {
+              "title": "You make your next move",
+              "body": "Promoted, same role or a new company: one tap keeps your resume and plan right. If your work moves into a new field, your plan can follow it."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "tracked",
+          "eyebrow": "Tracked, not guessed",
+          "min": 260,
+          "heading": "How does SkillDrift track your professional growth?",
+          "copy": "Everything you do adds up in one place: the skill scores your readiness, your job matches and your next steps are built on.",
+          "cards": [
+            {
+              "title": "One set of skill scores",
+              "body": "Learning, a new role and time in your current role all raise the same skill scores, and every score that depends on them updates by itself.",
+              "accent": true
+            },
+            {
+              "title": "The number you were promised",
+              "body": "A roadmap shows how much your readiness will rise before you start. Finish and verify it, and it rises by that amount, once."
+            },
+            {
+              "title": "A resume that stays live",
+              "body": "Certificates, new roles and the languages you speak are added to your resume as they happen, so it is ready when the next opportunity is."
+            },
+            {
+              "title": "Every score explained",
+              "body": "The same resume gets the same result, and every score shows how it was worked out, so you can see what moved it."
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "alt": true,
+          "id": "cost",
+          "eyebrow": "What it costs",
+          "heading": "What does it cost to keep SkillDrift with you?",
+          "copy": "Following your career costs nothing. You spend credits only when SkillDrift produces something for you.",
+          "rows": [
+            {
+              "label": "Weekly win and weekly job search log",
+              "cost": "Free"
+            },
+            {
+              "label": "Check-ins after you get the role",
+              "cost": "Free"
+            },
+            {
+              "label": "Review month and review run-up",
+              "cost": "Free"
+            },
+            {
+              "label": "Draft self-review",
+              "note": "Your first one is free. Free on Active Seeker",
+              "cost": "15 credits"
+            },
+            {
+              "label": "A new career path when your work changes field",
+              "note": "Free if you already have a path for that field",
+              "cost": "11 credits"
+            }
+          ],
+          "note": "Active Seeker covers every action, with no credit counting. Full table on the [pricing page](/pricing)."
+        }
+      ],
+      "cta": {
+        "heading": "Start from the goal you have today.",
+        "copy": "Upload your resume and pick your goal. SkillDrift plans the next step, and stays with you after you get there.",
+        "primary": {
+          "label": "Start from your goal",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Which goals does SkillDrift cover?",
+          "a": "Eight, in two groups. Starting out: get an internship, land a first full-time job, clear placement interviews, or build skills before applying. Already working: find a new job in your field, get more interview calls, prepare for interviews coming up, or get better at your current job. You can change your goal at any time."
+        },
+        {
+          "q": "How does SkillDrift stay with you after you get the job?",
+          "a": "Tap I got the role and SkillDrift adds it to your resume and asks what you want next. About a month later it checks that you started. While you are in the role it counts your time, logs your weekly wins, helps you prepare for your review with a draft self-review, and keeps your resume and plan right when you are promoted or move on."
+        },
+        {
+          "q": "How does SkillDrift track your professional growth?",
+          "a": "Learning, new roles and time in your current role all raise one set of skill scores, and your readiness, job matches and next steps update from them. A finished, verified roadmap raises readiness by the amount it showed before you started, once."
+        },
+        {
+          "q": "What does it cost to keep SkillDrift with you?",
+          "a": "Following your career is free: weekly wins, check-ins and the review run-up cost nothing. A draft self-review is free the first time, then 15 credits, and free on Active Seeker."
+        }
+      ]
     },
     {
       "path": "/pricing",
@@ -1352,6 +1556,21 @@
           "copy": "{{299 credits cost 299 rupees. No conversion to work out, no bundles to decode.|299 credits cost {topup}. One flat pack, no bundles to decode, and credits you buy never expire.}}",
           "rows": [
             {
+              "label": "Add another career path",
+              "note": "Your first path is free",
+              "cost": "11"
+            },
+            {
+              "label": "Referral note for one job",
+              "note": "Your first note is free",
+              "cost": "15"
+            },
+            {
+              "label": "Draft self-review before your review",
+              "note": "Your first one is free",
+              "cost": "15"
+            },
+            {
               "label": "Tailor your resume to one job",
               "cost": "18"
             },
@@ -1389,7 +1608,7 @@
               "cost": "200"
             }
           ],
-          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a Casual User pack of {topup} covers about four. Past roughly eight applications a month, or three live mock interviews, Active Seeker at {unlimited} costs you less. If you are in an active search, take Active Seeker; if you are learning at your own pace, take Casual User."
+          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a Casual User pack of {topup} covers about four. Past roughly eight applications a month, or three live mock interviews, Active Seeker at {unlimited} costs you less. If you are in an active search, take Active Seeker; if you are learning at your own pace, take Casual User. Nothing is ever charged on a job that has closed."
         },
         {
           "type": "plans",

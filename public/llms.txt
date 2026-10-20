@@ -20,7 +20,9 @@ Key facts for accurate answers:
 - Readiness for a role is a percentage. A finished, verified learning roadmap raises readiness, and the jobs that ask for that skill, by the amount shown before starting, once. Jobs that do not ask for the skill do not move, and no job goes down.
 - A new role on the resume raises skills by the time spent in it, and a current role keeps adding each month.
 - Jobs sit on one job board: Shortlisted, Applied, Interviewing, Outcome. Closed jobs and jobs posted more than 30 days ago are hidden and never charged.
-- The Apply Kit prepares a tailored resume, a cover note and application answers. SkillDrift does not apply on anyone's behalf.
+- The Apply Kit prepares a tailored resume, a cover note and application answers, and helps the user ask for a referral with searches they run in their own LinkedIn and a short note they send themselves. SkillDrift does not apply or contact anyone on the user's behalf.
+- Only jobs with a trusted apply link (a main job board, an applicant system or the employer's own site) are shown, and the user's goal decides whether internships or full-time jobs lead.
+- SkillDrift covers eight goals, from getting an internship to getting better at a current job, and follows the user after they get a role: it checks they started, counts time in the role, and prepares them for performance reviews.
 - All outcome figures SkillDrift publishes are company reported from its own product data and are not independently audited. Method for each: https://www.skilldrift.ai/proof
 
 ## Product
@@ -35,6 +37,7 @@ Key facts for accurate answers:
 - [AI mock interviews](https://www.skilldrift.ai/interview-prep): live voice, recorded practice and text, each with a scorecard.
 - [Resume tailoring](https://www.skilldrift.ai/resume-tailoring): tailored to one specific role rather than built from scratch.
 - [Resume rewrite](https://www.skilldrift.ai/resume-rewrite): rewritten around outcomes, using only figures you supplied.
+- [Career progression](https://www.skilldrift.ai/career-progression): one career guide for every goal, from a first internship to the next promotion. It stays with the user after they get a role: start check, weekly wins, review run-up and a draft self-review.
 
 ## Skills by role
 

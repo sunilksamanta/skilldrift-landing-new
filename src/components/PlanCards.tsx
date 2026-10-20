@@ -30,6 +30,7 @@ const unlimitedPoints = [
   "Everything, no credit counting",
   "Unlimited tailoring, downloads and interviews",
   "Unlimited roadmaps and certificates",
+  "No credit price anywhere in the app",
   "Cancel any time",
 ];
 
