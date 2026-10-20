@@ -1,10 +1,10 @@
 :root {
   /* Light is the default. Dark is opt-in via the toggle only — the site does
      not follow the OS colour scheme. */
-  --bg: #f6f6f8;
+  --bg: #ffffff;
   --bg2: #ffffff;
   --card: #ffffff;
-  --card2: #f0f0f4;
+  --card2: #f6f3ff;
   --line: rgba(10, 10, 14, 0.1);
   --line2: rgba(10, 10, 14, 0.18);
   --tx: #0a0a0c;
@@ -227,6 +227,10 @@ button {
 }
 
 .sect--alt {
+  background: linear-gradient(180deg, #f6f2ff 0%, #ffffff 60%);
+}
+
+html[data-sd-theme="dark"] .sect--alt {
   background: var(--bg2);
 }
 
