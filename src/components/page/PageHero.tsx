@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ShotPicture from "../ShotPicture";
 import type { ReactNode } from "react";
 import { ArrowRight } from "../icons";
 import { primaryButton } from "../SectionBits";
@@ -17,6 +17,7 @@ export default function PageHero({
   secondaryCta,
   noCta,
   image,
+  imageMobile,
   imageAlt,
   aside,
   campaign,
@@ -29,6 +30,7 @@ export default function PageHero({
   /** Skip the hero's calls to action entirely. */
   noCta?: boolean;
   image?: string;
+  imageMobile?: string;
   imageAlt?: string;
   aside?: ReactNode;
   campaign?: string;
@@ -43,20 +45,18 @@ export default function PageHero({
       style={{
         position: "relative",
         width: "100%",
-        aspectRatio: "1800 / 1290",
         borderRadius: 22,
         overflow: "hidden",
         boxShadow: "0 30px 70px -20px rgba(76,52,180,.28)",
         border: "1px solid var(--line)",
       }}
     >
-      <Image
-        src={image}
+      <ShotPicture
+        desktop={image}
+        mobile={imageMobile}
         alt={imageAlt ?? ""}
-        fill
         priority
-        sizes="(max-width: 1000px) 100vw, 46vw"
-        style={{ objectFit: "cover" }}
+        sizes="(max-width: 760px) 100vw, (max-width: 1000px) 100vw, 46vw"
       />
     </div>
   ) : null;

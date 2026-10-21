@@ -186,6 +186,8 @@ export type RouteContent = {
     secondaryCta?: Cta;
     /** Product shot shown beside the hero copy. Already carries its own field. */
     image?: string;
+    /** Portrait phone-size version of `image`, served below 760px wide. */
+    imageMobile?: string;
     imageAlt?: string;
   };
   sections?: Block[];

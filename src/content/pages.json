@@ -257,7 +257,8 @@
           "href": "#cost"
         },
         "image": "/assets/shots/tailor-apply-kit.png",
-        "imageAlt": "The Apply Kit: improve your resume, tailor it for this job for 18 credits, download it, then apply"
+        "imageAlt": "The Apply Kit: improve your resume, tailor it for this job for 18 credits, download it, then apply",
+        "imageMobile": "/assets/shots/m-tailor-apply-kit.png"
       },
       "sections": [
         {
@@ -377,7 +378,8 @@
           "href": "#cost"
         },
         "image": "/assets/shots/rewrite-improve.png",
-        "imageAlt": "The Apply Kit step that rewrites the latest role around real results, for 70 credits once"
+        "imageAlt": "The Apply Kit step that rewrites the latest role around real results, for 70 credits once",
+        "imageMobile": "/assets/shots/m-rewrite-improve.png"
       },
       "sections": [
         {
@@ -511,7 +513,8 @@
           "href": "#scorecard"
         },
         "image": "/assets/shots/interview-report.png",
-        "imageAlt": "A sample voice practice report for a made-up candidate: 7.1 out of 10, a medium hire chance and the question to work on first"
+        "imageAlt": "A sample voice practice report for a made-up candidate: 7.1 out of 10, a medium hire chance and the question to work on first",
+        "imageMobile": "/assets/shots/m-interview-report.png"
       },
       "sections": [
         {
@@ -663,7 +666,8 @@
           "href": "/jobs"
         },
         "image": "/assets/shots/job-match-analysis.png",
-        "imageAlt": "A job analysis scored 75 out of 100, with the skills the person already has and the three to close"
+        "imageAlt": "A job analysis scored 75 out of 100, with the skills the person already has and the three to close",
+        "imageMobile": "/assets/shots/m-job-match-analysis.png"
       },
       "sections": [
         {
@@ -796,7 +800,8 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/career-path.png",
-        "imageAlt": "A Junior Software Engineer career path at 55% readiness with the next step, and a suggested roadmap that meets one more requirement"
+        "imageAlt": "A Junior Software Engineer career path at 55% readiness with the next step, and a suggested roadmap that meets one more requirement",
+        "imageMobile": "/assets/shots/m-career-path.png"
       },
       "sections": [
         {
@@ -920,7 +925,8 @@
           "href": "/pricing"
         },
         "image": "/assets/shots/benchmarking.png",
-        "imageAlt": "The skills a person already has and the three to close for one job, with the time each roadmap takes"
+        "imageAlt": "The skills a person already has and the three to close for one job, with the time each roadmap takes",
+        "imageMobile": "/assets/shots/m-benchmarking.png"
       },
       "sections": [
         {
@@ -1046,7 +1052,8 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/learning-roadmaps.png",
-        "imageAlt": "Suggested roadmaps, each asked for by jobs the person picked and each meeting one more requirement, beside a career path at 55% readiness"
+        "imageAlt": "Suggested roadmaps, each asked for by jobs the person picked and each meeting one more requirement, beside a career path at 55% readiness",
+        "imageMobile": "/assets/shots/m-learning-roadmaps.png"
       },
       "sections": [
         {
@@ -1197,7 +1204,8 @@
           "href": "/job-match"
         },
         "image": "/assets/shots/jobs-board.png",
-        "imageAlt": "The SkillDrift job board: new matches scored out of 100, a shortlist, and columns for applied, interviewing and outcome"
+        "imageAlt": "The SkillDrift job board: new matches scored out of 100, a shortlist, and columns for applied, interviewing and outcome",
+        "imageMobile": "/assets/shots/m-jobs-board.png"
       },
       "sections": [
         {
@@ -1385,7 +1393,8 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/progression-rail.png",
-        "imageAlt": "The SkillDrift plan for today, now and next beside a career path showing 55% readiness and the next step"
+        "imageAlt": "The SkillDrift plan for today, now and next beside a career path showing 55% readiness and the next step",
+        "imageMobile": "/assets/shots/m-progression-rail.png"
       },
       "sections": [
         {
@@ -1564,7 +1573,8 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/benchmarking.png",
-        "imageAlt": "The skills a person already has and the three to close for a role in a new field"
+        "imageAlt": "The skills a person already has and the three to close for a role in a new field",
+        "imageMobile": "/assets/shots/m-benchmarking.png"
       },
       "sections": [
         {
@@ -1919,6 +1929,34 @@
         },
         {
           "type": "cards",
+          "id": "only-skilldrift",
+          "min": 260,
+          "alt": true,
+          "eyebrow": "What we do differently",
+          "heading": "What does SkillDrift do that a chatbot or a job board does not?",
+          "copy": "Most tools hand you one piece and forget you. SkillDrift keeps one record of you, so every step counts.",
+          "cards": [
+            {
+              "title": "It remembers every step",
+              "body": "Courses you finish, interviews you practise and months in a role all move the same scores.",
+              "accent": true
+            },
+            {
+              "title": "Jobs you can act on",
+              "body": "Jobs and internships scored out of 100, only with a trusted apply link, and never charged once closed."
+            },
+            {
+              "title": "Honest about the gap",
+              "body": "Every missing skill is named, and an interview can tell you an answer would not have got you through."
+            },
+            {
+              "title": "It stays after the offer",
+              "body": "Your new role, your weekly wins, your review and your next move, in the same place."
+            }
+          ]
+        },
+        {
+          "type": "cards",
           "alt": true,
           "eyebrow": "How we operate",
           "heading": "Three commitments we hold ourselves to.",
@@ -2003,7 +2041,13 @@
           "label": "Upload your resume - free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "What does SkillDrift do that a chatbot or a job board does not?",
+          "a": "It keeps one record of you, so courses, interviews and months in a role all move the same scores. It shows jobs and internships scored out of 100 with a trusted apply link, names every missing skill, and stays with you after you get the role: the new role, weekly wins, your review and your next move."
+        }
+      ]
     },
     {
       "path": "/contact",

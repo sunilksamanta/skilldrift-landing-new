@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { CSSProperties, ReactNode } from 'react';
 import RoleHero from "@/components/RoleHero";
+import ShotPicture from "@/components/ShotPicture";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { campaignFor } from "@/lib/cta";
@@ -137,6 +138,10 @@ export default async function RoleSkillsPage({ params }: { params: Promise<{ rol
           <p style={{ marginTop: 32, fontSize: 15.5, color: 'var(--tx2)' }}>
             See how a screening system reads your resume with the <Link href="/ats-score-checker" style={LINK}>ATS score checker</Link>, then turn the gaps into a plan with a <Link href="/career-roadmap" style={LINK}>career roadmap</Link>.
           </p>
+                  <div style={{ marginTop: 44, maxWidth: 980, borderRadius: 22, overflow: 'hidden', border: '1px solid var(--line)', boxShadow: '0 30px 70px -20px rgba(76,52,180,.28)' }}>
+            <ShotPicture desktop="/assets/shots/job-match-analysis.png" mobile="/assets/shots/m-job-match-analysis.png" alt="A real job scored 75 out of 100 in SkillDrift, with the skills the person already has and the ones to close" sizes="(max-width: 760px) 100vw, 980px" />
+          </div>
+          <p style={{ marginTop: 18, fontSize: 15, color: 'var(--tx2)' }}>What you see after the upload: each {r.role} job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.</p>
         </Sect>
 
         <Sect alt={n % 2 === 0}>

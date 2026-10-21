@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ShotPicture from "./ShotPicture";
 import { Pill, SectionIntro } from "./SectionBits";
 
 /*
@@ -20,19 +20,17 @@ export default function ProductShowcase() {
             position: "relative",
             marginTop: 48,
             width: "100%",
-            aspectRatio: "1800 / 1290",
             borderRadius: 26,
             overflow: "hidden",
             border: "1px solid var(--line)",
             boxShadow: "0 40px 90px -30px rgba(76,52,180,.30)",
           }}
         >
-          <Image
-            src="/assets/shots/home-product.png"
+          <ShotPicture
+            desktop="/assets/shots/home-product.png"
+            mobile="/assets/shots/m-home-product.png"
             alt="The SkillDrift dashboard: the best move today, a Product Management internship scored 75 out of 100, the next roadmap, matched internships, and the plan for today, now and next"
-            fill
-            sizes="(max-width: 1400px) 100vw, 1400px"
-            style={{ objectFit: "cover" }}
+            sizes="(max-width: 760px) 100vw, 1400px"
           />
         </div>
       </div>

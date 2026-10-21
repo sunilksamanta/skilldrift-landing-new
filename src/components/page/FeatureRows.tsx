@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ShotPicture from "../ShotPicture";
 import Link from "next/link";
 import { ArrowRight } from "../icons";
 import { FEATURE_ROUTES } from "@/lib/content";
@@ -102,19 +102,17 @@ export default function FeatureRows() {
                         display: "block",
                         position: "relative",
                         width: "100%",
-                        aspectRatio: "1800 / 1290",
                         borderRadius: 22,
                         overflow: "hidden",
                         boxShadow: "0 30px 70px -20px rgba(76,52,180,.28)",
                         border: "1px solid var(--line)",
                       }}
                     >
-                      <Image
-                        src={route.hero.image}
+                      <ShotPicture
+                        desktop={route.hero.image}
+                        mobile={route.hero.imageMobile}
                         alt={route.hero.imageAlt ?? ""}
-                        fill
-                        sizes="(max-width: 1000px) 100vw, 50vw"
-                        style={{ objectFit: "cover" }}
+                        sizes="(max-width: 760px) 100vw, 50vw"
                       />
                     </Link>
                   ) : (

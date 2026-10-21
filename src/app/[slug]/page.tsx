@@ -102,6 +102,7 @@ export default async function ContentPage({
           secondaryCta={route.hero.secondaryCta}
           noCta={route.hero.noCta}
           image={route.hero.image}
+          imageMobile={route.hero.imageMobile}
           imageAlt={route.hero.imageAlt}
           campaign={campaignFor(route.path)}
         />

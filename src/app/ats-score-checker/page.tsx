@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ResumeUploadCard from "@/components/ResumeUploadCard";
+import ShotPicture from "@/components/ShotPicture";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import TrackedLink from "@/components/TrackedLink";
@@ -218,7 +219,16 @@ export default function AtsScoreCheckerPage() {
           <CardGrid cards={WHAT_YOU_GET} min={260} />
         </Section>
 
-        <Section alt eyebrow="FAQ" heading="Questions people ask" id="faq">
+        <Section alt eyebrow="After the score" heading="What happens after your ATS score?">
+          <p style={{ marginTop: 20, maxWidth: 760, fontSize: 16.5, lineHeight: 1.65, color: "var(--tx2)" }}>
+            A checker gives you a score and stops. In SkillDrift the score is the first step: your matched jobs and internships are scored out of 100, every gap is named and turns into learning, and finishing it moves your scores. Your resume updates itself as you go.
+          </p>
+          <div style={{ marginTop: 36, maxWidth: 980, borderRadius: 22, overflow: "hidden", border: "1px solid var(--line)", boxShadow: "0 30px 70px -20px rgba(76,52,180,.28)" }}>
+            <ShotPicture desktop="/assets/shots/job-match-analysis.png" mobile="/assets/shots/m-job-match-analysis.png" alt="A real job scored 75 out of 100 in SkillDrift, with the skills the person already has and the ones to close" sizes="(max-width: 760px) 100vw, 980px" />
+          </div>
+        </Section>
+
+        <Section eyebrow="FAQ" heading="Questions people ask" id="faq">
           <div style={{ marginTop: 52 }}>
             {FAQS.map((faq, i) => (
               <details

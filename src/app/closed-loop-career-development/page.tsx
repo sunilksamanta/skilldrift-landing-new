@@ -65,6 +65,7 @@ const FAQ: { q: string; a: string }[] = [
     q: "Where does the loop start?",
     a: "With your resume. Upload it and SkillDrift names your gaps against the role you want, or against any job description you paste. A mock interview for the same role finds the gaps a resume cannot show, and those become learning too. The gap analysis is free.",
   },
+  { q: "Does the loop stop when you get the job?", a: "No. The new role goes onto your resume, each month in it adds to the skills it uses, a logged win can go onto your resume, and before your review SkillDrift drafts a self-review. The same scores keep moving towards the next role." },
 ];
 
 const jsonLd = [
@@ -372,6 +373,20 @@ export default function ClosedLoopCareerDevelopmentPage() {
               two sprints, built for this gap
             </div>
             <Score score={81} band="Good fit" good chips={[{ s: "Excel", ok: true }, { s: "SQL", ok: true }, { s: "Statistics", ok: true }]} />
+          </div>
+        </div>
+      </section>
+
+      {/* After the job */}
+      <section className="sect">
+        <div className="wrap">
+          <span style={pill}>After the job</span>
+          <div style={headRow}>
+            <h2 style={h2}>Does the loop stop when you get the job?</h2>
+            <p style={lede}>
+              No. Tap I got the role and the new role goes onto your resume. Each month in it adds to the skills it uses, a logged win can go onto your resume, and before your review you get a draft self-review. The same scores keep moving towards the next role.{" "}
+              <Link href="/career-progression" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>See how SkillDrift follows your career</Link>.
+            </p>
           </div>
         </div>
       </section>
