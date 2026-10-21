@@ -39,6 +39,11 @@ Key facts for accurate answers:
 - [Resume rewrite](https://www.skilldrift.ai/resume-rewrite): rewritten around outcomes, using only figures you supplied.
 - [Career progression](https://www.skilldrift.ai/career-progression): one career guide for every goal, from a first internship to the next promotion. It stays with the user after they get a role: start check, weekly wins, review run-up and a draft self-review.
 - [Career change](https://www.skilldrift.ai/career-change): plan a career change from your resume: the skills that transfer, the gaps named, learning for each gap and jobs in the new field scored out of 100.
+- [Compare SkillDrift](https://www.skilldrift.ai/compare): fair side by side comparisons with ChatGPT, LinkedIn Premium, Jobright and Internshala, checked on 21 October 2026, including where each is better.
+- [SkillDrift vs ChatGPT](https://www.skilldrift.ai/skilldrift-vs-chatgpt): ChatGPT is a general assistant you prompt; SkillDrift keeps resume, jobs scored out of 100, learning and interviews in one record so finished steps move the scores.
+- [SkillDrift vs LinkedIn Premium](https://www.skilldrift.ai/skilldrift-vs-linkedin-premium): LinkedIn for network and recruiter reach; SkillDrift for the plan: scored jobs, learning for each gap, certificates written into the resume, interviews scored out of 10.
+- [SkillDrift vs Jobright](https://www.skilldrift.ai/skilldrift-vs-jobright): Jobright for applying to many US jobs fast; SkillDrift for India and worldwide, closing gaps so scores move.
+- [SkillDrift vs Internshala](https://www.skilldrift.ai/skilldrift-vs-internshala): Internshala for the volume of Indian internships; SkillDrift to know which ones you match out of 100 and close the gaps with free learning.
 
 ## Skills by role
 

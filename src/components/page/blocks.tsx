@@ -349,3 +349,46 @@ export function FactList({ facts }: { facts: { label: string; value: string }[] 
     </dl>
   );
 }
+
+/** Side by side comparison table; on a phone each row stacks into a card. */
+export function CompareTable({
+  columns,
+  rows,
+  note,
+}: {
+  columns: [string, string, string];
+  rows: { label: string; us: string; them: string; win?: "us" | "them" | "both" }[];
+  note?: ReactNode;
+}) {
+  return (
+    <div style={{ marginTop: 44 }}>
+      <div className="sd-compare">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">{columns[0]}</th>
+              <th scope="col" className="sd-compare__us">{columns[1]}</th>
+              <th scope="col">{columns[2]}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr key={row.label}>
+                <th scope="row">{row.label}</th>
+                <td className="sd-compare__us" data-label={columns[1]} data-win={row.win === "us" || row.win === "both" ? "true" : undefined}>
+                  <RichText text={row.us} />
+                </td>
+                <td data-label={columns[2]} data-win={row.win === "them" || row.win === "both" ? "true" : undefined}>
+                  <RichText text={row.them} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {note && (
+        <p style={{ marginTop: 18, fontSize: 13.5, lineHeight: 1.65, color: "var(--tx3)" }}>{note}</p>
+      )}
+    </div>
+  );
+}

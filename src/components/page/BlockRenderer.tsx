@@ -4,7 +4,7 @@ import PlanCards from "../PlanCards";
 import FeatureRows from "./FeatureRows";
 import LegalDoc from "./LegalDoc";
 import RichText from "./RichText";
-import { CardGrid, FactList, PriceTable, Section, StepList } from "./blocks";
+import { CardGrid, CompareTable, FactList, PriceTable, Section, StepList } from "./blocks";
 
 /** Maps one `pages.json` block onto its component. */
 export default function BlockRenderer({
@@ -29,6 +29,17 @@ export default function BlockRenderer({
   };
 
   switch (block.type) {
+    case "compare":
+      return (
+        <Section {...shell}>
+          <CompareTable
+            columns={block.columns}
+            rows={block.rows}
+            note={block.note ? <RichText text={block.note} /> : undefined}
+          />
+        </Section>
+      );
+
     case "plans":
       return (
         <Section {...shell}>

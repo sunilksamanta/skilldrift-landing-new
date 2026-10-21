@@ -121,7 +121,7 @@ export default function DoorsSection() {
                   alignItems: "stretch",
                   justifyContent: "flex-start",
                   minHeight: 44,
-                  padding: "24px 26px",
+                  padding: "var(--door-pad, 24px 26px)",
                   borderRadius: 16,
                   transition: "border-color .2s, background .2s",
                   border: on ? "1px solid var(--ac)" : "1px solid var(--line)",
@@ -141,6 +141,7 @@ export default function DoorsSection() {
                   {door.title}
                 </span>
                 <span
+                  className="sd-phone-hide"
                   style={{
                     display: "block",
                     marginTop: 8,

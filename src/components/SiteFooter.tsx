@@ -19,6 +19,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
       { href: "/career-change", label: "Career change" },
       { href: "/closed-loop-career-development", label: "Closed loop career development" },
       { href: "/features", label: "Features" },
+      { href: "/compare", label: "Compare SkillDrift" },
       { href: "/ats-score-checker", label: "Free ATS score checker" },
       { href: "/skills", label: "Skills by role" },
       { href: "/skills/in-demand", label: "Skills in demand" },

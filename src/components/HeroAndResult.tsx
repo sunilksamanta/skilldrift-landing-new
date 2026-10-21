@@ -22,7 +22,7 @@ export default function HeroAndResult() {
         id="top"
         style={{
           position: "relative",
-          padding: done ? "36px 0 0" : "64px 0 110px",
+          padding: done ? "36px 0 0" : "64px 0 84px",
         }}
       >
         <div

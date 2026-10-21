@@ -129,7 +129,25 @@ export type FeatureRowsBlock = {
   id?: string;
 };
 
+/**
+ * A side by side comparison: one row per question, SkillDrift's answer and the
+ * other product's. Rendered as a real <table> so crawlers and answer engines
+ * read it as data. Every claim about the other product carries a checked date.
+ */
+export type CompareBlock = {
+  type: "compare";
+  id?: string;
+  alt?: boolean;
+  eyebrow?: string;
+  heading: string;
+  copy?: string;
+  columns: [string, string, string];
+  rows: { label: string; us: string; them: string; win?: "us" | "them" | "both" }[];
+  note?: string;
+};
+
 export type Block =
+  | CompareBlock
   | CardBlock
   | StepsBlock
   | SplitBlock

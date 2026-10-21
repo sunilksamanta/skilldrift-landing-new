@@ -2190,6 +2190,672 @@
           "doc": "data-protection"
         }
       ]
+    },
+    {
+      "path": "/compare",
+      "title": "Compare SkillDrift with ChatGPT, LinkedIn Premium, Jobright and Internshala | SkillDrift",
+      "description": "Fair, side by side comparisons of SkillDrift with ChatGPT, LinkedIn Premium, Jobright and Internshala, checked on 21 October 2026. Where they are better, we say so.",
+      "h1": "How SkillDrift compares, honestly.",
+      "priority": 0.6,
+      "breadcrumb": "Compare",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "Most career tools do one piece well: writing, a network, a job feed or a list of internships. SkillDrift connects the pieces in one record, so every step you finish moves your scores. Here is how it compares with the tools people ask about most, including where they are better.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "See how it works",
+          "href": "/how-it-works"
+        },
+        "image": "/assets/shots/home-product.png",
+        "imageMobile": "/assets/shots/m-home-product.png",
+        "imageAlt": "The SkillDrift dashboard: the best move today, jobs scored out of 100 and the plan for today"
+      },
+      "sections": [
+        {
+          "type": "cards",
+          "id": "comparisons",
+          "min": 260,
+          "eyebrow": "Side by side",
+          "heading": "Which tool are you comparing SkillDrift with?",
+          "cards": [
+            {
+              "title": "SkillDrift vs ChatGPT",
+              "body": "A chatbot you prompt, or a record that keeps moving. [Read the comparison](/skilldrift-vs-chatgpt)",
+              "accent": true
+            },
+            {
+              "title": "SkillDrift vs LinkedIn Premium",
+              "body": "Your network, or your plan to get the role. [Read the comparison](/skilldrift-vs-linkedin-premium)"
+            },
+            {
+              "title": "SkillDrift vs Jobright",
+              "body": "Apply to more US jobs, or become right for the ones you want. [Read the comparison](/skilldrift-vs-jobright)"
+            },
+            {
+              "title": "SkillDrift vs Internshala",
+              "body": "More listings, or a better shot at the right one. [Read the comparison](/skilldrift-vs-internshala)"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "fair",
+          "alt": true,
+          "eyebrow": "How we compare",
+          "heading": "How do we keep these comparisons fair?",
+          "paragraphs": [
+            "Every fact about another product comes from its own pages or a recent review, and each page says when it was checked. The current set was checked on 21 October 2026.",
+            "Where another product is better, the table says so. Products change quickly: if something is out of date, [tell us](/contact) and we will correct it."
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "What is the best app to get a job and keep growing after you are hired?",
+          "a": "It depends on the piece you need. LinkedIn is best for your network, ChatGPT for writing, Internshala for the number of Indian internships and Jobright for applying to US jobs in volume. SkillDrift is built for the whole path in one record: jobs scored out of 100, learning for each gap, interview practice scored out of 10 and help after you get the role."
+        },
+        {
+          "q": "What does SkillDrift do that other career tools do not?",
+          "a": "It connects the pieces. Finish a course and the certificate is written into your resume, and every job you track re-scores. Practise an interview and the weak answers become a learning roadmap. After you get the role, it keeps going."
+        }
+      ]
+    },
+    {
+      "path": "/skilldrift-vs-chatgpt",
+      "title": "SkillDrift vs ChatGPT for Job Search and Career Growth | SkillDrift",
+      "description": "Is ChatGPT enough for a job search? A fair comparison checked on 21 October 2026: ChatGPT is a general assistant you prompt. SkillDrift keeps your resume, jobs scored out of 100, learning and interviews in one record, so every step you finish moves your scores.",
+      "h1": "SkillDrift vs ChatGPT: a chatbot you prompt, or a record that keeps moving.",
+      "priority": 0.6,
+      "breadcrumb": "SkillDrift vs ChatGPT",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "ChatGPT is excellent at writing and answering questions, and many people use it on their resume. It is not built to hold your job search. SkillDrift keeps your resume, the jobs you track, your learning and your interviews in one record, so each step you finish changes what you see next.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "All comparisons",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/home-product.png",
+        "imageMobile": "/assets/shots/m-home-product.png",
+        "imageAlt": "The SkillDrift dashboard: the best move today, jobs scored out of 100 and the plan for today"
+      },
+      "sections": [
+        {
+          "type": "compare",
+          "id": "side-by-side",
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with ChatGPT?",
+          "copy": "Checked on 21 October 2026, from ChatGPT's own pages and recent reviews. A dot marks the better answer on that row.",
+          "columns": [
+            "Question",
+            "SkillDrift",
+            "ChatGPT"
+          ],
+          "rows": [
+            {
+              "label": "What it is",
+              "us": "A career platform with one job: get you the role you want, then help you grow into the next one.",
+              "them": "A general AI assistant for any task. It has no job search product of its own."
+            },
+            {
+              "label": "Jobs and internships",
+              "us": "Live jobs and internships inside the product, each scored out of 100 for you, with the reasons shown.",
+              "them": "No job listings inside ChatGPT. You can paste a job description and ask.",
+              "win": "us"
+            },
+            {
+              "label": "Skill gaps",
+              "us": "Named for every job you track and for the role you want next.",
+              "them": "Only when you paste a job description and ask.",
+              "win": "us"
+            },
+            {
+              "label": "Learning",
+              "us": "A learning roadmap for each gap, sized to the hours you have, plus a free AI course.",
+              "them": "Explanations in chat. No structured courses.",
+              "win": "us"
+            },
+            {
+              "label": "Your resume after you learn",
+              "us": "Finish a course and the certificate is written into your resume. Every job you track re-scores, free.",
+              "them": "You update your resume yourself.",
+              "win": "us"
+            },
+            {
+              "label": "Mock interviews",
+              "us": "Text, voice or realtime, scored out of 10 with how likely you are to be hired. Weak answers become a roadmap.",
+              "them": "Text or voice role play if you set it up. No built-in score.",
+              "win": "us"
+            },
+            {
+              "label": "Resume tailoring",
+              "us": "Tailored to each job from your record, in a few steps.",
+              "them": "Yes, by prompting. Very strong at writing.",
+              "win": "both"
+            },
+            {
+              "label": "What it remembers",
+              "us": "One record of your resume, jobs, learning and interviews that every feature reads.",
+              "them": "Saved memories and chat history, with more on paid plans. Not linked to job listings or your resume file."
+            },
+            {
+              "label": "After you get the job",
+              "us": "Keeps going: log a win each week and get a draft self-review before your review.",
+              "them": "No structured feature for promotion or reviews.",
+              "win": "us"
+            },
+            {
+              "label": "Open questions and writing",
+              "us": "Focused on your career only.",
+              "them": "Any topic, any format. Better for open-ended writing.",
+              "win": "them"
+            },
+            {
+              "label": "Price",
+              "us": "Free to start with 160 credits. Casual User {topup} one time, or Active Seeker {unlimited} a month with no credit counting.",
+              "them": "A free plan, and paid plans for more use. See OpenAI's pricing page for your country."
+            }
+          ],
+          "note": "ChatGPT facts from OpenAI's pricing page and help centre, checked on 21 October 2026. Products change: if something here is out of date, [tell us](/contact) and we will correct it."
+        },
+        {
+          "type": "split",
+          "id": "which",
+          "alt": true,
+          "eyebrow": "Which to use",
+          "heading": "Should you use ChatGPT or SkillDrift?",
+          "copy": "Many people use both. Here is when each one is the better choice.",
+          "panels": [
+            {
+              "title": "Use ChatGPT when",
+              "items": [
+                "You want help writing: a cover letter, an email, a LinkedIn post.",
+                "You have a one-off question about a role, a company or a skill.",
+                "You want to talk an idea through, on any topic."
+              ]
+            },
+            {
+              "title": "Use SkillDrift when",
+              "items": [
+                "You want to know which real jobs you can get now, scored out of 100.",
+                "You want a plan for the gaps, and your resume and job scores to update as you learn.",
+                "You want interview practice with an honest score, and help after you get the job."
+              ],
+              "accent": true
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Is ChatGPT enough for a job search?",
+          "a": "For writing, often yes. For the rest of a job search it does not hold anything for you: it has no job listings, no score per job and no link between what you learn and your resume. SkillDrift does those parts and keeps them in one record, so every step you finish moves your scores."
+        },
+        {
+          "q": "Can I use ChatGPT and SkillDrift together?",
+          "a": "Yes. Many people draft with ChatGPT and use SkillDrift for the plan, the scored jobs, interview practice and keeping the resume current."
+        },
+        {
+          "q": "Does SkillDrift remember my progress?",
+          "a": "Yes. Your resume, the jobs you track, the courses you finish and the interviews you practise live in one record. Finish a course and the certificate is written into your resume, and every job you track re-scores."
+        }
+      ]
+    },
+    {
+      "path": "/skilldrift-vs-linkedin-premium",
+      "title": "SkillDrift vs LinkedIn Premium for Job Seekers | SkillDrift",
+      "description": "LinkedIn Premium or SkillDrift? A fair comparison checked on 21 October 2026: LinkedIn gives you the network and recruiter reach. SkillDrift scores jobs out of 100 for you, plans the gaps, writes finished certificates into your resume and scores your interview practice.",
+      "h1": "SkillDrift vs LinkedIn Premium: your network, or your plan to get the role.",
+      "priority": 0.6,
+      "breadcrumb": "SkillDrift vs LinkedIn Premium",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "LinkedIn is where employers look, and Premium adds recruiter messages, a job match rating and a course library. SkillDrift is the plan behind the application: which jobs you can get now, what to learn for the rest, and practice until the interview goes well. Here is the honest difference.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "All comparisons",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/job-match-analysis.png",
+        "imageMobile": "/assets/shots/m-job-match-analysis.png",
+        "imageAlt": "A SkillDrift job analysis: a Summer Internship scored 79 out of 100, with what you have and what to close"
+      },
+      "sections": [
+        {
+          "type": "compare",
+          "id": "side-by-side",
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with LinkedIn Premium?",
+          "copy": "Checked on 21 October 2026, from LinkedIn Premium's own pages and recent reviews. A dot marks the better answer on that row.",
+          "columns": [
+            "Question",
+            "SkillDrift",
+            "LinkedIn Premium"
+          ],
+          "rows": [
+            {
+              "label": "What it is",
+              "us": "A career platform: jobs scored for you, a plan for the gaps and interview practice, in one record.",
+              "them": "The paid tier of LinkedIn, the professional network, for job seekers."
+            },
+            {
+              "label": "Jobs",
+              "us": "Jobs and internships scored out of 100 for you, with the reasons shown.",
+              "them": "LinkedIn's job listings with Easy Apply, and a high, medium or low match rating on Premium.",
+              "win": "both"
+            },
+            {
+              "label": "Skill gaps",
+              "us": "Each missing skill named, with a learning roadmap built for it.",
+              "them": "Job Match shows how you fit the listed qualifications.",
+              "win": "us"
+            },
+            {
+              "label": "Learning",
+              "us": "A roadmap for each gap, sized to your hours, plus a free AI course.",
+              "them": "Unlimited LinkedIn Learning courses.",
+              "win": "both"
+            },
+            {
+              "label": "Certificates",
+              "us": "Written into your resume the moment you finish, and shared to LinkedIn in one click.",
+              "them": "LinkedIn Learning certificates can be shown on your LinkedIn profile.",
+              "win": "us"
+            },
+            {
+              "label": "Mock interviews",
+              "us": "Text, voice or realtime, scored out of 10 with how likely you are to be hired.",
+              "them": "Interview preparation tools. No score out of 10 found.",
+              "win": "us"
+            },
+            {
+              "label": "Network and recruiters",
+              "us": "No professional network of its own.",
+              "them": "Your network, InMail messages to recruiters and the profile employers already check.",
+              "win": "them"
+            },
+            {
+              "label": "After you get the job",
+              "us": "Log a win each week and get a draft self-review before your review.",
+              "them": "No review or self-appraisal tools found.",
+              "win": "us"
+            },
+            {
+              "label": "Price",
+              "us": "Free to start with 160 credits. Casual User {topup} one time, or Active Seeker {unlimited} a month with no credit counting.",
+              "them": "A paid monthly or yearly subscription. See LinkedIn for the price in your country."
+            }
+          ],
+          "note": "LinkedIn facts from LinkedIn's announcements and recent reviews, checked on 21 October 2026. Products change: if something here is out of date, [tell us](/contact) and we will correct it."
+        },
+        {
+          "type": "split",
+          "id": "which",
+          "alt": true,
+          "eyebrow": "Which to use",
+          "heading": "Should you use LinkedIn Premium or SkillDrift?",
+          "copy": "Many people use both. Here is when each one is the better choice.",
+          "panels": [
+            {
+              "title": "Use LinkedIn Premium when",
+              "items": [
+                "You want recruiters to find you, and to message people you do not know.",
+                "You want to see who viewed your profile and how you rank among applicants.",
+                "You want a large general course library."
+              ]
+            },
+            {
+              "title": "Use SkillDrift when",
+              "items": [
+                "You want to know which jobs you can get now, scored out of 100, and what to learn for the rest.",
+                "You want finished courses to update your resume and your job scores by themselves.",
+                "You want spoken interview practice with an honest score."
+              ],
+              "accent": true
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Is LinkedIn Premium worth it for a job search?",
+          "a": "It is worth it if you need reach: recruiter messages, applicant insights and your network. It does not plan your gaps, update your resume as you learn or score your interview practice. SkillDrift does those, and shares your certificates to LinkedIn in one click."
+        },
+        {
+          "q": "Can SkillDrift share to LinkedIn?",
+          "a": "Yes. Finish a course and share the certificate to LinkedIn in one click, as a post or in the certifications section. The 50 credits it cost to issue come straight back."
+        },
+        {
+          "q": "What does SkillDrift do that LinkedIn Premium does not?",
+          "a": "It names every gap between you and a job, builds learning for each one, writes the certificate into your resume when you finish, re-scores your jobs, and scores your interview practice out of 10."
+        }
+      ]
+    },
+    {
+      "path": "/skilldrift-vs-jobright",
+      "title": "SkillDrift vs Jobright: AI Job Search Compared | SkillDrift",
+      "description": "Jobright or SkillDrift? A fair comparison checked on 21 October 2026: Jobright helps you apply to many US jobs fast. SkillDrift covers India and worldwide, scores jobs out of 100, builds learning for each gap and updates your resume and scores as you learn.",
+      "h1": "SkillDrift vs Jobright: apply to more jobs, or become right for the ones you want.",
+      "priority": 0.6,
+      "breadcrumb": "SkillDrift vs Jobright",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "Jobright is built to help you apply to many US jobs quickly. SkillDrift is built to make you a strong match for the jobs you want, in India and worldwide: it names each gap, builds the learning, and your scores move as you finish. Here is the honest difference.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "All comparisons",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/jobs-board.png",
+        "imageMobile": "/assets/shots/m-jobs-board.png",
+        "imageAlt": "The SkillDrift job board: jobs and internships scored out of 100, shortlisted and tracked"
+      },
+      "sections": [
+        {
+          "type": "compare",
+          "id": "side-by-side",
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with Jobright?",
+          "copy": "Checked on 21 October 2026, from Jobright's own pages and recent reviews. A dot marks the better answer on that row.",
+          "columns": [
+            "Question",
+            "SkillDrift",
+            "Jobright"
+          ],
+          "rows": [
+            {
+              "label": "Who it is for",
+              "us": "Job seekers in India and worldwide, from a first internship to a promotion.",
+              "them": "Job seekers for roles in the United States. Its iOS app lists US-based roles only.",
+              "win": "us"
+            },
+            {
+              "label": "Jobs",
+              "us": "Jobs and internships scored out of 100 for you, with the reasons shown.",
+              "them": "A large feed of US jobs with a match score out of 100.",
+              "win": "both"
+            },
+            {
+              "label": "Skill gaps",
+              "us": "Each gap named, with a learning roadmap built for it.",
+              "them": "Shows where you fall short on a posting.",
+              "win": "us"
+            },
+            {
+              "label": "Learning",
+              "us": "A roadmap for each gap, sized to your hours, plus a free AI course.",
+              "them": "No learning or courses found.",
+              "win": "us"
+            },
+            {
+              "label": "Your resume after you learn",
+              "us": "Certificates written into your resume. Your job scores re-score, free.",
+              "them": "No certificates or learning to add.",
+              "win": "us"
+            },
+            {
+              "label": "Resume tailoring",
+              "us": "Tailored to each job from your record.",
+              "them": "Tailored to each job.",
+              "win": "both"
+            },
+            {
+              "label": "Applying in volume",
+              "us": "One tailored application at a time.",
+              "them": "One-click autofill, an AI agent that applies, and insider connections for referrals.",
+              "win": "them"
+            },
+            {
+              "label": "Mock interviews",
+              "us": "Text, voice or realtime, scored out of 10 with how likely you are to be hired.",
+              "them": "Interview help through its chat assistant. No scored mock interview found.",
+              "win": "us"
+            },
+            {
+              "label": "After you get the job",
+              "us": "Log a win each week and get a draft self-review before your review.",
+              "them": "No tools for after the hire found.",
+              "win": "us"
+            },
+            {
+              "label": "Price",
+              "us": "Free to start with 160 credits. Casual User {topup} one time, or Active Seeker {unlimited} a month with no credit counting.",
+              "them": "Free with daily credits, and a paid plan. See Jobright for current prices."
+            }
+          ],
+          "note": "Jobright facts from Jobright's own site and App Store listing and recent reviews, checked on 21 October 2026. Products change: if something here is out of date, [tell us](/contact) and we will correct it."
+        },
+        {
+          "type": "split",
+          "id": "which",
+          "alt": true,
+          "eyebrow": "Which to use",
+          "heading": "Should you use Jobright or SkillDrift?",
+          "copy": "Many people use both. Here is when each one is the better choice.",
+          "panels": [
+            {
+              "title": "Use Jobright when",
+              "items": [
+                "You are applying for jobs in the United States.",
+                "You want to send many applications quickly, with autofill and an agent.",
+                "You want to find insiders for referrals."
+              ]
+            },
+            {
+              "title": "Use SkillDrift when",
+              "items": [
+                "You are in India, or applying anywhere outside the US.",
+                "You want to close the gaps for the jobs you want, with your resume and scores updating as you learn.",
+                "You want spoken interview practice with an honest score, and help after you get the job."
+              ],
+              "accent": true
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Is Jobright available in India?",
+          "a": "Jobright focuses on roles in the United States; its iOS app lists US-based roles only. SkillDrift covers jobs and internships in India and worldwide, scored out of 100 for you."
+        },
+        {
+          "q": "What is the difference between Jobright and SkillDrift?",
+          "a": "Jobright helps you apply to many US jobs fast. SkillDrift helps you become a strong match: it names each gap, builds learning for it, writes the certificate into your resume and re-scores your jobs as you learn."
+        },
+        {
+          "q": "Does SkillDrift apply to jobs for me?",
+          "a": "No. SkillDrift tailors your resume to each job and gets you ready to apply and interview. You send each application yourself."
+        }
+      ]
+    },
+    {
+      "path": "/skilldrift-vs-internshala",
+      "title": "SkillDrift vs Internshala for Freshers and Internships | SkillDrift",
+      "description": "Internshala or SkillDrift for freshers? A fair comparison checked on 21 October 2026: Internshala has a large volume of Indian internships and fresher jobs. SkillDrift scores each one out of 100 for you, names the gaps, builds free learning and writes certificates into your resume.",
+      "h1": "SkillDrift vs Internshala: more listings, or a better shot at the right one.",
+      "priority": 0.6,
+      "breadcrumb": "SkillDrift vs Internshala",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "Internshala lists a very large number of internships and fresher jobs in India. SkillDrift tells you which ones you can get now, scored out of 100, names what you are missing for the rest and builds the learning, so your resume and your scores improve as you go.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "All comparisons",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/learning-roadmaps.png",
+        "imageMobile": "/assets/shots/m-learning-roadmaps.png",
+        "imageAlt": "SkillDrift learning roadmaps built from the gaps in the jobs you picked"
+      },
+      "sections": [
+        {
+          "type": "compare",
+          "id": "side-by-side",
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with Internshala?",
+          "copy": "Checked on 21 October 2026, from Internshala's own pages and recent reviews. A dot marks the better answer on that row.",
+          "columns": [
+            "Question",
+            "SkillDrift",
+            "Internshala"
+          ],
+          "rows": [
+            {
+              "label": "Who it is for",
+              "us": "Freshers and experienced people, in India and worldwide.",
+              "them": "Students and freshers in India."
+            },
+            {
+              "label": "Listings",
+              "us": "Jobs and internships scored out of 100 for you, with the reasons shown.",
+              "them": "Thousands of internships and fresher jobs, with many new openings every day.",
+              "win": "them"
+            },
+            {
+              "label": "Match score",
+              "us": "Every job and internship scored out of 100 for you.",
+              "them": "No match score per listing found.",
+              "win": "us"
+            },
+            {
+              "label": "Skill gaps",
+              "us": "Each missing skill named, for every listing you track.",
+              "them": "No gap per listing found.",
+              "win": "us"
+            },
+            {
+              "label": "Learning",
+              "us": "A roadmap for each gap, sized to your hours, plus a free AI course.",
+              "them": "Paid certification and placement courses."
+            },
+            {
+              "label": "Certificates",
+              "us": "Written into your resume the moment you finish, and shared to LinkedIn in one click.",
+              "them": "Courses give certificates. Automatic addition to your resume not found.",
+              "win": "us"
+            },
+            {
+              "label": "Resume",
+              "us": "Rewritten around your results, and tailored to each listing.",
+              "them": "An AI resume builder with feedback.",
+              "win": "us"
+            },
+            {
+              "label": "Mock interviews",
+              "us": "Text, voice or realtime, scored out of 10 with how likely you are to be hired.",
+              "them": "AI mock interviews come with placement courses.",
+              "win": "us"
+            },
+            {
+              "label": "After you get the job",
+              "us": "Log a win each week and get a draft self-review before your review.",
+              "them": "No tools for after the hire found.",
+              "win": "us"
+            },
+            {
+              "label": "Price",
+              "us": "Free to start with 160 credits. Casual User {topup} one time, or Active Seeker {unlimited} a month with no credit counting.",
+              "them": "Free to apply. Courses are paid."
+            }
+          ],
+          "note": "Internshala facts from Internshala's own site and blog, checked on 21 October 2026. Products change: if something here is out of date, [tell us](/contact) and we will correct it."
+        },
+        {
+          "type": "split",
+          "id": "which",
+          "alt": true,
+          "eyebrow": "Which to use",
+          "heading": "Should you use Internshala or SkillDrift?",
+          "copy": "Many people use both. Here is when each one is the better choice.",
+          "panels": [
+            {
+              "title": "Use Internshala when",
+              "items": [
+                "You want to browse the largest number of internships and fresher jobs in India.",
+                "You want a placement course with a guarantee attached."
+              ]
+            },
+            {
+              "title": "Use SkillDrift when",
+              "items": [
+                "You want to know which internships you can get now, scored out of 100.",
+                "You want free learning for your gaps, with the certificate written into your resume.",
+                "You want interview practice with an honest score before you apply."
+              ],
+              "accent": true
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Is Internshala or SkillDrift better for freshers?",
+          "a": "Use Internshala to see a very large number of listings. Use SkillDrift to know which ones you match, scored out of 100, to close the gaps with free learning and to practise the interview. Many freshers use both."
+        },
+        {
+          "q": "Does SkillDrift have internships?",
+          "a": "Yes. SkillDrift brings internships and jobs for people with under one year of experience into the platform, each scored out of 100 for you, with the reasons shown."
+        },
+        {
+          "q": "Are SkillDrift courses free?",
+          "a": "Your first AI course is free, and the certificate is written into your resume when you finish. A learning roadmap for a gap costs 50 credits, and Active Seeker covers every action with no credit counting."
+        }
+      ]
     }
   ]
 }

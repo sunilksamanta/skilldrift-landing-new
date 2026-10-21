@@ -1,3 +1,4 @@
+import TrackedLink from "./TrackedLink";
 import PlanCards from "./PlanCards";
 import { Price, Regional } from "./Regional";
 import { Pill, SectionIntro } from "./SectionBits";
@@ -40,7 +41,15 @@ export default function PricingSection() {
 
         <PlanCards />
 
+        {/* Phone: the plan cards carry the decision; the detail lives on /pricing. */}
+        <p className="sd-phone-only" style={{ marginTop: 18, fontSize: 15 }}>
+          <TrackedLink href="/pricing" section="credits" label="pricing_detail" style={{ color: "var(--ac)", fontWeight: 500 }}>
+            Which plan is cheaper for you, and what credits cost &rarr;
+          </TrackedLink>
+        </p>
+
         <div
+          className="sd-phone-hide"
           style={{
             marginTop: 22,
             padding: "30px 34px",
@@ -70,6 +79,7 @@ export default function PricingSection() {
         </div>
 
         <div
+          className="sd-phone-hide"
           style={{
             marginTop: 22,
             display: "grid",
