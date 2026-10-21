@@ -2236,7 +2236,7 @@
             },
             {
               "title": "SkillDrift vs Jobright",
-              "body": "Apply to more US jobs, or become right for the ones you want.",
+              "body": "Apply to more jobs, or become right for the ones you want.",
               "href": "/skilldrift-vs-jobright",
               "cta": "Read the comparison"
             },
@@ -2271,7 +2271,7 @@
       "faq": [
         {
           "q": "What is the best app to get a job and keep growing after you are hired?",
-          "a": "It depends on the piece you need. LinkedIn is best for your network, ChatGPT for writing, Internshala for the number of Indian internships and Jobright for applying to US jobs in volume. SkillDrift is built for the whole path in one record: jobs scored out of 100, learning for each gap, interview practice scored out of 10 and help after you get the role."
+          "a": "It depends on the piece you need. LinkedIn is best for your network, ChatGPT for writing, Internshala for the number of Indian internships and Jobright for sending applications in volume. SkillDrift is built for the whole path in one record: jobs scored out of 100, learning for each gap, interview practice scored out of 10 and help after you get the role."
         },
         {
           "q": "What does SkillDrift do that other career tools do not?",
@@ -2575,13 +2575,13 @@
     {
       "path": "/skilldrift-vs-jobright",
       "title": "SkillDrift vs Jobright: AI Job Search Compared | SkillDrift",
-      "description": "Jobright or SkillDrift? A fair comparison checked on 21 October 2026: Jobright helps you apply to many US jobs fast. SkillDrift covers India and worldwide, scores jobs out of 100, builds learning for each gap and updates your resume and scores as you learn.",
+      "description": "Jobright or SkillDrift? A fair comparison checked on 21 October 2026: Jobright helps you send many applications fast. SkillDrift makes you a strong match for the jobs you want, in the US, India and worldwide: it scores jobs out of 100, builds learning for each gap and updates your resume and scores as you learn.",
       "h1": "SkillDrift vs Jobright: apply to more jobs, or become right for the ones you want.",
       "priority": 0.6,
       "breadcrumb": "SkillDrift vs Jobright",
       "hero": {
         "eyebrow": "Compare",
-        "standfirst": "Jobright is built to help you apply to many US jobs quickly. SkillDrift is built to make you a strong match for the jobs you want, in India and worldwide: it names each gap, builds the learning, and your scores move as you finish. Here is the honest difference.",
+        "standfirst": "Jobright is built to help you send many applications quickly. SkillDrift is built to make you a strong match for the jobs you want, in the US, India or anywhere else: it names each gap, builds the learning, and your scores move as you finish. Here is the honest difference.",
         "primaryCta": {
           "label": "Upload your resume - free",
           "href": "app:sign-in"
@@ -2608,9 +2608,9 @@
           ],
           "rows": [
             {
-              "label": "Who it is for",
-              "us": "Job seekers in India and worldwide, from a first internship to a promotion.",
-              "them": "Job seekers for roles in the United States. Its iOS app lists US-based roles only.",
+              "label": "Where it works",
+              "us": "The US, India and worldwide, from a first internship to a promotion.",
+              "them": "Roles in the United States. Its iOS app lists US-based roles only.",
               "win": "us"
             },
             {
@@ -2680,15 +2680,14 @@
             {
               "title": "Use Jobright when",
               "items": [
-                "You are applying for jobs in the United States.",
-                "You want to send many applications quickly, with autofill and an agent.",
-                "You want to find insiders for referrals."
+                "You want to send many applications quickly, with autofill and an agent that applies for you.",
+                "You want to find insiders at a company for referrals."
               ]
             },
             {
               "title": "Use SkillDrift when",
               "items": [
-                "You are in India, or applying anywhere outside the US.",
+                "You want to know which jobs you can get now, in the US, India or anywhere, scored out of 100.",
                 "You want to close the gaps for the jobs you want, with your resume and scores updating as you learn.",
                 "You want spoken interview practice with an honest score, and help after you get the job."
               ],
@@ -2707,12 +2706,12 @@
       },
       "faq": [
         {
-          "q": "Is Jobright available in India?",
-          "a": "Jobright focuses on roles in the United States; its iOS app lists US-based roles only. SkillDrift covers jobs and internships in India and worldwide, scored out of 100 for you."
+          "q": "Does SkillDrift work for jobs in the US?",
+          "a": "Yes. SkillDrift scores jobs and internships out of 100 for you in the US, India and worldwide, names each gap and builds the learning for it, so your resume and your scores improve as you go."
         },
         {
           "q": "What is the difference between Jobright and SkillDrift?",
-          "a": "Jobright helps you apply to many US jobs fast. SkillDrift helps you become a strong match: it names each gap, builds learning for it, writes the certificate into your resume and re-scores your jobs as you learn."
+          "a": "Jobright helps you send many applications fast. SkillDrift helps you become a strong match: it names each gap, builds learning for it, writes the certificate into your resume and re-scores your jobs as you learn."
         },
         {
           "q": "Does SkillDrift apply to jobs for me?",
@@ -2757,7 +2756,7 @@
           "rows": [
             {
               "label": "Who it is for",
-              "us": "Freshers and experienced people, in India and worldwide.",
+              "us": "Freshers and experienced people, in the US, India and worldwide.",
               "them": "Students and freshers in India."
             },
             {
