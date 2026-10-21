@@ -27,17 +27,18 @@ Key facts for accurate answers:
 
 ## Product
 
-- [SkillDrift](https://www.skilldrift.ai): upload a resume free, get your ATS resume score as a four level band and your named skill gaps without an account.
+- [SkillDrift](https://www.skilldrift.ai): get the job you want, then grow into the next one. Upload a resume free and see jobs and internships scored out of 100 and your named skill gaps without an account. As you learn, the resume updates itself and job matches re-score; after you get the role it keeps tracking your growth.
 - [Free ATS resume checker](https://www.skilldrift.ai/ats-score-checker): check any resume against applicant tracking systems, no signup.
-- [Skill gap analysis and peer benchmarking](https://www.skilldrift.ai/skill-benchmarking): the specific skills between you and the role you want.
-- [Career roadmap](https://www.skilldrift.ai/career-roadmap): a career path built automatically from your resume.
+- [Skill gap analysis and skills assessment](https://www.skilldrift.ai/skill-benchmarking): the specific skills between you and the role you want, read from your resume with no questionnaire.
+- [Career plan](https://www.skilldrift.ai/career-roadmap): a career plan built from your resume, gaps in the order that moves readiness most, updated as you learn.
 - [Learning sprints](https://www.skilldrift.ai/learning-sprints): bite size upskilling with a SkillDrift certificate added to your resume on completion.
-- [Job match](https://www.skilldrift.ai/job-match): jobs scored out of 100 against your skills, re-scored as gaps close.
-- [Jobs and internships](https://www.skilldrift.ai/jobs): including entry level roles for under one year of experience.
-- [AI mock interviews](https://www.skilldrift.ai/interview-prep): live voice, recorded practice and text, each with a scorecard.
+- [Job match](https://www.skilldrift.ai/job-match): which jobs you can get now, scored out of 100 against your skills, and what to learn for the rest; re-scored as gaps close.
+- [Entry level jobs and internships](https://www.skilldrift.ai/jobs): scored out of 100, including roles for under one year of experience. Only jobs with a trusted apply link; closed jobs are never charged.
+- [AI mock interviews](https://www.skilldrift.ai/interview-prep): practise out loud by recorded voice or live voice (English or Hindi), or in text; a score out of 10, a hire chance and a roadmap from weak answers.
 - [Resume tailoring](https://www.skilldrift.ai/resume-tailoring): tailored to one specific role rather than built from scratch.
 - [Resume rewrite](https://www.skilldrift.ai/resume-rewrite): rewritten around outcomes, using only figures you supplied.
 - [Career progression](https://www.skilldrift.ai/career-progression): one career guide for every goal, from a first internship to the next promotion. It stays with the user after they get a role: start check, weekly wins, review run-up and a draft self-review.
+- [Career change](https://www.skilldrift.ai/career-change): plan a career change from your resume: the skills that transfer, the gaps named, learning for each gap and jobs in the new field scored out of 100.
 
 ## Skills by role
 

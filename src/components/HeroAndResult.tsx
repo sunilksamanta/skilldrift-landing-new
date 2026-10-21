@@ -5,6 +5,7 @@ import { ArrowRight } from "./icons";
 import TrackedLink from "./TrackedLink";
 import GuestResultSection from "./GuestResultSection";
 import { UploadCard } from "./ResumeUploadCard";
+import HeroGoalPicker from "./HeroGoalPicker";
 import { useGuestAnalysis } from "@/hooks/useGuestAnalysis";
 
 /* av2 is used by a testimonial below, so the stack borrows av9 instead. */
@@ -76,7 +77,7 @@ export default function HeroAndResult() {
                     color: "var(--tx)",
                   }}
                 >
-                  See exactly what&rsquo;s missing between you and the role you want
+                  Get the job you want. Then grow into the next one.
                 </h1>
                 <p
                   style={{
@@ -87,11 +88,11 @@ export default function HeroAndResult() {
                     color: "var(--tx2)",
                   }}
                 >
-                  Upload your resume. SkillDrift scores your skills against the role you
-                  want, builds the path to close the gap and matches you to jobs out of
-                  100. After you get the role, it keeps tracking your growth towards the
-                  next one.
+                  SkillDrift finds jobs and internships scored out of 100 for you, plans
+                  what to learn and gets you ready to apply and interview. Every step you
+                  finish raises your scores, and after you get the role it keeps going.
                 </p>
+                <HeroGoalPicker />
                 <div
                   style={{
                     marginTop: 30,
@@ -121,6 +122,18 @@ export default function HeroAndResult() {
                     No account required to see your score &middot; first application free
                   </span>
                 </div>
+                <p
+                  style={{
+                    marginTop: 18,
+                    fontSize: 15,
+                    fontWeight: 500,
+                    color: "var(--tx)",
+                    paddingLeft: 14,
+                    borderLeft: "2px solid var(--ac)",
+                  }}
+                >
+                  A chatbot reads your resume once. SkillDrift remembers every step.
+                </p>
 
                 <div
                   style={{

@@ -105,7 +105,8 @@ export default function FeatureRows() {
                         aspectRatio: "1800 / 1290",
                         borderRadius: 22,
                         overflow: "hidden",
-                        boxShadow: "0 30px 70px rgba(20,10,60,.30)",
+                        boxShadow: "0 30px 70px -20px rgba(76,52,180,.28)",
+                        border: "1px solid var(--line)",
                       }}
                     >
                       <Image

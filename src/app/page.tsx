@@ -11,6 +11,7 @@ import LiveResumeSection from "@/components/LiveResumeSection";
 import LoopSection from "@/components/LoopSection";
 import PricingSection from "@/components/PricingSection";
 import ProofSection from "@/components/ProofSection";
+import ProductShowcase from "@/components/ProductShowcase";
 import RewriteSection from "@/components/RewriteSection";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
@@ -47,6 +48,7 @@ export default function Home() {
       <main>
         <HeroAndResult />
         <DoorsSection />
+        <ProductShowcase />
         <LoopSection />
         <CareerLifeSection />
         <RewriteSection />

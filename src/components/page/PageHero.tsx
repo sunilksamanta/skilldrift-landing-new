@@ -36,8 +36,8 @@ export default function PageHero({
   const cta = noCta
     ? null
     : (primaryCta ?? { label: "Upload your resume - free", href: "/#top" });
-  // The product shots already carry their own purple field, so they need no
-  // frame — only a matching radius and a lift off the page.
+  // The product shots carry their own white and violet field, so they need no
+  // frame, only a matching radius, a hairline and a soft lift off the page.
   const shot = image ? (
     <div
       style={{
@@ -46,7 +46,8 @@ export default function PageHero({
         aspectRatio: "1800 / 1290",
         borderRadius: 22,
         overflow: "hidden",
-        boxShadow: "0 30px 70px rgba(20,10,60,.30)",
+        boxShadow: "0 30px 70px -20px rgba(76,52,180,.28)",
+        border: "1px solid var(--line)",
       }}
     >
       <Image

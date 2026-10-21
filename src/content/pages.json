@@ -2,9 +2,9 @@
   "routes": [
     {
       "path": "/",
-      "title": "SkillDrift - see the skills between you and the job you want",
-      "description": "Upload your resume free and get a readiness score, the skills holding you back, and matched jobs and internships. No account needed to see it.",
-      "h1": "See exactly what's missing between you and the role you want",
+      "title": "SkillDrift: get the job you want and grow your career",
+      "description": "Upload your resume free. See jobs and internships scored out of 100 and the skills holding you back, then learn them: your resume updates itself and your job matches re-score as you grow. No account needed to see your score.",
+      "h1": "Get the job you want. Then grow into the next one.",
       "priority": 1.0,
       "custom": true
     },
@@ -19,14 +19,14 @@
     },
     {
       "path": "/features",
-      "title": "SkillDrift features - every tool in the career loop",
-      "description": "Score your skills, close the gap, tailor your resume, practise the interview and match to jobs out of 100. Seven connected tools, free to start.",
-      "h1": "Seven tools. One loop. One score that moves.",
+      "title": "SkillDrift features: every step of your career, connected",
+      "description": "Jobs scored out of 100, a plan for your gaps, learning, tailored resumes and interview practice, all reading one profile. Every step you finish raises your scores. Free to start.",
+      "h1": "Get the job, then grow. Every step connected, so every step counts.",
       "priority": 0.9,
       "breadcrumb": "Features",
       "hero": {
         "eyebrow": "Features",
-        "standfirst": "Every tool feeds one connected profile, one growing score, and one resume that gets stronger with every skill you build. Start with any of them; they all read the same resume.",
+        "standfirst": "Every tool reads the same profile, so a course you finish, an interview you practise and a month in your role all move the same scores. Start with any of them.",
         "primaryCta": {
           "label": "Upload your resume - free",
           "href": "app:sign-in"
@@ -132,6 +132,33 @@
           ]
         },
         {
+          "type": "cards",
+          "id": "what-moves",
+          "min": 260,
+          "eyebrow": "What moves your scores",
+          "heading": "What moves your scores, and by how much?",
+          "copy": "A chat starts from zero every time. SkillDrift keeps one record, so every step you take changes something you can see.",
+          "cards": [
+            {
+              "title": "Finish a roadmap",
+              "body": "Your readiness, and every job that asks for that skill, rises by the amount the roadmap showed before you started. Once.",
+              "accent": true
+            },
+            {
+              "title": "Practise an interview",
+              "body": "Your report names the weak answers, and each one can become a roadmap of its own."
+            },
+            {
+              "title": "Work in your role",
+              "body": "Each month in a role adds to the skills it uses, and a logged win can go onto your resume."
+            },
+            {
+              "title": "Get a new role",
+              "body": "Your resume, your career paths and your job matches refresh around the role you joined."
+            }
+          ]
+        },
+        {
           "type": "prose",
           "id": "whole-career",
           "eyebrow": "After the loop",
@@ -202,7 +229,13 @@
           "label": "Get started free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "What moves your scores, and by how much?",
+          "a": "Finishing a verified roadmap raises your readiness, and every job that asks for that skill, by the amount the roadmap showed before you started, once. Interviews turn weak answers into roadmaps, each month in a role adds to the skills it uses, and a new role refreshes your resume, career paths and job matches."
+        }
+      ]
     },
     {
       "path": "/resume-tailoring",
@@ -223,8 +256,8 @@
           "label": "See what it costs",
           "href": "#cost"
         },
-        "image": "/assets/tailor-resume.png",
-        "imageAlt": "Side-by-side comparison of an original resume and the AI-tailored version for a Senior Product Designer role"
+        "image": "/assets/shots/tailor-apply-kit.png",
+        "imageAlt": "The Apply Kit: improve your resume, tailor it for this job for 18 credits, download it, then apply"
       },
       "sections": [
         {
@@ -326,8 +359,8 @@
     },
     {
       "path": "/resume-rewrite",
-      "title": "Rewrite your resume around outcomes, not duties | SkillDrift",
-      "description": "Most resumes list duties. SkillDrift asks what actually happened and rewrites each line around the result. Every figure is one you supplied, nothing invented.",
+      "title": "Achievements in Resume: Rewrite Every Line Around the Result | SkillDrift",
+      "description": "Turn resume bullet points from duties into achievements. SkillDrift asks what actually happened and rewrites each line around the result. Every figure is one you supplied, nothing invented.",
       "h1": "Rewrite your resume around what happened, not what you were responsible for.",
       "priority": 0.8,
       "breadcrumb": "Resume rewrite",
@@ -343,8 +376,8 @@
           "label": "See what it costs",
           "href": "#cost"
         },
-        "image": "/assets/resume-rewrite.png",
-        "imageAlt": "SkillDrift asking what a Product Designer role actually produced (quantified results, team size and tools) before rewriting the section"
+        "image": "/assets/shots/rewrite-improve.png",
+        "imageAlt": "The Apply Kit step that rewrites the latest role around real results, for 70 credits once"
       },
       "sections": [
         {
@@ -460,15 +493,15 @@
     },
     {
       "path": "/interview-prep",
-      "title": "AI Interview Practice and Mock Interviews | SkillDrift",
-      "description": "Practice any interview with an AI coach by live voice, recorded answers or text. Every mock interview ends with a scorecard showing where you lost points.",
-      "h1": "Practise the interview in the format you will actually face.",
+      "title": "AI Mock Interview, Out Loud and Scored out of 10 | SkillDrift",
+      "description": "Practise a mock interview out loud, by recorded voice or with a live interviewer, in English or Hindi. Get a score out of 10, your hire chance and a learning roadmap from your weak answers.",
+      "h1": "Practise the interview out loud, and get an honest score out of 10.",
       "priority": 0.8,
       "breadcrumb": "Interview prep",
       "feature": true,
       "hero": {
         "eyebrow": "Interview prep",
-        "standfirst": "SkillDrift runs mock interviews in three formats: text, recorded voice, and live realtime voice. The realtime voice interview runs in English and in Hindi, so you can practise in the language you will be interviewed in. Every format returns a scorecard naming where you lost points, and every gap it finds can be turned into a learning roadmap.",
+        "standfirst": "A chatbot can ask you questions in text. A real interview is spoken, under time pressure, with follow-up questions. SkillDrift runs mock interviews in text, recorded voice and live voice, and the live interview runs in English and in Hindi. Every report gives a score out of 10, your hire chance and the questions to work on first, and every weak answer can become a learning roadmap.",
         "primaryCta": {
           "label": "Start a mock interview",
           "href": "app:sign-in"
@@ -477,8 +510,8 @@
           "label": "See the scorecard",
           "href": "#scorecard"
         },
-        "image": "/assets/interview.png",
-        "imageAlt": "A SkillDrift mock interview in progress with its scorecard"
+        "image": "/assets/shots/interview-report.png",
+        "imageAlt": "A sample voice practice report for a made-up candidate: 7.1 out of 10, a medium hire chance and the question to work on first"
       },
       "sections": [
         {
@@ -612,9 +645,9 @@
     },
     {
       "path": "/job-match",
-      "title": "Jobs matched to your resume, scored out of 100 | SkillDrift",
-      "description": "Stop scrolling job boards. See roles ranked by how well you actually match, out of 100, including internships and entry-level openings. Free to use.",
-      "h1": "See which jobs you actually match, scored out of 100.",
+      "title": "Which Jobs Can You Get? Matched to Your Resume, out of 100 | SkillDrift",
+      "description": "See which jobs you can get now, scored out of 100 against your resume, and what to learn for the rest. Every gap is named and turns into a learning roadmap. Free to use.",
+      "h1": "See which jobs you can get now, and what to learn for the rest.",
       "priority": 0.8,
       "breadcrumb": "Job matching",
       "feature": true,
@@ -629,8 +662,8 @@
           "label": "Browse matched jobs",
           "href": "/jobs"
         },
-        "image": "/assets/job-match.png",
-        "imageAlt": "A pasted job description scored against a resume, showing the match out of 100"
+        "image": "/assets/shots/job-match-analysis.png",
+        "imageAlt": "A job analysis scored 75 out of 100, with the skills the person already has and the three to close"
       },
       "sections": [
         {
@@ -745,9 +778,9 @@
     },
     {
       "path": "/career-roadmap",
-      "title": "Build a career roadmap from your resume | SkillDrift",
-      "description": "Pick a target role and get the exact skills that close the gap, in the order that moves your score. Your first career path is free when you upload a resume.",
-      "h1": "How to build a career roadmap from the role you actually want.",
+      "title": "Build a Career Plan from Your Resume | SkillDrift",
+      "description": "Pick the role you want and get a career plan built from your resume: every skill gap named, in the order that moves your readiness most, and updated as you learn. Your first career path is free.",
+      "h1": "Build a career plan from your resume, for the role you actually want.",
       "priority": 0.8,
       "breadcrumb": "Career roadmap",
       "feature": true,
@@ -762,8 +795,8 @@
           "label": "See how the loop works",
           "href": "/how-it-works"
         },
-        "image": "/assets/career-roadmap.png",
-        "imageAlt": "A Senior Product Designer career path: target role, readiness, and a skill gap radar comparing current level against required level"
+        "image": "/assets/shots/career-path.png",
+        "imageAlt": "A Junior Software Engineer career path at 55% readiness with the next step, and a suggested roadmap that meets one more requirement"
       },
       "sections": [
         {
@@ -869,8 +902,8 @@
     },
     {
       "path": "/skill-benchmarking",
-      "title": "Free skill gap analysis and peer benchmarking | SkillDrift",
-      "description": "See your skills against industry standards and against your peers, scored out of 100, with the blind spots named. Free, and it re-scores as you learn.",
+      "title": "Free Skill Gap Analysis and Skills Assessment from Your Resume | SkillDrift",
+      "description": "A skills assessment from your resume, with no questionnaire: every missing skill named against the role you want, jobs scored out of 100, and a re-score each time you learn. Free.",
       "h1": "See exactly which skills are missing between you and the role you want.",
       "priority": 0.8,
       "breadcrumb": "Skill benchmarking",
@@ -886,8 +919,8 @@
           "label": "See what's free",
           "href": "/pricing"
         },
-        "image": "/assets/benchmarking.png",
-        "imageAlt": "Skills benchmarked against industry standards and peers, scored out of 100"
+        "image": "/assets/shots/benchmarking.png",
+        "imageAlt": "The skills a person already has and the three to close for one job, with the time each roadmap takes"
       },
       "sections": [
         {
@@ -995,8 +1028,8 @@
     },
     {
       "path": "/learning-sprints",
-      "title": "Bite-size upskilling sprints with certificates | SkillDrift",
-      "description": "Learn the exact skills your gap report flagged in short sprints, not 40-hour courses. Finish one and the certificate writes itself into your resume.",
+      "title": "Upskilling Courses Built from Your Own Skill Gap | SkillDrift",
+      "description": "Short upskilling sprints built from the gaps in your own resume and sized to the hours you have each week. Finish one and your readiness and job scores move, and the certificate goes onto your resume.",
       "h1": "Close one named skill gap at a time, in short sprints.",
       "priority": 0.8,
       "breadcrumb": "Learning sprints",
@@ -1012,8 +1045,8 @@
           "label": "See how the loop works",
           "href": "/how-it-works"
         },
-        "image": "/assets/learning.png",
-        "imageAlt": "A SkillDrift learning sprint with its lessons and progress"
+        "image": "/assets/shots/learning-roadmaps.png",
+        "imageAlt": "Suggested roadmaps, each asked for by jobs the person picked and each meeting one more requirement, beside a career path at 55% readiness"
       },
       "sections": [
         {
@@ -1147,14 +1180,14 @@
     },
     {
       "path": "/jobs",
-      "title": "Jobs and internships matched to your resume | SkillDrift",
-      "description": "Real roles ranked for you out of 100, including internships and openings for under one year of experience. Upload your resume free to see your matches.",
-      "h1": "Real roles. Ranked for you, out of 100.",
+      "title": "Entry Level Jobs and Internships, Scored for You | SkillDrift",
+      "description": "Entry level jobs, fresher jobs and internships scored out of 100 against your resume. Only jobs with a trusted apply link, and closed jobs are never charged. Upload your resume free.",
+      "h1": "Entry level jobs and internships, scored out of 100 for you.",
       "priority": 0.9,
       "breadcrumb": "Jobs",
       "hero": {
         "eyebrow": "Jobs & internships",
-        "standfirst": "Including internships and openings for people with under a year of experience, scored the same way as everything else, so you know where you actually stand.",
+        "standfirst": "Fresher jobs, internships and openings at every level, each scored out of 100 against what your resume shows. SkillDrift only shows jobs with a trusted apply link, checks that a job is still open before you apply, and never charges for a job that has closed. Shortlist a job and it moves across your job board, so every application is tracked in one place.",
         "primaryCta": {
           "label": "See my matches - free",
           "href": "app:sign-in"
@@ -1163,8 +1196,8 @@
           "label": "How matching works",
           "href": "/job-match"
         },
-        "image": "/assets/jobs.png",
-        "imageAlt": "A list of matched roles, each ranked out of 100"
+        "image": "/assets/shots/jobs-board.png",
+        "imageAlt": "The SkillDrift job board: new matches scored out of 100, a shortlist, and columns for applied, interviewing and outcome"
       },
       "sections": [
         {
@@ -1350,7 +1383,9 @@
         "secondaryCta": {
           "label": "See how the loop works",
           "href": "/how-it-works"
-        }
+        },
+        "image": "/assets/shots/progression-rail.png",
+        "imageAlt": "The SkillDrift plan for today, now and next beside a career path showing 55% readiness and the next step"
       },
       "sections": [
         {
@@ -1435,6 +1470,17 @@
           ]
         },
         {
+          "type": "prose",
+          "id": "self-appraisal",
+          "alt": true,
+          "eyebrow": "Review season",
+          "heading": "How do you write a self appraisal?",
+          "paragraphs": [
+            "A self appraisal works when it is built from evidence you logged during the year, not from memory the week before. In SkillDrift you log one win a week. Before your review month, the review run-up shows how ready you are for the next level, gives you a practice round and drafts your self-review from those wins. Your first draft self-review is free, then 15 credits, and it is free on Active Seeker.",
+            "A win journal keeps your wins in a list. In SkillDrift the same wins also add to your skills, so your readiness for the next role and your job matches move with them, and the self-review knows which gaps you have closed."
+          ]
+        },
+        {
           "type": "prices",
           "alt": true,
           "id": "cost",
@@ -1490,8 +1536,137 @@
           "a": "Learning, new roles and time in your current role all raise one set of skill scores, and your readiness, job matches and next steps update from them. A finished, verified roadmap raises readiness by the amount it showed before you started, once."
         },
         {
+          "q": "How do you write a self appraisal?",
+          "a": "Build it from evidence logged during the year. In SkillDrift you log one win a week, and before your review month the review run-up drafts your self-review from those wins and shows how ready you are for the next level. The first draft is free, then 15 credits, and free on Active Seeker."
+        },
+        {
           "q": "What does it cost to keep SkillDrift with you?",
           "a": "Following your career is free: weekly wins, check-ins and the review run-up cost nothing. A draft self-review is free the first time, then 15 credits, and free on Active Seeker."
+        }
+      ]
+    },
+    {
+      "path": "/career-change",
+      "title": "Career Change: See Which Skills Transfer and What to Learn | SkillDrift",
+      "description": "Planning a career change? Upload your resume and pick the new role. SkillDrift shows which of your skills transfer, names the gaps, builds the learning for each one and scores jobs in the new field out of 100 as you learn.",
+      "h1": "Change careers with a plan: see what transfers, then close the rest.",
+      "priority": 0.8,
+      "breadcrumb": "Career change",
+      "hero": {
+        "eyebrow": "Career change",
+        "standfirst": "Most of what you already do counts in a new field; the question is which parts. Upload your resume and pick the role you want to move into. SkillDrift reads your resume against it, shows the skills that already count, names the ones that do not yet, and builds learning for each gap. Jobs in the new field are scored out of 100, and the scores move as you learn.",
+        "primaryCta": {
+          "label": "Start from your resume",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "See how it works",
+          "href": "/how-it-works"
+        },
+        "image": "/assets/shots/benchmarking.png",
+        "imageAlt": "The skills a person already has and the three to close for a role in a new field"
+      },
+      "sections": [
+        {
+          "type": "steps",
+          "id": "how",
+          "eyebrow": "How it runs",
+          "heading": "How do you plan a career change?",
+          "copy": "Start from what you have, not from a course catalogue.",
+          "steps": [
+            {
+              "title": "Pick the new role",
+              "body": "Any role, in any field. You can keep your current role as a second path."
+            },
+            {
+              "title": "See what transfers",
+              "body": "The skills your resume already shows that the new role asks for, named one by one."
+            },
+            {
+              "title": "Close the gaps that matter",
+              "body": "Learning built for each missing skill, sized to the hours you have each week, in the order that moves your readiness most."
+            },
+            {
+              "title": "Apply when the scores say so",
+              "body": "Jobs in the new field are scored out of 100 and move as you learn, so you can see when an application is worth sending."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "works",
+          "alt": true,
+          "min": 260,
+          "eyebrow": "What makes it work",
+          "heading": "What makes a career change work?",
+          "cards": [
+            {
+              "title": "Start from what transfers",
+              "body": "Experience in one field often covers part of the next. Seeing which part stops you learning what you already know.",
+              "accent": true
+            },
+            {
+              "title": "Learn only what the role asks",
+              "body": "Each roadmap is built from a gap the new role names, not from a general course."
+            },
+            {
+              "title": "Watch the new jobs move",
+              "body": "Finish a roadmap and the jobs that ask for that skill rise by the amount it showed, once."
+            },
+            {
+              "title": "Practise the new interview",
+              "body": "Mock interviews for roles in the new field, out loud, with a score out of 10."
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "id": "cost",
+          "eyebrow": "What it costs",
+          "heading": "What does a career change plan cost?",
+          "copy": "Seeing your gaps for a new role costs nothing. You spend credits when SkillDrift builds something for you.",
+          "rows": [
+            {
+              "label": "Your first career path, with the gaps named",
+              "cost": "Free"
+            },
+            {
+              "label": "Another career path",
+              "note": "For example, the new field beside your current one",
+              "cost": "11 credits"
+            },
+            {
+              "label": "A learning roadmap for one gap",
+              "cost": "50 credits"
+            },
+            {
+              "label": "A text mock interview",
+              "cost": "50 credits"
+            }
+          ],
+          "note": "Active Seeker covers every action, with no credit counting. Full table on the [pricing page](/pricing)."
+        }
+      ],
+      "cta": {
+        "heading": "See what already counts in the role you want next.",
+        "copy": "Upload your resume and pick the new role. The gaps come back named, and the first path is free.",
+        "primary": {
+          "label": "Start from your resume",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "How do you plan a career change?",
+          "a": "Pick the role you want to move into and upload your resume. SkillDrift shows the skills that already transfer, names the ones the new role asks for that your resume does not show yet, and builds learning for each gap. Jobs in the new field are scored out of 100 and move as you learn."
+        },
+        {
+          "q": "What makes a career change work?",
+          "a": "Starting from what already transfers, learning only what the new role asks for, and checking real jobs in the new field as your scores move, so you apply when an application is worth sending."
+        },
+        {
+          "q": "What does a career change plan cost?",
+          "a": "Your first career path with the gaps named is free. Another path is 11 credits, a learning roadmap for one gap is 50 credits and a text mock interview is 50 credits. Active Seeker covers every action with no credit counting."
         }
       ]
     },

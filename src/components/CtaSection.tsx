@@ -187,8 +187,8 @@ export default function CtaSection() {
         }}
       >
         <Image
-          src="/assets/phone.png"
-          alt="The SkillDrift app asking what your main career goal is"
+          src="/assets/shots/phone.png"
+          alt="SkillDrift on a phone: the best move today, an internship scored 75 out of 100 with 5 of 8 requirements matched"
           width={1620}
           height={1760}
           style={{

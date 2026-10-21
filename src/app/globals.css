@@ -606,3 +606,11 @@ html[data-sd-theme="dark"] .sd-result-card::after {
     transform: none;
   }
 }
+
+/* Hero goal line: the thin line joining the three goals reads as one career
+   path on wide screens; once the chips wrap it would cut through them. */
+@media (max-width: 720px) {
+  .sd-goal-line {
+    display: none;
+  }
+}
