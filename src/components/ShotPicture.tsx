@@ -32,7 +32,7 @@ export default function ShotPicture({ desktop, mobile, alt, priority, sizes }: P
   void rest;
   return (
     <picture>
-      <source media="(min-width: 761px)" srcSet={desktopSet} width={1800} height={1290} />
+      <source media="(min-width: 761px)" srcSet={desktopSet ?? d.src} width={1800} height={1290} />
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <img {...m} style={{ width: "100%", height: "auto", display: "block" }} />
     </picture>
