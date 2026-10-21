@@ -1,16 +1,20 @@
 import type { ReactNode } from "react";
+import { RingMark } from "./ScoreRing";
 
 export function Pill({ children }: { children: ReactNode }) {
   return (
     <span
       style={{
-        display: "inline-block",
-        padding: "9px 20px",
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 9,
+        padding: "8px 18px 8px 12px",
         borderRadius: 999,
         border: "1px solid var(--acline)",
         fontSize: 14,
       }}
     >
+      <RingMark />
       {children}
     </span>
   );

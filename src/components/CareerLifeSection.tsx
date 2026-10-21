@@ -117,6 +117,7 @@ export default function CareerLifeSection() {
           </ul>
 
           <ol
+            className="sd-stage-grid"
             style={{
               listStyle: "none",
               margin: 0,

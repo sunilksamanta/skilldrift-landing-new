@@ -32,7 +32,11 @@ export default function StickyUploadCta({
       if (!zone) return;
 
       // Past the drop zone: its bottom edge has gone above the viewport.
-      const scrolledPast = zone.getBoundingClientRect().bottom < 0;
+      // Out of view either way: scrolled past it, or (on the first phone
+      // screen) not reached yet because the hero copy sits above it. Every
+      // competitor puts its main button on the first phone screen.
+      const rect = zone.getBoundingClientRect();
+      const scrolledPast = rect.bottom < 0 || rect.top > window.innerHeight - 40;
 
       // Into the footer: it has entered the lower half of the screen.
       const footer = document.querySelector("footer");

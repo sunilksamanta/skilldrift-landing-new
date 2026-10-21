@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Check } from "./icons";
 import TrackedLink from "./TrackedLink";
 import { homeCta } from "@/lib/cta";
@@ -43,6 +43,16 @@ export default function DoorsSection() {
   const [intent, setIntent] = useState(0);
   const active = doors[intent];
 
+  // Follows the hero goal picker (same three goals, same order).
+  useEffect(() => {
+    const on = (e: Event) => {
+      const i = (e as CustomEvent<number>).detail;
+      if (typeof i === "number" && doors[i]) setIntent(i);
+    };
+    window.addEventListener("sd:goal", on);
+    return () => window.removeEventListener("sd:goal", on);
+  }, []);
+
   return (
     <section id="doors" className="sect--tight sect--alt">
       <div className="wrap">
@@ -59,7 +69,7 @@ export default function DoorsSection() {
               letterSpacing: "-0.025em",
             }}
           >
-            Where are you right now?
+            Wherever you start, the first step is the same.
           </h2>
           <p
             style={{
@@ -70,13 +80,13 @@ export default function DoorsSection() {
               color: "var(--tx2)",
             }}
           >
-            Three different journeys. Same first step.
+            Pick yours to see what SkillDrift does for it.
           </p>
         </div>
 
         <div
           role="tablist"
-          aria-label="Where are you right now?"
+          aria-label="Pick your starting point"
           style={{
             marginTop: 44,
             display: "grid",

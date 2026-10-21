@@ -6,6 +6,7 @@ import TrackedLink from "./TrackedLink";
 import GuestResultSection from "./GuestResultSection";
 import { UploadCard } from "./ResumeUploadCard";
 import HeroGoalPicker from "./HeroGoalPicker";
+import ScoreRing from "./ScoreRing";
 import { useGuestAnalysis } from "@/hooks/useGuestAnalysis";
 
 /* av2 is used by a testimonial below, so the stack borrows av9 instead. */
@@ -167,15 +168,57 @@ export default function HeroAndResult() {
                   </span>
                   <span>40,000+ professionals</span>
                   <span style={{ width: 1, height: 14, background: "var(--line2)" }} />
-                  <span>iOS + Android</span>
-                  <span style={{ width: 1, height: 14, background: "var(--line2)" }} />
-                  <span>Gaps &amp; job matches always free</span>
+                  <span className="sd-store-badges">
+                    <TrackedLink
+                      href="https://apps.apple.com/in/app/skilldrift/id6749856149"
+                      section="hero"
+                      label="app_store"
+                      newTab
+                      style={{ display: "block" }}
+                    >
+                      <Image src="/assets/app_store.png" alt="Download on the App Store" width={944} height={328} />
+                    </TrackedLink>
+                    <TrackedLink
+                      href="https://play.google.com/store/apps/details?id=com.skilldrift.app"
+                      section="hero"
+                      label="play_store"
+                      newTab
+                      style={{ display: "block" }}
+                    >
+                      <Image src="/assets/google_play.png" alt="Get it on Google Play" width={944} height={328} />
+                    </TrackedLink>
+                  </span>
+                  <span style={{ flexBasis: "100%" }}>Gaps &amp; job matches always free</span>
                 </div>
               </div>
             )}
 
             {!done && (
-              <div>
+              <div style={{ position: "relative" }}>
+                <div className="sd-hero-peek" aria-hidden="true">
+                  <ScoreRing value={79} size={46} stroke={4.5} transition={false} />
+                  <div>
+                    <div style={{ fontSize: 10.5, letterSpacing: "0.12em", fontWeight: 600, color: "var(--ac)" }}>
+                      EXAMPLE &middot; DATA ANALYST INTERN
+                    </div>
+                    <div style={{ marginTop: 3, display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--tx2)" }}>
+                      Good fit
+                      <span
+                        style={{
+                          padding: "2px 8px",
+                          borderRadius: 999,
+                          fontSize: 12,
+                          fontWeight: 600,
+                          color: "#0f7a4b",
+                          background: "#e3f6ec",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        +7 after one course
+                      </span>
+                    </div>
+                  </div>
+                </div>
                 <UploadCard guest={guest} />
                 <p
                   style={{

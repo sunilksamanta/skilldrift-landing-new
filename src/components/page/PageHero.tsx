@@ -1,4 +1,5 @@
 import ShotPicture from "../ShotPicture";
+import { RingMark } from "../ScoreRing";
 import type { ReactNode } from "react";
 import { ArrowRight } from "../icons";
 import { primaryButton } from "../SectionBits";
@@ -100,12 +101,16 @@ export default function PageHero({
           <div>
             <div
               style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 9,
                 fontSize: 12.5,
                 letterSpacing: "0.14em",
                 textTransform: "uppercase",
                 color: "var(--ac)",
               }}
             >
+              <RingMark />
               {eyebrow}
             </div>
             <h1

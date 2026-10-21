@@ -12,7 +12,7 @@ import { trackIntentSelected } from "@/lib/analytics/cta";
  */
 const goals = [
   { intent: "Land my first job", label: "First job or internship" },
-  { intent: "Move to a new job", label: "A new job" },
+  { intent: "Move to a new job", label: "A new job or field" },
   { intent: "Get promoted where I am", label: "Grow where I am" },
 ];
 
@@ -52,6 +52,9 @@ export default function HeroGoalPicker() {
               onClick={() => {
                 trackIntentSelected(g.intent);
                 setPicked(i);
+                // The goal doors below follow the pick, so the visitor sees
+                // what SkillDrift does for that goal without picking twice.
+                window.dispatchEvent(new CustomEvent("sd:goal", { detail: i }));
               }}
               style={{
                 position: "relative",

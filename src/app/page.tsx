@@ -4,10 +4,9 @@ import CtaSection from "@/components/CtaSection";
 import DoorsSection from "@/components/DoorsSection";
 import FaqSection, { faqs } from "@/components/FaqSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import FreeSection from "@/components/FreeSection";
 import HeroAndResult from "@/components/HeroAndResult";
 import JobsSection from "@/components/JobsSection";
-import LiveResumeSection from "@/components/LiveResumeSection";
+import ScoreLoopSection from "@/components/ScoreLoopSection";
 import LoopSection from "@/components/LoopSection";
 import PricingSection from "@/components/PricingSection";
 import ProofSection from "@/components/ProofSection";
@@ -49,14 +48,13 @@ export default function Home() {
         <HeroAndResult />
         <DoorsSection />
         <ProductShowcase />
+        <ScoreLoopSection />
         <LoopSection />
         <CareerLifeSection />
         <RewriteSection />
-        <LiveResumeSection />
         <FeaturesSection />
         <ProofSection />
         <JobsSection />
-        <FreeSection />
         <PricingSection />
         <FaqSection />
         <CtaSection />

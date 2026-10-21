@@ -24,8 +24,8 @@ async function markDataUri() {
 }
 
 /**
- * One OG card per route, rendered at build time. Dark field, the brand's purple
- * bloom top-right, a faint grid, the page's own H1 as the headline, and the
+ * One OG card per route, rendered at build time. Deep violet field (the same
+ * band as the homepage), the score ring as the brand mark, the page's own H1 as the headline, and the
  * eyebrow as a kicker — so a shared link is legible about which page it is.
  */
 export async function renderOgImage({
@@ -40,7 +40,7 @@ export async function renderOgImage({
   const [loadedFonts, mark] = await Promise.all([fonts(), markDataUri()]);
 
   // Long H1s need to step down a size or two to stay on four lines.
-  const size = headline.length > 62 ? 62 : headline.length > 44 ? 72 : 82;
+  const size = headline.length > 62 ? 54 : headline.length > 44 ? 62 : 70;
 
   return new ImageResponse(
     (
@@ -52,10 +52,11 @@ export async function renderOgImage({
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px 76px",
-          backgroundColor: "#08090A",
+          backgroundColor: "#1d1250",
           backgroundImage:
-            "radial-gradient(1100px 620px at 88% -12%, rgba(168,146,255,0.42) 0%, rgba(96,73,192,0.18) 42%, rgba(8,9,10,0) 72%), linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
-          backgroundSize: "100% 100%, 88px 88px, 88px 88px",
+            "radial-gradient(900px 560px at 92% 0%, rgba(155,130,255,0.5) 0%, rgba(91,63,208,0.25) 45%, rgba(29,18,80,0) 75%), linear-gradient(160deg, #1d1250 0%, #2f1d86 55%, #4a2fc4 100%)",
+          backgroundSize: "100% 100%, 100% 100%",
+          position: "relative",
           fontFamily: "Switzer",
           color: "#FFFFFF",
         }}
@@ -67,20 +68,54 @@ export async function renderOgImage({
             <span style={{ fontSize: 38, fontWeight: 600, letterSpacing: "-0.02em" }}>
               SkillDrift
             </span>
-            <span style={{ fontSize: 17, fontWeight: 500, color: "#9C86FF" }}>
+            <span style={{ fontSize: 17, fontWeight: 500, color: "#C9BCFF" }}>
               Your Personal Career Coach!
             </span>
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        {/* The score ring: the site's repeated mark. */}
+        <div
+          style={{
+            position: "absolute",
+            right: 76,
+            top: 150,
+            width: 230,
+            height: 230,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <svg width="230" height="230" viewBox="0 0 230 230" style={{ position: "absolute", left: 0, top: 0 }}>
+            <circle cx="115" cy="115" r="98" fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth="18" />
+            <circle
+              cx="115"
+              cy="115"
+              r="98"
+              fill="none"
+              stroke="#B9A6FF"
+              strokeWidth="18"
+              strokeLinecap="round"
+              strokeDasharray="615.75"
+              strokeDashoffset="129.3"
+              transform="rotate(-90 115 115)"
+            />
+          </svg>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <span style={{ fontSize: 76, fontWeight: 600, letterSpacing: "-0.03em", lineHeight: 1 }}>79</span>
+            <span style={{ marginTop: 6, fontSize: 18, fontWeight: 500, color: "#C9BCFF" }}>out of 100</span>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "column", maxWidth: 760 }}>
           <span
             style={{
               fontSize: 24,
               fontWeight: 500,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#9C86FF",
+              color: "#C9BCFF",
             }}
           >
             {kicker}
@@ -92,7 +127,7 @@ export async function renderOgImage({
               fontWeight: 600,
               lineHeight: 1.08,
               letterSpacing: "-0.028em",
-              maxWidth: 1000,
+              maxWidth: 760,
             }}
           >
             {headline}
@@ -105,9 +140,9 @@ export async function renderOgImage({
             alignItems: "center",
             justifyContent: "space-between",
             paddingTop: 28,
-            borderTop: "1px solid rgba(255,255,255,0.14)",
+            borderTop: "1px solid rgba(255,255,255,0.18)",
             fontSize: 22,
-            color: "#9EA0A8",
+            color: "#C9BCFF",
           }}
         >
           <span>{footer}</span>
