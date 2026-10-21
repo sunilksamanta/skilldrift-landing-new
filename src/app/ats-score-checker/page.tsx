@@ -115,7 +115,7 @@ export default function AtsScoreCheckerPage() {
         background: "var(--bg)",
         color: "var(--tx)",
         minHeight: "100vh",
-        overflowX: "hidden",
+        overflowX: "clip",
       }}
     >
       <JsonLd
@@ -272,7 +272,7 @@ export default function AtsScoreCheckerPage() {
           <p style={{ marginTop: 40, fontSize: 15.5, color: "var(--tx2)" }}>
             Ready when you are:{" "}
             <TrackedLink
-              href="#top"
+              href="#upload"
               section="ats_checker"
               label="back_to_upload"
               style={{

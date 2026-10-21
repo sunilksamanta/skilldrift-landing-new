@@ -17,7 +17,8 @@ export type CardBlock = {
   copy?: string;
   /** Minimum card width before the grid wraps. Default 300. */
   min?: number;
-  cards: { tag?: string; title: string; body: string; accent?: boolean }[];
+  /** A card with `href` becomes one link (the whole card is clickable). */
+  cards: { tag?: string; title: string; body: string; accent?: boolean; href?: string; cta?: string }[];
 };
 
 export type StepsBlock = {

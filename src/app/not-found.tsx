@@ -24,7 +24,7 @@ export default function NotFound() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        overflowX: "hidden",
+        overflowX: "clip",
       }}
     >
       <SiteHeader campaign={"not_found"} />

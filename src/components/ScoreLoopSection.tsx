@@ -73,6 +73,8 @@ export default function ScoreLoopSection() {
   const [step, setStep] = useState(0); // 0 in progress, 1 done, 2 on resume, 3 scores moved
   const [visible, setVisible] = useState(false);
   const [still, setStill] = useState(false);
+  // A step the visitor clicked holds the animation on that step for a while.
+  const [holdUntil, setHoldUntil] = useState(0);
 
   useEffect(() => {
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
@@ -92,10 +94,11 @@ export default function ScoreLoopSection() {
 
   useEffect(() => {
     if (still || !visible) return;
-    const wait = step === 3 ? 3600 : step === 0 ? 1400 : 1500;
+    const held = holdUntil - Date.now();
+    const wait = held > 0 ? held : step === 3 ? 3600 : step === 0 ? 1400 : 1500;
     const t = setTimeout(() => setStep((s) => (s + 1) % 4), wait);
     return () => clearTimeout(t);
-  }, [step, visible, still]);
+  }, [step, visible, still, holdUntil]);
 
   const progress = step === 0 ? 82 : 100;
   const active = step === 0 ? 0 : step - 1;
@@ -129,14 +132,26 @@ export default function ScoreLoopSection() {
               {steps.map((s, i) => {
                 const on = step > 0 && i <= active;
                 return (
-                  <li key={s.title} className="sd-loop-step" data-on={on ? "true" : "false"}>
-                    <span className="sd-loop-num">{on ? <Check size={15} strokeWidth={2.4} /> : i + 1}</span>
-                    <span>
-                      <span style={{ display: "block", fontSize: 16, fontWeight: 600, color: "#fff" }}>{s.title}</span>
-                      <span style={{ display: "block", marginTop: 4, fontSize: 14, lineHeight: 1.5, color: "rgba(255,255,255,.7)" }}>
-                        {s.body}
+                  <li key={s.title}>
+                    <button
+                      type="button"
+                      className="sd-loop-step"
+                      data-on={on ? "true" : "false"}
+                      aria-pressed={step === i + 1}
+                      onClick={() => {
+                        // Show this step in the example, then carry on from it.
+                        setStep(i + 1);
+                        setHoldUntil(Date.now() + 5000);
+                      }}
+                    >
+                      <span className="sd-loop-num">{on ? <Check size={15} strokeWidth={2.4} /> : i + 1}</span>
+                      <span>
+                        <span style={{ display: "block", fontSize: 16, fontWeight: 600, color: "#fff" }}>{s.title}</span>
+                        <span style={{ display: "block", marginTop: 4, fontSize: 14, lineHeight: 1.5, color: "rgba(255,255,255,.7)" }}>
+                          {s.body}
+                        </span>
                       </span>
-                    </span>
+                    </button>
                   </li>
                 );
               })}
@@ -158,6 +173,16 @@ export default function ScoreLoopSection() {
 
           <div ref={host} className="sd-loop-stage" aria-label="Example: a finished course moves two job scores">
             <span className="sd-loop-example">Example</span>
+            {/* The example looks like the product, so a click goes to what moves the scores. */}
+            <TrackedLink
+              href="/how-it-works#what-moves"
+              section="live_resume"
+              label="example_stage"
+              ariaLabel="See what moves your scores"
+              className="sd-loop-stagelink"
+            >
+              <span className="sd-loop-stagehint">See what moves your scores &rarr;</span>
+            </TrackedLink>
 
             <div className="sd-loop-card">
               <div className="sd-loop-kicker">LEARNING ROADMAP</div>

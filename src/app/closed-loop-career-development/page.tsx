@@ -196,7 +196,7 @@ function Score({ score, band, good, chips }: { score: number; band: string; good
 
 export default function ClosedLoopCareerDevelopmentPage() {
   return (
-    <div style={{ background: "var(--bg)", color: "var(--tx)", minHeight: "100vh", overflowX: "hidden" }}>
+    <div style={{ background: "var(--bg)", color: "var(--tx)", minHeight: "100vh", overflowX: "clip" }}>
       <SiteHeader campaign={CAMPAIGN} />
     <main>
       {jsonLd.map((d, i) => (

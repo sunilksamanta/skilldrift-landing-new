@@ -417,9 +417,17 @@ details > summary::-webkit-details-marker {
 }
 
 /* Sections are scrolled to by SectionLink; keep the sticky header off the
-   heading it lands on. */
+   heading it lands on, with a small gap. The header is 97px tall on desktop
+   and 77px on phones. (It only stays pinned because page wrappers clip
+   horizontal overflow with overflow-x: clip, not hidden: hidden makes the
+   wrapper a scroll container and the header scrolls away with the page.) */
 [id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 112px;
+}
+@media (max-width: 860px) {
+  [id] {
+    scroll-margin-top: 92px;
+  }
 }
 
 /* ---- region switch ----
@@ -655,6 +663,10 @@ html[data-sd-theme="dark"] .sd-result-card::after {
   align-items: center;
 }
 .sd-loop-step {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
   display: flex;
   gap: 14px;
   align-items: flex-start;
@@ -800,6 +812,8 @@ html[data-sd-theme="dark"] .sd-result-card::after {
   background: var(--card);
   border: 1px solid var(--line);
   box-shadow: 0 24px 60px -24px rgba(76, 52, 180, 0.45);
+  color: inherit;
+  transition: border-color .2s, box-shadow .2s;
   animation: sdPeekIn 0.8s 0.6s both cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 @keyframes sdPeekIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
@@ -858,3 +872,40 @@ html[data-sd-theme="dark"] .sd-result-card::after {
   #doors { --door-pad: 14px 18px; }
   #doors [role="tablist"] { gap: 10px !important; margin-top: 28px !important; }
 }
+
+/* ---- Zoomable product screenshots ---- */
+.sd-zoom { all: unset; display: block; position: relative; width: 100%; cursor: zoom-in; }
+.sd-zoom:focus-visible { outline: 2px solid var(--ac); outline-offset: 3px; }
+.sd-zoom__hint {
+  position: absolute; right: 14px; bottom: 14px; padding: 6px 12px; border-radius: 999px;
+  font-size: 12.5px; font-weight: 500; color: #fff; background: rgba(20, 14, 50, 0.72);
+  opacity: 0; transform: translateY(4px); transition: opacity .2s, transform .2s; pointer-events: none;
+}
+.sd-zoom:hover .sd-zoom__hint, .sd-zoom:focus-visible .sd-zoom__hint { opacity: 1; transform: none; }
+@media (hover: none) { .sd-zoom__hint { opacity: 1; transform: none; } }
+.sd-zoom__overlay {
+  position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 56px 16px 24px;
+  background: rgba(12, 8, 32, 0.86); cursor: zoom-out;
+}
+.sd-zoom__overlay img { max-width: min(1600px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 14px; cursor: default; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+.sd-zoom__close {
+  position: absolute; top: calc(14px + env(safe-area-inset-top, 0px)); right: 16px; padding: 8px 16px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.12); color: #fff; font: inherit; font-size: 14px; cursor: pointer;
+}
+
+.sd-card-link { transition: border-color .2s, transform .2s, box-shadow .2s; }
+a:hover > .sd-card-link, a:focus-visible > .sd-card-link { border-color: var(--ac) !important; transform: translateY(-2px); box-shadow: 0 18px 40px -24px rgba(76,52,180,.45); }
+
+.sd-loop-step:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.sd-loop-step:hover { border-color: rgba(255,255,255,.4); }
+.sd-loop-stagelink { position: absolute; inset: 0; z-index: 3; border-radius: inherit; }
+.sd-loop-stagelink:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.sd-loop-stagehint {
+  position: absolute; left: 50%; bottom: -16px; transform: translate(-50%, 6px); white-space: nowrap;
+  padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 500; color: #2f1d86; background: #e9e3ff;
+  opacity: 0; transition: opacity .2s, transform .2s;
+}
+.sd-loop-stagelink:hover .sd-loop-stagehint, .sd-loop-stagelink:focus-visible .sd-loop-stagehint { opacity: 1; transform: translate(-50%, 0); }
+@media (hover: none) { .sd-loop-stagehint { opacity: 1; transform: translate(-50%, 0); } }
+
+.sd-hero-peek:hover, .sd-hero-peek:focus-visible { border-color: var(--ac); box-shadow: 0 24px 60px -20px rgba(76, 52, 180, 0.6); }

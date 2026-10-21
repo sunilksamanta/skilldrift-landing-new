@@ -470,7 +470,9 @@ export default function ResumeUploadCard({
   // and .wrap) can swap in at full width without nesting wraps.
   return (
     <section id="top" style={{ padding: "8px 0 26px" }}>
-      <div className="wrap">
+      {/* In-page links land here. "#top" itself is read by browsers and the
+          router as "the top of the page", so it cannot be a link target. */}
+      <div className="wrap" id="upload">
         <div style={{ maxWidth: 860 }}>
           <UploadCard guest={guest} campaign={campaign} />
         </div>

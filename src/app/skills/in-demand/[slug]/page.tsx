@@ -105,7 +105,7 @@ export default async function SkillsDemandPage({ params }: { params: Promise<{ s
   ];
 
   return (
-    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'hidden' }}>
+    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'clip' }}>
       <SiteHeader campaign={campaign} />
       {ld.map((o, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(o) }} />

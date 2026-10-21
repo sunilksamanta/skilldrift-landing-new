@@ -2223,20 +2223,28 @@
           "cards": [
             {
               "title": "SkillDrift vs ChatGPT",
-              "body": "A chatbot you prompt, or a record that keeps moving. [Read the comparison](/skilldrift-vs-chatgpt)",
-              "accent": true
+              "body": "A chatbot you prompt, or a record that keeps moving.",
+              "accent": true,
+              "href": "/skilldrift-vs-chatgpt",
+              "cta": "Read the comparison"
             },
             {
               "title": "SkillDrift vs LinkedIn Premium",
-              "body": "Your network, or your plan to get the role. [Read the comparison](/skilldrift-vs-linkedin-premium)"
+              "body": "Your network, or your plan to get the role.",
+              "href": "/skilldrift-vs-linkedin-premium",
+              "cta": "Read the comparison"
             },
             {
               "title": "SkillDrift vs Jobright",
-              "body": "Apply to more US jobs, or become right for the ones you want. [Read the comparison](/skilldrift-vs-jobright)"
+              "body": "Apply to more US jobs, or become right for the ones you want.",
+              "href": "/skilldrift-vs-jobright",
+              "cta": "Read the comparison"
             },
             {
               "title": "SkillDrift vs Internshala",
-              "body": "More listings, or a better shot at the right one. [Read the comparison](/skilldrift-vs-internshala)"
+              "body": "More listings, or a better shot at the right one.",
+              "href": "/skilldrift-vs-internshala",
+              "cta": "Read the comparison"
             }
           ]
         },

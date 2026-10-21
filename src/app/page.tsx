@@ -32,7 +32,7 @@ export default function Home() {
         background: "var(--bg)",
         color: "var(--tx)",
         minHeight: "100vh",
-        overflowX: "hidden",
+        overflowX: "clip",
       }}
     >
       <JsonLd

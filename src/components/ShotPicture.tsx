@@ -1,4 +1,5 @@
 import { getImageProps } from "next/image";
+import ZoomShot from "./ZoomShot";
 
 /*
  * A product screenshot with art direction: the wide desktop frame above
@@ -12,9 +13,18 @@ type Props = {
   alt: string;
   priority?: boolean;
   sizes?: string;
+  /** Click to view full size. Off when the picture already sits inside a link. */
+  zoom?: boolean;
 };
 
-export default function ShotPicture({ desktop, mobile, alt, priority, sizes }: Props) {
+export default function ShotPicture({ zoom = true, ...props }: Props) {
+  // Screenshots show real buttons, so a click opens the screen full size
+  // rather than doing nothing. Inside a link (feature rows) zoom is off.
+  const pic = <Picture {...props} />;
+  return zoom ? <ZoomShot alt={props.alt}>{pic}</ZoomShot> : pic;
+}
+
+function Picture({ desktop, mobile, alt, priority, sizes }: Omit<Props, "zoom">) {
   // A <picture> only fetches the source it picks, so the hero can load
   // eagerly with a high fetch priority without pulling both frames.
   const common = {

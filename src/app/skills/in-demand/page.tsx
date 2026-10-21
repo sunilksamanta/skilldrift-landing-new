@@ -34,7 +34,7 @@ export default function SkillsDemandHub() {
   );
 
   return (
-    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'hidden' }}>
+    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'clip' }}>
       <SiteHeader campaign={campaign} />
     <main>
       <section style={{ padding: '40px 0 8px' }}>

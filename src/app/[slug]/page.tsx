@@ -64,7 +64,7 @@ export default async function ContentPage({
         background: "var(--bg)",
         color: "var(--tx)",
         minHeight: "100vh",
-        overflowX: "hidden",
+        overflowX: "clip",
       }}
     >
       <JsonLd schemas={schemas} />

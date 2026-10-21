@@ -195,7 +195,13 @@ export default function HeroAndResult() {
 
             {!done && (
               <div style={{ position: "relative" }}>
-                <div className="sd-hero-peek" aria-hidden="true">
+                <TrackedLink
+                  href="/job-match"
+                  section="hero"
+                  label="example_result"
+                  ariaLabel="Example result: Data Analyst Intern, 79 out of 100. See how job scores work"
+                  className="sd-hero-peek"
+                >
                   <ScoreRing value={79} size={46} stroke={4.5} transition={false} />
                   <div>
                     <div style={{ fontSize: 10.5, letterSpacing: "0.12em", fontWeight: 600, color: "var(--ac)" }}>
@@ -218,7 +224,7 @@ export default function HeroAndResult() {
                       </span>
                     </div>
                   </div>
-                </div>
+                </TrackedLink>
                 <UploadCard guest={guest} />
                 <p
                   style={{

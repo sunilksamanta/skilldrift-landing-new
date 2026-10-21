@@ -109,6 +109,7 @@ export default function FeatureRows() {
                       }}
                     >
                       <ShotPicture
+                        zoom={false}
                         desktop={route.hero.image}
                         mobile={route.hero.imageMobile}
                         alt={route.hero.imageAlt ?? ""}

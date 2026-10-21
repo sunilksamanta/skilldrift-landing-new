@@ -104,7 +104,7 @@ export default async function RoleSkillsPage({ params }: { params: Promise<{ rol
   ];
 
   return (
-    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'hidden' }}>
+    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'clip' }}>
       {ld.map((o, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(o) }} />
       ))}
@@ -175,7 +175,7 @@ export default async function RoleSkillsPage({ params }: { params: Promise<{ rol
             <li style={{ marginTop: 12 }}><Link href="/skills" style={LINK}>Skills needed for other roles</Link></li>
           </ul>
           <p style={{ marginTop: 40, fontSize: 15.5, color: 'var(--tx2)' }}>
-            Ready when you are: <a href="#top" style={LINK}>upload your resume and see your {r.role} gaps</a>.
+            Ready when you are: <a href="#upload" style={LINK}>upload your resume and see your {r.role} gaps</a>.
           </p>
         </Sect>
       </main>
