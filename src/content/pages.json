@@ -265,7 +265,7 @@
           "href": "#cost"
         },
         "image": "/assets/shots/tailor-apply-kit.png",
-        "imageAlt": "The Apply Kit: improve your resume, tailor it for this job for 18 credits, download it, then apply",
+        "imageAlt": "The Apply Kit for a Data Analyst job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site",
         "imageMobile": "/assets/shots/m-tailor-apply-kit.png"
       },
       "sections": [
@@ -413,7 +413,7 @@
           "href": "#cost"
         },
         "image": "/assets/shots/rewrite-improve.png",
-        "imageAlt": "The Apply Kit step that rewrites the latest role around real results, for 70 credits once",
+        "imageAlt": "The Apply Kit step that rewrites your latest role around real results, for 70 credits once, with improving the rest of your resume free later",
         "imageMobile": "/assets/shots/m-rewrite-improve.png"
       },
       "sections": [
@@ -749,7 +749,7 @@
           "href": "/jobs"
         },
         "image": "/assets/shots/job-match-analysis.png",
-        "imageAlt": "A job analysis scored 75 out of 100, with the skills the person already has and the three to close",
+        "imageAlt": "A Data Analyst job for someone with experience, scored 70 out of 100, with the six skills the person already has, the four to close and the next step",
         "imageMobile": "/assets/shots/m-job-match-analysis.png"
       },
       "sections": [
@@ -891,7 +891,7 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/career-path.png",
-        "imageAlt": "A Junior Software Engineer career path at 55% readiness with the next step, and a suggested roadmap that meets one more requirement",
+        "imageAlt": "A Senior Data Analyst path at 53% strength with each step marked, the top gap that moves readiness most, and the next role, Lead Data Analyst, already on the plan",
         "imageMobile": "/assets/shots/m-career-path.png"
       },
       "sections": [
@@ -1039,7 +1039,7 @@
           "href": "/pricing"
         },
         "image": "/assets/shots/benchmarking.png",
-        "imageAlt": "The skills a person already has and the three to close for one job, with the time each roadmap takes",
+        "imageAlt": "Readiness for Senior Data Analyst at 53%: the top gap, named in 7 of the person's 52 jobs, the skills inside it, and the next gaps with how much each adds",
         "imageMobile": "/assets/shots/m-benchmarking.png"
       },
       "sections": [
@@ -1188,7 +1188,7 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/learning-roadmaps.png",
-        "imageAlt": "Suggested roadmaps, each asked for by jobs the person picked and each meeting one more requirement, beside a career path at 55% readiness",
+        "imageAlt": "A learning roadmap for Causal Inference and Measurement Rigor, three weeks at an advanced level, with the first sprint ready and readiness rising to 66% when it is finished",
         "imageMobile": "/assets/shots/m-learning-roadmaps.png"
       },
       "sections": [
@@ -1329,12 +1329,12 @@
       "path": "/jobs",
       "title": "Entry Level Jobs and Internships, Scored for You | SkillDrift",
       "description": "Entry level jobs, fresher jobs and internships scored out of 100 against your resume. Only jobs with a trusted apply link, and closed jobs are never charged. Upload your resume free.",
-      "h1": "Entry level jobs and internships, scored out of 100 for you.",
+      "h1": "Jobs at every level, from internships up, scored out of 100 for you.",
       "priority": 0.9,
       "breadcrumb": "Jobs",
       "hero": {
         "eyebrow": "Jobs & internships",
-        "standfirst": "Fresher jobs, internships and openings at every level, each scored out of 100 against what your resume shows. SkillDrift only shows jobs with a trusted apply link, checks that a job is still open before you apply, and never charges for a job that has closed. Shortlist a job and it moves across your job board, so every application is tracked in one place.",
+        "standfirst": "Jobs at every level, fresher roles and internships, each scored out of 100 against what your resume shows. SkillDrift only shows jobs with a trusted apply link, checks that a job is still open before you apply, and never charges for a job that has closed. Shortlist a job and it moves across your job board, so every application is tracked in one place.",
         "primaryCta": {
           "label": "See my matches - free",
           "href": "app:sign-in"
@@ -1344,7 +1344,7 @@
           "href": "/job-match"
         },
         "image": "/assets/shots/jobs-board.png",
-        "imageAlt": "The SkillDrift job board: new matches scored out of 100, a shortlist, and columns for applied, interviewing and outcome",
+        "imageAlt": "The SkillDrift job board for a Data Analyst: new matches scored out of 100, the next role and the current role, a shortlist with apply links, and columns for applied, interviewing and outcome",
         "imageMobile": "/assets/shots/m-jobs-board.png"
       },
       "sections": [
@@ -1537,7 +1537,7 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/progression-rail.png",
-        "imageAlt": "The SkillDrift plan for today, now and next beside a career path showing 55% readiness and the next step",
+        "imageAlt": "The plan for today, now and next for a Senior Data Analyst, with the next role, Lead Data Analyst, set to start in November",
         "imageMobile": "/assets/shots/m-progression-rail.png"
       },
       "sections": [
@@ -1716,9 +1716,9 @@
           "label": "See how it works",
           "href": "/how-it-works"
         },
-        "image": "/assets/shots/benchmarking.png",
-        "imageAlt": "The skills a person already has and the three to close for a role in a new field",
-        "imageMobile": "/assets/shots/m-benchmarking.png"
+        "image": "/assets/shots/job-match-analysis.png",
+        "imageAlt": "A job scored out of 100 against what your resume already shows, with the skills that count and the ones to close",
+        "imageMobile": "/assets/shots/m-job-match-analysis.png"
       },
       "sections": [
         {
@@ -2449,9 +2449,9 @@
           "label": "All comparisons",
           "href": "/compare"
         },
-        "image": "/assets/shots/home-product.png",
-        "imageMobile": "/assets/shots/m-home-product.png",
-        "imageAlt": "The SkillDrift dashboard: the best move today, jobs scored out of 100 and the plan for today"
+        "image": "/assets/shots/home-product-newjob.png",
+        "imageMobile": "/assets/shots/m-home-product-newjob.png",
+        "imageAlt": "The SkillDrift dashboard for someone moving to a new job: the best move today scored out of 100, jobs in their field and the plan for today"
       },
       "sections": [
         {
@@ -2596,7 +2596,7 @@
         },
         "image": "/assets/shots/job-match-analysis.png",
         "imageMobile": "/assets/shots/m-job-match-analysis.png",
-        "imageAlt": "A SkillDrift job analysis: a Summer Internship scored 79 out of 100, with what you have and what to close"
+        "imageAlt": "A SkillDrift job analysis: a Data Analyst job scored 70 out of 100, with what you have and what to close"
       },
       "sections": [
         {
@@ -2736,7 +2736,7 @@
         },
         "image": "/assets/shots/jobs-board.png",
         "imageMobile": "/assets/shots/m-jobs-board.png",
-        "imageAlt": "The SkillDrift job board: jobs and internships scored out of 100, shortlisted and tracked"
+        "imageAlt": "The SkillDrift job board: jobs scored out of 100, shortlisted with apply links and tracked to the outcome"
       },
       "sections": [
         {
@@ -2875,8 +2875,8 @@
           "label": "All comparisons",
           "href": "/compare"
         },
-        "image": "/assets/shots/learning-roadmaps.png",
-        "imageMobile": "/assets/shots/m-learning-roadmaps.png",
+        "image": "/assets/shots/learning-roadmaps-intern.png",
+        "imageMobile": "/assets/shots/m-learning-roadmaps-intern.png",
         "imageAlt": "SkillDrift learning roadmaps built from the gaps in the jobs you picked"
       },
       "sections": [

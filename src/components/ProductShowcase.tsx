@@ -24,18 +24,18 @@ const goals = [
   {
     tab: "A new job or field",
     intent: "Move to a new job",
-    copy: "Jobs in your field scored out of 100, the best one to act on today, and a plan that keeps your search moving. It already asks when your next review is, so it can help you there too.",
+    copy: "Jobs in your field scored out of 100, the best one to act on today, and the steps that get you there: tailor your resume to the job, check each requirement before you apply, practise the interview.",
     desktop: "/assets/shots/home-product-newjob.png",
     mobile: "/assets/shots/m-home-product-newjob.png",
-    alt: "The SkillDrift dashboard for a new job in your field: a Data Analyst role scored 70 out of 100 as the best move today, jobs in the current role scored out of 100, and the plan for today",
+    alt: "The SkillDrift dashboard for a new job in your field: a Data Analyst role scored 70 out of 100 as the best move today, more jobs in the same role scored out of 100, and the steps to tailor, check and practise",
   },
   {
     tab: "Grow where I am",
     intent: "Get promoted where I am",
-    copy: "Your strength in the role you have, the step you are on, and the one gap that moves your readiness most. Each roadmap shows how much it adds before you start, and your review is on the plan.",
+    copy: "Your strength in the role you have and the one gap that moves your readiness most, with what each roadmap adds before you start. Your next role is already on the plan for when you are ready.",
     desktop: "/assets/shots/home-product-grow.png",
     mobile: "/assets/shots/m-home-product-grow.png",
-    alt: "The SkillDrift dashboard for growing in your current role: 53% strength as a Senior Data Analyst, the top gap to close, and a plan that includes the next review",
+    alt: "The SkillDrift dashboard for growing in your current role: 53% strength as a Senior Data Analyst, the top gap that adds 13% readiness, and Lead Data Analyst as the next role on the plan",
   },
 ];
 

@@ -24,8 +24,8 @@ const steps = [
 ];
 
 const jobs = [
-  { role: "Intern, Software Development", co: "Lumen Grid", from: 74, to: 81, req: ["9 of 14", "10 of 14"] },
-  { role: "Backend Developer, Graduate", co: "Northwind", from: 63, to: 70, req: ["6 of 11", "7 of 11"] },
+  { role: "Data Analyst", co: "Northwind", from: 70, to: 77, req: ["6 of 10", "7 of 10"] },
+  { role: "Business Analyst, Graduate", co: "Pinecrest", from: 63, to: 70, req: ["6 of 11", "7 of 11"] },
 ];
 
 function useTween(target: number, ms = 1000) {
@@ -187,7 +187,7 @@ export default function ScoreLoopSection() {
             <div className="sd-loop-card">
               <div className="sd-loop-kicker">LEARNING ROADMAP</div>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginTop: 8 }}>
-                <div style={{ fontSize: 15.5, fontWeight: 600, color: "#14102b" }}>Django backend development</div>
+                <div style={{ fontSize: 15.5, fontWeight: 600, color: "#14102b" }}>Data pipelines on AWS</div>
                 <span className="sd-loop-badge" data-on={step >= 1 ? "true" : "false"}>
                   {step >= 1 ? "Completed" : "Lesson 9 of 11"}
                 </span>
@@ -202,7 +202,7 @@ export default function ScoreLoopSection() {
               <div style={{ marginTop: 10, fontSize: 13.5, color: "#6b6880" }}>SQL for data work, SkillDrift, Aug 2026</div>
               <div className="sd-loop-newline" data-on={step >= 2 ? "true" : "false"}>
                 <Check size={14} strokeWidth={2.4} />
-                Django backend development, SkillDrift, Oct 2026
+                Data pipelines on AWS, SkillDrift, Oct 2026
               </div>
             </div>
 

@@ -18,6 +18,7 @@ import ShotPicture from "@/components/ShotPicture";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { campaignFor } from "@/lib/cta";
+import { matchShotFor } from '@/lib/shots';
 import { DEMAND_PAGES, SNAPSHOT_DATE, SNAPSHOT_LABEL, getDemandPage, sameIndustry, sameRole } from '@/lib/skillsDemand';
 
 const SITE = 'https://www.skilldrift.ai';
@@ -66,6 +67,7 @@ export default async function SkillsDemandPage({ params }: { params: Promise<{ s
   const url = `${SITE}/skills/in-demand/${p.slug}`;
   const campaign = campaignFor(`/skills/in-demand/${p.slug}`);
   const top = p.skills[0];
+  const shot = matchShotFor(DEMAND_PAGES.findIndex((x) => x.slug === p.slug));
   const others = sameRole(p).slice(0, 6);
   const neighbours = sameIndustry(p).slice(0, 6);
 
@@ -154,7 +156,7 @@ export default async function SkillsDemandPage({ params }: { params: Promise<{ s
             Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
           </p>
           <div style={{ marginTop: 36, maxWidth: 980, borderRadius: 22, overflow: 'hidden', border: '1px solid var(--line)', boxShadow: '0 30px 70px -20px rgba(76,52,180,.28)' }}>
-            <ShotPicture desktop="/assets/shots/job-match-analysis.png" mobile="/assets/shots/m-job-match-analysis.png" alt="A real job scored 75 out of 100 in SkillDrift, with the skills the person already has and the ones to close" sizes="(max-width: 760px) 100vw, 980px" />
+            <ShotPicture desktop={shot.desktop} mobile={shot.mobile} alt={shot.alt} sizes="(max-width: 760px) 100vw, 980px" />
           </div>
           <WhySkillDrift />
         </Sect>
