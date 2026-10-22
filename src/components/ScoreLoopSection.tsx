@@ -18,7 +18,7 @@ import TrackedLink from "./TrackedLink";
  */
 
 const steps = [
-  { title: "You finish a course", body: "A free course built from the gap your jobs ask about, sized to your hours." },
+  { title: "You finish a course", body: "A course for the skill your jobs ask about, sized to the hours you have." },
   { title: "The certificate goes into your resume", body: "Written in the moment you finish. No re-uploading, no re-formatting." },
   { title: "Every job you track re-scores", body: "Free, every time. You see which roles just came within reach." },
 ];

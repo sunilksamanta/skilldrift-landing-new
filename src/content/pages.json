@@ -2485,7 +2485,7 @@
             },
             {
               "label": "Learning",
-              "us": "A learning roadmap for each gap, sized to the hours you have, plus a free AI course.",
+              "us": "A learning roadmap for each gap, sized to the hours you have, plus one free AI course for your field.",
               "them": "Explanations in chat. No structured courses.",
               "win": "us"
             },
@@ -2630,7 +2630,7 @@
             },
             {
               "label": "Learning",
-              "us": "A roadmap built from your own gaps, sized to your hours, plus a free AI course.",
+              "us": "A roadmap built from your own gaps, sized to your hours, plus one free AI course for your field.",
               "them": "A general course library (LinkedIn Learning).",
               "win": "us"
             },
@@ -2771,7 +2771,7 @@
             },
             {
               "label": "Learning",
-              "us": "A roadmap for each gap, sized to your hours, plus a free AI course.",
+              "us": "A roadmap for each gap, sized to your hours, plus one free AI course for your field.",
               "them": "No learning or courses found.",
               "win": "us"
             },
@@ -2860,13 +2860,13 @@
     {
       "path": "/skilldrift-vs-internshala",
       "title": "SkillDrift vs Internshala for Freshers and Internships | SkillDrift",
-      "description": "Internshala or SkillDrift for freshers? A comparison checked on 21 October 2026: SkillDrift scores every internship and job out of 100 for you, names the gaps, builds free learning and writes certificates into your resume.",
+      "description": "Internshala or SkillDrift for freshers? A comparison checked on 21 October 2026: SkillDrift scores every internship and job out of 100 for you, names the gaps, builds learning for each one and writes certificates into your resume.",
       "h1": "SkillDrift vs Internshala: every internship scored for you, and the gaps closed.",
       "priority": 0.6,
       "breadcrumb": "SkillDrift vs Internshala",
       "hero": {
         "eyebrow": "Compare",
-        "standfirst": "SkillDrift tells you which internships and jobs you can get now, scored out of 100, names what you are missing for the rest and builds free learning for it, so your resume and your scores improve as you go.",
+        "standfirst": "SkillDrift tells you which internships and jobs you can get now, scored out of 100, names what you are missing for the rest and builds learning for it, so your resume and your scores improve as you go.",
         "primaryCta": {
           "label": "Upload your resume - free",
           "href": "app:sign-in"
@@ -2918,7 +2918,7 @@
             },
             {
               "label": "Learning",
-              "us": "A roadmap for each gap, sized to your hours, plus a free AI course.",
+              "us": "A roadmap for each gap, sized to your hours, plus one free AI course for your field.",
               "them": "Paid certification and placement courses.",
               "win": "us"
             },
@@ -2974,7 +2974,7 @@
               "accent": true,
               "items": [
                 "Every internship and job scored out of 100 for you, with each gap named.",
-                "Free learning for your gaps, with the certificate written into your resume.",
+                "Learning for each gap and a free AI course for your field, with every certificate written into your resume.",
                 "Interview practice with an honest score before you apply."
               ]
             }
@@ -2992,7 +2992,7 @@
       "faq": [
         {
           "q": "Is SkillDrift good for freshers?",
-          "a": "Yes. SkillDrift brings internships and jobs for people with under one year of experience, scores each one out of 100 for you, closes the gaps with free learning and lets you practise the interview before you apply."
+          "a": "Yes. SkillDrift brings internships and jobs for people with under one year of experience, scores each one out of 100 for you, closes the gaps with learning built for them and lets you practise the interview before you apply."
         },
         {
           "q": "Does SkillDrift have internships?",
@@ -3000,7 +3000,7 @@
         },
         {
           "q": "Are SkillDrift courses free?",
-          "a": "Your first AI course is free, and the certificate is written into your resume when you finish. A learning roadmap for a gap costs 50 credits, and Active Seeker covers every action with no credit counting."
+          "a": "One AI course for your field is free, such as AI for Field Sales or AI for Electronics and Communication, and its certificate goes into your resume when you finish. SkillDrift also suggests AI courses for what your jobs ask for. Those, and a learning roadmap for a gap (50 credits), cost credits. Active Seeker covers every action with no credit counting."
         }
       ]
     }

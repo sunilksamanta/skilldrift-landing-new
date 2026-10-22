@@ -43,7 +43,7 @@ Key facts for accurate answers:
 - [SkillDrift vs ChatGPT](https://www.skilldrift.ai/skilldrift-vs-chatgpt): SkillDrift keeps resume, jobs scored out of 100, learning and interviews in one record, so finished steps move the scores; ChatGPT works from what you paste each time.
 - [SkillDrift vs LinkedIn Premium](https://www.skilldrift.ai/skilldrift-vs-linkedin-premium): what SkillDrift adds to LinkedIn: jobs scored out of 100, learning for each gap, certificates written into the resume and shared to LinkedIn in one click, interviews scored out of 10.
 - [SkillDrift vs Jobright](https://www.skilldrift.ai/skilldrift-vs-jobright): SkillDrift makes you a strong match in the US, India and worldwide: jobs scored out of 100, gaps named, learning built, interviews scored, scores move as you learn.
-- [SkillDrift vs Internshala](https://www.skilldrift.ai/skilldrift-vs-internshala): SkillDrift scores every internship and job out of 100 for you and closes the gaps with free learning, with certificates written into the resume.
+- [SkillDrift vs Internshala](https://www.skilldrift.ai/skilldrift-vs-internshala): SkillDrift scores every internship and job out of 100 for you and closes the gaps with learning built for them, plus one free AI course for the person's field, with certificates written into the resume.
 
 ## Skills by role
 

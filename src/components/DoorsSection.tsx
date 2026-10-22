@@ -26,8 +26,8 @@ const doors = [
         body: "Your projects and coursework are read as skills, and every opening is scored out of 100 with the reasons shown.",
       },
       {
-        title: "Close the gaps, free",
-        body: "Your free AI course comes from your own gaps. The certificate goes into your resume and your scores move.",
+        title: "Close the gaps",
+        body: "Start with a free AI course for your field, such as AI for Field Sales. SkillDrift then suggests courses for what your jobs ask for. Each certificate goes into your resume and your scores move.",
       },
       {
         title: "Apply and practise",
