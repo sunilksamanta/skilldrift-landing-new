@@ -1171,7 +1171,7 @@
     {
       "path": "/learning-sprints",
       "title": "Upskilling Courses Built from Your Own Skill Gap | SkillDrift",
-      "description": "Short upskilling sprints built from the gaps in your own resume and sized to the hours you have each week. Finish one and your readiness and job scores move, and the certificate goes onto your resume.",
+      "description": "Upskilling built from the gaps in your own resume, plus a free AI course with certificate for your field. Finish one and your job scores move and the certificate goes onto your resume.",
       "h1": "Close one named skill gap at a time, in short sprints.",
       "priority": 0.8,
       "breadcrumb": "Learning sprints",
@@ -1346,8 +1346,8 @@
     {
       "path": "/jobs",
       "title": "Entry Level Jobs and Internships, Scored for You | SkillDrift",
-      "description": "Entry level jobs, fresher jobs and internships scored out of 100 against your resume. Only jobs with a trusted apply link, and closed jobs are never charged. Upload your resume free.",
-      "h1": "Jobs at every level, from internships up, scored out of 100 for you.",
+      "description": "Entry level jobs, fresher jobs, internships and jobs at every level, scored out of 100 against your resume. Only jobs with a trusted apply link, and closed jobs are never charged. Upload your resume free.",
+      "h1": "Entry level jobs, internships and jobs at every level, scored out of 100 for you.",
       "priority": 0.9,
       "breadcrumb": "Jobs",
       "hero": {

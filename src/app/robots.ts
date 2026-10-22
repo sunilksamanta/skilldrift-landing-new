@@ -14,7 +14,8 @@ export default function robots(): MetadataRoute.Robots {
          * AI crawlers at the plain-text summary of what the site offers, the
          * same way `Sitemap` points search crawlers at the URL list.
          */
-        other: { Llms: `${SITE_URL}/llms.txt` },
+        // llms-full.txt is the full text of every page (npm run llms:full).
+        other: { Llms: `${SITE_URL}/llms.txt`, "Llms-full": `${SITE_URL}/llms-full.txt` },
       },
     ],
     sitemap: [

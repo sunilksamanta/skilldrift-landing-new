@@ -49,6 +49,10 @@ export const faqs = [
     a: "A resume builder formats what you already wrote. SkillDrift starts from the role you want, tells you what is missing, helps you close it, and keeps your resume current as you do. The resume is an output of the loop, not the product.",
   },
   {
+    q: "I finished courses but I am still not getting interviews. Why?",
+    a: "Usually the course did not match what the jobs you apply to ask for, or it never reached your resume. SkillDrift starts from those jobs: each one is scored out of 100 and the missing skills are named, so your upskilling goes where it counts. Finish and verify a roadmap and the certificate is written into your resume, and every job that asks for that skill re-scores by the amount shown before you started. We call this skill compounding: every real step adds to the same scores.",
+  },
+  {
     q: "How much does finishing a course raise my scores?",
     a: "Each roadmap shows how much it will raise your readiness before you start. Finish and verify it, and readiness rises by exactly that amount, along with every job that asks for that skill. SkillDrift shows you the number rather than promising that one course makes you job ready.",
   },

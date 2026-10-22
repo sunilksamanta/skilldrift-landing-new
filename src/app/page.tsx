@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AiCourseSection from "@/components/AiCourseSection";
 import CareerLifeSection from "@/components/CareerLifeSection";
 import CtaSection from "@/components/CtaSection";
 import DoorsSection from "@/components/DoorsSection";
@@ -49,6 +50,7 @@ export default function Home() {
         <DoorsSection />
         <ProductShowcase />
         <ScoreLoopSection />
+        <AiCourseSection />
         <LoopSection />
         <CareerLifeSection />
         <RewriteSection />
