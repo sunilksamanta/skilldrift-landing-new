@@ -224,7 +224,7 @@ export default function AtsScoreCheckerPage() {
             A checker gives you a score and stops. In SkillDrift the score is the first step: your matched jobs and internships are scored out of 100, every gap is named and turns into learning, and finishing it moves your scores. Your resume updates itself as you go.
           </p>
           <div style={{ marginTop: 36, maxWidth: 980, borderRadius: 22, overflow: "hidden", border: "1px solid var(--line)", boxShadow: "0 30px 70px -20px rgba(76,52,180,.28)" }}>
-            <ShotPicture desktop="/assets/shots/job-match-analysis.png" mobile="/assets/shots/m-job-match-analysis.png" alt="A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close" sizes="(max-width: 760px) 100vw, 980px" />
+            <ShotPicture desktop="/assets/shots/job-match-analysis.png" mobile="/assets/shots/m-job-match-analysis.png" alt="A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the six skills the person already has and the four to close" sizes="(max-width: 760px) 100vw, 980px" />
           </div>
         </Section>
 

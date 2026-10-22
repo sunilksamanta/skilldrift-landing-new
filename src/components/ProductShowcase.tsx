@@ -19,7 +19,7 @@ const goals = [
     copy: "Internships and first jobs scored out of 100 with the reasons shown, the next skill to learn named, and your plan for today, now and next beside them. Finish a step and the scores move.",
     desktop: "/assets/shots/home-product.png",
     mobile: "/assets/shots/m-home-product.png",
-    alt: "The SkillDrift dashboard for an internship goal: the best move today, a Product Management internship scored 75 out of 100, the next roadmap, matched internships, and the plan for today, now and next",
+    alt: "The SkillDrift dashboard for an internship goal: the best move today, an electrical engineering internship scored 74 out of 100, the next roadmap, matched internships, and the plan for today, now and next",
   },
   {
     tab: "A new job or field",
@@ -27,7 +27,7 @@ const goals = [
     copy: "Jobs in your field scored out of 100, the best one to act on today, and the steps that get you there: tailor your resume to the job, check each requirement before you apply, practise the interview.",
     desktop: "/assets/shots/home-product-newjob.png",
     mobile: "/assets/shots/m-home-product-newjob.png",
-    alt: "The SkillDrift dashboard for a new job in your field: a Data Analyst role scored 70 out of 100 as the best move today, more jobs in the same role scored out of 100, and the steps to tailor, check and practise",
+    alt: "The SkillDrift dashboard for a new job in your field: a tax manager role scored 78 out of 100 as the best move today for an accountant, more jobs in the same role scored out of 100, and the steps to tailor, check and practise",
   },
   {
     tab: "Grow where I am",
@@ -35,7 +35,7 @@ const goals = [
     copy: "Your strength in the role you have and the one gap that moves your readiness most, with what each roadmap adds before you start. Your next role is already on the plan for when you are ready.",
     desktop: "/assets/shots/home-product-grow.png",
     mobile: "/assets/shots/m-home-product-grow.png",
-    alt: "The SkillDrift dashboard for growing in your current role: 53% strength as a Senior Data Analyst, the top gap that adds 13% readiness, and Lead Data Analyst as the next role on the plan",
+    alt: "The SkillDrift dashboard for growing in your current role: 61% strength as a maintenance engineer, the top gap that adds 10% readiness, and Senior Maintenance Engineer as the next role on the plan",
   },
 ];
 

@@ -42,7 +42,7 @@ export const faqs = [
   },
   {
     q: "Is there a free AI course on SkillDrift?",
-    a: "Yes. Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication, and the certificate goes into your resume when you finish. SkillDrift also reads the jobs you match in your own role. When enough of them ask for AI tools, it builds an AI course for that role, such as AI tools for data analysts, and shows you the postings that ask for it. That course is 50 credits, or included in Active Seeker.",
+    a: "Yes. Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication, and the certificate goes into your resume when you finish. SkillDrift also reads the jobs you match in your own role. When enough of them ask for AI tools, it builds an AI course for that role, such as AI tools for digital marketing, and shows you the postings that ask for it. That course is 50 credits, or included in Active Seeker.",
   },
   {
     q: "How is this different from a resume builder?",

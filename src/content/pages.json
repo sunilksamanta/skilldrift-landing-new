@@ -265,7 +265,7 @@
           "href": "#cost"
         },
         "image": "/assets/shots/tailor-apply-kit.png",
-        "imageAlt": "The Apply Kit for a Data Analyst job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site",
+        "imageAlt": "The Apply Kit for a Senior Financial Accountant job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site",
         "imageMobile": "/assets/shots/m-tailor-apply-kit.png"
       },
       "sections": [
@@ -570,7 +570,7 @@
           "href": "#scorecard"
         },
         "image": "/assets/shots/interview-report.png",
-        "imageAlt": "A sample voice practice report for a made-up candidate: 7.1 out of 10, a medium hire chance and the question to work on first",
+        "imageAlt": "A SkillDrift text interview report for a paid media executive role: 6.8 out of 10, a medium hire chance, the three answers to work on first and a roadmap from the gaps",
         "imageMobile": "/assets/shots/m-interview-report.png"
       },
       "sections": [
@@ -749,7 +749,7 @@
           "href": "/jobs"
         },
         "image": "/assets/shots/job-match-analysis.png",
-        "imageAlt": "A Data Analyst job for someone with experience, scored 70 out of 100, with the six skills the person already has, the four to close and the next step",
+        "imageAlt": "A tax manager job for an experienced accountant, scored 78 out of 100, with the five skills the person already has, the three to close and the next step",
         "imageMobile": "/assets/shots/m-job-match-analysis.png"
       },
       "sections": [
@@ -891,7 +891,7 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/career-path.png",
-        "imageAlt": "A Senior Data Analyst path at 53% strength with each step marked, the top gap that moves readiness most, and the next role, Lead Data Analyst, already on the plan",
+        "imageAlt": "A maintenance engineer's path at 61% strength with each step marked, the readiness and top gap that move it most, the path card, and the next role, Senior Maintenance Engineer, already on the plan",
         "imageMobile": "/assets/shots/m-career-path.png"
       },
       "sections": [
@@ -1039,7 +1039,7 @@
           "href": "/pricing"
         },
         "image": "/assets/shots/benchmarking.png",
-        "imageAlt": "Readiness for Senior Data Analyst at 53%: the top gap, named in 7 of the person's 52 jobs, the skills inside it, and the next gaps with how much each adds",
+        "imageAlt": "Readiness for a maintenance engineer at 61%: the top gap, predictive maintenance and condition monitoring, the skills inside it, and the next gaps with how much each adds",
         "imageMobile": "/assets/shots/m-benchmarking.png"
       },
       "sections": [
@@ -1188,7 +1188,7 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/learning-roadmaps.png",
-        "imageAlt": "A learning roadmap for Causal Inference and Measurement Rigor, three weeks at an advanced level, with the first sprint ready and readiness rising to 66% when it is finished",
+        "imageAlt": "A learning roadmap for Advanced Reliability and Asset Management, four weeks at an advanced level, with the first sprint ready and readiness rising to 72% when it is finished",
         "imageMobile": "/assets/shots/m-learning-roadmaps.png"
       },
       "sections": [
@@ -1226,7 +1226,7 @@
           "heading": "Learn the AI your jobs are asking for.",
           "copy": "Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication. Then SkillDrift goes a level deeper: it reads the jobs you match in your own role and builds an AI course for that role, from what those employers ask for.",
           "items": [
-            "Read from your own matches. SkillDrift counts how many of your jobs ask for AI tools such as ChatGPT, Copilot, LLMs or generative AI, for example 24 of your 60.",
+            "Read from your own matches. SkillDrift counts how many of your jobs ask for AI tools such as ChatGPT, Copilot, LLMs or generative AI, for example 9 of your 60.",
             "Quoted, so you can check it. You see the lines from two different employers before you spend anything.",
             "Built for your role, not a general AI class. The course covers what you will use AI for at work, such as drafting insights from your analysis or writing and checking queries.",
             "Shown only when it is real: when enough of your matches ask for it and your role uses AI at work. A role that does not use it never sees the offer.",
@@ -1234,7 +1234,7 @@
           ],
           "image": "/assets/shots/ai-in-field.png",
           "imageMobile": "/assets/shots/m-ai-in-field.png",
-          "imageAlt": "AI in your field in SkillDrift: AI tools for data analysts, about 2 to 4 weeks, because 24 of the person's 60 matches ask for AI tools, with quotes from two employers' postings, where AI helps in the role, and the price before building"
+          "imageAlt": "AI in your field in SkillDrift: AI tools for digital marketing, about 2 to 4 weeks, because 9 of the person's 60 matches ask for AI tools, with quotes from two employers' postings, where AI helps in the role, and the price before building"
         },
         {
           "type": "cards",
@@ -1362,7 +1362,7 @@
           "href": "/job-match"
         },
         "image": "/assets/shots/jobs-board.png",
-        "imageAlt": "The SkillDrift job board for a Data Analyst: new matches scored out of 100, the next role and the current role, a shortlist with apply links, and columns for applied, interviewing and outcome",
+        "imageAlt": "The SkillDrift job board for an experienced accountant: new matches scored out of 100, the next role and the current role, a shortlist with apply links, and columns for applied, interviewing and outcome",
         "imageMobile": "/assets/shots/m-jobs-board.png"
       },
       "sections": [
@@ -1555,7 +1555,7 @@
           "href": "/how-it-works"
         },
         "image": "/assets/shots/progression-rail.png",
-        "imageAlt": "The plan for today, now and next for a Senior Data Analyst, with the next role, Lead Data Analyst, set to start in November",
+        "imageAlt": "The plan for today, now and next for a maintenance engineer, with the next role, Senior Maintenance Engineer, set to start in November",
         "imageMobile": "/assets/shots/m-progression-rail.png"
       },
       "sections": [
@@ -1734,9 +1734,9 @@
           "label": "See how it works",
           "href": "/how-it-works"
         },
-        "image": "/assets/shots/job-match-analysis.png",
-        "imageAlt": "A job scored out of 100 against what your resume already shows, with the skills that count and the ones to close",
-        "imageMobile": "/assets/shots/m-job-match-analysis.png"
+        "image": "/assets/shots/career-change.png",
+        "imageAlt": "An accountant's path to Financial Analyst in SkillDrift: 42% role transition readiness, the skills that carry over from their experience, the ones that do not carry over yet, and the skills compared with what the role needs",
+        "imageMobile": "/assets/shots/m-career-change.png"
       },
       "sections": [
         {
@@ -2614,7 +2614,7 @@
         },
         "image": "/assets/shots/job-match-analysis.png",
         "imageMobile": "/assets/shots/m-job-match-analysis.png",
-        "imageAlt": "A SkillDrift job analysis: a Data Analyst job scored 70 out of 100, with what you have and what to close"
+        "imageAlt": "A SkillDrift job analysis: a tax manager job scored 78 out of 100, with what you have and what to close"
       },
       "sections": [
         {

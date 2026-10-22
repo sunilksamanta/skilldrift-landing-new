@@ -16,7 +16,7 @@ A chatbot reads your resume once. SkillDrift remembers every step.
 [Image: Download on the App Store]
 [Image: Get it on Google Play]
 Gaps & job matches always free
-EXAMPLE · DATA ANALYST
+EXAMPLE · SALES EXECUTIVE
 Good fit+7 after one course
 ## Start with your resume.
 Takes about a minute
@@ -42,7 +42,7 @@ In the product
 ## Every day starts with one best move.
 Internships and first jobs scored out of 100 with the reasons shown, the next skill to learn named, and your plan for today, now and next beside them. Finish a step and the scores move.
 First job or internship A new job or field Grow where I am
-[Image: The SkillDrift dashboard for an internship goal: the best move today, a Product Management internship scored 75 out of 100, the next roadmap, matched internships, and the plan for today, now and next]
+[Image: The SkillDrift dashboard for an internship goal: the best move today, an electrical engineering internship scored 74 out of 100, the next roadmap, matched internships, and the plan for today, now and next]
 Nobody else does this
 ## Finish a step. Watch your scores move.
 Your resume, your courses and your jobs live in one record. So what you finish shows up everywhere at once, and your resume never goes stale.
@@ -53,44 +53,44 @@ Share the certificate to LinkedIn in one click and the 50 credits it cost to iss
 See what moves your scores
 Example See what moves your scores →
 LEARNING ROADMAP
-Data pipelines on AWS
+Predictive maintenance basics
 Lesson 9 of 11
 YOUR RESUME · CERTIFICATIONS
-SQL for data work, SkillDrift, Aug 2026
-Data pipelines on AWS, SkillDrift, Oct 2026
+PLC troubleshooting, SkillDrift, Aug 2026
+Predictive maintenance basics, SkillDrift, Oct 2026
 JOBS YOU TRACK · SCORED OUT OF 100
-Data Analyst
-Northwind · 6 of 10 requirements met
+Maintenance Engineer
+Voltaic · 6 of 10 requirements met
 +7
-Business Analyst, Graduate
+Reliability Engineer
 Pinecrest · 6 of 11 requirements met
 +7
 AI courses
 ## A free AI course for your field. Then the AI your jobs ask for.
 Most AI courses are the same for everyone. SkillDrift starts from your field, then from the jobs you actually match, so you learn the AI employers in your role are asking for right now.
 - Free, for your field Your first AI course is on us, built for your field, such as AI for Field Sales or AI for Electronics and Communication. Finish it and the certificate goes into your resume.
-- Then AI for your exact role SkillDrift reads the jobs you match. When enough of them ask for AI tools such as ChatGPT, Copilot or generative AI, it builds an AI course for your role, such as AI tools for data analysts.
-- You see why before you pay How many of your jobs ask, for example 24 of your 60, with lines quoted from two employers. 50 credits, or included in Active Seeker.
+- Then AI for your exact role SkillDrift reads the jobs you match. When enough of them ask for AI tools such as ChatGPT, Copilot or generative AI, it builds an AI course for your role, such as AI tools for digital marketing.
+- You see why before you pay How many of your jobs ask, for example 9 of your 60, with lines quoted from two employers. 50 credits, or included in Active Seeker.
 See how the AI course is built
-[Image: An AI course in SkillDrift built from the jobs a person matches: AI tools for data analysts, because 24 of their 60 matches ask for AI tools, with lines quoted from two employers and the price before building]
+[Image: An AI course in SkillDrift built from the jobs a person matches: AI tools for digital marketing, because 9 of their 60 matches ask for AI tools, with lines quoted from two employers and the price before building]
 The closed loop
 ## Most tools hand you one piece. SkillDrift closes the loop.
-Every other product gives you one arc of this circle: a course library, a resume builder, a job board. The loop is why your score moves instead of your bookmarks piling up. What is closed loop career development?
-[Image: SkillDrift]
-Gaps shrink in real time
-Then round again
-1 Upload
-2 Score
-3 Roadmap
-4 Learn
-5 Certify
-6 Rise
-- 01 Upload We read your skills straight from your resume. No forms to fill.
-- 02 Score Pick a target role and see your match out of 100, with each missing skill named.
-- 03 Roadmap The exact skills to close it, in the order that moves your score.
-- 04 Learn Short sprints built from your own gaps and sized to your hours.
-- 05 Certify Finish a course and the certificate writes itself into your resume.
-- 06 Rise Your score re-scores itself free, and better roles unlock. Then round again.
+A course site stops when the course ends. A job board stops at the listing. SkillDrift carries every step into the next, so each one raises your scores, and it keeps going after you are hired. What is closed loop career development?
+Example
+Read
+Your skills, compared with the role
+1 Upload 2 Match 3 Close 4 Prove 5 Apply 6 Grow
+1. Upload 2. Match 3. Close 4. Prove 5. Apply 6. Grow
+Step 1 of 6
+### Upload
+SkillDrift reads your skills straight from your resume and compares them with the role. No forms to fill.
+[Image: An accountant's skills read from their resume and compared with a Financial Analyst role: what carries over and what does not yet]
+How your skills are read
+- Course sites stop at Close.
+- Job boards stop at Match.
+- Resume tools stop at Apply.
+- SkillDrift keeps going after the hire.
+Start step 1: upload your resume
 For your whole career
 ## Every goal, one career guide. From your first internship to your next promotion.
 Pick the goal you have today and SkillDrift plans the steps. It stays with you after you get there. Every course you finish and every month in a role adds to the same skill scores, so your growth is tracked, not guessed. See how SkillDrift follows your career
@@ -167,7 +167,7 @@ See skill benchmarking
 07 Learning sprints Close one named skill gap at a time, in short sprints.
 A learning sprint is built from a gap your own report named, not from a catalogue. It is short enough to finish, and when you finish it the certificate writes itself into your resume and your readiness percentage moves. Building the roadmap that produces the sprints is 50 credits, the learning content itself is free, and the certificate is 50.
 See learning sprints
-[Image: The Apply Kit for a Data Analyst job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site]
+[Image: The Apply Kit for a Senior Financial Accountant job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site]
 Proof
 ## Don’t take our word for it. Look at the output.
 No signup, no email. Open a real report and judge the quality yourself.
@@ -191,7 +191,7 @@ Layla Haddad · Senior leader · Dubai
 Jobs & internships
 ## Real roles. Ranked for you, out of 100.
 Including internships and openings for people with under a year of experience, scored the same way as everything else, so you know where you actually stand. Only jobs with a trusted apply link, checked before you apply, and never charged once closed.
-[Image: The SkillDrift job board for a Data Analyst: new matches scored out of 100, the next role and the current role, and a shortlist where each job has a tailor step and an apply link]
+[Image: The SkillDrift job board for an experienced accountant: new matches scored out of 100, the next role and the current role, and a shortlist where each job has a tailor step and an apply link]
 Browse matched jobs
 Pricing
 ## Diagnosis is free. You pay when you’re ready to apply.
@@ -247,7 +247,7 @@ The certificate is added to your resume automatically, with no re-uploading and 
 Is the learning on SkillDrift personalised to me?
 Yes. SkillDrift starts from the gaps your resume, a job description or a mock interview shows, and builds each learning roadmap around those gaps and the role you are aiming at. When you finish, your gaps and job scores update and the certificate is added to your resume. We call this closed loop career development.
 Is there a free AI course on SkillDrift?
-Yes. Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication, and the certificate goes into your resume when you finish. SkillDrift also reads the jobs you match in your own role. When enough of them ask for AI tools, it builds an AI course for that role, such as AI tools for data analysts, and shows you the postings that ask for it. That course is 50 credits, or included in Active Seeker.
+Yes. Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication, and the certificate goes into your resume when you finish. SkillDrift also reads the jobs you match in your own role. When enough of them ask for AI tools, it builds an AI course for that role, such as AI tools for digital marketing, and shows you the postings that ask for it. That course is 50 credits, or included in Active Seeker.
 How is this different from a resume builder?
 A resume builder formats what you already wrote. SkillDrift starts from the role you want, tells you what is missing, helps you close it, and keeps your resume current as you do. The resume is an output of the loop, not the product.
 I finished courses but I am still not getting interviews. Why?
@@ -268,7 +268,7 @@ No card required · first application free · takes 2 minutes
 OR GET THE APP
 [Image: Download on the App Store]
 [Image: Get it on Google Play]
-[Image: SkillDrift on a phone: the best move today, an internship scored 75 out of 100 with 5 of 8 requirements matched]
+[Image: SkillDrift on a phone: the best move today, an electrical engineering internship scored 74 out of 100 with 4 of 8 requirements matched]
 
 ---
 
@@ -364,7 +364,7 @@ Upload your resume - free See how the loop works
 ## Tailor your resume to one job without rewriting it from scratch.
 SkillDrift keeps one master resume and generates a fresh ATS-optimised version for each job you apply to. What changes is emphasis and ordering. Every figure on the tailored version is one you supplied, and your master copy is never altered. Seeing how your resume reads to the bots, as a four level ATS band, costs nothing.
 See resume tailoring
-[Image: The Apply Kit for a Data Analyst job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site]
+[Image: The Apply Kit for a Senior Financial Accountant job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site]
 02 Resume rewrite
 ## Rewrite your resume around what happened, not what you were responsible for.
 Most resumes list duties. SkillDrift reads each line, asks what actually resulted from it, and rewrites it around the outcome. It never invents a number: every figure comes from you. The result is the same job history reading as evidence rather than as a job description.
@@ -374,27 +374,27 @@ See resume rewrite
 ## Practise the interview out loud, and get an honest score out of 10.
 A chatbot can ask you questions in text. A real interview is spoken, under time pressure, with follow-up questions. SkillDrift runs mock interviews in text, recorded voice and live voice, and the live interview runs in English and in Hindi. Every report gives a score out of 10, your hire chance and the questions to work on first, and every weak answer can become a learning roadmap.
 See interview prep
-[Image: A sample voice practice report for a made-up candidate: 7.1 out of 10, a medium hire chance and the question to work on first]
+[Image: A SkillDrift text interview report for a paid media executive role: 6.8 out of 10, a medium hire chance, the three answers to work on first and a roadmap from the gaps]
 04 Job matching
 ## See which jobs you can get now, and what to learn for the rest.
 SkillDrift reads your resume against each open role and scores the match out of 100, with the reasons behind the number named rather than hidden. Internships and entry level roles are included for anyone with under a year of experience. Basic analysis on any role costs nothing.
 See job matching
-[Image: A Data Analyst job for someone with experience, scored 70 out of 100, with the six skills the person already has, the four to close and the next step]
+[Image: A tax manager job for an experienced accountant, scored 78 out of 100, with the five skills the person already has, the three to close and the next step]
 05 Career roadmap
 ## Build a career plan from your resume, for the role you actually want.
 Pick the role you want and SkillDrift reads your current resume against it, names every skill standing between the two, and orders them by which one moves your readiness most. The path itself is free. Building the full roadmap, with the learning attached to each gap, is 50 credits.
 See career roadmap
-[Image: A Senior Data Analyst path at 53% strength with each step marked, the top gap that moves readiness most, and the next role, Lead Data Analyst, already on the plan]
+[Image: A maintenance engineer's path at 61% strength with each step marked, the readiness and top gap that move it most, the path card, and the next role, Senior Maintenance Engineer, already on the plan]
 06 Skill benchmarking
 ## See exactly which skills are missing between you and the role you want.
 SkillDrift reads your resume against the role you actually want and names every missing skill individually, rather than returning one overall percentage. Your named gaps and your ATS resume score as a four level band come back without creating an account, and every job and internship is scored out of 100 against your actual skills.
 See skill benchmarking
-[Image: Readiness for Senior Data Analyst at 53%: the top gap, named in 7 of the person's 52 jobs, the skills inside it, and the next gaps with how much each adds]
+[Image: Readiness for a maintenance engineer at 61%: the top gap, predictive maintenance and condition monitoring, the skills inside it, and the next gaps with how much each adds]
 07 Learning sprints
 ## Close one named skill gap at a time, in short sprints.
 A learning sprint is built from a gap your own report named, not from a catalogue. It is short enough to finish, and when you finish it the certificate writes itself into your resume and your readiness percentage moves. Building the roadmap that produces the sprints is 50 credits, the learning content itself is free, and the certificate is 50.
 See learning sprints
-[Image: A learning roadmap for Causal Inference and Measurement Rigor, three weeks at an advanced level, with the first sprint ready and readiness rising to 66% when it is finished]
+[Image: A learning roadmap for Advanced Reliability and Asset Management, four weeks at an advanced level, with the first sprint ready and readiness rising to 72% when it is finished]
 Where to start
 ## Four more places to start.
 Pick the one that matches what you need today. Each leads into the same record, so nothing you do is wasted.
@@ -427,7 +427,7 @@ Jobs & internships
 ## Entry level jobs, internships and jobs at every level, scored out of 100 for you.
 Jobs at every level, fresher roles and internships, each scored out of 100 against what your resume shows. SkillDrift only shows jobs with a trusted apply link, checks that a job is still open before you apply, and never charges for a job that has closed. Shortlist a job and it moves across your job board, so every application is tracked in one place.
 See my matches - free How matching works
-[Image: The SkillDrift job board for a Data Analyst: new matches scored out of 100, the next role and the current role, a shortlist with apply links, and columns for applied, interviewing and outcome]
+[Image: The SkillDrift job board for an experienced accountant: new matches scored out of 100, the next role and the current role, a shortlist with apply links, and columns for applied, interviewing and outcome]
 What we carry
 ## Openings at every level, scored the same way.
 A fresher and a director get the same treatment: a number out of 100, and the named gaps behind it.
@@ -519,7 +519,7 @@ Job matching
 ## See which jobs you can get now, and what to learn for the rest.
 SkillDrift reads your resume against each open role and scores the match out of 100, with the reasons behind the number named rather than hidden. Internships and entry level roles are included for anyone with under a year of experience. Basic analysis on any role costs nothing.
 Check a job match Browse matched jobs
-[Image: A Data Analyst job for someone with experience, scored 70 out of 100, with the six skills the person already has, the four to close and the next step]
+[Image: A tax manager job for an experienced accountant, scored 78 out of 100, with the five skills the person already has, the three to close and the next step]
 How it runs
 ## How do you know if you are a good match for a job?
 A match score you cannot interrogate is a horoscope. Every point here traces back to a named skill.
@@ -582,7 +582,7 @@ Skill benchmarking
 ## See exactly which skills are missing between you and the role you want.
 SkillDrift reads your resume against the role you actually want and names every missing skill individually, rather than returning one overall percentage. Your named gaps and your ATS resume score as a four level band come back without creating an account, and every job and internship is scored out of 100 against your actual skills.
 Get my score - free See what's free
-[Image: Readiness for Senior Data Analyst at 53%: the top gap, named in 7 of the person's 52 jobs, the skills inside it, and the next gaps with how much each adds]
+[Image: Readiness for a maintenance engineer at 61%: the top gap, predictive maintenance and condition monitoring, the skills inside it, and the next gaps with how much each adds]
 What you get
 ## How do you find out which skills you are missing?
 The score is only useful if you can see what produced it. Every point traces to a named skill and a named benchmark.
@@ -649,7 +649,7 @@ Career roadmap
 ## Build a career plan from your resume, for the role you actually want.
 Pick the role you want and SkillDrift reads your current resume against it, names every skill standing between the two, and orders them by which one moves your readiness most. The path itself is free. Building the full roadmap, with the learning attached to each gap, is 50 credits. What is closed loop career development?
 Build my roadmap See how the loop works
-[Image: A Senior Data Analyst path at 53% strength with each step marked, the top gap that moves readiness most, and the next role, Lead Data Analyst, already on the plan]
+[Image: A maintenance engineer's path at 61% strength with each step marked, the readiness and top gap that move it most, the path card, and the next role, Senior Maintenance Engineer, already on the plan]
 How it runs
 ## How do you build a career roadmap for yourself?
 A list of everything you are missing is not a plan. The order is the product.
@@ -714,7 +714,7 @@ Learning sprints
 ## Close one named skill gap at a time, in short sprints.
 A learning sprint is built from a gap your own report named, not from a catalogue. It is short enough to finish, and when you finish it the certificate writes itself into your resume and your readiness percentage moves. Building the roadmap that produces the sprints is 50 credits, the learning content itself is free, and the certificate is 50. What is closed loop career development?
 Find my sprints See how the loop works
-[Image: A learning roadmap for Causal Inference and Measurement Rigor, three weeks at an advanced level, with the first sprint ready and readiness rising to 66% when it is finished]
+[Image: A learning roadmap for Advanced Reliability and Asset Management, four weeks at an advanced level, with the first sprint ready and readiness rising to 72% when it is finished]
 Why sprints
 ## Why do people not finish online courses?
 You do not need a syllabus. You need the four things standing between you and the role, in the order that moves your score.
@@ -729,12 +729,12 @@ Years of experience, a licence or a language are not sold as a course. Add your 
 AI in your field
 ## Learn the AI your jobs are asking for.
 Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication. Then SkillDrift goes a level deeper: it reads the jobs you match in your own role and builds an AI course for that role, from what those employers ask for.
-- Read from your own matches. SkillDrift counts how many of your jobs ask for AI tools such as ChatGPT, Copilot, LLMs or generative AI, for example 24 of your 60.
+- Read from your own matches. SkillDrift counts how many of your jobs ask for AI tools such as ChatGPT, Copilot, LLMs or generative AI, for example 9 of your 60.
 - Quoted, so you can check it. You see the lines from two different employers before you spend anything.
 - Built for your role, not a general AI class. The course covers what you will use AI for at work, such as drafting insights from your analysis or writing and checking queries.
 - Shown only when it is real: when enough of your matches ask for it and your role uses AI at work. A role that does not use it never sees the offer.
 - Finished like any roadmap: hands-on tasks each week, a knowledge check, and a SkillDrift certificate written into your resume. 50 credits, or included in Active Seeker.
-[Image: AI in your field in SkillDrift: AI tools for data analysts, about 2 to 4 weeks, because 24 of the person's 60 matches ask for AI tools, with quotes from two employers' postings, where AI helps in the role, and the price before building]
+[Image: AI in your field in SkillDrift: AI tools for digital marketing, about 2 to 4 weeks, because 9 of the person's 60 matches ask for AI tools, with quotes from two employers' postings, where AI helps in the role, and the price before building]
 Skill compounding
 ## What does finishing a roadmap do to your scores?
 Every real step adds up. Learning, a new role and time in your current role all raise the same skill scores, and everything that depends on them updates by itself.
@@ -787,7 +787,7 @@ Interview prep
 ## Practise the interview out loud, and get an honest score out of 10.
 A chatbot can ask you questions in text. A real interview is spoken, under time pressure, with follow-up questions. SkillDrift runs mock interviews in text, recorded voice and live voice, and the live interview runs in English and in Hindi. Every report gives a score out of 10, your hire chance and the questions to work on first, and every weak answer can become a learning roadmap.
 Start a mock interview See the scorecard
-[Image: A sample voice practice report for a made-up candidate: 7.1 out of 10, a medium hire chance and the question to work on first]
+[Image: A SkillDrift text interview report for a paid media executive role: 6.8 out of 10, a medium hire chance, the three answers to work on first and a roadmap from the gaps]
 Three ways to practise
 ## What is the best way to practise for an interview?
 The same coach and the same scorecard behind all three. Start where it is cheap and move up as the real interview gets closer.
@@ -866,7 +866,7 @@ Resume tailoring
 ## Tailor your resume to one job without rewriting it from scratch.
 SkillDrift keeps one master resume and generates a fresh ATS-optimised version for each job you apply to. What changes is emphasis and ordering. Every figure on the tailored version is one you supplied, and your master copy is never altered. Seeing how your resume reads to the bots, as a four level ATS band, costs nothing.
 Tailor your resume See what it costs
-[Image: The Apply Kit for a Data Analyst job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site]
+[Image: The Apply Kit for a Senior Financial Accountant job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site]
 How it runs
 ## Should you tailor your resume for every job application?
 The posting decides the emphasis. You decide what is true. Nothing is invented in between.
@@ -1039,7 +1039,7 @@ The roles you are nearest to today, scored out of 100 against your real skills.
 After the score
 ## What happens after your ATS score?
 A checker gives you a score and stops. In SkillDrift the score is the first step: your matched jobs and internships are scored out of 100, every gap is named and turns into learning, and finishing it moves your scores. Your resume updates itself as you go.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
 FAQ
 ## Questions people ask
 Is the ATS check free?
@@ -1066,7 +1066,7 @@ Career change
 ## Change careers with a plan: see what transfers, then close the rest.
 Most of what you already do counts in a new field; the question is which parts. Upload your resume and pick the role you want to move into. SkillDrift reads your resume against it, shows the skills that already count, names the ones that do not yet, and builds learning for each gap. Jobs in the new field are scored out of 100, and the scores move as you learn.
 Start from your resume See how it works
-[Image: A job scored out of 100 against what your resume already shows, with the skills that count and the ones to close]
+[Image: An accountant's path to Financial Analyst in SkillDrift: 42% role transition readiness, the skills that carry over from their experience, the ones that do not carry over yet, and the skills compared with what the role needs]
 How it runs
 ## How do you plan a career change?
 Start from what you have, not from a course catalogue.
@@ -1119,7 +1119,7 @@ Career progression
 ## One career guide for every goal, from your first internship to your next promotion.
 Most career tools stop when you get the job. SkillDrift starts from the goal you pick today and stays with you after you reach it: when you get the role, when you start, through every review and into your next move. Every course you finish and every month in a role adds to the same skill scores, so your progress is tracked, not guessed.
 Start from your goal See how the loop works
-[Image: The plan for today, now and next for a Senior Data Analyst, with the next role, Lead Data Analyst, set to start in November]
+[Image: The plan for today, now and next for a maintenance engineer, with the next role, Senior Maintenance Engineer, set to start in November]
 Every goal
 ## Which goals does SkillDrift cover?
 You pick a goal when you start. Your dashboard, the jobs you see first and your next step all follow it, and you can change it at any time in Settings.
@@ -1249,16 +1249,16 @@ Does finishing it move something you can see: your resume, your remaining gaps, 
 The loop, closed
 ## Same job. Same person. Two gaps closed.
 An example of what step 4 looks like. The job did not change. The resume did, without anyone editing it.
-Data Analyst, entry level
+Quality Engineer, entry level
 58 / 100
 Stretch
-Excel SQL, missing Statistics, missing
+Inspection Six Sigma, missing Root cause analysis, missing
 →
 two sprints, built for this gap
-Data Analyst, entry level
+Quality Engineer, entry level
 81 / 100
 Good fit
-Excel SQL Statistics
+Inspection Six Sigma Root cause analysis
 After the job
 ## Does the loop stop when you get the job?
 No. Tap I got the role and the new role goes onto your resume. Each month in it adds to the skills it uses, a logged win can go onto your resume, and before your review you get a draft self-review. The same scores keep moving towards the next role. See how SkillDrift follows your career.
@@ -1488,7 +1488,7 @@ Compare
 ## SkillDrift vs LinkedIn Premium: the plan that gets you the role.
 SkillDrift is the plan behind every application: which jobs you can get now, scored out of 100, what to learn for the rest, and interview practice until it goes well. Your certificates go straight onto your resume and to LinkedIn in one click.
 Upload your resume - free All comparisons
-[Image: A SkillDrift job analysis: a Data Analyst job scored 70 out of 100, with what you have and what to close]
+[Image: A SkillDrift job analysis: a tax manager job scored 78 out of 100, with what you have and what to close]
 Side by side
 ## How does SkillDrift compare with LinkedIn Premium?
 Checked on 21 October 2026, from LinkedIn's own pages and recent reviews. A dot marks where SkillDrift goes further.
@@ -1833,7 +1833,7 @@ Responsible for month end closing and reconciliations.
 ### After
 Ran the month end close for three entities in Xero, and cut it from eight working days to five by automating the bank reconciliations.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 What you see after the upload: each accountant job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real accountant jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -1921,7 +1921,7 @@ Provided administrative support to the management team.
 ### After
 Managed calendars and travel for four senior managers in Outlook, kept the contracts register current in SharePoint, and set up a shared request tracker that reduced repeat questions to the team.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 What you see after the upload: each administrative assistant job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real administrative assistant jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2007,7 +2007,7 @@ Gathered requirements from stakeholders.
 ### After
 Ran six workshops with finance and operations, mapped the invoice approval process, and wrote the requirements that cut approval time from ten days to four.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 What you see after the upload: each business analyst job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real business analyst jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2093,7 +2093,7 @@ Handled customer queries and complaints.
 ### After
 Resolved chat and email cases in Zendesk, kept satisfaction scores above the team target, and rewrote the three saved replies that caused the most follow up questions.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 What you see after the upload: each customer service job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real customer service jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2177,7 +2177,7 @@ Created dashboards in Power BI.
 ### After
 Built a Power BI dashboard on SQL data that showed where returns were rising, which led the team to change one supplier.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 What you see after the upload: each data analyst job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real data analyst jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2267,7 +2267,7 @@ Built ETL pipelines using Spark and Airflow.
 ### After
 Built and ran Spark pipelines in Airflow that load sales data into Snowflake each morning, added data quality checks, and halved the nightly run time.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 What you see after the upload: each data engineer job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real data engineer jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2353,7 +2353,7 @@ Built machine learning models in Python.
 ### After
 Built a churn model in Python on two years of subscription data. The retention team used it to target offers, and kept more customers than with the previous rule based list.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 What you see after the upload: each data scientist job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real data scientist jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2443,7 +2443,7 @@ Designed marketing materials using Adobe Creative Suite.
 ### After
 Designed a new event identity in Illustrator and InDesign, built templates the marketing team reused for a year of campaigns, and prepared all print and social files to the brand guidelines.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 What you see after the upload: each graphic designer job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real graphic designer jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2531,7 +2531,7 @@ Responsible for recruitment and onboarding.
 ### After
 Ran hiring for 40 roles a year across three teams and cut time to productivity for new joiners with a structured first month plan.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 What you see after the upload: each HR professional job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real HR professional jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2617,7 +2617,7 @@ Managed social media accounts for the brand.
 ### After
 Planned and ran the brand Instagram and LinkedIn calendar, tested two new content formats a month, and grew inbound leads from social by a third in six months.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 What you see after the upload: each marketing job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real marketing jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2703,7 +2703,7 @@ Managed the mobile app roadmap.
 ### After
 Owned the mobile app roadmap, cut three low value features after user interviews, and shipped a new onboarding flow that raised week one retention.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 What you see after the upload: each product manager job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real product manager jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2791,7 +2791,7 @@ Managed IT projects from start to finish.
 ### After
 Led a 12 month system migration for three departments, kept a weekly risk log, brought a delayed data transfer back on schedule, and delivered within the agreed budget.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 What you see after the upload: each project manager job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real project manager jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2877,7 +2877,7 @@ Achieved 120 percent of annual quota.
 ### After
 Built a new mid market territory from zero to a full pipeline in two quarters, then reached 120 percent of quota.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 What you see after the upload: each sales executive job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real sales executive jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -2967,7 +2967,7 @@ Developed backend services in Java.
 ### After
 Designed and ran a payments service in Java, including alerting, runbooks and on call.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 What you see after the upload: each software engineer job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real software engineer jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -3055,7 +3055,7 @@ Taught mathematics to students aged 12 to 14.
 ### After
 Planned and taught mathematics to three classes aged 12 to 14, used short weekly quizzes to find gaps, and regrouped students for targeted practice, which raised end of term results in all three classes.
 See how a screening system reads your resume with the ATS score checker, then turn the gaps into a plan with a career roadmap.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 What you see after the upload: each teacher job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.
 ### Why check this in SkillDrift?
 - Real teacher jobs, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
@@ -3195,7 +3195,7 @@ Each share is the part of all creative jobs that name the skill. One posting usu
 - 7 Graphic design 10% 334 of 3,339 postings
 - 8 Adobe Photoshop 9.9% 330 of 3,339 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3247,7 +3247,7 @@ Each share is the part of all creative jobs in media and entertainment that name
 - 7 Sound design 11.3% 196 of 1,728 postings
 - 8 Color grading 7.8% 134 of 1,728 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3303,7 +3303,7 @@ Each share is the part of all customer support jobs that name the skill. One pos
 - 7 Issue resolution 5.9% 801 of 13,593 postings
 - 8 CRM 4.3% 590 of 13,593 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3355,7 +3355,7 @@ Each share is the part of all data and AI jobs that name the skill. One posting 
 - 7 Excel 16.6% 5,554 of 33,406 postings
 - 8 Tableau 16.3% 5,444 of 33,406 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3413,7 +3413,7 @@ Each share is the part of all data and AI jobs in consulting that name the skill
 - 7 Tableau 20% 389 of 1,948 postings
 - 8 Excel 18.9% 369 of 1,948 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3475,7 +3475,7 @@ Each share is the part of all data and AI jobs in fintech that name the skill. O
 - 7 Excel 18% 970 of 5,401 postings
 - 8 Machine learning 14.5% 782 of 5,401 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3537,7 +3537,7 @@ Each share is the part of all data and AI jobs in health tech that name the skil
 - 7 Excel 17.7% 396 of 2,236 postings
 - 8 Tableau 16.8% 375 of 2,236 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3598,7 +3598,7 @@ Each share is the part of all data and AI jobs in manufacturing that name the sk
 - 7 Machine learning 20.5% 275 of 1,342 postings
 - 8 Excel 18.3% 246 of 1,342 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3660,7 +3660,7 @@ Each share is the part of all data and AI jobs in software that name the skill. 
 - 7 Data modeling 13.8% 987 of 7,169 postings
 - 8 pandas 12.3% 879 of 7,169 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3724,7 +3724,7 @@ Each share is the part of all design jobs that name the skill. One posting usual
 - 7 Prototyping 20.7% 2,885 of 13,905 postings
 - 8 Design systems 16.9% 2,350 of 13,905 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3777,7 +3777,7 @@ Each share is the part of all design jobs in media and entertainment that name t
 - 7 Photoshop 19.2% 396 of 2,062 postings
 - 8 Color theory 18.6% 383 of 2,062 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3834,7 +3834,7 @@ Each share is the part of all design jobs in software that name the skill. One p
 - 7 Usability testing 22.3% 461 of 2,063 postings
 - 8 Responsive design 19.4% 400 of 2,063 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3893,7 +3893,7 @@ Each share is the part of all education jobs that name the skill. One posting us
 - 7 Curriculum development 6.6% 361 of 5,499 postings
 - 8 Instructional design 2.9% 160 of 5,499 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -3944,7 +3944,7 @@ Each share is the part of all engineering jobs that name the skill. One posting 
 - 7 React 13.9% 22,927 of 164,527 postings
 - 8 AWS 10.7% 17,630 of 164,527 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4002,7 +4002,7 @@ Each share is the part of all engineering jobs in automotive that name the skill
 - 7 Debugging 7% 132 of 1,882 postings
 - 8 DFMEA 7% 131 of 1,882 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4060,7 +4060,7 @@ Each share is the part of all engineering jobs in consulting that name the skill
 - 7 AWS 10.4% 742 of 7,124 postings
 - 8 Azure 9.2% 653 of 7,124 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4122,7 +4122,7 @@ Each share is the part of all engineering jobs in e-commerce that name the skill
 - 7 Node.js 17.5% 418 of 2,382 postings
 - 8 CI/CD 16.4% 390 of 2,382 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4182,7 +4182,7 @@ Each share is the part of all engineering jobs in edtech that name the skill. On
 - 7 SQL 20% 295 of 1,473 postings
 - 8 HTML 18.1% 266 of 1,473 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4241,7 +4241,7 @@ Each share is the part of all engineering jobs in energy that name the skill. On
 - 7 Safety compliance 5.3% 170 of 3,186 postings
 - 8 Docker 5.1% 163 of 3,186 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4300,7 +4300,7 @@ Each share is the part of all engineering jobs in fintech that name the skill. O
 - 7 AWS 16.7% 2,452 of 14,701 postings
 - 8 Spring Boot 15.5% 2,279 of 14,701 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4362,7 +4362,7 @@ Each share is the part of all engineering jobs in government and non-profit that
 - 7 AWS 8.5% 347 of 4,079 postings
 - 8 Linux 8.3% 340 of 4,079 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4421,7 +4421,7 @@ Each share is the part of all engineering jobs in health tech that name the skil
 - 7 AWS 13.7% 849 of 6,182 postings
 - 8 Java 13.4% 829 of 6,182 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4482,7 +4482,7 @@ Each share is the part of all engineering jobs in logistics that name the skill.
 - 7 TypeScript 10.5% 152 of 1,445 postings
 - 8 PostgreSQL 10.4% 150 of 1,445 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4541,7 +4541,7 @@ Each share is the part of all engineering jobs in manufacturing that name the sk
 - 7 Root cause analysis 5.9% 974 of 16,384 postings
 - 8 SolidWorks 3.9% 636 of 16,384 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4603,7 +4603,7 @@ Each share is the part of all engineering jobs in media and entertainment that n
 - 7 TypeScript 16.4% 418 of 2,547 postings
 - 8 CI/CD 15.7% 400 of 2,547 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4665,7 +4665,7 @@ Each share is the part of all engineering jobs in real estate that name the skil
 - 7 Civil engineering 7.6% 81 of 1,066 postings
 - 8 Quality assurance 6.9% 74 of 1,066 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4725,7 +4725,7 @@ Each share is the part of all engineering jobs in software that name the skill. 
 - 7 CI/CD 16.8% 11,990 of 71,281 postings
 - 8 TypeScript 13.9% 9,933 of 71,281 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4789,7 +4789,7 @@ Each share is the part of all engineering jobs in telecom that name the skill. O
 - 7 Git 12.3% 253 of 2,054 postings
 - 8 Docker 11.8% 242 of 2,054 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4847,7 +4847,7 @@ Each share is the part of all finance jobs that name the skill. One posting usua
 - 7 Financial analysis 13.9% 4,579 of 32,943 postings
 - 8 TDS 12.9% 4,245 of 32,943 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4903,7 +4903,7 @@ Each share is the part of all finance jobs in consulting that name the skill. On
 - 7 Accounts receivable 10.8% 471 of 4,378 postings
 - 8 Financial analysis 10.4% 456 of 4,378 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -4963,7 +4963,7 @@ Each share is the part of all finance jobs in fintech that name the skill. One p
 - 7 Accounting 8.4% 542 of 6,465 postings
 - 8 Regulatory compliance 5.9% 380 of 6,465 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5023,7 +5023,7 @@ Each share is the part of all finance jobs in manufacturing that name the skill.
 - 7 Accounts receivable 18.4% 641 of 3,487 postings
 - 8 MS Excel 17.2% 601 of 3,487 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5083,7 +5083,7 @@ Each share is the part of all finance jobs in software that name the skill. One 
 - 7 Forecasting 17% 209 of 1,228 postings
 - 8 Accounts receivable 15.9% 195 of 1,228 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5145,7 +5145,7 @@ Each share is the part of all HR jobs that name the skill. One posting usually n
 - 7 Onboarding 18% 2,011 of 11,145 postings
 - 8 Hr operations 18% 2,011 of 11,145 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5197,7 +5197,7 @@ Each share is the part of all legal jobs that name the skill. One posting usuall
 - 7 Stakeholder management 10.4% 215 of 2,061 postings
 - 8 Written communication 9.7% 200 of 2,061 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5248,7 +5248,7 @@ Each share is the part of all marketing jobs that name the skill. One posting us
 - 7 Content creation 13.9% 3,092 of 22,224 postings
 - 8 Meta Ads 13.6% 3,024 of 22,224 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5305,7 +5305,7 @@ Each share is the part of all marketing jobs in consulting that name the skill. 
 - 7 Email marketing 13.6% 145 of 1,068 postings
 - 8 Keyword research 13.4% 143 of 1,068 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5366,7 +5366,7 @@ Each share is the part of all marketing jobs in e-commerce that name the skill. 
 - 7 Keyword research 15.3% 265 of 1,734 postings
 - 8 Google Analytics 14.9% 259 of 1,734 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5425,7 +5425,7 @@ Each share is the part of all marketing jobs in health tech that name the skill.
 - 7 Google Analytics 12.4% 134 of 1,080 postings
 - 8 Lead generation 12.3% 133 of 1,080 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5485,7 +5485,7 @@ Each share is the part of all marketing jobs in media and entertainment that nam
 - 7 Keyword research 12.7% 437 of 3,437 postings
 - 8 Social media management 12.2% 419 of 3,437 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5546,7 +5546,7 @@ Each share is the part of all marketing jobs in software that name the skill. On
 - 7 Google Analytics 16.4% 352 of 2,141 postings
 - 8 Lead generation 15.3% 328 of 2,141 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5609,7 +5609,7 @@ Each share is the part of all operations jobs in consulting that name the skill.
 - 7 Change management 5.3% 208 of 3,906 postings
 - 8 Reporting 5.3% 206 of 3,906 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5670,7 +5670,7 @@ Each share is the part of all operations jobs in e-commerce that name the skill.
 - 7 Warehouse operations 8% 154 of 1,920 postings
 - 8 Order fulfillment 5.6% 108 of 1,920 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5729,7 +5729,7 @@ Each share is the part of all operations jobs in energy that name the skill. One
 - 7 Excel 7.2% 97 of 1,338 postings
 - 8 Data analysis 7% 93 of 1,338 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5787,7 +5787,7 @@ Each share is the part of all operations jobs in government and non-profit that 
 - 7 Record keeping 7.6% 262 of 3,448 postings
 - 8 MS Office 7.2% 249 of 3,448 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5845,7 +5845,7 @@ Each share is the part of all operations jobs in hospitality that name the skill
 - 7 Portion control 4.9% 422 of 8,676 postings
 - 8 Restaurant operations 4.8% 413 of 8,676 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5903,7 +5903,7 @@ Each share is the part of all operations jobs in logistics that name the skill. 
 - 7 Logistics operations 6.7% 455 of 6,808 postings
 - 8 Safety compliance 6.7% 455 of 6,808 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -5961,7 +5961,7 @@ Each share is the part of all operations jobs in manufacturing that name the ski
 - 7 Project management 6.3% 727 of 11,630 postings
 - 8 Quality control 6% 700 of 11,630 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6022,7 +6022,7 @@ Each share is the part of all operations jobs in pharma that name the skill. One
 - 7 Vendor management 6.3% 186 of 2,967 postings
 - 8 Quality assurance 6% 178 of 2,967 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6079,7 +6079,7 @@ Each share is the part of all operations jobs in real estate that name the skill
 - 7 Customer service 7.9% 131 of 1,660 postings
 - 8 Budgeting 7.4% 123 of 1,660 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6138,7 +6138,7 @@ Each share is the part of all product jobs that name the skill. One posting usua
 - 7 Jira 9.9% 486 of 4,895 postings
 - 8 SQL 9% 439 of 4,895 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6192,7 +6192,7 @@ Each share is the part of all product jobs in fintech that name the skill. One p
 - 7 Agile 12.7% 158 of 1,245 postings
 - 8 Jira 12.6% 157 of 1,245 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6250,7 +6250,7 @@ Each share is the part of all product jobs in software that name the skill. One 
 - 7 Data analysis 10% 101 of 1,007 postings
 - 8 SQL 6.7% 67 of 1,007 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6310,7 +6310,7 @@ Each share is the part of all research jobs that name the skill. One posting usu
 - 7 Excel 8% 190 of 2,382 postings
 - 8 TensorFlow 5.3% 126 of 2,382 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6361,7 +6361,7 @@ Each share is the part of all sales jobs that name the skill. One posting usuall
 - 7 Customer service 9.5% 3,887 of 40,941 postings
 - 8 CRM 8.7% 3,543 of 40,941 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6419,7 +6419,7 @@ Each share is the part of all sales jobs in edtech that name the skill. One post
 - 7 Relationship building 13.1% 155 of 1,187 postings
 - 8 Consultative selling 11.5% 137 of 1,187 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6478,7 +6478,7 @@ Each share is the part of all sales jobs in fintech that name the skill. One pos
 - 7 Cross-selling 14.4% 1,143 of 7,943 postings
 - 8 Compliance 9.9% 783 of 7,943 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6540,7 +6540,7 @@ Each share is the part of all sales jobs in health tech that name the skill. One
 - 7 CRM 8.8% 160 of 1,827 postings
 - 8 Account management 8% 146 of 1,827 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6601,7 +6601,7 @@ Each share is the part of all sales jobs in hospitality that name the skill. One
 - 7 Account management 14.9% 167 of 1,121 postings
 - 8 CRM 10.5% 118 of 1,121 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6660,7 +6660,7 @@ Each share is the part of all sales jobs in manufacturing that name the skill. O
 - 7 Client relationship management 12.2% 443 of 3,644 postings
 - 8 Account management 8.2% 297 of 3,644 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6722,7 +6722,7 @@ Each share is the part of all sales jobs in media and entertainment that name th
 - 7 Sales pipeline management 12.7% 194 of 1,523 postings
 - 8 Digital marketing 10.5% 160 of 1,523 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6784,7 +6784,7 @@ Each share is the part of all sales jobs in real estate that name the skill. One
 - 7 CRM 13.7% 252 of 1,834 postings
 - 8 Market research 8.2% 151 of 1,834 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6844,7 +6844,7 @@ Each share is the part of all sales jobs in retail that name the skill. One post
 - 7 Retail sales 10.9% 279 of 2,557 postings
 - 8 Cash handling 5.6% 143 of 2,557 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real Data Analyst job for someone with experience, scored 70 out of 100 in SkillDrift, with the six skills the person already has and the four to close]
+[Image: A real tax manager job for an experienced accountant, scored 78 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.
@@ -6902,7 +6902,7 @@ Each share is the part of all sales jobs in software that name the skill. One po
 - 7 B2B sales 14.7% 707 of 4,820 postings
 - 8 Cold calling 13.2% 636 of 4,820 postings
 Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
-[Image: A real internship scored 75 out of 100 in SkillDrift, with the five skills the person already has and the three to close]
+[Image: A real electrical engineering internship scored 74 out of 100 in SkillDrift, with the four skills the person already has and the four to close]
 ### Why check this in SkillDrift?
 - Real jobs in this field, scored for you Each one scored out of 100 against your resume, with the skills you already show and the ones to close named.
 - A plan that moves your scores Learning built for each gap and sized to your hours. Finish it and the certificate goes into your resume, and the jobs that ask for that skill move up.

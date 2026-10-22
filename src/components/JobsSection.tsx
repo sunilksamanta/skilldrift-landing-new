@@ -26,7 +26,7 @@ export default function JobsSection() {
           <ShotPicture
             desktop="/assets/shots/jobs-board.png"
             mobile="/assets/shots/m-jobs-board.png"
-            alt="The SkillDrift job board for a Data Analyst: new matches scored out of 100, the next role and the current role, and a shortlist where each job has a tailor step and an apply link"
+            alt="The SkillDrift job board for an experienced accountant: new matches scored out of 100, the next role and the current role, and a shortlist where each job has a tailor step and an apply link"
             sizes="(max-width: 760px) 100vw, 1400px"
           />
         </div>

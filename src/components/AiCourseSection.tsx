@@ -17,11 +17,11 @@ const points = [
   },
   {
     h: "Then AI for your exact role",
-    b: "SkillDrift reads the jobs you match. When enough of them ask for AI tools such as ChatGPT, Copilot or generative AI, it builds an AI course for your role, such as AI tools for data analysts.",
+    b: "SkillDrift reads the jobs you match. When enough of them ask for AI tools such as ChatGPT, Copilot or generative AI, it builds an AI course for your role, such as AI tools for digital marketing.",
   },
   {
     h: "You see why before you pay",
-    b: "How many of your jobs ask, for example 24 of your 60, with lines quoted from two employers. 50 credits, or included in Active Seeker.",
+    b: "How many of your jobs ask, for example 9 of your 60, with lines quoted from two employers. 50 credits, or included in Active Seeker.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function AiCourseSection() {
             <ShotPicture
               desktop="/assets/shots/ai-in-field.png"
               mobile="/assets/shots/m-ai-in-field.png"
-              alt="An AI course in SkillDrift built from the jobs a person matches: AI tools for data analysts, because 24 of their 60 matches ask for AI tools, with lines quoted from two employers and the price before building"
+              alt="An AI course in SkillDrift built from the jobs a person matches: AI tools for digital marketing, because 9 of their 60 matches ask for AI tools, with lines quoted from two employers and the price before building"
               sizes="(max-width: 760px) 100vw, 60vw"
             />
           </div>

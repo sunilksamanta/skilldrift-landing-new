@@ -194,18 +194,18 @@ export default function HeroAndResult() {
             )}
 
             {!done && (
-              <div style={{ position: "relative" }}>
+              <div id="upload" style={{ position: "relative" }}>
                 <TrackedLink
                   href="/job-match"
                   section="hero"
                   label="example_result"
-                  ariaLabel="Example result: Data Analyst, 77 out of 100. See how job scores work"
+                  ariaLabel="Example result: Sales Executive, 77 out of 100. See how job scores work"
                   className="sd-hero-peek"
                 >
                   <ScoreRing value={77} size={46} stroke={4.5} transition={false} />
                   <div>
                     <div style={{ fontSize: 10.5, letterSpacing: "0.12em", fontWeight: 600, color: "var(--ac)" }}>
-                      EXAMPLE &middot; DATA ANALYST
+                      EXAMPLE &middot; SALES EXECUTIVE
                     </div>
                     <div style={{ marginTop: 3, display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--tx2)" }}>
                       Good fit
