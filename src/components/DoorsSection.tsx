@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Check } from "./icons";
 import TrackedLink from "./TrackedLink";
 import { homeCta } from "@/lib/cta";
 import { trackIntentSelected } from "@/lib/analytics/cta";
@@ -11,30 +10,81 @@ const doors = [
     title: "Land my first job",
     blurb: "I am starting out and want a proper role in my field.",
     heading: "You have no track record yet. Let us build one.",
-    points: [
-      "See which of your projects and coursework actually count as skills, scored against an entry level role.",
-      "Internships and openings for under one year of experience, ranked out of 100.",
-      "Finish your free AI course and the certificate writes itself into your resume.",
+    goals: [
+      "Get an internship",
+      "Land my first full-time job",
+      "Clear my placement interviews",
+      "Build my skills before I start applying",
+    ],
+    steps: [
+      {
+        title: "Pick internship or full-time",
+        body: "Your job board follows the goal: internships first, or full-time roles only, all for under one year of experience.",
+      },
+      {
+        title: "See what already counts",
+        body: "Your projects and coursework are read as skills, and every opening is scored out of 100 with the reasons shown.",
+      },
+      {
+        title: "Close the gaps, free",
+        body: "Your free AI course comes from your own gaps. The certificate goes into your resume and your scores move.",
+      },
+      {
+        title: "Apply and practise",
+        body: "Tailor your resume to each job, ask for a referral with a short note, and practise the interview out loud, scored out of 10.",
+      },
     ],
   },
   {
     title: "Move to a new job",
     blurb: "I want to move, in my field or into a new one.",
     heading: "You have the experience. Now make sure it gets read.",
-    points: [
-      "See how you match roles at other companies, out of 100, before you spend an application.",
-      "Rewrite your resume around what you achieved, then tailor it to each posting.",
-      "Moving into something new? See which skills transfer, and get a roadmap for the ones that do not.",
+    goals: [
+      "Find a new job in my field",
+      "Get more interview calls from my applications",
+      "Prepare for interviews I have coming up",
+    ],
+    steps: [
+      {
+        title: "Pick up to five roles",
+        body: "Choose the roles you want, or see roles near yours that have openings. Moving field? See which skills transfer.",
+      },
+      {
+        title: "Only real, open jobs",
+        body: "Every job has a trusted apply link and is checked before you apply. A closed job is never charged.",
+      },
+      {
+        title: "Your experience counts",
+        body: "Tap I have this to add one line of proof, and that requirement counts as met. Rewrite your resume around what you achieved.",
+      },
+      {
+        title: "Get the call, then the offer",
+        body: "Tailor each application, ask for a referral and practise the interview. When you get the job, tap I got the role.",
+      },
     ],
   },
   {
     title: "Get promoted where I am",
     blurb: "I want the next level up, in the job I already have.",
     heading: "Know exactly what the next level needs.",
-    points: [
-      "Benchmark yourself against the level above you, not against strangers.",
-      "Your score re-scores itself every time you close a gap, at no cost.",
-      "Log a win each week, and before your review get a draft self-review built from them.",
+    goals: ["Get better at my current job"],
+    steps: [
+      {
+        title: "See the level above",
+        body: "Benchmark yourself against the role above yours, with each gap named and the skills you already have shown.",
+      },
+      {
+        title: "Close the gaps at your pace",
+        body: "Learning sized to your hours. Every finished step, and every month in the role, adds to your scores.",
+      },
+      {
+        title: "Log a win each week",
+        body: "Keep the wins you choose on your resume, ready for the month your review comes round.",
+      },
+      {
+        title: "Walk into your review ready",
+        body: "Before your review, get a draft self-review built from your wins, and see how ready you are for the next level.",
+      },
     ],
   },
 ];
@@ -179,23 +229,27 @@ export default function DoorsSection() {
           >
             {active.heading}
           </h3>
-          <div
-            style={{
-              marginTop: 30,
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))",
-              gap: 28,
-            }}
-          >
-            {active.points.map((point) => (
-              <div key={point} style={{ display: "flex", gap: 12 }}>
-                <span style={{ flex: "0 0 auto", color: "var(--ac)", marginTop: 1 }}>
-                  <Check />
+          <ol className="sd-door-steps" aria-label={`How SkillDrift works when you want to ${active.title.toLowerCase()}`}>
+            {active.steps.map((step, i) => (
+              <li key={step.title}>
+                <span className="sd-door-num">{i + 1}</span>
+                <span style={{ display: "block", marginTop: 14, fontSize: 16.5, fontWeight: 600, letterSpacing: "-0.01em" }}>
+                  {step.title}
                 </span>
-                <span style={{ display: "block", fontSize: 15.5, lineHeight: 1.6 }}>
-                  {point}
+                <span style={{ display: "block", marginTop: 6, fontSize: 14.5, lineHeight: 1.6, color: "var(--tx2)" }}>
+                  {step.body}
                 </span>
-              </div>
+              </li>
+            ))}
+          </ol>
+          <div style={{ marginTop: 28, display: "flex", flexWrap: "wrap", alignItems: "center", gap: 8 }}>
+            <span style={{ fontSize: 13.5, color: "var(--tx3)", marginRight: 4 }}>
+              {active.goals.length > 1 ? "Goals you can pick at sign-up:" : "The goal you pick at sign-up:"}
+            </span>
+            {active.goals.map((g) => (
+              <span key={g} className="sd-door-goal">
+                {g}
+              </span>
             ))}
           </div>
           <div

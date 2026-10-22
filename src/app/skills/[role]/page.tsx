@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { CSSProperties, ReactNode } from 'react';
 import RoleHero from "@/components/RoleHero";
+import WhySkillDrift from "@/components/WhySkillDrift";
 import ShotPicture from "@/components/ShotPicture";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
@@ -142,6 +143,7 @@ export default async function RoleSkillsPage({ params }: { params: Promise<{ rol
             <ShotPicture desktop="/assets/shots/job-match-analysis.png" mobile="/assets/shots/m-job-match-analysis.png" alt="A real job scored 75 out of 100 in SkillDrift, with the skills the person already has and the ones to close" sizes="(max-width: 760px) 100vw, 980px" />
           </div>
           <p style={{ marginTop: 18, fontSize: 15, color: 'var(--tx2)' }}>What you see after the upload: each {r.role} job scored out of 100, the skills you already show, and the ones to close, each with a roadmap.</p>
+          <WhySkillDrift role={r.role} />
         </Sect>
 
         <Sect alt={n % 2 === 0}>

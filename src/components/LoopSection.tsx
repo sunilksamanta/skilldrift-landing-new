@@ -11,14 +11,14 @@ const steps = [
   {
     n: "02",
     title: "Score",
-    body: "Pick a target role and see your gap out of 100, skill by skill.",
+    body: "Pick a target role and see your match out of 100, with each missing skill named.",
   },
   {
     n: "03",
     title: "Roadmap",
     body: "The exact skills to close it, in the order that moves your score.",
   },
-  { n: "04", title: "Learn", body: "Bite-size sprints, not 40-hour courses." },
+  { n: "04", title: "Learn", body: "Short sprints built from your own gaps and sized to your hours." },
   {
     n: "05",
     title: "Certify",

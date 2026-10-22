@@ -42,26 +42,34 @@
         },
         {
           "type": "cards",
-          "eyebrow": "And the rest of it",
-          "heading": "Three more places to start.",
-          "copy": "Not every route in starts with a feature. These are the pages people open first.",
-          "min": 300,
+          "eyebrow": "Where to start",
+          "heading": "Four more places to start.",
+          "copy": "Pick the one that matches what you need today. Each leads into the same record, so nothing you do is wasted.",
+          "min": 240,
           "cards": [
             {
-              "tag": "How it works",
               "title": "The closed loop, end to end",
-              "body": "Upload, score, roadmap, learn, certify, rise, and then round again. The six steps and why joining them is the product.",
-              "accent": true
+              "body": "Upload, score, roadmap, learn, certify, rise, and round again. Why joining the steps is what moves your scores.",
+              "href": "/closed-loop-career-development",
+              "cta": "See the loop"
             },
             {
-              "tag": "Jobs",
-              "title": "Real roles, ranked out of 100",
-              "body": "Including internships and openings for under a year of experience, scored the same way as senior roles."
+              "title": "Jobs and internships, scored for you",
+              "body": "Every opening scored out of 100 against your resume, only with a trusted apply link, and never charged once closed.",
+              "href": "/jobs",
+              "cta": "See the jobs"
             },
             {
-              "tag": "Pricing",
-              "title": "Free to start, pay when you apply",
-              "body": "Diagnosis is free forever. {{In India, one credit is one rupee, so every price is already in money you understand.|Credits are priced up front, and credits you buy never expire, so you always know what a run costs.}}"
+              "title": "How SkillDrift compares",
+              "body": "Side by side with ChatGPT, LinkedIn Premium, Jobright and Internshala.",
+              "href": "/compare",
+              "cta": "Compare"
+            },
+            {
+              "title": "Free to start",
+              "body": "Diagnosis is free forever, and new accounts get 160 credits, enough for a full first application.",
+              "href": "/pricing",
+              "cta": "See pricing"
             }
           ]
         }
@@ -111,7 +119,7 @@
             },
             {
               "title": "Score",
-              "body": "Pick a target role and see your gap out of 100, skill by skill."
+              "body": "Pick a target role and see your match out of 100, with each missing skill named."
             },
             {
               "title": "Roadmap",
@@ -119,7 +127,7 @@
             },
             {
               "title": "Learn",
-              "body": "Bite-size sprints, not 40-hour courses."
+              "body": "Short sprints built from your own gaps and sized to your hours."
             },
             {
               "title": "Certify",
@@ -268,8 +276,8 @@
           "copy": "The posting decides the emphasis. You decide what is true. Nothing is invented in between.",
           "steps": [
             {
-              "title": "Paste the job",
-              "body": "Any posting: LinkedIn, Indeed, a careers page, or one of your matched roles."
+              "title": "Pick the job",
+              "body": "Any job on your job board, or a posting from LinkedIn, Indeed or a careers page."
             },
             {
               "title": "We read both sides",
@@ -304,6 +312,33 @@
             {
               "title": "Whichever template you picked",
               "body": "Tailoring works on the template you already chose. You are not pushed back through a builder to use it."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "apply-kit",
+          "alt": true,
+          "min": 250,
+          "eyebrow": "Why tailor in SkillDrift",
+          "heading": "What do you get beyond a tailored resume?",
+          "copy": "A chatbot rewrites what you paste. SkillDrift tailors from everything it already knows about you, and prepares the rest of the application with it.",
+          "cards": [
+            {
+              "title": "Your proof is already on it",
+              "body": "Certificates you earned, experience you proved with I have this and the languages you speak are on your resume before you tailor."
+            },
+            {
+              "title": "The whole Apply Kit",
+              "body": "A cover note, drafts for the questions the application asks, and help asking for a referral with a short note."
+            },
+            {
+              "title": "Only jobs that are still open",
+              "body": "SkillDrift checks the job before the Apply Kit opens, and never charges for a job that has closed."
+            },
+            {
+              "title": "Your job board stays right",
+              "body": "A day or two later SkillDrift asks whether you applied and moves the job to Applied, so every application is tracked."
             }
           ]
         },
@@ -438,6 +473,28 @@
                 "Overwrite your existing resume without your say-so",
                 "Produce something you cannot defend in the room"
               ]
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "why-here",
+          "alt": true,
+          "min": 250,
+          "eyebrow": "Why rewrite in SkillDrift",
+          "heading": "Why rewrite your resume in SkillDrift and not in a chatbot?",
+          "cards": [
+            {
+              "title": "It asks before it writes",
+              "body": "Every figure comes from your answers, so you can defend every line in the interview."
+            },
+            {
+              "title": "It stays current by itself",
+              "body": "Certificates, new roles and the languages you speak are added as they happen, so the rewrite never goes stale."
+            },
+            {
+              "title": "Every application starts from it",
+              "body": "Each tailored version is built from your rewritten resume, so the improvement carries into every job you apply for."
             }
           ]
         },
@@ -596,6 +653,32 @@
           ]
         },
         {
+          "type": "cards",
+          "id": "why-here",
+          "alt": true,
+          "min": 250,
+          "eyebrow": "Why practise in SkillDrift",
+          "heading": "Why practise in SkillDrift and not with a chatbot?",
+          "cards": [
+            {
+              "title": "Built from the job you want",
+              "body": "Questions come from the posting you are chasing, so the practice matches the room you will walk into."
+            },
+            {
+              "title": "A verdict, not encouragement",
+              "body": "A score out of 10 and your chance of being hired, with the answers that cost you points named."
+            },
+            {
+              "title": "Weak answers become a plan",
+              "body": "Each weak answer can become a learning roadmap, and your next attempt is measured against your last."
+            },
+            {
+              "title": "Out loud, in English or Hindi",
+              "body": "Recorded voice and a live interview that follows up on what you actually said, as a real panel would."
+            }
+          ]
+        },
+        {
           "type": "prices",
           "alt": true,
           "id": "cost",
@@ -743,6 +826,14 @@
             {
               "title": "One score, everywhere",
               "body": "A job has one match score out of 100, the same on your board, the job page and your dashboard. Closed jobs drop off, and you are never charged for one."
+            },
+            {
+              "title": "Your experience counts",
+              "body": "Years, a licence or a language cannot be learned on a course. Add one line of proof, or the language you speak, and the requirement counts as met."
+            },
+            {
+              "title": "Every score explained",
+              "body": "The same resume always gets the same score, and every score shows how it was worked out."
             }
           ]
         }
@@ -816,7 +907,7 @@
             },
             {
               "title": "See the gap, scored",
-              "body": "Skill by skill, out of 100, against that role, not against strangers."
+              "body": "Your readiness for that role as a percentage, with every missing skill named, against that role and not against strangers."
             },
             {
               "title": "Get the order",
@@ -824,7 +915,7 @@
             },
             {
               "title": "Watch it re-score",
-              "body": "Close one and the score updates free. The roadmap re-orders around what is left."
+              "body": "Finish a roadmap and readiness rises by the amount it showed before you started. The plan re-orders around what is left."
             }
           ]
         },
@@ -851,6 +942,29 @@
               "tag": "Get promoted",
               "title": "Know exactly what the next level needs.",
               "body": "Benchmark against the level above you, and practise the panel before you sit it."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "honest-learning",
+          "alt": false,
+          "min": 250,
+          "eyebrow": "Only what a course can teach",
+          "heading": "Will SkillDrift sell you a course you do not need?",
+          "copy": "No. A roadmap is built only for a gap that learning can close.",
+          "cards": [
+            {
+              "title": "Experience is marked as experience",
+              "body": "Years in a role, a network, a quota or a licence are never sold as a course. Add one line of proof and the job counts it as met."
+            },
+            {
+              "title": "Languages go straight on your resume",
+              "body": "No roadmap for a language a job asks for. Add the language you speak and it counts as met on every matched job."
+            },
+            {
+              "title": "Sized to the hours you have",
+              "body": "Each roadmap fits the time you have each week, in the order that moves your readiness most."
             }
           ]
         },
@@ -983,6 +1097,28 @@
         },
         {
           "type": "cards",
+          "id": "explained",
+          "alt": true,
+          "min": 250,
+          "eyebrow": "Scores you can trust",
+          "heading": "Can you trust a skills score?",
+          "cards": [
+            {
+              "title": "Same resume, same score",
+              "body": "Upload the same resume twice and you get the same result. A small change moves only what it touches."
+            },
+            {
+              "title": "Every score shows its working",
+              "body": "Each result says how it was scored, so you can see exactly what moved it."
+            },
+            {
+              "title": "Experience counts as experience",
+              "body": "Years in a role or a licence are marked as experience you can prove, not as a skill you are missing."
+            }
+          ]
+        },
+        {
+          "type": "cards",
           "eyebrow": "Always free",
           "heading": "Is skill gap analysis free?",
           "copy": "Finding out where you stand is free permanently. Credits only appear when you are producing something to send to an employer.",
@@ -1075,6 +1211,10 @@
             {
               "title": "Scored, not just completed",
               "body": "Finishing moves your readiness score, so progress shows up as a number rather than a badge."
+            },
+            {
+              "title": "Never a course it cannot teach",
+              "body": "Years of experience, a licence or a language are not sold as a course. Add your proof instead and the job counts it."
             }
           ]
         },
@@ -1338,6 +1478,10 @@
             {
               "title": "Experience you already have counts",
               "body": "Some asks, such as years in a role or a language, cannot be learned on a course. Add one line of proof, or add the language to your resume, and the job counts it as met."
+            },
+            {
+              "title": "More cities when matches are thin",
+              "body": "If your city has few openings in your field, your board names up to three nearby cities that have more."
             }
           ]
         },
@@ -1626,6 +1770,10 @@
             {
               "title": "Practise the new interview",
               "body": "Mock interviews for roles in the new field, out loud, with a score out of 10."
+            },
+            {
+              "title": "Your experience still counts",
+              "body": "Years in your current field, a licence or a language you speak count where the new role asks for them. Add one line of proof and the job counts it as met."
             }
           ]
         },
@@ -1952,6 +2100,10 @@
             {
               "title": "It stays after the offer",
               "body": "Your new role, your weekly wins, your review and your next move, in the same place."
+            },
+            {
+              "title": "Works where you are",
+              "body": "Jobs and internships in the US, India and worldwide, with prices in your currency."
             }
           ]
         },

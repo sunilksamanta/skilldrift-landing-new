@@ -44,7 +44,7 @@ export default function JobsSection() {
         <Pill>Jobs &amp; internships</Pill>
         <SectionIntro
           heading="Real roles. Ranked for you, out of 100."
-          copy="Including internships and openings for people with under a year of experience, scored the same way as everything else, so you know where you actually stand."
+          copy="Including internships and openings for people with under a year of experience, scored the same way as everything else, so you know where you actually stand. Only jobs with a trusted apply link, checked before you apply, and never charged once closed."
         />
 
         <ul

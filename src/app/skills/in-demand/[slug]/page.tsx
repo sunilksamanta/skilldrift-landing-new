@@ -8,6 +8,7 @@
 // The root layout does not render the site chrome, so this page renders
 // SiteHeader and SiteFooter itself, like app/skills/[role].
 
+import WhySkillDrift from "@/components/WhySkillDrift";
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -155,6 +156,7 @@ export default async function SkillsDemandPage({ params }: { params: Promise<{ s
           <div style={{ marginTop: 36, maxWidth: 980, borderRadius: 22, overflow: 'hidden', border: '1px solid var(--line)', boxShadow: '0 30px 70px -20px rgba(76,52,180,.28)' }}>
             <ShotPicture desktop="/assets/shots/job-match-analysis.png" mobile="/assets/shots/m-job-match-analysis.png" alt="A real job scored 75 out of 100 in SkillDrift, with the skills the person already has and the ones to close" sizes="(max-width: 760px) 100vw, 980px" />
           </div>
+          <WhySkillDrift />
         </Sect>
 
         <ResumeUploadCard campaign={campaign} />

@@ -909,3 +909,31 @@ a:hover > .sd-card-link, a:focus-visible > .sd-card-link { border-color: var(--a
 @media (hover: none) { .sd-loop-stagehint { opacity: 1; transform: translate(-50%, 0); } }
 
 .sd-hero-peek:hover, .sd-hero-peek:focus-visible { border-color: var(--ac); box-shadow: 0 24px 60px -20px rgba(76, 52, 180, 0.6); }
+
+/* ---- Goal doors: the journey for the picked goal ---- */
+.sd-door-steps {
+  list-style: none; margin: 30px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; position: relative;
+}
+.sd-door-steps::before {
+  content: ""; position: absolute; top: 15px; left: 16px; right: 16px; height: 2px;
+  background: linear-gradient(90deg, rgba(124,93,249,.15), rgba(124,93,249,.55), rgba(124,93,249,.15));
+}
+.sd-door-steps li { position: relative; min-width: 0; }
+.sd-door-num {
+  position: relative; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 999px;
+  font-size: 14px; font-weight: 600; color: #fff; background: linear-gradient(135deg, #7c5df9, #5b3fd0);
+  box-shadow: 0 0 0 5px var(--card);
+}
+.sd-door-goal {
+  display: inline-block; padding: 6px 12px; border-radius: 999px; font-size: 13.5px;
+  border: 1px solid var(--acline); background: var(--acsoft); color: var(--tx);
+}
+@media (max-width: 900px) {
+  .sd-door-steps { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .sd-door-steps::before { top: 16px; bottom: 16px; left: 15px; right: auto; width: 2px; height: auto;
+    background: linear-gradient(180deg, rgba(124,93,249,.15), rgba(124,93,249,.55), rgba(124,93,249,.15)); }
+  .sd-door-steps li { padding-left: 48px; }
+  .sd-door-steps li .sd-door-num { position: absolute; left: 0; top: 0; }
+  .sd-door-steps li > span:nth-child(2) { margin-top: 4px !important; }
+}
