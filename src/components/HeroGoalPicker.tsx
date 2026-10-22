@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { trackIntentSelected } from "@/lib/analytics/cta";
 
 /*
@@ -18,6 +18,15 @@ const goals = [
 
 export default function HeroGoalPicker() {
   const [picked, setPicked] = useState<number | null>(null);
+  // Stays in step when the goal is picked further down the page.
+  useEffect(() => {
+    const on = (e: Event) => {
+      const i = (e as CustomEvent<number>).detail;
+      if (typeof i === "number" && goals[i]) setPicked(i);
+    };
+    window.addEventListener("sd:goal", on);
+    return () => window.removeEventListener("sd:goal", on);
+  }, []);
   return (
     <div style={{ marginTop: 28 }}>
       <div style={{ fontSize: 14, fontWeight: 500, color: "var(--tx2)" }}>

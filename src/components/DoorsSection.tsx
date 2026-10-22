@@ -162,6 +162,8 @@ export default function DoorsSection() {
                   // the upload above all — so the two can never disagree.
                   trackIntentSelected(door.title);
                   setIntent(i);
+                  // The product screen below follows the same goal.
+                  window.dispatchEvent(new CustomEvent("sd:goal", { detail: i }));
                 }}
                 style={{
                   textAlign: "left",
@@ -244,7 +246,7 @@ export default function DoorsSection() {
           </ol>
           <div style={{ marginTop: 28, display: "flex", flexWrap: "wrap", alignItems: "center", gap: 8 }}>
             <span style={{ fontSize: 13.5, color: "var(--tx3)", marginRight: 4 }}>
-              {active.goals.length > 1 ? "Goals you can pick at sign-up:" : "The goal you pick at sign-up:"}
+              {active.goals.length > 1 ? "Goals you can pick:" : "The goal you pick:"}
             </span>
             {active.goals.map((g) => (
               <span key={g} className="sd-door-goal">

@@ -937,3 +937,11 @@ a:hover > .sd-card-link, a:focus-visible > .sd-card-link { border-color: var(--a
   .sd-door-steps li .sd-door-num { position: absolute; left: 0; top: 0; }
   .sd-door-steps li > span:nth-child(2) { margin-top: 4px !important; }
 }
+
+/* ---- Product showcase goal tabs ---- */
+.sd-show-tabs { margin-top: 36px; display: inline-flex; flex-wrap: wrap; gap: 6px; padding: 5px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); }
+.sd-show-tabs button { font: inherit; font-size: 15px; font-weight: 500; border: 0; cursor: pointer; padding: 10px 18px; border-radius: 999px; background: transparent; color: var(--tx2); min-height: 44px; }
+.sd-show-tabs button[aria-selected="true"] { color: #fff; background: linear-gradient(135deg, #7c5df9, #5b3fd0); }
+.sd-show-tabs button:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
+@media (max-width: 720px) { .sd-show-tabs { display: flex; border-radius: 18px; } .sd-show-tabs button { flex: 1 1 auto; font-size: 14px; padding: 8px 12px; } }
+@media (hover: none) { .sd-zoom__hint { top: 12px; right: 12px; bottom: auto; } }

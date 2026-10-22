@@ -1,24 +1,89 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import ShotPicture from "./ShotPicture";
 import { Pill, SectionIntro } from "./SectionBits";
+import { trackIntentSelected } from "@/lib/analytics/cta";
 
 /*
- * The product itself, right under the goal doors: a real screen from the app
- * (company names swapped for neutral ones), so a visitor sees what the next
- * step looks like before reading about the loop.
+ * The product itself, right under the goal doors: a real dashboard from the
+ * app for each goal (company names swapped for neutral ones). The dashboard is
+ * built around the goal a person picks, so the screen follows the goal: the
+ * hero picker and the doors both switch it (the `sd:goal` event), and picking
+ * a tab here switches them back.
  */
+const goals = [
+  {
+    tab: "First job or internship",
+    intent: "Land my first job",
+    copy: "Internships and first jobs scored out of 100 with the reasons shown, the next skill to learn named, and your plan for today, now and next beside them. Finish a step and the scores move.",
+    desktop: "/assets/shots/home-product.png",
+    mobile: "/assets/shots/m-home-product.png",
+    alt: "The SkillDrift dashboard for an internship goal: the best move today, a Product Management internship scored 75 out of 100, the next roadmap, matched internships, and the plan for today, now and next",
+  },
+  {
+    tab: "A new job or field",
+    intent: "Move to a new job",
+    copy: "Jobs in your field scored out of 100, the best one to act on today, and a plan that keeps your search moving. It already asks when your next review is, so it can help you there too.",
+    desktop: "/assets/shots/home-product-newjob.png",
+    mobile: "/assets/shots/m-home-product-newjob.png",
+    alt: "The SkillDrift dashboard for a new job in your field: a Data Analyst role scored 70 out of 100 as the best move today, jobs in the current role scored out of 100, and the plan for today",
+  },
+  {
+    tab: "Grow where I am",
+    intent: "Get promoted where I am",
+    copy: "Your strength in the role you have, the step you are on, and the one gap that moves your readiness most. Each roadmap shows how much it adds before you start, and your review is on the plan.",
+    desktop: "/assets/shots/home-product-grow.png",
+    mobile: "/assets/shots/m-home-product-grow.png",
+    alt: "The SkillDrift dashboard for growing in your current role: 53% strength as a Senior Data Analyst, the top gap to close, and a plan that includes the next review",
+  },
+];
+
 export default function ProductShowcase() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const on = (e: Event) => {
+      const i = (e as CustomEvent<number>).detail;
+      if (typeof i === "number" && goals[i]) setActive(i);
+    };
+    window.addEventListener("sd:goal", on);
+    return () => window.removeEventListener("sd:goal", on);
+  }, []);
+
   return (
     <section id="in-the-product" className="sect sect--tight">
       <div className="wrap">
         <Pill>In the product</Pill>
-        <SectionIntro
-          heading="Every day starts with one best move."
-          copy="Your matches are scored out of 100 with the reasons shown, the next skill to learn is named, and your plan for today, now and next sits beside them. Finish a step and the scores move."
-        />
+        <SectionIntro heading="Every day starts with one best move." copy={goals[active].copy} />
+
+        <div role="tablist" aria-label="Show the dashboard for a goal" className="sd-show-tabs">
+          {goals.map((g, i) => (
+            <button
+              key={g.tab}
+              type="button"
+              role="tab"
+              id={`show-tab-${i}`}
+              aria-selected={active === i}
+              aria-controls="show-panel"
+              onClick={() => {
+                trackIntentSelected(g.intent);
+                setActive(i);
+                window.dispatchEvent(new CustomEvent("sd:goal", { detail: i }));
+              }}
+            >
+              {g.tab}
+            </button>
+          ))}
+        </div>
+
         <div
+          id="show-panel"
+          role="tabpanel"
+          aria-labelledby={`show-tab-${active}`}
           style={{
             position: "relative",
-            marginTop: 48,
+            marginTop: 22,
             width: "100%",
             borderRadius: 26,
             overflow: "hidden",
@@ -26,12 +91,11 @@ export default function ProductShowcase() {
             boxShadow: "0 40px 90px -30px rgba(76,52,180,.30)",
           }}
         >
-          <ShotPicture
-            desktop="/assets/shots/home-product.png"
-            mobile="/assets/shots/m-home-product.png"
-            alt="The SkillDrift dashboard: the best move today, a Product Management internship scored 75 out of 100, the next roadmap, matched internships, and the plan for today, now and next"
-            sizes="(max-width: 760px) 100vw, 1400px"
-          />
+          {goals.map((g, i) => (
+            <div key={g.tab} hidden={active !== i}>
+              <ShotPicture desktop={g.desktop} mobile={g.mobile} alt={g.alt} sizes="(max-width: 760px) 100vw, 1400px" />
+            </div>
+          ))}
         </div>
       </div>
     </section>
