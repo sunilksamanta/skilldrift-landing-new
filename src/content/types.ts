@@ -147,7 +147,26 @@ export type CompareBlock = {
   note?: string;
 };
 
+/**
+ * A real product screen beside the points it proves: the points on one side,
+ * the framed screenshot (desktop and phone versions) on the other. Stacks on
+ * phone, points first.
+ */
+export type ShotBlock = {
+  type: "shot";
+  id?: string;
+  alt?: boolean;
+  eyebrow?: string;
+  heading: string;
+  copy?: string;
+  items: string[];
+  image: string;
+  imageMobile: string;
+  imageAlt: string;
+};
+
 export type Block =
+  | ShotBlock
   | CompareBlock
   | CardBlock
   | StepsBlock

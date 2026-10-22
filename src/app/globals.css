@@ -945,3 +945,7 @@ a:hover > .sd-card-link, a:focus-visible > .sd-card-link { border-color: var(--a
 .sd-show-tabs button:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
 @media (max-width: 720px) { .sd-show-tabs { display: flex; border-radius: 18px; } .sd-show-tabs button { flex: 1 1 auto; font-size: 14px; padding: 8px 12px; } }
 @media (hover: none) { .sd-zoom__hint { top: 12px; right: 12px; bottom: auto; } }
+
+/* Points beside a real product screen (pages.json "shot" block). */
+.sd-shot-grid{margin-top:44px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:44px;align-items:center}
+@media (max-width:900px){.sd-shot-grid{grid-template-columns:1fr;gap:30px}}

@@ -1219,6 +1219,24 @@
           ]
         },
         {
+          "type": "shot",
+          "id": "ai-in-your-field",
+          "alt": true,
+          "eyebrow": "AI in your field",
+          "heading": "Learn the AI your jobs are asking for.",
+          "copy": "Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication. Then SkillDrift goes a level deeper: it reads the jobs you match in your own role and builds an AI course for that role, from what those employers ask for.",
+          "items": [
+            "Read from your own matches. SkillDrift counts how many of your jobs ask for AI tools such as ChatGPT, Copilot, LLMs or generative AI, for example 24 of your 60.",
+            "Quoted, so you can check it. You see the lines from two different employers before you spend anything.",
+            "Built for your role, not a general AI class. The course covers what you will use AI for at work, such as drafting insights from your analysis or writing and checking queries.",
+            "Shown only when it is real: when enough of your matches ask for it and your role uses AI at work. A role that does not use it never sees the offer.",
+            "Finished like any roadmap: hands-on tasks each week, a knowledge check, and a SkillDrift certificate written into your resume. 50 credits, or included in Active Seeker."
+          ],
+          "image": "/assets/shots/ai-in-field.png",
+          "imageMobile": "/assets/shots/m-ai-in-field.png",
+          "imageAlt": "AI in your field in SkillDrift: AI tools for data analysts, about 2 to 4 weeks, because 24 of the person's 60 matches ask for AI tools, with quotes from two employers' postings, where AI helps in the role, and the price before building"
+        },
+        {
           "type": "cards",
           "id": "compounding",
           "eyebrow": "Skill compounding",

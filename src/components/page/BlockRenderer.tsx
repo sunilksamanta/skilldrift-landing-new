@@ -1,6 +1,7 @@
 import type { Block } from "@/content/types";
 import { ArrowRight, Check } from "../icons";
 import PlanCards from "../PlanCards";
+import ShotPicture from "../ShotPicture";
 import FeatureRows from "./FeatureRows";
 import LegalDoc from "./LegalDoc";
 import RichText from "./RichText";
@@ -29,6 +30,42 @@ export default function BlockRenderer({
   };
 
   switch (block.type) {
+    case "shot":
+      return (
+        <Section {...shell}>
+          <div className="sd-shot-grid">
+            <ul style={{ display: "flex", flexDirection: "column", gap: 16, listStyle: "none", margin: 0, padding: 0 }}>
+              {block.items.map((item) => (
+                <li key={item} style={{ display: "flex", gap: 13, fontSize: 15.5, lineHeight: 1.6 }}>
+                  <span style={{ flex: "0 0 auto", marginTop: 2, color: "var(--ac)" }}>
+                    <Check />
+                  </span>
+                  <span>
+                    <RichText text={item} />
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div
+              style={{
+                width: "100%",
+                borderRadius: 22,
+                overflow: "hidden",
+                border: "1px solid var(--line)",
+                boxShadow: "0 30px 70px -20px rgba(76,52,180,.28)",
+              }}
+            >
+              <ShotPicture
+                desktop={block.image}
+                mobile={block.imageMobile}
+                alt={block.imageAlt}
+                sizes="(max-width: 760px) 100vw, 60vw"
+              />
+            </div>
+          </div>
+        </Section>
+      );
+
     case "compare":
       return (
         <Section {...shell}>

@@ -41,6 +41,10 @@ export const faqs = [
     a: "Yes. SkillDrift starts from the gaps your resume, a job description or a mock interview shows, and builds each learning roadmap around those gaps and the role you are aiming at. When you finish, your gaps and job scores update and the certificate is added to your resume. We call this closed loop career development.",
   },
   {
+    q: "Is there a free AI course on SkillDrift?",
+    a: "Yes. Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication, and the certificate goes into your resume when you finish. SkillDrift also reads the jobs you match in your own role. When enough of them ask for AI tools, it builds an AI course for that role, such as AI tools for data analysts, and shows you the postings that ask for it. That course is 50 credits, or included in Active Seeker.",
+  },
+  {
     q: "How is this different from a resume builder?",
     a: "A resume builder formats what you already wrote. SkillDrift starts from the role you want, tells you what is missing, helps you close it, and keeps your resume current as you do. The resume is an output of the loop, not the product.",
   },
