@@ -24,6 +24,8 @@ export type CtaSection =
   | "intent_cards"
   | "resume_rewrite"
   | "live_resume"
+  | "closed_loop"
+  | "ai_course"
   | "feature_grid"
   | "proof"
   | "jobs"

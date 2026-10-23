@@ -3,7 +3,7 @@ import {
   PRICES,
   PRICE_TOKENS,
   REGIONS,
-  resolveRegionalText,
+  resolveRegionalTextForMachines,
   type PriceToken,
 } from "./region";
 import { SITE_NAME, SITE_URL } from "./seo";
@@ -81,11 +81,11 @@ const CURRENCY = { in: "INR", row: "USD" } as const;
 
 const PLAN_NAMES: Record<PriceToken, string> = {
   free: "Free",
-  topup: "Top up",
-  unlimited: "Unlimited",
+  topup: "Casual User",
+  unlimited: "Active Seeker",
 };
 
-/** Unlimited is a monthly subscription; the others are one-off. */
+/** Active Seeker is a monthly subscription; the others are one-off. */
 const RECURRING: Record<PriceToken, boolean> = {
   free: false,
   topup: false,
@@ -168,7 +168,12 @@ export function faqPageSchema(faqs: readonly { q: string; a: string }[]) {
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: resolveRegionalText(faq.a) },
+      acceptedAnswer: {
+        "@type": "Answer",
+        // Inline [label](/href) links are for the visible answer; the structured
+        // answer keeps the label text only.
+        text: resolveRegionalTextForMachines(faq.a).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"),
+      },
     })),
   };
 }

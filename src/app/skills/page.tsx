@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function SkillsHub() {
   const campaign = campaignFor('/skills');
   return (
-    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'hidden' }}>
+    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'clip' }}>
       <SiteHeader campaign={campaign} />
       <main>
         <section style={{ padding: '28px 0 8px' }}>

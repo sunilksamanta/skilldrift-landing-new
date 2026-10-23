@@ -21,7 +21,7 @@ const freeItems: [string, string][] = [
 
 const paidItems: { label: string; note?: string; cost: string }[] = [
   { label: "Tailor your resume to one job", cost: "18" },
-  { label: "Detailed job analysis", cost: "37" },
+  { label: "Deep fit analysis", cost: "37" },
   { label: "Text-based mock interview", cost: "50" },
   { label: "Build a learning roadmap", cost: "50" },
   {
@@ -29,7 +29,7 @@ const paidItems: { label: string; note?: string; cost: string }[] = [
     note: "Share it on LinkedIn and you get all 50 back",
     cost: "50",
   },
-  { label: "Download your resume", cost: "54–70" },
+  { label: "Download your resume", cost: "54 to 70" },
   { label: "Rewrite your resume around outcomes", cost: "70" },
   { label: "Recorded practice interview", cost: "150" },
   { label: "Live voice interview with the AI coach", cost: "200" },

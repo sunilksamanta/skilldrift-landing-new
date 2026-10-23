@@ -71,3 +71,20 @@ export function resolveRegionalText(text: string, region: Region = DEFAULT_REGIO
       PRICES[region][token] ?? whole,
     );
 }
+
+/**
+ * For text a machine reads without the browser bootstrap (FAQ JSON-LD that AI
+ * answers and search results quote). One region would tell an Indian reader a
+ * dollar price, or everyone else a rupee one, so every price carries both:
+ * "₹299 ($6.99 outside India)". Variant copy takes the rest-of-world wording,
+ * which always names the price through a token.
+ */
+export function resolveRegionalTextForMachines(text: string) {
+  return text
+    .replace(/\{\{([\s\S]*?)\|([\s\S]*?)\}\}/g, (_, _inText, rowText) => rowText)
+    .replace(/\{(free|topup|unlimited)\}/g, (whole, token: PriceToken) =>
+      PRICES.in[token] && PRICES.row[token]
+        ? `${PRICES.in[token]} (${PRICES.row[token]} outside India)`
+        : whole,
+    );
+}

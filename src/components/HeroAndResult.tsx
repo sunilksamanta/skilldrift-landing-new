@@ -5,6 +5,8 @@ import { ArrowRight } from "./icons";
 import TrackedLink from "./TrackedLink";
 import GuestResultSection from "./GuestResultSection";
 import { UploadCard } from "./ResumeUploadCard";
+import HeroGoalPicker from "./HeroGoalPicker";
+import ScoreRing from "./ScoreRing";
 import { useGuestAnalysis } from "@/hooks/useGuestAnalysis";
 
 /* av2 is used by a testimonial below, so the stack borrows av9 instead. */
@@ -20,7 +22,7 @@ export default function HeroAndResult() {
         id="top"
         style={{
           position: "relative",
-          padding: done ? "36px 0 0" : "64px 0 110px",
+          padding: done ? "36px 0 0" : "64px 0 84px",
         }}
       >
         <div
@@ -76,7 +78,7 @@ export default function HeroAndResult() {
                     color: "var(--tx)",
                   }}
                 >
-                  See exactly what&rsquo;s missing between you and the role you want
+                  Get the job you want. Then grow into the next one.
                 </h1>
                 <p
                   style={{
@@ -87,10 +89,11 @@ export default function HeroAndResult() {
                     color: "var(--tx2)",
                   }}
                 >
-                  Upload your resume. SkillDrift scores your skills against your target
-                  role, builds the path to close the gap, and updates your resume
-                  automatically as you go.
+                  SkillDrift finds jobs and internships scored out of 100 for you, plans
+                  what to learn and gets you ready to apply and interview. Every step you
+                  finish raises your scores, and after you get the role it keeps going.
                 </p>
+                <HeroGoalPicker />
                 <div
                   style={{
                     marginTop: 30,
@@ -120,6 +123,18 @@ export default function HeroAndResult() {
                     No account required to see your score &middot; first application free
                   </span>
                 </div>
+                <p
+                  style={{
+                    marginTop: 18,
+                    fontSize: 15,
+                    fontWeight: 500,
+                    color: "var(--tx)",
+                    paddingLeft: 14,
+                    borderLeft: "2px solid var(--ac)",
+                  }}
+                >
+                  A chatbot reads your resume once. SkillDrift remembers every step.
+                </p>
 
                 <div
                   style={{
@@ -153,15 +168,63 @@ export default function HeroAndResult() {
                   </span>
                   <span>40,000+ professionals</span>
                   <span style={{ width: 1, height: 14, background: "var(--line2)" }} />
-                  <span>iOS + Android</span>
-                  <span style={{ width: 1, height: 14, background: "var(--line2)" }} />
-                  <span>Gaps &amp; job matches always free</span>
+                  <span className="sd-store-badges">
+                    <TrackedLink
+                      href="https://apps.apple.com/in/app/skilldrift/id6749856149"
+                      section="hero"
+                      label="app_store"
+                      newTab
+                      style={{ display: "block" }}
+                    >
+                      <Image src="/assets/app_store.png" alt="Download on the App Store" width={944} height={328} />
+                    </TrackedLink>
+                    <TrackedLink
+                      href="https://play.google.com/store/apps/details?id=com.skilldrift.app"
+                      section="hero"
+                      label="play_store"
+                      newTab
+                      style={{ display: "block" }}
+                    >
+                      <Image src="/assets/google_play.png" alt="Get it on Google Play" width={944} height={328} />
+                    </TrackedLink>
+                  </span>
+                  <span style={{ flexBasis: "100%" }}>Gaps &amp; job matches always free</span>
                 </div>
               </div>
             )}
 
             {!done && (
-              <div>
+              <div id="upload" style={{ position: "relative" }}>
+                <TrackedLink
+                  href="/job-match"
+                  section="hero"
+                  label="example_result"
+                  ariaLabel="Example result: Sales Executive, 77 out of 100. See how job scores work"
+                  className="sd-hero-peek"
+                >
+                  <ScoreRing value={77} size={46} stroke={4.5} transition={false} />
+                  <div>
+                    <div style={{ fontSize: 10.5, letterSpacing: "0.12em", fontWeight: 600, color: "var(--ac)" }}>
+                      EXAMPLE &middot; SALES EXECUTIVE
+                    </div>
+                    <div style={{ marginTop: 3, display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--tx2)" }}>
+                      Good fit
+                      <span
+                        style={{
+                          padding: "2px 8px",
+                          borderRadius: 999,
+                          fontSize: 12,
+                          fontWeight: 600,
+                          color: "#0f7a4b",
+                          background: "#e3f6ec",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        +7 after one course
+                      </span>
+                    </div>
+                  </div>
+                </TrackedLink>
                 <UploadCard guest={guest} />
                 <p
                   style={{

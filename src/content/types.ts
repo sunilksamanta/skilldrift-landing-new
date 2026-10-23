@@ -17,7 +17,8 @@ export type CardBlock = {
   copy?: string;
   /** Minimum card width before the grid wraps. Default 300. */
   min?: number;
-  cards: { tag?: string; title: string; body: string; accent?: boolean }[];
+  /** A card with `href` becomes one link (the whole card is clickable). */
+  cards: { tag?: string; title: string; body: string; accent?: boolean; href?: string; cta?: string }[];
 };
 
 export type StepsBlock = {
@@ -102,7 +103,7 @@ export type FactsBlock = {
   facts: { label: string; value: string }[];
 };
 
-/** Renders the three real plan cards — Free, Top up, Unlimited. */
+/** Renders the three real plan cards: Free, Casual User, Active Seeker. */
 export type PlansBlock = {
   type: "plans";
   id?: string;
@@ -129,7 +130,44 @@ export type FeatureRowsBlock = {
   id?: string;
 };
 
+/**
+ * A side by side comparison: one row per question, SkillDrift's answer and the
+ * other product's. Rendered as a real <table> so crawlers and answer engines
+ * read it as data. Every claim about the other product carries a checked date.
+ */
+export type CompareBlock = {
+  type: "compare";
+  id?: string;
+  alt?: boolean;
+  eyebrow?: string;
+  heading: string;
+  copy?: string;
+  columns: [string, string, string];
+  rows: { label: string; us: string; them: string; win?: "us" | "them" | "both" }[];
+  note?: string;
+};
+
+/**
+ * A real product screen beside the points it proves: the points on one side,
+ * the framed screenshot (desktop and phone versions) on the other. Stacks on
+ * phone, points first.
+ */
+export type ShotBlock = {
+  type: "shot";
+  id?: string;
+  alt?: boolean;
+  eyebrow?: string;
+  heading: string;
+  copy?: string;
+  items: string[];
+  image: string;
+  imageMobile: string;
+  imageAlt: string;
+};
+
 export type Block =
+  | ShotBlock
+  | CompareBlock
   | CardBlock
   | StepsBlock
   | SplitBlock
@@ -186,6 +224,8 @@ export type RouteContent = {
     secondaryCta?: Cta;
     /** Product shot shown beside the hero copy. Already carries its own field. */
     image?: string;
+    /** Portrait phone-size version of `image`, served below 760px wide. */
+    imageMobile?: string;
     imageAlt?: string;
   };
   sections?: Block[];

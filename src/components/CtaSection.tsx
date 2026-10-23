@@ -186,9 +186,17 @@ export default function CtaSection() {
           overflow: "hidden",
         }}
       >
+        {/* The phone shows the app, so a click starts it, the same as the button above. */}
+        <TrackedLink
+          href={homeCta("closing_phone")}
+          section="final_cta"
+          label="phone_image"
+          ariaLabel="Get started free"
+          style={{ position: "absolute", inset: 0, display: "block" }}
+        >
         <Image
-          src="/assets/phone.png"
-          alt="The SkillDrift app asking what your main career goal is"
+          src="/assets/shots/phone.png"
+          alt="SkillDrift on a phone: the best move today, an electrical engineering internship scored 74 out of 100 with 4 of 8 requirements matched"
           width={1620}
           height={1760}
           style={{
@@ -203,6 +211,7 @@ export default function CtaSection() {
             filter: "drop-shadow(0 -30px 70px rgba(20,10,60,.45))",
           }}
         />
+        </TrackedLink>
       </div>
     </section>
   );

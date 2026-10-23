@@ -64,7 +64,7 @@ export default async function ContentPage({
         background: "var(--bg)",
         color: "var(--tx)",
         minHeight: "100vh",
-        overflowX: "hidden",
+        overflowX: "clip",
       }}
     >
       <JsonLd schemas={schemas} />
@@ -102,6 +102,7 @@ export default async function ContentPage({
           secondaryCta={route.hero.secondaryCta}
           noCta={route.hero.noCta}
           image={route.hero.image}
+          imageMobile={route.hero.imageMobile}
           imageAlt={route.hero.imageAlt}
           campaign={campaignFor(route.path)}
         />

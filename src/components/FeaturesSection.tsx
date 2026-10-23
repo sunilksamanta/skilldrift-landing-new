@@ -151,6 +151,7 @@ export default function FeaturesSection() {
               no frame of its own — only a matching radius. */}
           {active.image && (
             <TrackedLink
+              className="sd-phone-hide"
               href={active.href}
               section="feature_grid"
               label={active.slug}
@@ -162,7 +163,8 @@ export default function FeaturesSection() {
                 aspectRatio: "1800 / 1290",
                 borderRadius: 24,
                 overflow: "hidden",
-                boxShadow: "0 30px 70px rgba(20,10,60,.28)",
+                boxShadow: "0 30px 70px -20px rgba(76,52,180,.28)",
+                border: "1px solid var(--line)",
               }}
             >
               <Image

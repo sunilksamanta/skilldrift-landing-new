@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import AiCourseSection from "@/components/AiCourseSection";
+import CareerLifeSection from "@/components/CareerLifeSection";
 import CtaSection from "@/components/CtaSection";
 import DoorsSection from "@/components/DoorsSection";
 import FaqSection, { faqs } from "@/components/FaqSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import FreeSection from "@/components/FreeSection";
 import HeroAndResult from "@/components/HeroAndResult";
 import JobsSection from "@/components/JobsSection";
-import LiveResumeSection from "@/components/LiveResumeSection";
+import ScoreLoopSection from "@/components/ScoreLoopSection";
 import LoopSection from "@/components/LoopSection";
 import PricingSection from "@/components/PricingSection";
 import ProofSection from "@/components/ProofSection";
+import ProductShowcase from "@/components/ProductShowcase";
 import RewriteSection from "@/components/RewriteSection";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
@@ -31,7 +33,7 @@ export default function Home() {
         background: "var(--bg)",
         color: "var(--tx)",
         minHeight: "100vh",
-        overflowX: "hidden",
+        overflowX: "clip",
       }}
     >
       <JsonLd
@@ -46,13 +48,15 @@ export default function Home() {
       <main>
         <HeroAndResult />
         <DoorsSection />
+        <ProductShowcase />
+        <ScoreLoopSection />
+        <AiCourseSection />
         <LoopSection />
+        <CareerLifeSection />
         <RewriteSection />
-        <LiveResumeSection />
         <FeaturesSection />
         <ProofSection />
         <JobsSection />
-        <FreeSection />
         <PricingSection />
         <FaqSection />
         <CtaSection />

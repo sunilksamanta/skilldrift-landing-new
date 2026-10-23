@@ -76,7 +76,7 @@ export default function RoleHero({
               <strong style={{ color: "var(--tx)" }}>Check yours against a real {role} job.</strong> {intro}
             </p>
           </div>
-          <div>
+          <div id="upload">
             <UploadCard guest={guest} campaign={campaign} />
           </div>
         </div>

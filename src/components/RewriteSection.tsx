@@ -93,9 +93,10 @@ export default function RewriteSection() {
         <div
           style={{ marginTop: 56, display: "flex", flexDirection: "column", gap: 18 }}
         >
-          {pairs.map((pair) => (
+          {pairs.map((pair, i) => (
             <div
               key={pair.before}
+              className={i > 0 ? "sd-phone-hide" : undefined}
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit,minmax(min(320px,100%),1fr))",

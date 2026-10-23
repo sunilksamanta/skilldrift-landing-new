@@ -2,9 +2,9 @@
   "routes": [
     {
       "path": "/",
-      "title": "SkillDrift - see the skills between you and the job you want",
-      "description": "Upload your resume free and get a readiness score out of 100, the skills holding you back, and matched jobs and internships. No account needed to see it.",
-      "h1": "See exactly what's missing between you and the role you want",
+      "title": "SkillDrift: get the job you want and grow your career",
+      "description": "Upload your resume free. See jobs and internships scored out of 100 and the skills holding you back, then learn them: your resume updates itself and your job matches re-score as you grow. No account needed to see your score.",
+      "h1": "Get the job you want. Then grow into the next one.",
       "priority": 1.0,
       "custom": true
     },
@@ -19,14 +19,14 @@
     },
     {
       "path": "/features",
-      "title": "SkillDrift features - every tool in the career loop",
-      "description": "Score your skills, close the gap, tailor your resume, practise the interview and match to jobs out of 100. Seven connected tools, free to start.",
-      "h1": "Seven tools. One loop. One score that moves.",
+      "title": "SkillDrift features: every step of your career, connected",
+      "description": "Jobs scored out of 100, a plan for your gaps, learning, tailored resumes and interview practice, all reading one profile. Every step you finish raises your scores. Free to start.",
+      "h1": "Get the job, then grow. Every step connected, so every step counts.",
       "priority": 0.9,
       "breadcrumb": "Features",
       "hero": {
         "eyebrow": "Features",
-        "standfirst": "Every tool feeds one connected profile, one growing score, and one resume that gets stronger with every skill you build. Start with any of them; they all read the same resume.",
+        "standfirst": "Every tool reads the same profile, so a course you finish, an interview you practise and a month in your role all move the same scores. Start with any of them.",
         "primaryCta": {
           "label": "Upload your resume - free",
           "href": "app:sign-in"
@@ -42,26 +42,34 @@
         },
         {
           "type": "cards",
-          "eyebrow": "And the rest of it",
-          "heading": "Three more places to start.",
-          "copy": "Not every route in starts with a feature. These are the pages people open first.",
-          "min": 300,
+          "eyebrow": "Where to start",
+          "heading": "Four more places to start.",
+          "copy": "Pick the one that matches what you need today. Each leads into the same record, so nothing you do is wasted.",
+          "min": 240,
           "cards": [
             {
-              "tag": "How it works",
               "title": "The closed loop, end to end",
-              "body": "Upload, score, roadmap, learn, certify, rise, and then round again. The six steps and why joining them is the product.",
-              "accent": true
+              "body": "Upload, score, roadmap, learn, certify, rise, and round again. Why joining the steps is what moves your scores.",
+              "href": "/closed-loop-career-development",
+              "cta": "See the loop"
             },
             {
-              "tag": "Jobs",
-              "title": "Real roles, ranked out of 100",
-              "body": "Including internships and openings for under a year of experience, scored the same way as senior roles."
+              "title": "Jobs and internships, scored for you",
+              "body": "Every opening scored out of 100 against your resume, only with a trusted apply link, and never charged once closed.",
+              "href": "/jobs",
+              "cta": "See the jobs"
             },
             {
-              "tag": "Pricing",
-              "title": "Free to start, pay when you apply",
-              "body": "Diagnosis is free forever. {{In India, one credit is one rupee, so every price is already in money you understand.|Credits are priced up front and never expire, so you always know what a run costs.}}"
+              "title": "How SkillDrift compares",
+              "body": "Side by side with ChatGPT, LinkedIn Premium, Jobright and Internshala.",
+              "href": "/compare",
+              "cta": "Compare"
+            },
+            {
+              "title": "Free to start",
+              "body": "Diagnosis is free forever, and new accounts get 160 credits, enough for a full first application.",
+              "href": "/pricing",
+              "cta": "See pricing"
             }
           ]
         }
@@ -111,7 +119,7 @@
             },
             {
               "title": "Score",
-              "body": "Pick a target role and see your gap out of 100, skill by skill."
+              "body": "Pick a target role and see your match out of 100, with each missing skill named."
             },
             {
               "title": "Roadmap",
@@ -119,7 +127,7 @@
             },
             {
               "title": "Learn",
-              "body": "Bite-size sprints, not 40-hour courses."
+              "body": "Short sprints built from your own gaps and sized to your hours."
             },
             {
               "title": "Certify",
@@ -129,6 +137,43 @@
               "title": "Rise",
               "body": "Your score re-scores itself free, and better roles unlock. Then round again."
             }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "what-moves",
+          "min": 260,
+          "eyebrow": "What moves your scores",
+          "heading": "What moves your scores, and by how much?",
+          "copy": "A chat starts from zero every time. SkillDrift keeps one record, so every step you take changes something you can see.",
+          "cards": [
+            {
+              "title": "Finish a roadmap",
+              "body": "Your readiness, and every job that asks for that skill, rises by the amount the roadmap showed before you started. Once.",
+              "accent": true
+            },
+            {
+              "title": "Practise an interview",
+              "body": "Your report names the weak answers, and each one can become a roadmap of its own."
+            },
+            {
+              "title": "Work in your role",
+              "body": "Each month in a role adds to the skills it uses, and a logged win can go onto your resume."
+            },
+            {
+              "title": "Get a new role",
+              "body": "Your resume, your career paths and your job matches refresh around the role you joined."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "whole-career",
+          "eyebrow": "After the loop",
+          "heading": "What happens after you get the job?",
+          "paragraphs": [
+            "The loop does not stop at an offer. Tap I got the role and SkillDrift adds it to your resume, checks a month later that you started, counts each month in the role toward your skills, and helps you prepare for your review with a draft self-review built from your weekly wins.",
+            "It works for every goal, from your first internship to your next promotion. [See how SkillDrift follows your career](/career-progression)."
           ]
         },
         {
@@ -169,7 +214,7 @@
             {
               "tag": "Free, no account",
               "title": "Your readiness score",
-              "body": "Drop a PDF or DOCX on the homepage and get your score out of 100, the three skills holding it down, and three matched roles, in place, with no redirect.",
+              "body": "Drop a PDF or DOCX on the homepage and get your readiness score, the three skills holding it down, and three matched roles, in place, with no redirect.",
               "accent": true
             },
             {
@@ -180,7 +225,7 @@
             {
               "tag": "Costs credits",
               "title": "Anything you send an employer",
-              "body": "Tailoring, downloads, rewrites and mock interviews. New accounts get starter credits, enough for a full first application."
+              "body": "Tailoring, downloads, rewrites and mock interviews. New accounts get 160 credits, enough for a full first application."
             }
           ]
         }
@@ -192,7 +237,13 @@
           "label": "Get started free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "What moves your scores, and by how much?",
+          "a": "Finishing a verified roadmap raises your readiness, and every job that asks for that skill, by the amount the roadmap showed before you started, once. Interviews turn weak answers into roadmaps, each month in a role adds to the skills it uses, and a new role refreshes your resume, career paths and job matches."
+        }
+      ]
     },
     {
       "path": "/resume-tailoring",
@@ -213,8 +264,9 @@
           "label": "See what it costs",
           "href": "#cost"
         },
-        "image": "/assets/tailor-resume.png",
-        "imageAlt": "Side-by-side comparison of an original resume and the AI-tailored version for a Senior Product Designer role"
+        "image": "/assets/shots/tailor-apply-kit.png",
+        "imageAlt": "The Apply Kit for a Senior Financial Accountant job: improve your resume, tailor it for this job for 18 credits, download it, then apply on the company site",
+        "imageMobile": "/assets/shots/m-tailor-apply-kit.png"
       },
       "sections": [
         {
@@ -224,8 +276,8 @@
           "copy": "The posting decides the emphasis. You decide what is true. Nothing is invented in between.",
           "steps": [
             {
-              "title": "Paste the job",
-              "body": "Any posting: LinkedIn, Indeed, a careers page, or one of your matched roles."
+              "title": "Pick the job",
+              "body": "Any job on your job board, or a posting from LinkedIn, Indeed or a careers page."
             },
             {
               "title": "We read both sides",
@@ -264,31 +316,58 @@
           ]
         },
         {
+          "type": "cards",
+          "id": "apply-kit",
+          "alt": true,
+          "min": 250,
+          "eyebrow": "Why tailor in SkillDrift",
+          "heading": "What do you get beyond a tailored resume?",
+          "copy": "A chatbot rewrites what you paste. SkillDrift tailors from everything it already knows about you, and prepares the rest of the application with it.",
+          "cards": [
+            {
+              "title": "Your proof is already on it",
+              "body": "Certificates you earned, experience you proved with I have this and the languages you speak are on your resume before you tailor."
+            },
+            {
+              "title": "The whole Apply Kit",
+              "body": "A cover note, drafts for the questions the application asks, and help asking for a referral with a short note."
+            },
+            {
+              "title": "Only jobs that are still open",
+              "body": "SkillDrift checks the job before the Apply Kit opens, and never charges for a job that has closed."
+            },
+            {
+              "title": "Your job board stays right",
+              "body": "A day or two later SkillDrift asks whether you applied and moves the job to Applied, so every application is tracked."
+            }
+          ]
+        },
+        {
           "type": "prices",
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "What does tailoring a resume cost?",
-          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gap analysis, job matching and your career path never cost a credit.",
+          "copy": "{{In India, one credit is one rupee.|Credits you buy never expire.}} Skill gap analysis, job matching and your career path never cost a credit.",
           "rows": [
             {
               "label": "Tailor your resume to one job",
               "cost": "18 credits"
             },
             {
-              "label": "Detailed job analysis",
+              "label": "Deep fit analysis",
               "cost": "37 credits"
             },
             {
               "label": "Download your resume",
-              "cost": "54–70 credits"
+              "cost": "54 to 70 credits"
             }
           ],
-          "note": "One full application costs about 72 credits: 18 to tailor, 54 to download. A 299-credit top-up is {topup} and covers roughly four. Compare that against unlimited on the [pricing page](/pricing)."
+          "note": "One full application costs about 72 credits: 18 to tailor, 54 to download. A Casual User pack of 299 credits is {topup} and covers roughly four. Compare that against Active Seeker on the [pricing page](/pricing)."
         }
       ],
       "cta": {
         "heading": "Stop sending the same resume to every job.",
-        "copy": "Upload once, see your readiness score free, and tailor your first application on your starter credits.",
+        "copy": "Upload once, see your readiness score free, and tailor your first application on your 160 sign-up credits.",
         "primary": {
           "label": "Get started free",
           "href": "app:sign-in"
@@ -316,8 +395,8 @@
     },
     {
       "path": "/resume-rewrite",
-      "title": "Rewrite your resume around outcomes, not duties | SkillDrift",
-      "description": "Most resumes list duties. SkillDrift asks what actually happened and rewrites each line around the result. Every figure is one you supplied, nothing invented.",
+      "title": "Achievements in Resume: Rewrite Every Line Around the Result | SkillDrift",
+      "description": "Turn resume bullet points from duties into achievements. SkillDrift asks what actually happened and rewrites each line around the result. Every figure is one you supplied, nothing invented.",
       "h1": "Rewrite your resume around what happened, not what you were responsible for.",
       "priority": 0.8,
       "breadcrumb": "Resume rewrite",
@@ -333,8 +412,9 @@
           "label": "See what it costs",
           "href": "#cost"
         },
-        "image": "/assets/resume-rewrite.png",
-        "imageAlt": "SkillDrift asking what a Product Designer role actually produced (quantified results, team size and tools) before rewriting the section"
+        "image": "/assets/shots/rewrite-improve.png",
+        "imageAlt": "The Apply Kit step that rewrites your latest role around real results, for 70 credits once, with improving the rest of your resume free later",
+        "imageMobile": "/assets/shots/m-rewrite-improve.png"
       },
       "sections": [
         {
@@ -397,11 +477,33 @@
           ]
         },
         {
+          "type": "cards",
+          "id": "why-here",
+          "alt": true,
+          "min": 250,
+          "eyebrow": "Why rewrite in SkillDrift",
+          "heading": "Why rewrite your resume in SkillDrift and not in a chatbot?",
+          "cards": [
+            {
+              "title": "It asks before it writes",
+              "body": "Every figure comes from your answers, so you can defend every line in the interview."
+            },
+            {
+              "title": "It stays current by itself",
+              "body": "Certificates, new roles and the languages you speak are added as they happen, so the rewrite never goes stale."
+            },
+            {
+              "title": "Every application starts from it",
+              "body": "Each tailored version is built from your rewritten resume, so the improvement carries into every job you apply for."
+            }
+          ]
+        },
+        {
           "type": "prices",
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "What does a resume rewrite cost?",
-          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Resume and ATS analysis, the diagnosis that tells you whether you need this at all, is free.",
+          "copy": "{{In India, one credit is one rupee.|Credits you buy never expire.}} Resume and ATS analysis, the diagnosis that tells you whether you need this at all, is free.",
           "rows": [
             {
               "label": "Resume and ATS analysis",
@@ -414,7 +516,7 @@
             },
             {
               "label": "Download your resume",
-              "cost": "54–70 credits"
+              "cost": "54 to 70 credits"
             }
           ],
           "note": "Run the free analysis first. If your resume already leads with outcomes, it will tell you so and you can spend the credits elsewhere. Full prices on the [pricing page](/pricing)."
@@ -450,15 +552,15 @@
     },
     {
       "path": "/interview-prep",
-      "title": "AI Interview Practice and Mock Interviews | SkillDrift",
-      "description": "Practice any interview with an AI coach by live voice, recorded answers or text. Every mock interview ends with a scorecard showing where you lost points.",
-      "h1": "Practise the interview in the format you will actually face.",
+      "title": "AI Mock Interview, Out Loud and Scored out of 10 | SkillDrift",
+      "description": "Practise a mock interview out loud, by recorded voice or with a live interviewer, in English or Hindi. Get a score out of 10, your hire chance and a learning roadmap from your weak answers.",
+      "h1": "Practise the interview out loud, and get an honest score out of 10.",
       "priority": 0.8,
       "breadcrumb": "Interview prep",
       "feature": true,
       "hero": {
         "eyebrow": "Interview prep",
-        "standfirst": "SkillDrift runs mock interviews in three formats: text, recorded voice, and live realtime voice. The realtime voice interview runs in English and in Hindi, so you can practise in the language you will be interviewed in. Every format returns a scorecard naming where you lost points, and every gap it finds can be turned into a learning roadmap.",
+        "standfirst": "A chatbot can ask you questions in text. A real interview is spoken, under time pressure, with follow-up questions. SkillDrift runs mock interviews in text, recorded voice and live voice, and the live interview runs in English and in Hindi. Every report gives a score out of 10, your hire chance and the questions to work on first, and every weak answer can become a learning roadmap.",
         "primaryCta": {
           "label": "Start a mock interview",
           "href": "app:sign-in"
@@ -467,8 +569,9 @@
           "label": "See the scorecard",
           "href": "#scorecard"
         },
-        "image": "/assets/interview.png",
-        "imageAlt": "A SkillDrift mock interview in progress with its scorecard"
+        "image": "/assets/shots/interview-report.png",
+        "imageAlt": "A SkillDrift text interview report for a paid media executive role: 6.8 out of 10, a medium hire chance, the three answers to work on first and a roadmap from the gaps",
+        "imageMobile": "/assets/shots/m-interview-report.png"
       },
       "sections": [
         {
@@ -550,12 +653,39 @@
           ]
         },
         {
+          "type": "cards",
+          "id": "why-here",
+          "alt": true,
+          "min": 250,
+          "eyebrow": "Why practise in SkillDrift",
+          "heading": "Why practise in SkillDrift and not with a chatbot?",
+          "cards": [
+            {
+              "title": "Built from the job you want",
+              "body": "Questions come from the posting you are chasing, so the practice matches the room you will walk into."
+            },
+            {
+              "title": "A verdict, not encouragement",
+              "body": "A score out of 10 and your chance of being hired, with the answers that cost you points named."
+            },
+            {
+              "title": "Weak answers become a plan",
+              "body": "Each weak answer can become a learning roadmap, and your next attempt is measured against your last."
+            },
+            {
+              "title": "Out loud, in English or Hindi",
+              "body": "Recorded voice and a live interview that follows up on what you actually said, as a real panel would."
+            }
+          ],
+          "copy": "Interview practice is one part of the coach. See [what an AI career coach that also teaches you does](/ai-career-coach)."
+        },
+        {
           "type": "prices",
           "alt": true,
           "id": "cost",
           "eyebrow": "What it costs",
           "heading": "What does an AI mock interview cost?",
-          "copy": "{{In India, one credit is one rupee.|Credits never expire.}} Skill gaps, job matching and your career path stay free forever; you spend only on the runs you actually take.",
+          "copy": "{{In India, one credit is one rupee.|Credits you buy never expire.}} Skill gaps, job matching and your career path stay free forever; you spend only on the runs you actually take.",
           "rows": [
             {
               "label": "Text-based mock interview",
@@ -570,7 +700,7 @@
               "cost": "200 credits"
             }
           ],
-          "note": "Past roughly three live interviews a month, unlimited at {unlimited} costs you less than topping up. Compare both on the [pricing page](/pricing)."
+          "note": "Past roughly three live interviews a month, Active Seeker at {unlimited} costs you less than buying credits. Compare both on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -592,7 +722,7 @@
         },
         {
           "q": "What does an AI mock interview report actually tell you?",
-          "a": "Where you lost points, question by question. A text interview returns an overall score out of 100 with per-question feedback. The voice and realtime formats add a hire verdict out of 10 and an assessment of delivery. Every weakness it names can be turned into a learning roadmap."
+          "a": "Where you lost points, question by question. A text interview returns an overall score out of 10, to one decimal, with per-question feedback. The voice and realtime formats add a hire verdict out of 10 and an assessment of delivery. Every weakness it names can be turned into a learning roadmap."
         },
         {
           "q": "What does an AI mock interview cost?",
@@ -602,14 +732,14 @@
     },
     {
       "path": "/job-match",
-      "title": "Jobs matched to your resume, scored out of 100 | SkillDrift",
-      "description": "Stop scrolling job boards. See roles ranked by how well you actually match, out of 100, including internships and entry-level openings. Free to use.",
-      "h1": "See which jobs you actually match, scored out of 100.",
+      "title": "Which Jobs Can You Get? Matched to Your Resume, out of 100 | SkillDrift",
+      "description": "See which jobs you can get now, scored out of 100 against your resume, and what to learn for the rest. Every gap is named and turns into a learning roadmap. Free to use.",
+      "h1": "See which jobs you can get now, and what to learn for the rest.",
       "priority": 0.8,
-      "breadcrumb": "Job fit analysis",
+      "breadcrumb": "Job matching",
       "feature": true,
       "hero": {
-        "eyebrow": "Job fit analysis",
+        "eyebrow": "Job matching",
         "standfirst": "SkillDrift reads your resume against each open role and scores the match out of 100, with the reasons behind the number named rather than hidden. Internships and entry level roles are included for anyone with under a year of experience. Basic analysis on any role costs nothing.",
         "primaryCta": {
           "label": "Check a job match",
@@ -619,8 +749,9 @@
           "label": "Browse matched jobs",
           "href": "/jobs"
         },
-        "image": "/assets/job-match.png",
-        "imageAlt": "A pasted job description scored against a resume, showing the match out of 100"
+        "image": "/assets/shots/job-match-analysis.png",
+        "imageAlt": "A tax manager job for an experienced accountant, scored 78 out of 100, with the five skills the person already has, the three to close and the next step",
+        "imageMobile": "/assets/shots/m-job-match-analysis.png"
       },
       "sections": [
         {
@@ -667,9 +798,9 @@
             {
               "title": "Costs credits",
               "items": [
-                "Detailed job analysis on one posting - 37 credits",
-                "Tailoring your resume to that posting - 18 credits",
-                "Downloading the tailored version - 54 to 70 credits"
+                "Deep fit analysis on one posting: 37 credits",
+                "Tailoring your resume to that posting: 18 credits",
+                "Downloading the tailored version: 54 to 70 credits"
               ]
             }
           ]
@@ -678,7 +809,7 @@
           "type": "cards",
           "eyebrow": "Why it beats scrolling",
           "heading": "What does a job match score out of 100 actually measure?",
-          "min": 300,
+          "min": 260,
           "cards": [
             {
               "title": "Entry level is scored too",
@@ -692,6 +823,18 @@
             {
               "title": "It moves as you learn",
               "body": "Close a gap and the score re-scores itself free. Roles that were out of reach become reachable."
+            },
+            {
+              "title": "One score, everywhere",
+              "body": "A job has one match score out of 100, the same on your board, the job page and your dashboard. Closed jobs drop off, and you are never charged for one."
+            },
+            {
+              "title": "Your experience counts",
+              "body": "Years, a licence or a language cannot be learned on a course. Add one line of proof, or the language you speak, and the requirement counts as met."
+            },
+            {
+              "title": "Every score explained",
+              "body": "The same resume always gets the same score, and every score shows how it was worked out."
             }
           ]
         }
@@ -717,7 +860,7 @@
         },
         {
           "q": "Is job matching free?",
-          "a": "Yes. Job and internship matches are scored for free, and a basic analysis of any individual role costs nothing. A detailed job analysis is 37 credits."
+          "a": "Yes. Job and internship matches are scored for free, and a basic analysis of any individual role costs nothing. A Deep fit analysis is 37 credits, and it also works on a job you paste from another site."
         },
         {
           "q": "What does a job match score out of 100 actually measure?",
@@ -731,9 +874,9 @@
     },
     {
       "path": "/career-roadmap",
-      "title": "Build a career roadmap from your resume | SkillDrift",
-      "description": "Pick a target role and get the exact skills that close the gap, in the order that moves your score. Your first career path is free when you upload a resume.",
-      "h1": "How to build a career roadmap from the role you actually want.",
+      "title": "Build a Career Plan from Your Resume | SkillDrift",
+      "description": "Pick the role you want and get a career plan built from your resume: every skill gap named, in the order that moves your readiness most, and updated as you learn. Your first career path is free.",
+      "h1": "Build a career plan from your resume, for the role you actually want.",
       "priority": 0.8,
       "breadcrumb": "Career roadmap",
       "feature": true,
@@ -748,15 +891,16 @@
           "label": "See how the loop works",
           "href": "/how-it-works"
         },
-        "image": "/assets/career-roadmap.png",
-        "imageAlt": "A Senior Product Designer career path: target role, readiness, and a skill gap radar comparing current level against required level"
+        "image": "/assets/shots/career-path.png",
+        "imageAlt": "A maintenance engineer's path at 61% strength with each step marked, the readiness and top gap that move it most, the path card, and the next role, Senior Maintenance Engineer, already on the plan",
+        "imageMobile": "/assets/shots/m-career-path.png"
       },
       "sections": [
         {
           "type": "steps",
           "eyebrow": "How it runs",
           "heading": "How do you build a career roadmap for yourself?",
-          "copy": "A list of everything you are missing is not a plan. The order is the product.",
+          "copy": "A list of everything you are missing is not a plan. The order is the product. For the learning inside each gap, see [how SkillDrift makes a learning plan from your resume](/learning-plan-from-resume).",
           "steps": [
             {
               "title": "Name the target",
@@ -764,7 +908,7 @@
             },
             {
               "title": "See the gap, scored",
-              "body": "Skill by skill, out of 100, against that role, not against strangers."
+              "body": "Your readiness for that role as a percentage, with every missing skill named, against that role and not against strangers."
             },
             {
               "title": "Get the order",
@@ -772,7 +916,7 @@
             },
             {
               "title": "Watch it re-score",
-              "body": "Close one and the score updates free. The roadmap re-orders around what is left."
+              "body": "Finish a roadmap and readiness rises by the amount it showed before you started. The plan re-orders around what is left."
             }
           ]
         },
@@ -803,6 +947,29 @@
           ]
         },
         {
+          "type": "cards",
+          "id": "honest-learning",
+          "alt": false,
+          "min": 250,
+          "eyebrow": "Only what a course can teach",
+          "heading": "Will SkillDrift sell you a course you do not need?",
+          "copy": "No. A roadmap is built only for a gap that learning can close.",
+          "cards": [
+            {
+              "title": "Experience is marked as experience",
+              "body": "Years in a role, a network, a quota or a licence are never sold as a course. Add one line of proof and the job counts it as met."
+            },
+            {
+              "title": "Languages go straight on your resume",
+              "body": "No roadmap for a language a job asks for. Add the language you speak and it counts as met on every matched job."
+            },
+            {
+              "title": "Sized to the hours you have",
+              "body": "Each roadmap fits the time you have each week, in the order that moves your readiness most."
+            }
+          ]
+        },
+        {
           "type": "prices",
           "eyebrow": "What it costs",
           "heading": "Is a career roadmap free on SkillDrift?",
@@ -822,7 +989,7 @@
               "cost": "50 credits"
             }
           ],
-          "note": "New accounts get starter credits, so your first roadmap can come out of those. See the full table on the [pricing page](/pricing)."
+          "note": "New accounts get 160 credits, so your first roadmap can come out of those. See the full table on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -855,8 +1022,8 @@
     },
     {
       "path": "/skill-benchmarking",
-      "title": "Free skill gap analysis and peer benchmarking | SkillDrift",
-      "description": "See your skills against industry standards and against your peers, scored out of 100, with the blind spots named. Free, and it re-scores as you learn.",
+      "title": "Free Skill Gap Analysis and Skills Assessment from Your Resume | SkillDrift",
+      "description": "A skills assessment from your resume, with no questionnaire: every missing skill named against the role you want, jobs scored out of 100, and a re-score each time you learn. Free.",
       "h1": "See exactly which skills are missing between you and the role you want.",
       "priority": 0.8,
       "breadcrumb": "Skill benchmarking",
@@ -872,8 +1039,9 @@
           "label": "See what's free",
           "href": "/pricing"
         },
-        "image": "/assets/benchmarking.png",
-        "imageAlt": "Skills benchmarked against industry standards and peers, scored out of 100"
+        "image": "/assets/shots/benchmarking.png",
+        "imageAlt": "Readiness for a maintenance engineer at 61%: the top gap, predictive maintenance and condition monitoring, the skills inside it, and the next gaps with how much each adds",
+        "imageMobile": "/assets/shots/m-benchmarking.png"
       },
       "sections": [
         {
@@ -886,7 +1054,7 @@
               "title": "Scored against the role",
               "accent": true,
               "items": [
-                "Your readiness out of 100 for the role you actually want",
+                "Your readiness, as a percentage, for the role you actually want",
                 "The specific skills holding the number down, named",
                 "Industry standards for that role, not a generic profile",
                 "Benchmarks against the level above you, not against strangers"
@@ -925,6 +1093,28 @@
             {
               "title": "Come back after you learn",
               "body": "Re-scoring is free and unlimited. The loop never costs you anything to turn."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "explained",
+          "alt": true,
+          "min": 250,
+          "eyebrow": "Scores you can trust",
+          "heading": "Can you trust a skills score?",
+          "cards": [
+            {
+              "title": "Same resume, same score",
+              "body": "Upload the same resume twice and you get the same result. A small change moves only what it touches."
+            },
+            {
+              "title": "Every score shows its working",
+              "body": "Each result says how it was scored, so you can see exactly what moved it."
+            },
+            {
+              "title": "Experience counts as experience",
+              "body": "Years in a role or a licence are marked as experience you can prove, not as a skill you are missing."
             }
           ]
         },
@@ -981,8 +1171,8 @@
     },
     {
       "path": "/learning-sprints",
-      "title": "Bite-size upskilling sprints with certificates | SkillDrift",
-      "description": "Learn the exact skills your gap report flagged in short sprints, not 40-hour courses. Finish one and the certificate writes itself into your resume.",
+      "title": "Upskilling Courses Built from Your Own Skill Gap | SkillDrift",
+      "description": "Upskilling built from the gaps in your own resume, plus a free AI course with certificate for your field. Finish one and your job scores move and the certificate goes onto your resume.",
       "h1": "Close one named skill gap at a time, in short sprints.",
       "priority": 0.8,
       "breadcrumb": "Learning sprints",
@@ -998,15 +1188,16 @@
           "label": "See how the loop works",
           "href": "/how-it-works"
         },
-        "image": "/assets/learning.png",
-        "imageAlt": "A SkillDrift learning sprint with its lessons and progress"
+        "image": "/assets/shots/learning-roadmaps.png",
+        "imageAlt": "A learning roadmap for Advanced Reliability and Asset Management, four weeks at an advanced level, with the first sprint ready and readiness rising to 72% when it is finished",
+        "imageMobile": "/assets/shots/m-learning-roadmaps.png"
       },
       "sections": [
         {
           "type": "cards",
           "eyebrow": "Why sprints",
           "heading": "Why do people not finish online courses?",
-          "copy": "You do not need a syllabus. You need the four things standing between you and the role, in the order that moves your score.",
+          "copy": "You do not need a syllabus. You need the four things standing between you and the role, in the order that moves your score. See [how the learning plan is built from your resume](/learning-plan-from-resume).",
           "min": 300,
           "cards": [
             {
@@ -1021,6 +1212,55 @@
             {
               "title": "Scored, not just completed",
               "body": "Finishing moves your readiness score, so progress shows up as a number rather than a badge."
+            },
+            {
+              "title": "Never a course it cannot teach",
+              "body": "Years of experience, a licence or a language are not sold as a course. Add your proof instead and the job counts it."
+            }
+          ]
+        },
+        {
+          "type": "shot",
+          "id": "ai-in-your-field",
+          "alt": true,
+          "eyebrow": "AI in your field",
+          "heading": "Learn the AI your jobs are asking for.",
+          "copy": "Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication. Then SkillDrift goes a level deeper: it reads the jobs you match in your own role and builds an AI course for that role, from what those employers ask for.",
+          "items": [
+            "Read from your own matches. SkillDrift counts how many of your jobs ask for AI tools such as ChatGPT, Copilot, LLMs or generative AI, for example 9 of your 60.",
+            "Quoted, so you can check it. You see the lines from two different employers before you spend anything.",
+            "Built for your role, not a general AI class. The course covers what you will use AI for at work, such as drafting insights from your analysis or writing and checking queries.",
+            "Shown only when it is real: when enough of your matches ask for it and your role uses AI at work. A role that does not use it never sees the offer.",
+            "Finished like any roadmap: hands-on tasks each week, a knowledge check, and a SkillDrift certificate written into your resume. 50 credits, or included in Active Seeker."
+          ],
+          "image": "/assets/shots/ai-in-field.png",
+          "imageMobile": "/assets/shots/m-ai-in-field.png",
+          "imageAlt": "AI in your field in SkillDrift: AI tools for digital marketing, about 2 to 4 weeks, because 9 of the person's 60 matches ask for AI tools, with quotes from two employers' postings, where AI helps in the role, and the price before building"
+        },
+        {
+          "type": "cards",
+          "id": "compounding",
+          "eyebrow": "Skill compounding",
+          "min": 260,
+          "heading": "What does finishing a roadmap do to your scores?",
+          "copy": "Every real step adds up. Learning, a new role and time in your current role all raise the same skill scores, and everything that depends on them updates by itself.",
+          "cards": [
+            {
+              "title": "The number you were promised",
+              "body": "Before you start, a roadmap shows how much your readiness will rise. Finish and verify it, and readiness rises by exactly that amount, once.",
+              "accent": true
+            },
+            {
+              "title": "Only the jobs that ask for it",
+              "body": "Jobs that ask for the skill you learned move up. Jobs that do not ask for it stay where they are. No job goes down."
+            },
+            {
+              "title": "Your work counts too",
+              "body": "Add a new role to your resume and your skills grow by the time you spent in it. While the role is current, each month adds to the skills it uses."
+            },
+            {
+              "title": "Nothing goes backwards by accident",
+              "body": "Practising an interview never lowers your readiness or your match scores, and neither does improving your resume."
             }
           ]
         },
@@ -1073,7 +1313,7 @@
               "cost": "50 credits"
             }
           ],
-          "note": "{{In India, one credit is one rupee.|Credits never expire.}} Full table on the [pricing page](/pricing)."
+          "note": "{{In India, one credit is one rupee.|Credits you buy never expire.}} Full table on the [pricing page](/pricing)."
         }
       ],
       "cta": {
@@ -1106,14 +1346,14 @@
     },
     {
       "path": "/jobs",
-      "title": "Jobs and internships matched to your resume | SkillDrift",
-      "description": "Real roles ranked for you out of 100, including internships and openings for under one year of experience. Upload your resume free to see your matches.",
-      "h1": "Real roles. Ranked for you, out of 100.",
+      "title": "Entry Level Jobs and Internships, Scored for You | SkillDrift",
+      "description": "Entry level jobs, fresher jobs, internships and jobs at every level, scored out of 100 against your resume. Only jobs with a trusted apply link, and closed jobs are never charged. Upload your resume free.",
+      "h1": "Entry level jobs, internships and jobs at every level, scored out of 100 for you.",
       "priority": 0.9,
       "breadcrumb": "Jobs",
       "hero": {
         "eyebrow": "Jobs & internships",
-        "standfirst": "Including internships and openings for people with under a year of experience, scored the same way as everything else, so you know where you actually stand.",
+        "standfirst": "Jobs at every level, fresher roles and internships, each scored out of 100 against what your resume shows. SkillDrift only shows jobs with a trusted apply link, checks that a job is still open before you apply, and never charges for a job that has closed. Shortlist a job and it moves across your job board, so every application is tracked in one place.",
         "primaryCta": {
           "label": "See my matches - free",
           "href": "app:sign-in"
@@ -1122,8 +1362,9 @@
           "label": "How matching works",
           "href": "/job-match"
         },
-        "image": "/assets/jobs.png",
-        "imageAlt": "A list of matched roles, each ranked out of 100"
+        "image": "/assets/shots/jobs-board.png",
+        "imageAlt": "The SkillDrift job board for an experienced accountant: new matches scored out of 100, the next role and the current role, a shortlist with apply links, and columns for applied, interviewing and outcome",
+        "imageMobile": "/assets/shots/m-jobs-board.png"
       },
       "sections": [
         {
@@ -1167,11 +1408,99 @@
             },
             {
               "title": "Tailor before you apply",
-              "body": "Generate an ATS-optimised version for that specific posting - 18 credits."
+              "body": "Generate an ATS-optimised version for that specific posting: 18 credits."
             },
             {
               "title": "Close a gap, re-rank",
               "body": "Finish a sprint and the whole list re-scores itself, free. Better roles surface."
+            }
+          ]
+        },
+        {
+          "type": "split",
+          "alt": true,
+          "id": "job-board",
+          "eyebrow": "Your job board",
+          "heading": "What happens after you find a job you like?",
+          "copy": "Every job you keep sits on one board, from Shortlisted to Applied, Interviewing and Outcome. Its match score out of 100 is the same on the board, on the job page and on your dashboard.",
+          "panels": [
+            {
+              "title": "On your board",
+              "accent": true,
+              "items": [
+                "Shortlist a job, then move it to Applied, Interviewing and Outcome",
+                "One match score out of 100 for each job, the same everywhere you see it",
+                "A requirement check on every job, such as 12 of 18 requirements met",
+                "Not for me hides a job everywhere, and you can undo it"
+              ]
+            },
+            {
+              "title": "What you never pay for",
+              "items": [
+                "Closed jobs and jobs posted more than 30 days ago are not shown",
+                "Nothing is ever charged on a job that has closed",
+                "The basic analysis of any job is free",
+                "Re-scoring as you learn is free"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "apply-kit",
+          "eyebrow": "The Apply Kit",
+          "min": 260,
+          "heading": "What do you need ready before you apply?",
+          "copy": "Open the Apply Kit on any job and SkillDrift prepares what the application asks for. You apply on the employer's own site.",
+          "cards": [
+            {
+              "title": "A resume tailored to the job",
+              "body": "Rewritten for that posting, charged once at 18 credits. Opening it again is free.",
+              "accent": true
+            },
+            {
+              "title": "A cover note and your answers",
+              "body": "A short cover note and drafts for the questions the application asks."
+            },
+            {
+              "title": "A follow up that keeps your board right",
+              "body": "Within a day or two SkillDrift asks whether you finished applying, and moves the job to Applied."
+            },
+            {
+              "title": "Help asking for a referral",
+              "body": "Who usually decides on the role, the recruiter, and someone doing the job now, with searches you run in your own LinkedIn. A connection note of up to 180 characters: your first one is free, then 15 credits. SkillDrift never contacts anyone for you."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "alt": true,
+          "id": "trusted-jobs",
+          "eyebrow": "Jobs you can act on",
+          "min": 260,
+          "heading": "Which jobs does SkillDrift show you?",
+          "copy": "Only jobs you can actually apply to, chosen by the goal you picked.",
+          "cards": [
+            {
+              "title": "Trusted apply links only",
+              "body": "A job shows only when it links to a main job board, an applicant system or the employer's own site. Copies on suspicious sites are hidden.",
+              "accent": true
+            },
+            {
+              "title": "Checked before you apply",
+              "body": "Before the Apply Kit opens, SkillDrift checks the job page. If the job has closed, it tells you."
+            },
+            {
+              "title": "Your goal decides",
+              "body": "Looking for an internship puts internships first. Looking for your first full-time job shows full-time roles only."
+            },
+            {
+              "title": "Experience you already have counts",
+              "body": "Some asks, such as years in a role or a language, cannot be learned on a course. Add one line of proof, or add the language to your resume, and the job counts it as met."
+            },
+            {
+              "title": "More cities when matches are thin",
+              "body": "If your city has few openings in your field, your board names up to three nearby cities that have more."
             }
           ]
         },
@@ -1209,15 +1538,808 @@
       }
     },
     {
+      "path": "/career-progression",
+      "title": "Career Progression, Tracked: A Career Guide for Every Goal | SkillDrift",
+      "description": "Pick a goal and SkillDrift plans the steps. It stays with you after you get there: the new role, your reviews, your next move. Every course and every month in a role adds to your skill scores.",
+      "h1": "One career guide for every goal, from your first internship to your next promotion.",
+      "priority": 0.8,
+      "breadcrumb": "Career progression",
+      "hero": {
+        "eyebrow": "Career progression",
+        "standfirst": "Most career tools stop when you get the job. SkillDrift starts from the goal you pick today and stays with you after you reach it: when you get the role, when you start, through every review and into your next move. Every course you finish and every month in a role adds to the same skill scores, so your progress is tracked, not guessed.",
+        "primaryCta": {
+          "label": "Start from your goal",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "See how the loop works",
+          "href": "/how-it-works"
+        },
+        "image": "/assets/shots/progression-rail.png",
+        "imageAlt": "The plan for today, now and next for a maintenance engineer, with the next role, Senior Maintenance Engineer, set to start in November",
+        "imageMobile": "/assets/shots/m-progression-rail.png"
+      },
+      "sections": [
+        {
+          "type": "split",
+          "id": "every-goal",
+          "eyebrow": "Every goal",
+          "heading": "Which goals does SkillDrift cover?",
+          "copy": "You pick a goal when you start. Your dashboard, the jobs you see first and your next step all follow it, and you can change it at any time in Settings.",
+          "panels": [
+            {
+              "title": "Starting out",
+              "accent": true,
+              "items": [
+                "Get an internship",
+                "Land my first full-time job",
+                "Clear my placement interviews",
+                "Build my skills before I start applying"
+              ]
+            },
+            {
+              "title": "Already working",
+              "items": [
+                "Find a new job in my field",
+                "Get more interview calls from my applications",
+                "Prepare for interviews I have coming up",
+                "Get better at my current job"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "steps",
+          "alt": true,
+          "id": "after-the-offer",
+          "eyebrow": "After you get the job",
+          "heading": "How does SkillDrift stay with you after you get the job?",
+          "copy": "Getting the role is one step, not the end. SkillDrift keeps your resume, your plan and your next goal in step with what happens next.",
+          "steps": [
+            {
+              "title": "You get the role",
+              "body": "Tap I got the role and SkillDrift adds it to your resume. About a month later it checks you started. With more than one offer, your resume keeps only the one you joined."
+            },
+            {
+              "title": "You grow in the role",
+              "body": "Each month in a current role adds to the skills it uses. Log one win a week, and add the best ones to your resume."
+            },
+            {
+              "title": "You prepare for your review",
+              "body": "Before your review month, see how ready you are for the next level, practise, and get a draft self-review built from your wins."
+            },
+            {
+              "title": "You make your next move",
+              "body": "Promoted, same role or a new company: one tap keeps your resume and plan right. If your work moves into a new field, your plan can follow it."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "tracked",
+          "eyebrow": "Tracked, not guessed",
+          "min": 260,
+          "heading": "How does SkillDrift track your professional growth?",
+          "copy": "Everything you do adds up in one place: the skill scores your readiness, your job matches and your next steps are built on.",
+          "cards": [
+            {
+              "title": "One set of skill scores",
+              "body": "Learning, a new role and time in your current role all raise the same skill scores, and every score that depends on them updates by itself.",
+              "accent": true
+            },
+            {
+              "title": "The number you were promised",
+              "body": "A roadmap shows how much your readiness will rise before you start. Finish and verify it, and it rises by that amount, once."
+            },
+            {
+              "title": "A resume that stays live",
+              "body": "Certificates, new roles and the languages you speak are added to your resume as they happen, so it is ready when the next opportunity is."
+            },
+            {
+              "title": "Every score explained",
+              "body": "The same resume gets the same result, and every score shows how it was worked out, so you can see what moved it."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "self-appraisal",
+          "alt": true,
+          "eyebrow": "Review season",
+          "heading": "How do you write a self appraisal?",
+          "paragraphs": [
+            "A self appraisal works when it is built from evidence you logged during the year, not from memory the week before. In SkillDrift you log one win a week. Before your review month, the review run-up shows how ready you are for the next level, gives you a practice round and drafts your self-review from those wins. Your first draft self-review is free, then 15 credits, and it is free on Active Seeker.",
+            "A win journal keeps your wins in a list. In SkillDrift the wins you choose go onto your resume, each month in the role adds to the skills it uses, so your readiness for the next role and your job matches keep moving, and the self-review draws on the progress you have made."
+          ]
+        },
+        {
+          "type": "prices",
+          "alt": true,
+          "id": "cost",
+          "eyebrow": "What it costs",
+          "heading": "What does it cost to keep SkillDrift with you?",
+          "copy": "Following your career costs nothing. You spend credits only when SkillDrift produces something for you.",
+          "rows": [
+            {
+              "label": "Weekly win and weekly job search log",
+              "cost": "Free"
+            },
+            {
+              "label": "Check-ins after you get the role",
+              "cost": "Free"
+            },
+            {
+              "label": "Review month and review run-up",
+              "cost": "Free"
+            },
+            {
+              "label": "Draft self-review",
+              "note": "Your first one is free. Free on Active Seeker",
+              "cost": "15 credits"
+            },
+            {
+              "label": "A new career path when your work changes field",
+              "note": "Free if you already have a path for that field",
+              "cost": "11 credits"
+            }
+          ],
+          "note": "Active Seeker covers every action, with no credit counting. Full table on the [pricing page](/pricing)."
+        }
+      ],
+      "cta": {
+        "heading": "Start from the goal you have today.",
+        "copy": "Upload your resume and pick your goal. SkillDrift plans the next step, and stays with you after you get there.",
+        "primary": {
+          "label": "Start from your goal",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Which goals does SkillDrift cover?",
+          "a": "Eight, in two groups. Starting out: get an internship, land a first full-time job, clear placement interviews, or build skills before applying. Already working: find a new job in your field, get more interview calls, prepare for interviews coming up, or get better at your current job. You can change your goal at any time."
+        },
+        {
+          "q": "How does SkillDrift stay with you after you get the job?",
+          "a": "Tap I got the role and SkillDrift adds it to your resume and asks what you want next. About a month later it checks that you started. While you are in the role it counts your time, logs your weekly wins, helps you prepare for your review with a draft self-review, and keeps your resume and plan right when you are promoted or move on."
+        },
+        {
+          "q": "How does SkillDrift track your professional growth?",
+          "a": "Learning, new roles and time in your current role all raise one set of skill scores, and your readiness, job matches and next steps update from them. A finished, verified roadmap raises readiness by the amount it showed before you started, once."
+        },
+        {
+          "q": "How do you write a self appraisal?",
+          "a": "Build it from evidence logged during the year. In SkillDrift you log one win a week, and before your review month the review run-up drafts your self-review from those wins and shows how ready you are for the next level. The first draft is free, then 15 credits, and free on Active Seeker."
+        },
+        {
+          "q": "What does it cost to keep SkillDrift with you?",
+          "a": "Following your career is free: weekly wins, check-ins and the review run-up cost nothing. A draft self-review is free the first time, then 15 credits, and free on Active Seeker."
+        }
+      ]
+    },
+    {
+      "path": "/career-change",
+      "title": "Career Change: See Which Skills Transfer and What to Learn | SkillDrift",
+      "description": "Planning a career change? Upload your resume and pick the new role. SkillDrift shows which of your skills transfer, names the gaps, builds the learning for each one and scores jobs in the new field out of 100 as you learn.",
+      "h1": "Change careers with a plan: see what transfers, then close the rest.",
+      "priority": 0.8,
+      "breadcrumb": "Career change",
+      "hero": {
+        "eyebrow": "Career change",
+        "standfirst": "Most of what you already do counts in a new field; the question is which parts. Upload your resume and pick the role you want to move into. SkillDrift reads your resume against it, shows the skills that already count, names the ones that do not yet, and builds learning for each gap. Jobs in the new field are scored out of 100, and the scores move as you learn.",
+        "primaryCta": {
+          "label": "Start from your resume",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "See how it works",
+          "href": "/how-it-works"
+        },
+        "image": "/assets/shots/career-change.png",
+        "imageAlt": "An accountant's path to Financial Analyst in SkillDrift: 42% role transition readiness, the skills that carry over from their experience, the ones that do not carry over yet, and the skills compared with what the role needs",
+        "imageMobile": "/assets/shots/m-career-change.png"
+      },
+      "sections": [
+        {
+          "type": "steps",
+          "id": "how",
+          "eyebrow": "How it runs",
+          "heading": "How do you plan a career change?",
+          "copy": "Start from what you have, not from a course catalogue.",
+          "steps": [
+            {
+              "title": "Pick the new role",
+              "body": "Any role, in any field. You can keep your current role as a second path."
+            },
+            {
+              "title": "See what transfers",
+              "body": "The skills your resume already shows that the new role asks for, named one by one."
+            },
+            {
+              "title": "Close the gaps that matter",
+              "body": "Learning built for each missing skill, sized to the hours you have each week, in the order that moves your readiness most."
+            },
+            {
+              "title": "Apply when the scores say so",
+              "body": "Jobs in the new field are scored out of 100 and move as you learn, so you can see when an application is worth sending."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "works",
+          "alt": true,
+          "min": 260,
+          "eyebrow": "What makes it work",
+          "heading": "What makes a career change work?",
+          "cards": [
+            {
+              "title": "Start from what transfers",
+              "body": "Experience in one field often covers part of the next. Seeing which part stops you learning what you already know.",
+              "accent": true
+            },
+            {
+              "title": "Learn only what the role asks",
+              "body": "Each roadmap is built from a gap the new role names, not from a general course."
+            },
+            {
+              "title": "Watch the new jobs move",
+              "body": "Finish a roadmap and the jobs that ask for that skill rise by the amount it showed, once."
+            },
+            {
+              "title": "Practise the new interview",
+              "body": "Mock interviews for roles in the new field, out loud, with a score out of 10."
+            },
+            {
+              "title": "Your experience still counts",
+              "body": "Years in your current field, a licence or a language you speak count where the new role asks for them. Add one line of proof and the job counts it as met."
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "id": "cost",
+          "eyebrow": "What it costs",
+          "heading": "What does a career change plan cost?",
+          "copy": "Seeing your gaps for a new role costs nothing. You spend credits when SkillDrift builds something for you.",
+          "rows": [
+            {
+              "label": "Your first career path, with the gaps named",
+              "cost": "Free"
+            },
+            {
+              "label": "Another career path",
+              "note": "For example, the new field beside your current one",
+              "cost": "11 credits"
+            },
+            {
+              "label": "A learning roadmap for one gap",
+              "cost": "50 credits"
+            },
+            {
+              "label": "A text mock interview",
+              "cost": "50 credits"
+            }
+          ],
+          "note": "Active Seeker covers every action, with no credit counting. Full table on the [pricing page](/pricing)."
+        }
+      ],
+      "cta": {
+        "heading": "See what already counts in the role you want next.",
+        "copy": "Upload your resume and pick the new role. The gaps come back named, and the first path is free.",
+        "primary": {
+          "label": "Start from your resume",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "How do you plan a career change?",
+          "a": "Pick the role you want to move into and upload your resume. SkillDrift shows the skills that already transfer, names the ones the new role asks for that your resume does not show yet, and builds learning for each gap. Jobs in the new field are scored out of 100 and move as you learn."
+        },
+        {
+          "q": "What makes a career change work?",
+          "a": "Starting from what already transfers, learning only what the new role asks for, and checking real jobs in the new field as your scores move, so you apply when an application is worth sending."
+        },
+        {
+          "q": "What does a career change plan cost?",
+          "a": "Your first career path with the gaps named is free. Another path is 11 credits, a learning roadmap for one gap is 50 credits and a text mock interview is 50 credits. Active Seeker covers every action with no credit counting."
+        }
+      ]
+    },
+    {
+      "path": "/learning-plan-from-resume",
+      "title": "AI that makes a learning plan from your resume | SkillDrift",
+      "description": "Upload your resume, pick the role you want, and SkillDrift builds a learning plan for each skill gap, sized to the hours you have each week.",
+      "h1": "An AI that makes a learning plan from your resume",
+      "priority": 0.8,
+      "breadcrumb": "Learning plan from your resume",
+      "hero": {
+        "eyebrow": "Learning plan",
+        "standfirst": "SkillDrift reads your resume against the role you want and names each skill you are missing. For the gap you pick, it builds a learning roadmap set to your track, your level and the hours you can give each week.",
+        "primaryCta": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "See how it works",
+          "href": "/how-it-works"
+        },
+        "image": "/assets/shots/learning-roadmaps.png",
+        "imageAlt": "A learning roadmap for Advanced Reliability and Asset Management, four weeks at an advanced level, with the first sprint ready and readiness rising to 72% when it is finished",
+        "imageMobile": "/assets/shots/m-learning-roadmaps.png"
+      },
+      "sections": [
+        {
+          "type": "steps",
+          "id": "how",
+          "eyebrow": "How it runs",
+          "heading": "How does SkillDrift make a learning plan from your resume?",
+          "copy": "Five steps, from your resume to a skill you can prove.",
+          "steps": [
+            {
+              "title": "Upload your resume and pick a target",
+              "body": "A target role, a career path or a job description you paste in."
+            },
+            {
+              "title": "See your skill gaps",
+              "body": "Each gap is named and ordered by how much it adds to your readiness for the role."
+            },
+            {
+              "title": "Build the roadmap for one gap",
+              "body": "Pick the track (technical, functional or executive), the level (basic, intermediate or advanced) and your hours, from two to four a week up to full time."
+            },
+            {
+              "title": "Pass a short knowledge check",
+              "body": "Each sprint ends with a check. Finish the roadmap and the SkillDrift certificate is added to your resume under Certifications."
+            },
+            {
+              "title": "Watch your scores move",
+              "body": "Once the skill is verified, your readiness and every job that asks for that skill rise by the amount shown before you started."
+            }
+          ]
+        },
+        {
+          "type": "shot",
+          "id": "market",
+          "alt": true,
+          "eyebrow": "From real jobs",
+          "heading": "Does the plan change when the job market changes?",
+          "copy": "Your gaps are measured against live job postings for your role, so the next gap follows what employers ask for.",
+          "items": [
+            "Each gap shows how many jobs ask for it, for example 3 of 12 Senior Maintenance Engineer jobs.",
+            "When a role has few listings, SkillDrift also reads nearby roles in the same field and tells you so.",
+            "Close this gap turns any of them into a learning roadmap.",
+            "A skill you already have can be added as proof, and it counts as met for that job."
+          ],
+          "image": "/assets/shots/jobs-ask.png",
+          "imageMobile": "/assets/shots/m-jobs-ask.png",
+          "imageAlt": "What Senior Maintenance Engineer jobs ask for, read from live postings across India: PFMEA and Control Plan support asked by 3 of 12 jobs, each gap with a button to close it, beside the learning roadmap for Advanced Reliability and Asset Management"
+        },
+        {
+          "type": "prose",
+          "id": "personal",
+          "eyebrow": "Built for you",
+          "heading": "Is the plan the same for everyone?",
+          "paragraphs": [
+            "No two plans start from the same place. Each one starts from your resume and the role you chose, so two people aiming at the same role get different gaps, in a different order.",
+            "The roadmap is then set to the track, level and hours you pick. It is built only for a gap that learning can close: years of experience or a degree come with time, so SkillDrift does not sell a course for them."
+          ]
+        },
+        {
+          "type": "prices",
+          "id": "cost",
+          "alt": true,
+          "eyebrow": "What it costs",
+          "heading": "What does a learning plan cost?",
+          "copy": "Seeing your skill gaps costs nothing. You spend credits when SkillDrift builds the learning.",
+          "rows": [
+            {
+              "label": "Your skill gaps for the role you want",
+              "cost": "Free"
+            },
+            {
+              "label": "One AI course for your field",
+              "cost": "Free"
+            },
+            {
+              "label": "A learning roadmap for one gap",
+              "note": "Every sprint and its learning included",
+              "cost": "50 credits"
+            },
+            {
+              "label": "The certificate on your resume",
+              "note": "All 50 come back when you share it on LinkedIn",
+              "cost": "50 credits"
+            }
+          ],
+          "note": "Active Seeker covers every action, with no credit counting. Full table on the [pricing page](/pricing)."
+        },
+        {
+          "type": "cards",
+          "id": "related",
+          "min": 260,
+          "eyebrow": "Related",
+          "heading": "Where does the learning plan fit?",
+          "cards": [
+            {
+              "title": "Career roadmap",
+              "body": "The path from your resume to the role you want, ordered by what moves your readiness most.",
+              "href": "/career-roadmap",
+              "cta": "See the career roadmap"
+            },
+            {
+              "title": "Learning sprints",
+              "body": "How each roadmap runs week by week, and the AI course for your field.",
+              "href": "/learning-sprints",
+              "cta": "See learning sprints"
+            },
+            {
+              "title": "Finished courses, still no interviews?",
+              "body": "How to check whether a course closes a gap the jobs you apply for ask for.",
+              "href": "/courses-but-no-interviews",
+              "cta": "Read the check"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See the skills you are missing, then learn them.",
+        "copy": "Upload your resume and pick the role you want. Your gaps come back named, and the learning plan starts from the one you pick.",
+        "primary": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "How does SkillDrift make a learning plan from your resume?",
+          "a": "Upload your resume and pick a target role, a career path or a job description. SkillDrift names your skill gaps, ordered by how much each adds to your readiness. Pick a gap and it builds a learning roadmap set to your track (technical, functional or executive), your level (basic to advanced) and your hours, from two to four a week up to full time. Pass the knowledge checks and the certificate is added to your resume under Certifications, and your readiness and job scores move."
+        },
+        {
+          "q": "Does the plan change when the job market changes?",
+          "a": "Your gaps are measured against live job postings for your role, so the next gap follows what employers ask for. Each gap shows how many of those jobs ask for it, for example 3 of 12."
+        },
+        {
+          "q": "Is the plan the same for everyone?",
+          "a": "No two plans start from the same place. Each one starts from your resume and the role you chose, and it is set to the track, level and hours you pick."
+        },
+        {
+          "q": "What does a learning plan cost?",
+          "a": "Seeing your skill gaps is free, and one AI course for your field is free. A learning roadmap for any other gap is 50 credits, and the certificate is 50 credits, which come back when you share it on LinkedIn. Active Seeker covers every action with no credit counting."
+        }
+      ]
+    },
+    {
+      "path": "/ai-career-coach",
+      "title": "AI career coach that also teaches you | SkillDrift",
+      "description": "SkillDrift tells you what to do next for the role you want, then teaches the skills you are missing and shows how your job scores move.",
+      "h1": "An AI career coach that also teaches you",
+      "priority": 0.8,
+      "breadcrumb": "AI career coach",
+      "hero": {
+        "eyebrow": "AI career coach",
+        "standfirst": "SkillDrift is an AI career coach that also teaches. It shows your next step for the role you want, builds the course for the gap that step needs, and then shows the job scores that move when you finish.",
+        "primaryCta": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "Compare SkillDrift",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/ai-career-coach.png",
+        "imageMobile": "/assets/shots/m-ai-career-coach.png",
+        "imageAlt": "A maintenance engineer's plan in SkillDrift: three steps for today, the next roadmap priced at 50 credits against a balance of 10 with the readiness it adds, and what Senior Maintenance Engineer jobs ask for, gap by gap"
+      },
+      "sections": [
+        {
+          "type": "cards",
+          "id": "what",
+          "min": 260,
+          "eyebrow": "What the coach does",
+          "heading": "What does an AI career coach that also teaches you do?",
+          "copy": "One plan, built from your resume, that moves as you do.",
+          "cards": [
+            {
+              "title": "Names your next step",
+              "body": "Every day, with the reason and its price against your balance.",
+              "accent": true
+            },
+            {
+              "title": "Scores every job",
+              "body": "Every job and internship is scored out of 100 against your resume, with the skills to close."
+            },
+            {
+              "title": "Teaches the gap",
+              "body": "A learning roadmap for the gap you choose, with a knowledge check and a certificate added to your resume."
+            },
+            {
+              "title": "Runs your interviews",
+              "body": "Text, recorded voice and live voice interviews, scored out of 10, with your chance of being hired and the answers to work on."
+            },
+            {
+              "title": "Keeps going after the hire",
+              "body": "Logs your wins, prepares you for reviews and plans your next role."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "choose",
+          "alt": true,
+          "min": 300,
+          "eyebrow": "Choosing one",
+          "heading": "How do you choose an AI career coach?",
+          "copy": "Six questions to ask of any AI career coach, SkillDrift included.",
+          "cards": [
+            {
+              "title": "Does it start from your resume?",
+              "body": "A coach that reads your resume can name the exact skills you are missing for a role. A coach that only answers questions needs you to explain yourself every time."
+            },
+            {
+              "title": "Does it check real jobs?",
+              "body": "Advice should be measured against live job postings, with a score for each job and the reasons shown."
+            },
+            {
+              "title": "Does it teach the gap?",
+              "body": "Naming a gap is half the job. Look for learning built for that gap, sized to your hours, with a check at the end."
+            },
+            {
+              "title": "Does your progress carry over?",
+              "body": "Finished learning should reach your resume and your job scores without you redoing anything."
+            },
+            {
+              "title": "Does it score your interviews?",
+              "body": "A score and the weak answers named show what to fix before the real interview."
+            },
+            {
+              "title": "Does it work where you are?",
+              "body": "Check that it covers your country and your stage, from a first internship to a promotion."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "compare",
+          "min": 260,
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with other AI career tools?",
+          "copy": "Checked on 21 October 2026, from each product's own pages and recent reviews.",
+          "cards": [
+            {
+              "title": "SkillDrift vs ChatGPT",
+              "body": "A general AI assistant. It works from what you paste each time, with no job listings and no built-in interview score.",
+              "href": "/skilldrift-vs-chatgpt",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "SkillDrift vs LinkedIn Premium",
+              "body": "LinkedIn's job listings with a high, medium or low match rating, and a general course library.",
+              "href": "/skilldrift-vs-linkedin-premium",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "SkillDrift vs Jobright",
+              "body": "A feed of US jobs with a match score out of 100. No learning or courses found.",
+              "href": "/skilldrift-vs-jobright",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "All comparisons",
+              "body": "Side by side with ChatGPT, LinkedIn Premium, Jobright and Internshala.",
+              "href": "/compare",
+              "cta": "See all"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "chatbot",
+          "alt": true,
+          "eyebrow": "Coach or chatbot",
+          "heading": "How is this different from a chatbot?",
+          "paragraphs": [
+            "A chatbot answers questions. SkillDrift keeps your resume, your gaps, your jobs and your learning in one plan and updates it as you progress.",
+            "Finish a roadmap and the certificate is added to your resume, and every job that asks for that skill re-scores. Practise an interview and the weak answers can become a learning roadmap."
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "skills",
+          "eyebrow": "Where to start",
+          "heading": "Do I need to know which skills to learn?",
+          "paragraphs": [
+            "No. SkillDrift finds them from your resume and the jobs you want, and shows how many of those jobs ask for each one. See [how the learning plan is built](/learning-plan-from-resume)."
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "Get your next step, then learn it.",
+        "copy": "Upload your resume and pick the role you want. SkillDrift names your gaps, scores your jobs and builds the learning for the gap you pick.",
+        "primary": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "What does an AI career coach that also teaches you do?",
+          "a": "SkillDrift shows your next step for the role you want, with the reason and its price against your balance. It scores every job and internship out of 100 against your resume, builds a learning roadmap for the gap you choose with a knowledge check and a certificate added to your resume, runs text, recorded voice and live voice interviews scored out of 10, and keeps going after the hire with the plan for your next role."
+        },
+        {
+          "q": "How do you choose an AI career coach?",
+          "a": "Ask six questions. Does it start from your resume? Does it check live job postings? Does it teach the gap? Does your progress carry over to your resume and job scores? Does it score your interviews? Does it work in your country and at your stage? SkillDrift does all six, in the US, India and worldwide."
+        },
+        {
+          "q": "How is this different from a chatbot?",
+          "a": "A chatbot answers questions. SkillDrift keeps your resume, your gaps, your jobs and your learning in one plan and updates it as you progress."
+        },
+        {
+          "q": "Do I need to know which skills to learn?",
+          "a": "No. SkillDrift finds them from your resume and the jobs you want, and shows how many of those jobs ask for each one."
+        }
+      ]
+    },
+    {
+      "path": "/courses-but-no-interviews",
+      "title": "Finished courses but still not getting interviews? | SkillDrift",
+      "description": "Courses help only when they close a gap employers ask for and show on your resume. Here is how to check both.",
+      "h1": "I finished courses but I am still not getting interviews. Why?",
+      "priority": 0.8,
+      "breadcrumb": "Courses but no interviews",
+      "hero": {
+        "eyebrow": "Courses but no interviews",
+        "standfirst": "Most often the course did not close a gap that the jobs you apply for ask for, or it does not show on your resume in the employer's words. Check both against real postings for one target role before you take the next course.",
+        "primaryCta": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "How to check",
+          "href": "#check"
+        },
+        "image": "/assets/shots/benchmarking.png",
+        "imageMobile": "/assets/shots/m-benchmarking.png",
+        "imageAlt": "Readiness for a maintenance engineer at 61%: the top gap, predictive maintenance and condition monitoring, the skills inside it, and the next gaps with how much each adds"
+      },
+      "sections": [
+        {
+          "type": "steps",
+          "id": "check",
+          "eyebrow": "The check",
+          "heading": "How do you check whether a course will get you interviews?",
+          "copy": "Use one target role and five real postings.",
+          "steps": [
+            {
+              "title": "List what the role asks for",
+              "body": "Open five postings for one role and list the skills they ask for. A skill in four or five of them belongs to the role."
+            },
+            {
+              "title": "Sort each skill",
+              "body": "Mark each one: on your resume, you have it but your resume does not show it, or you do not have it yet."
+            },
+            {
+              "title": "Fix the middle group first",
+              "body": "It is a writing fix. Name the skill in the employer's words and attach it to something you did."
+            },
+            {
+              "title": "Learn one gap at a time",
+              "body": "Take the next course for one skill from the last group, and add the proof to your resume when you finish."
+            },
+            {
+              "title": "Check again",
+              "body": "Run the same check against new postings."
+            }
+          ]
+        },
+        {
+          "type": "shot",
+          "id": "how-skilldrift",
+          "alt": true,
+          "eyebrow": "With SkillDrift",
+          "heading": "How does SkillDrift run this check for you?",
+          "copy": "The same check, on your resume, against live jobs for the role you want.",
+          "items": [
+            "Reads your resume against the role you want and names each gap.",
+            "Shows how many live jobs ask for each gap, so the next course goes where it counts.",
+            "Scores each job out of 100, with the skills you already have and the ones to close.",
+            "Builds the learning for the gap you pick and adds the certificate to your resume.",
+            "Shows which job scores move when you finish."
+          ],
+          "image": "/assets/shots/job-match-analysis.png",
+          "imageMobile": "/assets/shots/m-job-match-analysis.png",
+          "imageAlt": "A tax manager job for an experienced accountant, scored 78 out of 100, with the five skills the person already has, the three to close and the next step"
+        },
+        {
+          "type": "prose",
+          "id": "stop",
+          "eyebrow": "Courses",
+          "heading": "Should I stop taking courses?",
+          "paragraphs": [
+            "No. Take the course that closes the gap most of your target jobs ask for, and make sure it shows on your resume when you finish. [See how SkillDrift builds that learning plan](/learning-plan-from-resume)."
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "certificate",
+          "alt": true,
+          "eyebrow": "Certificates",
+          "heading": "Does a certificate alone get interviews?",
+          "paragraphs": [
+            "It helps when the skill is one the job asks for and the resume shows it next to real work.",
+            "On SkillDrift the certificate is added to your resume under Certifications when you finish, and you can share it to LinkedIn as a post or in your certifications section."
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "related",
+          "min": 260,
+          "eyebrow": "Related",
+          "heading": "Where to go next",
+          "cards": [
+            {
+              "title": "Learning plan from your resume",
+              "body": "A learning roadmap for each gap, set to your track, level and hours.",
+              "href": "/learning-plan-from-resume",
+              "cta": "See the learning plan"
+            },
+            {
+              "title": "Job match",
+              "body": "Which jobs you can get now, and what to learn for the rest.",
+              "href": "/job-match",
+              "cta": "See job match"
+            },
+            {
+              "title": "Closed loop career development",
+              "body": "Why finishing a course should change your resume and your job scores.",
+              "href": "/closed-loop-career-development",
+              "cta": "Read about the loop"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "Check your resume against the jobs you want.",
+        "copy": "Upload your resume and pick a role. SkillDrift names the gaps those jobs ask for, so the next course closes one of them.",
+        "primary": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "I finished courses but I am still not getting interviews. Why?",
+          "a": "Most often the course did not close a gap that the jobs you apply for ask for, or it does not show on your resume in the employer's words. Check both against real postings for one target role before you take the next course."
+        },
+        {
+          "q": "How do you check whether a course will get you interviews?",
+          "a": "Open five postings for one role and list the skills they ask for. Mark each skill: on your resume, you have it but your resume does not show it, or you do not have it yet. Fix the middle group first by naming the skill in the employer's words next to something you did. Then learn one gap from the last group at a time, add the proof to your resume, and check again against new postings."
+        },
+        {
+          "q": "How does SkillDrift run this check for you?",
+          "a": "It reads your resume against the role you want, names each gap and shows how many live jobs ask for it, scores each job out of 100, builds the learning for the gap you pick, adds the certificate to your resume and shows which job scores move when you finish."
+        },
+        {
+          "q": "Should I stop taking courses?",
+          "a": "No. Take the course that closes the gap most of your target jobs ask for, and make sure it shows on your resume when you finish."
+        },
+        {
+          "q": "Does a certificate alone get interviews?",
+          "a": "It helps when the skill is one the job asks for and the resume shows it next to real work."
+        }
+      ]
+    },
+    {
       "path": "/pricing",
       "title": "SkillDrift pricing - free to start, pay when you apply",
-      "description": "Skill gaps, career path, job matching and one AI course are free forever. Top up credits or go unlimited when you're ready to apply. Credits never expire.",
+      "description": "Skill gaps, career path, job matching and one AI course are free forever. Buy credits as a Casual User or go unlimited with Active Seeker when you are ready to apply. Credits you buy never expire.",
       "h1": "Diagnosis is free. You pay when you're ready to apply.",
       "priority": 0.9,
       "breadcrumb": "Pricing",
       "hero": {
         "eyebrow": "Pricing",
-        "standfirst": "New accounts get starter credits, enough to rewrite your resume, tailor it to a job and download it. {{In India, one credit is one rupee, so every price below is already in money you understand.|Every price below is a flat one, with no bundles to decode and nothing that expires.}}",
+        "standfirst": "New accounts get 160 credits, enough to rewrite your resume, tailor it to a job and download it. {{In India, one credit is one rupee, so every price below is already in money you understand.|Every price below is a flat one, with no bundles to decode and nothing that expires.}}",
         "primaryCta": {
           "label": "Start free",
           "href": "app:sign-in"
@@ -1254,7 +2376,7 @@
               "body": "Everything that produces a finished artefact: something you send, download, or put your name on. One of them refunds itself.",
               "items": [
                 "Tailoring, downloads and outcome rewrites",
-                "Detailed job analysis on a single posting",
+                "Deep fit analysis on a single posting",
                 "Mock interviews: text, recorded and live voice",
                 "Learning roadmaps and certificate issuance"
               ]
@@ -1266,14 +2388,29 @@
           "alt": true,
           "eyebrow": "The credit table",
           "heading": "{{In India, one credit is one rupee.|Every credit is priced up front.}}",
-          "copy": "{{299 credits cost 299 rupees. No conversion to work out, no bundles to decode.|299 credits cost {topup}. One flat pack, no bundles to decode, and nothing expires.}}",
+          "copy": "{{299 credits cost 299 rupees. No conversion to work out, no bundles to decode.|299 credits cost {topup}. One flat pack, no bundles to decode, and credits you buy never expire.}}",
           "rows": [
+            {
+              "label": "Add another career path",
+              "note": "Your first path is free",
+              "cost": "11"
+            },
+            {
+              "label": "Referral note for one job",
+              "note": "Your first note is free",
+              "cost": "15"
+            },
+            {
+              "label": "Draft self-review before your review",
+              "note": "Your first one is free",
+              "cost": "15"
+            },
             {
               "label": "Tailor your resume to one job",
               "cost": "18"
             },
             {
-              "label": "Detailed job analysis",
+              "label": "Deep fit analysis",
               "cost": "37"
             },
             {
@@ -1291,7 +2428,7 @@
             },
             {
               "label": "Download your resume",
-              "cost": "54–70"
+              "cost": "54 to 70"
             },
             {
               "label": "Rewrite your resume around outcomes",
@@ -1306,13 +2443,13 @@
               "cost": "200"
             }
           ],
-          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a {topup} top-up covers about four. Past roughly eight applications a month, or three live mock interviews, unlimited at {unlimited} costs you less. If you're mid-search, take unlimited; if you're browsing, take credits."
+          "note": "One application costs 72 credits: 18 to tailor, 54 to download. So a Casual User pack of {topup} covers about four. Past roughly eight applications a month, or three live mock interviews, Active Seeker at {unlimited} costs you less. If you are in an active search, take Active Seeker; if you are learning at your own pace, take Casual User. Nothing is ever charged on a job that has closed."
         },
         {
           "type": "plans",
           "eyebrow": "Two ways to pay",
-          "heading": "Top up when you need it, or stop counting.",
-          "copy": "Start free: new accounts get starter credits, enough for a full first application. After that, buy credits as you go or stop counting altogether."
+          "heading": "Pay as you go, or stop counting.",
+          "copy": "Start free: new accounts get 160 credits, enough for a full first application. After that, buy credits as a Casual User, or stop counting altogether with Active Seeker. Both are the full SkillDrift."
         }
       ],
       "cta": {
@@ -1442,6 +2579,38 @@
         },
         {
           "type": "cards",
+          "id": "only-skilldrift",
+          "min": 260,
+          "alt": true,
+          "eyebrow": "What we do differently",
+          "heading": "What does SkillDrift do that a chatbot or a job board does not?",
+          "copy": "Most tools hand you one piece and forget you. SkillDrift keeps one record of you, so every step counts.",
+          "cards": [
+            {
+              "title": "It remembers every step",
+              "body": "Courses you finish, interviews you practise and months in a role all move the same scores.",
+              "accent": true
+            },
+            {
+              "title": "Jobs you can act on",
+              "body": "Jobs and internships scored out of 100, only with a trusted apply link, and never charged once closed."
+            },
+            {
+              "title": "Honest about the gap",
+              "body": "Every missing skill is named, and an interview can tell you an answer would not have got you through."
+            },
+            {
+              "title": "It stays after the offer",
+              "body": "Your new role, your weekly wins, your review and your next move, in the same place."
+            },
+            {
+              "title": "Works where you are",
+              "body": "Jobs and internships in the US, India and worldwide, with prices in your currency."
+            }
+          ]
+        },
+        {
+          "type": "cards",
           "alt": true,
           "eyebrow": "How we operate",
           "heading": "Three commitments we hold ourselves to.",
@@ -1526,7 +2695,13 @@
           "label": "Upload your resume - free",
           "href": "app:sign-in"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "What does SkillDrift do that a chatbot or a job board does not?",
+          "a": "It keeps one record of you, so courses, interviews and months in a role all move the same scores. It shows jobs and internships scored out of 100 with a trusted apply link, names every missing skill, and stays with you after you get the role: the new role, weekly wins, your review and your next move."
+        }
+      ]
     },
     {
       "path": "/contact",
@@ -1594,7 +2769,7 @@
             },
             {
               "title": "What does a credit cost?",
-              "body": "{{In India, one credit is one rupee: 299 credits cost 299 rupees.|A 299-credit top-up is {topup}, and credits never expire.}} The full table is on the pricing page."
+              "body": "{{In India, one credit is one rupee: 299 credits cost 299 rupees.|A Casual User pack of 299 credits is {topup}, and credits you buy never expire.}} The full table is on the pricing page."
             },
             {
               "title": "What happens to my resume?",
@@ -1667,6 +2842,673 @@
         {
           "type": "legal",
           "doc": "data-protection"
+        }
+      ]
+    },
+    {
+      "path": "/compare",
+      "title": "Compare SkillDrift with ChatGPT, LinkedIn Premium, Jobright and Internshala | SkillDrift",
+      "description": "Side by side comparisons of SkillDrift with ChatGPT, LinkedIn Premium, Jobright and Internshala, checked on 21 October 2026.",
+      "h1": "How SkillDrift compares, honestly.",
+      "priority": 0.6,
+      "breadcrumb": "Compare",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "Most career tools do one piece: writing, a network, a job feed or a list of internships. SkillDrift connects every piece in one record, so every step you finish moves your scores. Here is how it compares with the tools people ask about most.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "See how it works",
+          "href": "/how-it-works"
+        },
+        "image": "/assets/shots/home-product.png",
+        "imageMobile": "/assets/shots/m-home-product.png",
+        "imageAlt": "The SkillDrift dashboard: the best move today, jobs scored out of 100 and the plan for today"
+      },
+      "sections": [
+        {
+          "type": "cards",
+          "id": "comparisons",
+          "min": 260,
+          "eyebrow": "Side by side",
+          "heading": "Which tool are you comparing SkillDrift with?",
+          "cards": [
+            {
+              "title": "SkillDrift vs ChatGPT",
+              "body": "A chatbot you prompt, or a record that keeps moving.",
+              "accent": true,
+              "href": "/skilldrift-vs-chatgpt",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "SkillDrift vs LinkedIn Premium",
+              "body": "What SkillDrift adds to your LinkedIn.",
+              "href": "/skilldrift-vs-linkedin-premium",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "SkillDrift vs Jobright",
+              "body": "Scored jobs, plus the plan to win them.",
+              "href": "/skilldrift-vs-jobright",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "SkillDrift vs Internshala",
+              "body": "Every internship scored for you, and the gaps closed.",
+              "href": "/skilldrift-vs-internshala",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "Choosing an AI career coach",
+              "body": "Six questions to ask of any AI career coach, and how SkillDrift answers them.",
+              "href": "/ai-career-coach",
+              "cta": "Read the guide"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "fair",
+          "alt": true,
+          "eyebrow": "How we compare",
+          "heading": "How do we check these comparisons?",
+          "paragraphs": [
+            "Every fact about another product comes from its own pages or a recent review, and each page says when it was checked. The current set was checked on 21 October 2026.",
+            "Products change quickly: if something here is out of date, [tell us](/contact) and we will correct it."
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "What is the best app to get a job and keep growing after you are hired?",
+          "a": "SkillDrift is built for the whole path in one record: jobs and internships scored out of 100, learning for each gap with the certificate written into your resume, interview practice scored out of 10, and help after you get the role. Other tools cover one piece: writing, a network, a job feed or a list of internships."
+        },
+        {
+          "q": "What does SkillDrift do that other career tools do not?",
+          "a": "It connects the pieces. Finish a course and the certificate is written into your resume, and every job you track re-scores. Practise an interview and the weak answers become a learning roadmap. After you get the role, it keeps going."
+        }
+      ]
+    },
+    {
+      "path": "/skilldrift-vs-chatgpt",
+      "title": "SkillDrift vs ChatGPT for Job Search and Career Growth | SkillDrift",
+      "description": "Is ChatGPT enough for a job search? A fair comparison checked on 21 October 2026: ChatGPT is a general assistant you prompt. SkillDrift keeps your resume, jobs scored out of 100, learning and interviews in one record, so every step you finish moves your scores.",
+      "h1": "SkillDrift vs ChatGPT: a chatbot you prompt, or a record that keeps moving.",
+      "priority": 0.6,
+      "breadcrumb": "SkillDrift vs ChatGPT",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "SkillDrift keeps your resume, the jobs you track, your learning and your interviews in one record, so every step you finish moves your scores and changes what you see next. ChatGPT answers what you paste into a chat, and starts from what you give it each time.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "All comparisons",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/home-product-newjob.png",
+        "imageMobile": "/assets/shots/m-home-product-newjob.png",
+        "imageAlt": "The SkillDrift dashboard for someone moving to a new job: the best move today scored out of 100, jobs in their field and the plan for today"
+      },
+      "sections": [
+        {
+          "type": "compare",
+          "id": "side-by-side",
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with ChatGPT?",
+          "copy": "Checked on 21 October 2026, from OpenAI's own pages and recent reviews. A dot marks where SkillDrift goes further.",
+          "columns": [
+            "Question",
+            "SkillDrift",
+            "ChatGPT"
+          ],
+          "rows": [
+            {
+              "label": "What it is",
+              "us": "A career platform with one job: get you the role you want, then help you grow into the next one.",
+              "them": "A general AI assistant for any task. It has no job search product of its own."
+            },
+            {
+              "label": "Jobs and internships",
+              "us": "Live jobs and internships inside the product, each scored out of 100 for you, with the reasons shown.",
+              "them": "No job listings inside ChatGPT. You can paste a job description and ask.",
+              "win": "us"
+            },
+            {
+              "label": "Skill gaps",
+              "us": "Named for every job you track and for the role you want next.",
+              "them": "Only when you paste a job description and ask.",
+              "win": "us"
+            },
+            {
+              "label": "Learning",
+              "us": "A learning roadmap for each gap, sized to the hours you have, plus one free AI course for your field.",
+              "them": "Explanations in chat. No structured courses.",
+              "win": "us"
+            },
+            {
+              "label": "Your resume after you learn",
+              "us": "Finish a course and the certificate is written into your resume. Every job you track re-scores, free.",
+              "them": "You update your resume yourself.",
+              "win": "us"
+            },
+            {
+              "label": "Mock interviews",
+              "us": "Text, voice or realtime, scored out of 10 with how likely you are to be hired. Weak answers become a roadmap.",
+              "them": "Text or voice role play if you set it up. No built-in score.",
+              "win": "us"
+            },
+            {
+              "label": "Resume tailoring",
+              "us": "Tailored to each job from your record, in a few steps.",
+              "them": "Yes, if you paste the job and prompt it each time.",
+              "win": "us"
+            },
+            {
+              "label": "What it remembers",
+              "us": "One record of your resume, jobs, learning and interviews that every feature reads.",
+              "them": "Saved memories and chat history, with more on paid plans. Not linked to job listings or your resume file."
+            },
+            {
+              "label": "After you get the job",
+              "us": "Keeps going: log a win each week and get a draft self-review before your review.",
+              "them": "No structured feature for promotion or reviews.",
+              "win": "us"
+            },
+            {
+              "label": "Price",
+              "us": "Free to start with 160 credits. Casual User {topup} one time, or Active Seeker {unlimited} a month with no credit counting.",
+              "them": "A free plan, and paid plans for more use. See OpenAI's pricing page for your country."
+            }
+          ],
+          "note": "ChatGPT facts from OpenAI's pricing page and help centre, checked on 21 October 2026. Products change: if something here is out of date, [tell us](/contact) and we will correct it."
+        },
+        {
+          "type": "split",
+          "id": "which",
+          "alt": true,
+          "eyebrow": "What SkillDrift adds",
+          "heading": "What does SkillDrift add to ChatGPT?",
+          "copy": "Most people already use ChatGPT. Here is what SkillDrift adds.",
+          "panels": [
+            {
+              "title": "ChatGPT",
+              "items": [
+                "A general assistant you prompt for any task.",
+                "Works from what you paste into the chat."
+              ]
+            },
+            {
+              "title": "SkillDrift adds",
+              "accent": true,
+              "items": [
+                "Real jobs and internships, scored out of 100 for you, with the reasons shown.",
+                "A plan for every gap, with your resume and job scores updating as you learn.",
+                "Interview practice scored out of 10, and help after you get the job."
+              ]
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Is ChatGPT enough for a job search?",
+          "a": "ChatGPT can help you write, but it does not hold your job search: it has no job listings, no score per job and no link between what you learn and your resume. SkillDrift does all of that in one record, so every step you finish moves your scores."
+        },
+        {
+          "q": "Can I use ChatGPT and SkillDrift together?",
+          "a": "Yes. SkillDrift brings what ChatGPT does not: scored jobs, a plan for each gap, interview practice with an honest score, and a resume that updates as you learn."
+        },
+        {
+          "q": "Does SkillDrift remember my progress?",
+          "a": "Yes. Your resume, the jobs you track, the courses you finish and the interviews you practise live in one record. Finish a course and the certificate is written into your resume, and every job you track re-scores."
+        }
+      ]
+    },
+    {
+      "path": "/skilldrift-vs-linkedin-premium",
+      "title": "SkillDrift vs LinkedIn Premium for Job Seekers | SkillDrift",
+      "description": "LinkedIn Premium or SkillDrift? A comparison checked on 21 October 2026: SkillDrift scores jobs out of 100 for you, builds learning for each gap, writes finished certificates into your resume and shares them to LinkedIn in one click, and scores your interview practice out of 10.",
+      "h1": "SkillDrift vs LinkedIn Premium: the plan that gets you the role.",
+      "priority": 0.6,
+      "breadcrumb": "SkillDrift vs LinkedIn Premium",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "SkillDrift is the plan behind every application: which jobs you can get now, scored out of 100, what to learn for the rest, and interview practice until it goes well. Your certificates go straight onto your resume and to LinkedIn in one click.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "All comparisons",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/job-match-analysis.png",
+        "imageMobile": "/assets/shots/m-job-match-analysis.png",
+        "imageAlt": "A SkillDrift job analysis: a tax manager job scored 78 out of 100, with what you have and what to close"
+      },
+      "sections": [
+        {
+          "type": "compare",
+          "id": "side-by-side",
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with LinkedIn Premium?",
+          "copy": "Checked on 21 October 2026, from LinkedIn's own pages and recent reviews. A dot marks where SkillDrift goes further.",
+          "columns": [
+            "Question",
+            "SkillDrift",
+            "LinkedIn Premium"
+          ],
+          "rows": [
+            {
+              "label": "What it is",
+              "us": "A career platform: jobs scored for you, a plan for the gaps and interview practice, in one record.",
+              "them": "The paid tier of LinkedIn, the professional network, for job seekers."
+            },
+            {
+              "label": "Jobs",
+              "us": "Jobs and internships scored out of 100 for you, with the reasons shown.",
+              "them": "LinkedIn's job listings with Easy Apply, and a high, medium or low match rating on Premium.",
+              "win": "us"
+            },
+            {
+              "label": "Skill gaps",
+              "us": "Each missing skill named, with a learning roadmap built for it.",
+              "them": "Job Match shows how you fit the listed qualifications.",
+              "win": "us"
+            },
+            {
+              "label": "Learning",
+              "us": "A roadmap built from your own gaps, sized to your hours, plus one free AI course for your field.",
+              "them": "A general course library (LinkedIn Learning).",
+              "win": "us"
+            },
+            {
+              "label": "Certificates",
+              "us": "Written into your resume the moment you finish, and shared to LinkedIn in one click.",
+              "them": "LinkedIn Learning certificates can be shown on your LinkedIn profile.",
+              "win": "us"
+            },
+            {
+              "label": "Mock interviews",
+              "us": "Text, voice or realtime, scored out of 10 with how likely you are to be hired.",
+              "them": "Interview preparation tools. No score out of 10 found.",
+              "win": "us"
+            },
+            {
+              "label": "Sharing to LinkedIn",
+              "us": "Share any SkillDrift certificate to LinkedIn in one click, as a post or in your certifications section.",
+              "them": "You add certificates to your profile yourself.",
+              "win": "us"
+            },
+            {
+              "label": "After you get the job",
+              "us": "Log a win each week and get a draft self-review before your review.",
+              "them": "No review or self-appraisal tools found.",
+              "win": "us"
+            },
+            {
+              "label": "Price",
+              "us": "Free to start with 160 credits. Casual User {topup} one time, or Active Seeker {unlimited} a month with no credit counting.",
+              "them": "A paid monthly or yearly subscription. See LinkedIn for the price in your country."
+            }
+          ],
+          "note": "LinkedIn facts from LinkedIn's announcements and recent reviews, checked on 21 October 2026. Products change: if something here is out of date, [tell us](/contact) and we will correct it."
+        },
+        {
+          "type": "split",
+          "id": "which",
+          "alt": true,
+          "eyebrow": "What SkillDrift adds",
+          "heading": "What does SkillDrift add to LinkedIn?",
+          "copy": "Most people already have LinkedIn. Here is what SkillDrift adds.",
+          "panels": [
+            {
+              "title": "LinkedIn Premium",
+              "items": [
+                "Your professional profile and network.",
+                "Job listings with a high, medium or low match rating."
+              ]
+            },
+            {
+              "title": "SkillDrift adds",
+              "accent": true,
+              "items": [
+                "Every job scored out of 100 for you, with each gap named.",
+                "Learning built for each gap, with the certificate written into your resume and shared to LinkedIn in one click.",
+                "Spoken interview practice with an honest score out of 10."
+              ]
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Is LinkedIn Premium enough for a job search?",
+          "a": "Premium shows you jobs and a match rating. It does not plan your gaps, update your resume as you learn or score your interview practice. SkillDrift does all of that, and shares your certificates to LinkedIn in one click."
+        },
+        {
+          "q": "Can SkillDrift share to LinkedIn?",
+          "a": "Yes. Finish a course and share the certificate to LinkedIn in one click, as a post or in the certifications section. The 50 credits it cost to issue come straight back."
+        },
+        {
+          "q": "What does SkillDrift do that LinkedIn Premium does not?",
+          "a": "It names every gap between you and a job, builds learning for each one, writes the certificate into your resume when you finish, re-scores your jobs, and scores your interview practice out of 10."
+        }
+      ]
+    },
+    {
+      "path": "/skilldrift-vs-jobright",
+      "title": "SkillDrift vs Jobright: AI Job Search Compared | SkillDrift",
+      "description": "Jobright or SkillDrift? A comparison checked on 21 October 2026: SkillDrift makes you a strong match for the jobs you want, in the US, India and worldwide. It scores jobs out of 100, builds learning for each gap, scores your interview practice and updates your resume and scores as you learn.",
+      "h1": "SkillDrift vs Jobright: scored jobs, plus the plan to win them.",
+      "priority": 0.6,
+      "breadcrumb": "SkillDrift vs Jobright",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "SkillDrift makes you a strong match for the jobs you want, in the US, India or anywhere else: it scores each job out of 100, names each gap, builds the learning and gets you ready to apply and interview. Your scores move as you finish.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "All comparisons",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/jobs-board.png",
+        "imageMobile": "/assets/shots/m-jobs-board.png",
+        "imageAlt": "The SkillDrift job board: jobs scored out of 100, shortlisted with apply links and tracked to the outcome"
+      },
+      "sections": [
+        {
+          "type": "compare",
+          "id": "side-by-side",
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with Jobright?",
+          "copy": "Checked on 21 October 2026, from Jobright's own pages and recent reviews. A dot marks where SkillDrift goes further.",
+          "columns": [
+            "Question",
+            "SkillDrift",
+            "Jobright"
+          ],
+          "rows": [
+            {
+              "label": "Where it works",
+              "us": "The US, India and worldwide, from a first internship to a promotion.",
+              "them": "Roles in the United States. Its iOS app lists US-based roles only.",
+              "win": "us"
+            },
+            {
+              "label": "Jobs",
+              "us": "Jobs and internships scored out of 100 for you, with the reasons shown, in the US, India and worldwide.",
+              "them": "A large feed of US jobs with a match score out of 100.",
+              "win": "us"
+            },
+            {
+              "label": "Skill gaps",
+              "us": "Each gap named, with a learning roadmap built for it.",
+              "them": "Shows where you fall short on a posting.",
+              "win": "us"
+            },
+            {
+              "label": "Learning",
+              "us": "A roadmap for each gap, sized to your hours, plus one free AI course for your field.",
+              "them": "No learning or courses found.",
+              "win": "us"
+            },
+            {
+              "label": "Your resume after you learn",
+              "us": "Certificates written into your resume. Your job scores re-score, free.",
+              "them": "No certificates or learning to add.",
+              "win": "us"
+            },
+            {
+              "label": "Resume tailoring",
+              "us": "Tailored to each job from your record, with the certificates you earn already on it.",
+              "them": "Tailored to each job.",
+              "win": "us"
+            },
+            {
+              "label": "Mock interviews",
+              "us": "Text, voice or realtime, scored out of 10 with how likely you are to be hired.",
+              "them": "Interview help through its chat assistant. No scored mock interview found.",
+              "win": "us"
+            },
+            {
+              "label": "After you get the job",
+              "us": "Log a win each week and get a draft self-review before your review.",
+              "them": "No tools for after the hire found.",
+              "win": "us"
+            },
+            {
+              "label": "Price",
+              "us": "Free to start with 160 credits. Casual User {topup} one time, or Active Seeker {unlimited} a month with no credit counting.",
+              "them": "Free with daily credits, and a paid plan. See Jobright for current prices."
+            }
+          ],
+          "note": "Jobright facts from Jobright's own site and App Store listing and recent reviews, checked on 21 October 2026. Products change: if something here is out of date, [tell us](/contact) and we will correct it."
+        },
+        {
+          "type": "split",
+          "id": "which",
+          "alt": true,
+          "eyebrow": "What SkillDrift adds",
+          "heading": "What does SkillDrift do that Jobright does not?",
+          "copy": null,
+          "panels": [
+            {
+              "title": "Jobright",
+              "items": [
+                "A feed of US jobs with a match score.",
+                "Help sending applications."
+              ]
+            },
+            {
+              "title": "SkillDrift",
+              "accent": true,
+              "items": [
+                "Jobs scored out of 100 in the US, India and worldwide, with each gap named.",
+                "Learning built for each gap, with your resume and scores updating as you learn.",
+                "Interview practice scored out of 10, and help after you get the job."
+              ]
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Does SkillDrift work for jobs in the US?",
+          "a": "Yes. SkillDrift scores jobs and internships out of 100 for you in the US, India and worldwide, names each gap and builds the learning for it, so your resume and your scores improve as you go."
+        },
+        {
+          "q": "What is the difference between Jobright and SkillDrift?",
+          "a": "SkillDrift makes you a strong match for the jobs you want: it scores each job out of 100, names each gap, builds learning for it, writes the certificate into your resume and re-scores your jobs as you learn. It also scores your interview practice and keeps helping after you get the job."
+        },
+        {
+          "q": "Does SkillDrift help me apply?",
+          "a": "Yes. SkillDrift tailors your resume to each job, shows you how well you match before you apply, and gets you ready for the interview."
+        }
+      ]
+    },
+    {
+      "path": "/skilldrift-vs-internshala",
+      "title": "SkillDrift vs Internshala for Freshers and Internships | SkillDrift",
+      "description": "Internshala or SkillDrift for freshers? A comparison checked on 21 October 2026: SkillDrift scores every internship and job out of 100 for you, names the gaps, builds learning for each one and writes certificates into your resume.",
+      "h1": "SkillDrift vs Internshala: every internship scored for you, and the gaps closed.",
+      "priority": 0.6,
+      "breadcrumb": "SkillDrift vs Internshala",
+      "hero": {
+        "eyebrow": "Compare",
+        "standfirst": "SkillDrift tells you which internships and jobs you can get now, scored out of 100, names what you are missing for the rest and builds learning for it, so your resume and your scores improve as you go.",
+        "primaryCta": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "All comparisons",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/learning-roadmaps-intern.png",
+        "imageMobile": "/assets/shots/m-learning-roadmaps-intern.png",
+        "imageAlt": "SkillDrift learning roadmaps built from the gaps in the jobs you picked"
+      },
+      "sections": [
+        {
+          "type": "compare",
+          "id": "side-by-side",
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with Internshala?",
+          "copy": "Checked on 21 October 2026, from Internshala's own pages and recent reviews. A dot marks where SkillDrift goes further.",
+          "columns": [
+            "Question",
+            "SkillDrift",
+            "Internshala"
+          ],
+          "rows": [
+            {
+              "label": "Who it is for",
+              "us": "Freshers and experienced people, in the US, India and worldwide.",
+              "them": "Students and freshers in India.",
+              "win": "us"
+            },
+            {
+              "label": "Listings",
+              "us": "Internships and jobs for people with under one year of experience, each scored out of 100 for you.",
+              "them": "Internships and fresher jobs in India, without a score for you.",
+              "win": "us"
+            },
+            {
+              "label": "Match score",
+              "us": "Every job and internship scored out of 100 for you.",
+              "them": "No match score per listing found.",
+              "win": "us"
+            },
+            {
+              "label": "Skill gaps",
+              "us": "Each missing skill named, for every listing you track.",
+              "them": "No gap per listing found.",
+              "win": "us"
+            },
+            {
+              "label": "Learning",
+              "us": "A roadmap for each gap, sized to your hours, plus one free AI course for your field.",
+              "them": "Paid certification and placement courses.",
+              "win": "us"
+            },
+            {
+              "label": "Certificates",
+              "us": "Written into your resume the moment you finish, and shared to LinkedIn in one click.",
+              "them": "Courses give certificates. Automatic addition to your resume not found.",
+              "win": "us"
+            },
+            {
+              "label": "Resume",
+              "us": "Rewritten around your results, and tailored to each listing.",
+              "them": "An AI resume builder with feedback.",
+              "win": "us"
+            },
+            {
+              "label": "Mock interviews",
+              "us": "Text, voice or realtime, scored out of 10 with how likely you are to be hired.",
+              "them": "AI mock interviews come with placement courses.",
+              "win": "us"
+            },
+            {
+              "label": "After you get the job",
+              "us": "Log a win each week and get a draft self-review before your review.",
+              "them": "No tools for after the hire found.",
+              "win": "us"
+            },
+            {
+              "label": "Price",
+              "us": "Free to start with 160 credits. Casual User {topup} one time, or Active Seeker {unlimited} a month with no credit counting.",
+              "them": "Free to apply. Courses are paid."
+            }
+          ],
+          "note": "Internshala facts from Internshala's own site and blog, checked on 21 October 2026. Products change: if something here is out of date, [tell us](/contact) and we will correct it."
+        },
+        {
+          "type": "split",
+          "id": "which",
+          "alt": true,
+          "eyebrow": "What SkillDrift adds",
+          "heading": "What does SkillDrift do that Internshala does not?",
+          "copy": null,
+          "panels": [
+            {
+              "title": "Internshala",
+              "items": [
+                "Lists internships and fresher jobs in India.",
+                "Paid certification and placement courses."
+              ]
+            },
+            {
+              "title": "SkillDrift",
+              "accent": true,
+              "items": [
+                "Every internship and job scored out of 100 for you, with each gap named.",
+                "Learning for each gap and a free AI course for your field, with every certificate written into your resume.",
+                "Interview practice with an honest score before you apply."
+              ]
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See your jobs scored out of 100, free.",
+        "copy": "Upload your resume. You get your gaps named and your closest jobs scored, with no account needed to see your score.",
+        "primary": {
+          "label": "Upload your resume - free",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "Is SkillDrift good for freshers?",
+          "a": "Yes. SkillDrift brings internships and jobs for people with under one year of experience, scores each one out of 100 for you, closes the gaps with learning built for them and lets you practise the interview before you apply."
+        },
+        {
+          "q": "Does SkillDrift have internships?",
+          "a": "Yes. SkillDrift brings internships and jobs for people with under one year of experience into the platform, each scored out of 100 for you, with the reasons shown."
+        },
+        {
+          "q": "Are SkillDrift courses free?",
+          "a": "Your first AI course is on us: one built for your field, such as AI for Field Sales or AI for Electronics and Communication, with the certificate written into your resume when you finish. From there, SkillDrift keeps suggesting new AI courses based on what the jobs you want are asking for right now, so you learn what employers want next. Those use credits, and Active Seeker includes them all with no credit counting."
         }
       ]
     }

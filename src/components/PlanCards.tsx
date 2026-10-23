@@ -11,7 +11,7 @@ export const pricing = {
 };
 
 const freePoints = [
-  "Your first application, end to end: enough credits to rewrite, tailor and download it",
+  "160 credits to start: enough to rewrite, tailor and download your first application",
   "Whichever template you pick",
   "Skill gaps, career path, and free re-scoring every time you upskill",
   "Matched jobs and internships, scored out of 100",
@@ -19,7 +19,8 @@ const freePoints = [
 ];
 
 const topupPoints = [
-  "299 credits, no expiry, no subscription",
+  "Full SkillDrift, used at your own pace",
+  "299 credits that never expire, no subscription",
   "Roughly four job applications, tailored and downloaded",
   "Or one live mock interview, with 99 credits left over",
   "Recharge whenever you run out",
@@ -29,6 +30,7 @@ const unlimitedPoints = [
   "Everything, no credit counting",
   "Unlimited tailoring, downloads and interviews",
   "Unlimited roadmaps and certificates",
+  "No credit price anywhere in the app",
   "Cancel any time",
 ];
 
@@ -159,7 +161,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
         </TrackedLink>
       </div>
 
-      {/* Top up */}
+      {/* Casual User (price token "topup") */}
       <div
         className="sd-pad-34"
         style={{
@@ -180,7 +182,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           }}
         >
           <h3 style={{ fontSize: 24, fontWeight: 600, letterSpacing: "-0.015em" }}>
-            Top up
+            Casual User
           </h3>
           <Image
             src="/assets/badge-silver.png"
@@ -244,7 +246,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
         </TrackedLink>
       </div>
 
-      {/* Unlimited */}
+      {/* Active Seeker (price token "unlimited") */}
       <div
         className="sd-pad-34"
         style={{
@@ -279,7 +281,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
           }}
         >
           <h3 style={{ fontSize: 24, fontWeight: 600, letterSpacing: "-0.015em" }}>
-            Unlimited
+            Active Seeker
           </h3>
           <Image
             src="/assets/badge-crown.png"
@@ -298,7 +300,7 @@ export default function PlanCards({ campaign = "home" }: { campaign?: string }) 
             opacity: 0.85,
           }}
         >
-          IF YOU&rsquo;RE APPLYING
+          UNLIMITED, FOR AN ACTIVE SEARCH
         </div>
         <div
           style={{

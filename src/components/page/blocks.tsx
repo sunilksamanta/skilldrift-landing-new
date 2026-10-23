@@ -1,5 +1,6 @@
+import SmartLink from "../SmartLink";
 import type { ReactNode } from "react";
-import { Check } from "../icons";
+import { ArrowRight, Check } from "../icons";
 import { Pill } from "../SectionBits";
 import RichText from "./RichText";
 
@@ -138,7 +139,7 @@ export function CardGrid({
   cards,
   min = 300,
 }: {
-  cards: { title: string; body: string; accent?: boolean; tag?: string }[];
+  cards: { title: string; body: string; accent?: boolean; tag?: string; href?: string; cta?: string }[];
   min?: number;
 }) {
   return (
@@ -150,10 +151,12 @@ export function CardGrid({
         gap: 20,
       }}
     >
-      {cards.map((card) => (
+      {cards.map((card) => {
+        const inner = (
         <div
-          key={card.title}
+          className={card.href ? "sd-card-link" : undefined}
           style={{
+            height: "100%",
             padding: 28,
             borderRadius: 18,
             border: card.accent ? "1px solid var(--acline)" : "1px solid var(--line)",
@@ -195,8 +198,22 @@ export function CardGrid({
           >
             <RichText text={card.body} />
           </p>
+          {card.href && (
+            <span style={{ marginTop: 16, display: "inline-flex", alignItems: "center", gap: 8, fontSize: 15, fontWeight: 500, color: "var(--ac)" }}>
+              {card.cta ?? "Read more"} <ArrowRight />
+            </span>
+          )}
         </div>
-      ))}
+        );
+        // A card with a destination is one link, so the whole card answers a click.
+        return card.href ? (
+          <SmartLink key={card.title} href={card.href} style={{ display: "block", color: "inherit" }}>
+            {inner}
+          </SmartLink>
+        ) : (
+          <div key={card.title}>{inner}</div>
+        );
+      })}
     </div>
   );
 }
@@ -347,5 +364,48 @@ export function FactList({ facts }: { facts: { label: string; value: string }[] 
         </div>
       ))}
     </dl>
+  );
+}
+
+/** Side by side comparison table; on a phone each row stacks into a card. */
+export function CompareTable({
+  columns,
+  rows,
+  note,
+}: {
+  columns: [string, string, string];
+  rows: { label: string; us: string; them: string; win?: "us" | "them" | "both" }[];
+  note?: ReactNode;
+}) {
+  return (
+    <div style={{ marginTop: 44 }}>
+      <div className="sd-compare">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">{columns[0]}</th>
+              <th scope="col" className="sd-compare__us">{columns[1]}</th>
+              <th scope="col">{columns[2]}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr key={row.label}>
+                <th scope="row">{row.label}</th>
+                <td className="sd-compare__us" data-label={columns[1]} data-win={row.win === "us" || row.win === "both" ? "true" : undefined}>
+                  <RichText text={row.us} />
+                </td>
+                <td data-label={columns[2]} data-win={row.win === "them" || row.win === "both" ? "true" : undefined}>
+                  <RichText text={row.them} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {note && (
+        <p style={{ marginTop: 18, fontSize: 13.5, lineHeight: 1.65, color: "var(--tx3)" }}>{note}</p>
+      )}
+    </div>
   );
 }

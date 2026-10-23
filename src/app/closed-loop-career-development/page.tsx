@@ -65,6 +65,7 @@ const FAQ: { q: string; a: string }[] = [
     q: "Where does the loop start?",
     a: "With your resume. Upload it and SkillDrift names your gaps against the role you want, or against any job description you paste. A mock interview for the same role finds the gaps a resume cannot show, and those become learning too. The gap analysis is free.",
   },
+  { q: "Does the loop stop when you get the job?", a: "No. The new role goes onto your resume, each month in it adds to the skills it uses, a logged win can go onto your resume, and before your review SkillDrift drafts a self-review. The same scores keep moving towards the next role." },
 ];
 
 const jsonLd = [
@@ -176,7 +177,7 @@ function Score({ score, band, good, chips }: { score: number; band: string; good
   const tone = good ? "#1F9D6B" : "#C7811A";
   return (
     <div style={{ ...card, padding: 26 }}>
-      <div style={{ fontWeight: 600 }}>Data Analyst, entry level</div>
+      <div style={{ fontWeight: 600 }}>Quality Engineer, entry level</div>
       <div style={{ fontSize: 52, fontWeight: 600, lineHeight: 1, margin: "14px 0 8px" }}>
         {score}
         <span style={{ fontSize: 18, color: "var(--tx2)", fontWeight: 500 }}> / 100</span>
@@ -195,7 +196,7 @@ function Score({ score, band, good, chips }: { score: number; band: string; good
 
 export default function ClosedLoopCareerDevelopmentPage() {
   return (
-    <div style={{ background: "var(--bg)", color: "var(--tx)", minHeight: "100vh", overflowX: "hidden" }}>
+    <div style={{ background: "var(--bg)", color: "var(--tx)", minHeight: "100vh", overflowX: "clip" }}>
       <SiteHeader campaign={CAMPAIGN} />
     <main>
       {jsonLd.map((d, i) => (
@@ -366,12 +367,26 @@ export default function ClosedLoopCareerDevelopmentPage() {
             <p style={lede}>An example of what step 4 looks like. The job did not change. The resume did, without anyone editing it.</p>
           </div>
           <div style={{ marginTop: 44, display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))", gap: 22, alignItems: "center", maxWidth: 900 }}>
-            <Score score={58} band="Stretch" good={false} chips={[{ s: "Excel", ok: true }, { s: "SQL, missing", ok: false }, { s: "Statistics, missing", ok: false }]} />
+            <Score score={58} band="Stretch" good={false} chips={[{ s: "Inspection", ok: true }, { s: "Six Sigma, missing", ok: false }, { s: "Root cause analysis, missing", ok: false }]} />
             <div style={{ textAlign: "center", fontSize: 14, color: "var(--tx2)" }}>
               <div style={{ fontSize: 30, color: "var(--ac)" }}>&rarr;</div>
               two sprints, built for this gap
             </div>
-            <Score score={81} band="Good fit" good chips={[{ s: "Excel", ok: true }, { s: "SQL", ok: true }, { s: "Statistics", ok: true }]} />
+            <Score score={81} band="Good fit" good chips={[{ s: "Inspection", ok: true }, { s: "Six Sigma", ok: true }, { s: "Root cause analysis", ok: true }]} />
+          </div>
+        </div>
+      </section>
+
+      {/* After the job */}
+      <section className="sect">
+        <div className="wrap">
+          <span style={pill}>After the job</span>
+          <div style={headRow}>
+            <h2 style={h2}>Does the loop stop when you get the job?</h2>
+            <p style={lede}>
+              No. Tap I got the role and the new role goes onto your resume. Each month in it adds to the skills it uses, a logged win can go onto your resume, and before your review you get a draft self-review. The same scores keep moving towards the next role.{" "}
+              <Link href="/career-progression" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>See how SkillDrift follows your career</Link>.
+            </p>
           </div>
         </div>
       </section>
@@ -384,7 +399,8 @@ export default function ClosedLoopCareerDevelopmentPage() {
             <h2 style={h2}>Questions people ask about the loop.</h2>
             <p style={lede}>
               For the full loop, end to end, see{" "}
-              <Link href="/how-it-works" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>how it works</Link>.
+              <Link href="/how-it-works" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>how it works</Link>. Finished courses and still no interviews? Start with{" "}
+              <Link href="/courses-but-no-interviews" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>what to check</Link>.
             </p>
           </div>
           {/* Same accordion markup as the homepage FAQ */}

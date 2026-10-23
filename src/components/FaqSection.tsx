@@ -14,7 +14,7 @@ export const faqs = [
   },
   {
     q: "Is SkillDrift free?",
-    a: "The parts that tell you where you stand are free forever: skill gap analysis, a career path, resume and ATS analysis, job matching, jobs and internships, one AI course for your domain, industry news and podcasts. New accounts also get starter credits, enough to rewrite your resume, tailor it to a job and download it.",
+    a: "The parts that tell you where you stand are free forever: skill gap analysis, a career path, resume and ATS analysis, job matching, jobs and internships, one AI course for your domain, industry news and podcasts. New accounts also get 160 credits, enough to rewrite your resume, tailor it to a job and download it.",
   },
   {
     q: "Can SkillDrift analyse my resume without signing up?",
@@ -26,7 +26,7 @@ export const faqs = [
   },
   {
     q: "What does a credit cost, and what does it buy?",
-    a: "{{In India one credit is one rupee: 299 credits cost 299 rupees.|A 299-credit top-up costs {topup} and credits never expire.}} Tailoring your resume to a job is 18 credits, a detailed job analysis is 37, a text-based mock interview is 50, a learning roadmap is 50, a resume download is 54 to 70, and a full outcome rewrite is 70. Unlimited access is {unlimited} a month.",
+    a: "{{In India one credit is one rupee: 299 credits cost 299 rupees.|A Casual User pack of 299 credits costs {topup}, and credits you buy never expire.}} Tailoring your resume to a job is 18 credits, a Deep fit analysis is 37, a text-based mock interview is 50, a learning roadmap is 50, a resume download is 54 to 70, and a full outcome rewrite is 70. Active Seeker, with no credit counting, is {unlimited} a month.",
   },
   {
     q: "Can I use SkillDrift if I am a student or a fresher?",
@@ -41,8 +41,28 @@ export const faqs = [
     a: "Yes. SkillDrift starts from the gaps your resume, a job description or a mock interview shows, and builds each learning roadmap around those gaps and the role you are aiming at. When you finish, your gaps and job scores update and the certificate is added to your resume. We call this closed loop career development.",
   },
   {
+    q: "Is there a free AI course on SkillDrift?",
+    a: "Yes. Your first AI course is free and built for your field, such as AI for Field Sales or AI for Electronics and Communication, and the certificate goes into your resume when you finish. SkillDrift also reads the jobs you match in your own role. When enough of them ask for AI tools, it builds an AI course for that role, such as AI tools for digital marketing, and shows you the postings that ask for it. That course is 50 credits, or included in Active Seeker.",
+  },
+  {
     q: "How is this different from a resume builder?",
     a: "A resume builder formats what you already wrote. SkillDrift starts from the role you want, tells you what is missing, helps you close it, and keeps your resume current as you do. The resume is an output of the loop, not the product.",
+  },
+  {
+    q: "I finished courses but I am still not getting interviews. Why?",
+    a: "Usually the course did not match what the jobs you apply to ask for, or it never reached your resume. SkillDrift starts from those jobs: each one is scored out of 100 and the missing skills are named, so your upskilling goes where it counts. Finish and verify a roadmap and the certificate is written into your resume, and every job that asks for that skill re-scores by the amount shown before you started. We call this skill compounding: every real step adds to the same scores. [See how to check a course against real jobs](/courses-but-no-interviews).",
+  },
+  {
+    q: "How much does finishing a course raise my scores?",
+    a: "Each roadmap shows how much it will raise your readiness before you start. Finish and verify it, and readiness rises by exactly that amount, along with every job that asks for that skill. SkillDrift shows you the number rather than promising that one course makes you job ready.",
+  },
+  {
+    q: "How does SkillDrift help me apply for jobs?",
+    a: "Open the Apply Kit on any job and SkillDrift prepares the application: a resume tailored to the job, a cover note, answers to the questions it asks and help asking for a referral. It checks the job is still open first, and a day or two later asks whether you applied, so your job board stays right.",
+  },
+  {
+    q: "Why did a job disappear from my matches?",
+    a: "It closed, or it was posted more than 30 days ago. SkillDrift hides those jobs and never charges for one. Jobs you have already applied to stay on your board.",
   },
 ];
 

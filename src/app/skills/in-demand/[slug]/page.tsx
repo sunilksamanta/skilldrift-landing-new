@@ -8,14 +8,17 @@
 // The root layout does not render the site chrome, so this page renders
 // SiteHeader and SiteFooter itself, like app/skills/[role].
 
+import WhySkillDrift from "@/components/WhySkillDrift";
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { CSSProperties, ReactNode } from 'react';
 import ResumeUploadCard from "@/components/ResumeUploadCard";
+import ShotPicture from "@/components/ShotPicture";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { campaignFor } from "@/lib/cta";
+import { matchShotFor } from '@/lib/shots';
 import { DEMAND_PAGES, SNAPSHOT_DATE, SNAPSHOT_LABEL, getDemandPage, sameIndustry, sameRole } from '@/lib/skillsDemand';
 
 const SITE = 'https://www.skilldrift.ai';
@@ -64,6 +67,7 @@ export default async function SkillsDemandPage({ params }: { params: Promise<{ s
   const url = `${SITE}/skills/in-demand/${p.slug}`;
   const campaign = campaignFor(`/skills/in-demand/${p.slug}`);
   const top = p.skills[0];
+  const shot = matchShotFor(DEMAND_PAGES.findIndex((x) => x.slug === p.slug));
   const others = sameRole(p).slice(0, 6);
   const neighbours = sameIndustry(p).slice(0, 6);
 
@@ -104,7 +108,7 @@ export default async function SkillsDemandPage({ params }: { params: Promise<{ s
   ];
 
   return (
-    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'hidden' }}>
+    <div style={{ background: 'var(--bg)', color: 'var(--tx)', minHeight: '100vh', overflowX: 'clip' }}>
       <SiteHeader campaign={campaign} />
       {ld.map((o, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(o) }} />
@@ -151,6 +155,10 @@ export default async function SkillsDemandPage({ params }: { params: Promise<{ s
           <p style={{ ...LEAD, marginTop: 28 }}>
             Which of these does your resume show? Upload it below. SkillDrift reads it against a real job, names the skills it does not show yet, and builds a plan to close them.
           </p>
+          <div style={{ marginTop: 36, maxWidth: 980, borderRadius: 22, overflow: 'hidden', border: '1px solid var(--line)', boxShadow: '0 30px 70px -20px rgba(76,52,180,.28)' }}>
+            <ShotPicture desktop={shot.desktop} mobile={shot.mobile} alt={shot.alt} sizes="(max-width: 760px) 100vw, 980px" />
+          </div>
+          <WhySkillDrift />
         </Sect>
 
         <ResumeUploadCard campaign={campaign} />
