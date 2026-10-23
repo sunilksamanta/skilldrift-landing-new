@@ -50,7 +50,7 @@ export const faqs = [
   },
   {
     q: "I finished courses but I am still not getting interviews. Why?",
-    a: "Usually the course did not match what the jobs you apply to ask for, or it never reached your resume. SkillDrift starts from those jobs: each one is scored out of 100 and the missing skills are named, so your upskilling goes where it counts. Finish and verify a roadmap and the certificate is written into your resume, and every job that asks for that skill re-scores by the amount shown before you started. We call this skill compounding: every real step adds to the same scores.",
+    a: "Usually the course did not match what the jobs you apply to ask for, or it never reached your resume. SkillDrift starts from those jobs: each one is scored out of 100 and the missing skills are named, so your upskilling goes where it counts. Finish and verify a roadmap and the certificate is written into your resume, and every job that asks for that skill re-scores by the amount shown before you started. We call this skill compounding: every real step adds to the same scores. [See how to check a course against real jobs](/courses-but-no-interviews).",
   },
   {
     q: "How much does finishing a course raise my scores?",

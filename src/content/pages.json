@@ -676,7 +676,8 @@
               "title": "Out loud, in English or Hindi",
               "body": "Recorded voice and a live interview that follows up on what you actually said, as a real panel would."
             }
-          ]
+          ],
+          "copy": "Interview practice is one part of the coach. See [what an AI career coach that also teaches you does](/ai-career-coach)."
         },
         {
           "type": "prices",
@@ -899,7 +900,7 @@
           "type": "steps",
           "eyebrow": "How it runs",
           "heading": "How do you build a career roadmap for yourself?",
-          "copy": "A list of everything you are missing is not a plan. The order is the product.",
+          "copy": "A list of everything you are missing is not a plan. The order is the product. For the learning inside each gap, see [how SkillDrift makes a learning plan from your resume](/learning-plan-from-resume).",
           "steps": [
             {
               "title": "Name the target",
@@ -1196,7 +1197,7 @@
           "type": "cards",
           "eyebrow": "Why sprints",
           "heading": "Why do people not finish online courses?",
-          "copy": "You do not need a syllabus. You need the four things standing between you and the role, in the order that moves your score.",
+          "copy": "You do not need a syllabus. You need the four things standing between you and the role, in the order that moves your score. See [how the learning plan is built from your resume](/learning-plan-from-resume).",
           "min": 300,
           "cards": [
             {
@@ -1847,6 +1848,489 @@
       ]
     },
     {
+      "path": "/learning-plan-from-resume",
+      "title": "AI that makes a learning plan from your resume | SkillDrift",
+      "description": "Upload your resume, pick the role you want, and SkillDrift builds a learning plan for each skill gap, sized to the hours you have each week.",
+      "h1": "An AI that makes a learning plan from your resume",
+      "priority": 0.8,
+      "breadcrumb": "Learning plan from your resume",
+      "hero": {
+        "eyebrow": "Learning plan",
+        "standfirst": "SkillDrift reads your resume against the role you want and names each skill you are missing. For the gap you pick, it builds a learning roadmap set to your track, your level and the hours you can give each week.",
+        "primaryCta": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "See how it works",
+          "href": "/how-it-works"
+        },
+        "image": "/assets/shots/learning-roadmaps.png",
+        "imageAlt": "A learning roadmap for Advanced Reliability and Asset Management, four weeks at an advanced level, with the first sprint ready and readiness rising to 72% when it is finished",
+        "imageMobile": "/assets/shots/m-learning-roadmaps.png"
+      },
+      "sections": [
+        {
+          "type": "steps",
+          "id": "how",
+          "eyebrow": "How it runs",
+          "heading": "How does SkillDrift make a learning plan from your resume?",
+          "copy": "Five steps, from your resume to a skill you can prove.",
+          "steps": [
+            {
+              "title": "Upload your resume and pick a target",
+              "body": "A target role, a career path or a job description you paste in."
+            },
+            {
+              "title": "See your skill gaps",
+              "body": "Each gap is named and ordered by how much it adds to your readiness for the role."
+            },
+            {
+              "title": "Build the roadmap for one gap",
+              "body": "Pick the track (technical, functional or executive), the level (basic, intermediate or advanced) and your hours, from two to four a week up to full time."
+            },
+            {
+              "title": "Pass a short knowledge check",
+              "body": "Each sprint ends with a check. Finish the roadmap and the SkillDrift certificate is added to your resume under Certifications."
+            },
+            {
+              "title": "Watch your scores move",
+              "body": "Once the skill is verified, your readiness and every job that asks for that skill rise by the amount shown before you started."
+            }
+          ]
+        },
+        {
+          "type": "shot",
+          "id": "market",
+          "alt": true,
+          "eyebrow": "From real jobs",
+          "heading": "Does the plan change when the job market changes?",
+          "copy": "Your gaps are measured against live job postings for your role, so the next gap follows what employers ask for.",
+          "items": [
+            "Each gap shows how many jobs ask for it, for example 3 of 12 Senior Maintenance Engineer jobs.",
+            "When a role has few listings, SkillDrift also reads nearby roles in the same field and tells you so.",
+            "Close this gap turns any of them into a learning roadmap.",
+            "A skill you already have can be added as proof, and it counts as met for that job."
+          ],
+          "image": "/assets/shots/jobs-ask.png",
+          "imageMobile": "/assets/shots/m-jobs-ask.png",
+          "imageAlt": "What Senior Maintenance Engineer jobs ask for, read from live postings across India: PFMEA and Control Plan support asked by 3 of 12 jobs, each gap with a button to close it, beside the learning roadmap for Advanced Reliability and Asset Management"
+        },
+        {
+          "type": "prose",
+          "id": "personal",
+          "eyebrow": "Built for you",
+          "heading": "Is the plan the same for everyone?",
+          "paragraphs": [
+            "No two plans start from the same place. Each one starts from your resume and the role you chose, so two people aiming at the same role get different gaps, in a different order.",
+            "The roadmap is then set to the track, level and hours you pick. It is built only for a gap that learning can close: years of experience or a degree come with time, so SkillDrift does not sell a course for them."
+          ]
+        },
+        {
+          "type": "prices",
+          "id": "cost",
+          "alt": true,
+          "eyebrow": "What it costs",
+          "heading": "What does a learning plan cost?",
+          "copy": "Seeing your skill gaps costs nothing. You spend credits when SkillDrift builds the learning.",
+          "rows": [
+            {
+              "label": "Your skill gaps for the role you want",
+              "cost": "Free"
+            },
+            {
+              "label": "One AI course for your field",
+              "cost": "Free"
+            },
+            {
+              "label": "A learning roadmap for one gap",
+              "note": "Every sprint and its learning included",
+              "cost": "50 credits"
+            },
+            {
+              "label": "The certificate on your resume",
+              "note": "All 50 come back when you share it on LinkedIn",
+              "cost": "50 credits"
+            }
+          ],
+          "note": "Active Seeker covers every action, with no credit counting. Full table on the [pricing page](/pricing)."
+        },
+        {
+          "type": "cards",
+          "id": "related",
+          "min": 260,
+          "eyebrow": "Related",
+          "heading": "Where does the learning plan fit?",
+          "cards": [
+            {
+              "title": "Career roadmap",
+              "body": "The path from your resume to the role you want, ordered by what moves your readiness most.",
+              "href": "/career-roadmap",
+              "cta": "See the career roadmap"
+            },
+            {
+              "title": "Learning sprints",
+              "body": "How each roadmap runs week by week, and the AI course for your field.",
+              "href": "/learning-sprints",
+              "cta": "See learning sprints"
+            },
+            {
+              "title": "Finished courses, still no interviews?",
+              "body": "How to check whether a course closes a gap the jobs you apply for ask for.",
+              "href": "/courses-but-no-interviews",
+              "cta": "Read the check"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "See the skills you are missing, then learn them.",
+        "copy": "Upload your resume and pick the role you want. Your gaps come back named, and the learning plan starts from the one you pick.",
+        "primary": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "How does SkillDrift make a learning plan from your resume?",
+          "a": "Upload your resume and pick a target role, a career path or a job description. SkillDrift names your skill gaps, ordered by how much each adds to your readiness. Pick a gap and it builds a learning roadmap set to your track (technical, functional or executive), your level (basic to advanced) and your hours, from two to four a week up to full time. Pass the knowledge checks and the certificate is added to your resume under Certifications, and your readiness and job scores move."
+        },
+        {
+          "q": "Does the plan change when the job market changes?",
+          "a": "Your gaps are measured against live job postings for your role, so the next gap follows what employers ask for. Each gap shows how many of those jobs ask for it, for example 3 of 12."
+        },
+        {
+          "q": "Is the plan the same for everyone?",
+          "a": "No two plans start from the same place. Each one starts from your resume and the role you chose, and it is set to the track, level and hours you pick."
+        },
+        {
+          "q": "What does a learning plan cost?",
+          "a": "Seeing your skill gaps is free, and one AI course for your field is free. A learning roadmap for any other gap is 50 credits, and the certificate is 50 credits, which come back when you share it on LinkedIn. Active Seeker covers every action with no credit counting."
+        }
+      ]
+    },
+    {
+      "path": "/ai-career-coach",
+      "title": "AI career coach that also teaches you | SkillDrift",
+      "description": "SkillDrift tells you what to do next for the role you want, then teaches the skills you are missing and shows how your job scores move.",
+      "h1": "An AI career coach that also teaches you",
+      "priority": 0.8,
+      "breadcrumb": "AI career coach",
+      "hero": {
+        "eyebrow": "AI career coach",
+        "standfirst": "SkillDrift is an AI career coach that also teaches. It shows your next step for the role you want, builds the course for the gap that step needs, and then shows the job scores that move when you finish.",
+        "primaryCta": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "Compare SkillDrift",
+          "href": "/compare"
+        },
+        "image": "/assets/shots/ai-career-coach.png",
+        "imageMobile": "/assets/shots/m-ai-career-coach.png",
+        "imageAlt": "A maintenance engineer's plan in SkillDrift: three steps for today, the next roadmap priced at 50 credits against a balance of 10 with the readiness it adds, and what Senior Maintenance Engineer jobs ask for, gap by gap"
+      },
+      "sections": [
+        {
+          "type": "cards",
+          "id": "what",
+          "min": 260,
+          "eyebrow": "What the coach does",
+          "heading": "What does an AI career coach that also teaches you do?",
+          "copy": "One plan, built from your resume, that moves as you do.",
+          "cards": [
+            {
+              "title": "Names your next step",
+              "body": "Every day, with the reason and its price against your balance.",
+              "accent": true
+            },
+            {
+              "title": "Scores every job",
+              "body": "Every job and internship is scored out of 100 against your resume, with the skills to close."
+            },
+            {
+              "title": "Teaches the gap",
+              "body": "A learning roadmap for the gap you choose, with a knowledge check and a certificate added to your resume."
+            },
+            {
+              "title": "Runs your interviews",
+              "body": "Text, recorded voice and live voice interviews, scored out of 10, with your chance of being hired and the answers to work on."
+            },
+            {
+              "title": "Keeps going after the hire",
+              "body": "Logs your wins, prepares you for reviews and plans your next role."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "choose",
+          "alt": true,
+          "min": 300,
+          "eyebrow": "Choosing one",
+          "heading": "How do you choose an AI career coach?",
+          "copy": "Six questions to ask of any AI career coach, SkillDrift included.",
+          "cards": [
+            {
+              "title": "Does it start from your resume?",
+              "body": "A coach that reads your resume can name the exact skills you are missing for a role. A coach that only answers questions needs you to explain yourself every time."
+            },
+            {
+              "title": "Does it check real jobs?",
+              "body": "Advice should be measured against live job postings, with a score for each job and the reasons shown."
+            },
+            {
+              "title": "Does it teach the gap?",
+              "body": "Naming a gap is half the job. Look for learning built for that gap, sized to your hours, with a check at the end."
+            },
+            {
+              "title": "Does your progress carry over?",
+              "body": "Finished learning should reach your resume and your job scores without you redoing anything."
+            },
+            {
+              "title": "Does it score your interviews?",
+              "body": "A score and the weak answers named show what to fix before the real interview."
+            },
+            {
+              "title": "Does it work where you are?",
+              "body": "Check that it covers your country and your stage, from a first internship to a promotion."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "compare",
+          "min": 260,
+          "eyebrow": "Side by side",
+          "heading": "How does SkillDrift compare with other AI career tools?",
+          "copy": "Checked on 21 October 2026, from each product's own pages and recent reviews.",
+          "cards": [
+            {
+              "title": "SkillDrift vs ChatGPT",
+              "body": "A general AI assistant. It works from what you paste each time, with no job listings and no built-in interview score.",
+              "href": "/skilldrift-vs-chatgpt",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "SkillDrift vs LinkedIn Premium",
+              "body": "LinkedIn's job listings with a high, medium or low match rating, and a general course library.",
+              "href": "/skilldrift-vs-linkedin-premium",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "SkillDrift vs Jobright",
+              "body": "A feed of US jobs with a match score out of 100. No learning or courses found.",
+              "href": "/skilldrift-vs-jobright",
+              "cta": "Read the comparison"
+            },
+            {
+              "title": "All comparisons",
+              "body": "Side by side with ChatGPT, LinkedIn Premium, Jobright and Internshala.",
+              "href": "/compare",
+              "cta": "See all"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "chatbot",
+          "alt": true,
+          "eyebrow": "Coach or chatbot",
+          "heading": "How is this different from a chatbot?",
+          "paragraphs": [
+            "A chatbot answers questions. SkillDrift keeps your resume, your gaps, your jobs and your learning in one plan and updates it as you progress.",
+            "Finish a roadmap and the certificate is added to your resume, and every job that asks for that skill re-scores. Practise an interview and the weak answers can become a learning roadmap."
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "skills",
+          "eyebrow": "Where to start",
+          "heading": "Do I need to know which skills to learn?",
+          "paragraphs": [
+            "No. SkillDrift finds them from your resume and the jobs you want, and shows how many of those jobs ask for each one. See [how the learning plan is built](/learning-plan-from-resume)."
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "Get your next step, then learn it.",
+        "copy": "Upload your resume and pick the role you want. SkillDrift names your gaps, scores your jobs and builds the learning for the gap you pick.",
+        "primary": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "What does an AI career coach that also teaches you do?",
+          "a": "SkillDrift shows your next step for the role you want, with the reason and its price against your balance. It scores every job and internship out of 100 against your resume, builds a learning roadmap for the gap you choose with a knowledge check and a certificate added to your resume, runs text, recorded voice and live voice interviews scored out of 10, and keeps going after the hire with the plan for your next role."
+        },
+        {
+          "q": "How do you choose an AI career coach?",
+          "a": "Ask six questions. Does it start from your resume? Does it check live job postings? Does it teach the gap? Does your progress carry over to your resume and job scores? Does it score your interviews? Does it work in your country and at your stage? SkillDrift does all six, in the US, India and worldwide."
+        },
+        {
+          "q": "How is this different from a chatbot?",
+          "a": "A chatbot answers questions. SkillDrift keeps your resume, your gaps, your jobs and your learning in one plan and updates it as you progress."
+        },
+        {
+          "q": "Do I need to know which skills to learn?",
+          "a": "No. SkillDrift finds them from your resume and the jobs you want, and shows how many of those jobs ask for each one."
+        }
+      ]
+    },
+    {
+      "path": "/courses-but-no-interviews",
+      "title": "Finished courses but still not getting interviews? | SkillDrift",
+      "description": "Courses help only when they close a gap employers ask for and show on your resume. Here is how to check both.",
+      "h1": "I finished courses but I am still not getting interviews. Why?",
+      "priority": 0.8,
+      "breadcrumb": "Courses but no interviews",
+      "hero": {
+        "eyebrow": "Courses but no interviews",
+        "standfirst": "Most often the course did not close a gap that the jobs you apply for ask for, or it does not show on your resume in the employer's words. Check both against real postings for one target role before you take the next course.",
+        "primaryCta": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        },
+        "secondaryCta": {
+          "label": "How to check",
+          "href": "#check"
+        },
+        "image": "/assets/shots/benchmarking.png",
+        "imageMobile": "/assets/shots/m-benchmarking.png",
+        "imageAlt": "Readiness for a maintenance engineer at 61%: the top gap, predictive maintenance and condition monitoring, the skills inside it, and the next gaps with how much each adds"
+      },
+      "sections": [
+        {
+          "type": "steps",
+          "id": "check",
+          "eyebrow": "The check",
+          "heading": "How do you check whether a course will get you interviews?",
+          "copy": "Use one target role and five real postings.",
+          "steps": [
+            {
+              "title": "List what the role asks for",
+              "body": "Open five postings for one role and list the skills they ask for. A skill in four or five of them belongs to the role."
+            },
+            {
+              "title": "Sort each skill",
+              "body": "Mark each one: on your resume, you have it but your resume does not show it, or you do not have it yet."
+            },
+            {
+              "title": "Fix the middle group first",
+              "body": "It is a writing fix. Name the skill in the employer's words and attach it to something you did."
+            },
+            {
+              "title": "Learn one gap at a time",
+              "body": "Take the next course for one skill from the last group, and add the proof to your resume when you finish."
+            },
+            {
+              "title": "Check again",
+              "body": "Run the same check against new postings."
+            }
+          ]
+        },
+        {
+          "type": "shot",
+          "id": "how-skilldrift",
+          "alt": true,
+          "eyebrow": "With SkillDrift",
+          "heading": "How does SkillDrift run this check for you?",
+          "copy": "The same check, on your resume, against live jobs for the role you want.",
+          "items": [
+            "Reads your resume against the role you want and names each gap.",
+            "Shows how many live jobs ask for each gap, so the next course goes where it counts.",
+            "Scores each job out of 100, with the skills you already have and the ones to close.",
+            "Builds the learning for the gap you pick and adds the certificate to your resume.",
+            "Shows which job scores move when you finish."
+          ],
+          "image": "/assets/shots/job-match-analysis.png",
+          "imageMobile": "/assets/shots/m-job-match-analysis.png",
+          "imageAlt": "A tax manager job for an experienced accountant, scored 78 out of 100, with the five skills the person already has, the three to close and the next step"
+        },
+        {
+          "type": "prose",
+          "id": "stop",
+          "eyebrow": "Courses",
+          "heading": "Should I stop taking courses?",
+          "paragraphs": [
+            "No. Take the course that closes the gap most of your target jobs ask for, and make sure it shows on your resume when you finish. [See how SkillDrift builds that learning plan](/learning-plan-from-resume)."
+          ]
+        },
+        {
+          "type": "prose",
+          "id": "certificate",
+          "alt": true,
+          "eyebrow": "Certificates",
+          "heading": "Does a certificate alone get interviews?",
+          "paragraphs": [
+            "It helps when the skill is one the job asks for and the resume shows it next to real work.",
+            "On SkillDrift the certificate is added to your resume under Certifications when you finish, and you can share it to LinkedIn as a post or in your certifications section."
+          ]
+        },
+        {
+          "type": "cards",
+          "id": "related",
+          "min": 260,
+          "eyebrow": "Related",
+          "heading": "Where to go next",
+          "cards": [
+            {
+              "title": "Learning plan from your resume",
+              "body": "A learning roadmap for each gap, set to your track, level and hours.",
+              "href": "/learning-plan-from-resume",
+              "cta": "See the learning plan"
+            },
+            {
+              "title": "Job match",
+              "body": "Which jobs you can get now, and what to learn for the rest.",
+              "href": "/job-match",
+              "cta": "See job match"
+            },
+            {
+              "title": "Closed loop career development",
+              "body": "Why finishing a course should change your resume and your job scores.",
+              "href": "/closed-loop-career-development",
+              "cta": "Read about the loop"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "heading": "Check your resume against the jobs you want.",
+        "copy": "Upload your resume and pick a role. SkillDrift names the gaps those jobs ask for, so the next course closes one of them.",
+        "primary": {
+          "label": "Upload your resume",
+          "href": "app:sign-in"
+        }
+      },
+      "faq": [
+        {
+          "q": "I finished courses but I am still not getting interviews. Why?",
+          "a": "Most often the course did not close a gap that the jobs you apply for ask for, or it does not show on your resume in the employer's words. Check both against real postings for one target role before you take the next course."
+        },
+        {
+          "q": "How do you check whether a course will get you interviews?",
+          "a": "Open five postings for one role and list the skills they ask for. Mark each skill: on your resume, you have it but your resume does not show it, or you do not have it yet. Fix the middle group first by naming the skill in the employer's words next to something you did. Then learn one gap from the last group at a time, add the proof to your resume, and check again against new postings."
+        },
+        {
+          "q": "How does SkillDrift run this check for you?",
+          "a": "It reads your resume against the role you want, names each gap and shows how many live jobs ask for it, scores each job out of 100, builds the learning for the gap you pick, adds the certificate to your resume and shows which job scores move when you finish."
+        },
+        {
+          "q": "Should I stop taking courses?",
+          "a": "No. Take the course that closes the gap most of your target jobs ask for, and make sure it shows on your resume when you finish."
+        },
+        {
+          "q": "Does a certificate alone get interviews?",
+          "a": "It helps when the skill is one the job asks for and the resume shows it next to real work."
+        }
+      ]
+    },
+    {
       "path": "/pricing",
       "title": "SkillDrift pricing - free to start, pay when you apply",
       "description": "Skill gaps, career path, job matching and one AI course are free forever. Buy credits as a Casual User or go unlimited with Active Seeker when you are ready to apply. Credits you buy never expire.",
@@ -2415,6 +2899,12 @@
               "body": "Every internship scored for you, and the gaps closed.",
               "href": "/skilldrift-vs-internshala",
               "cta": "Read the comparison"
+            },
+            {
+              "title": "Choosing an AI career coach",
+              "body": "Six questions to ask of any AI career coach, and how SkillDrift answers them.",
+              "href": "/ai-career-coach",
+              "cta": "Read the guide"
             }
           ]
         },

@@ -168,7 +168,12 @@ export function faqPageSchema(faqs: readonly { q: string; a: string }[]) {
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: resolveRegionalTextForMachines(faq.a) },
+      acceptedAnswer: {
+        "@type": "Answer",
+        // Inline [label](/href) links are for the visible answer; the structured
+        // answer keeps the label text only.
+        text: resolveRegionalTextForMachines(faq.a).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"),
+      },
     })),
   };
 }

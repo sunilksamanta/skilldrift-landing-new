@@ -21,7 +21,8 @@ const FIRST = [
   "", "how-it-works", "features", "jobs", "job-match", "skill-benchmarking",
   "career-roadmap", "learning-sprints", "interview-prep", "resume-tailoring",
   "resume-rewrite", "ats-score-checker", "career-change", "career-progression",
-  "closed-loop-career-development", "pricing", "proof", "compare",
+  "closed-loop-career-development", "learning-plan-from-resume", "ai-career-coach",
+  "courses-but-no-interviews", "pricing", "proof", "compare",
   "skilldrift-vs-chatgpt", "skilldrift-vs-linkedin-premium", "skilldrift-vs-jobright",
   "skilldrift-vs-internshala", "about", "contact", "skills",
 ];

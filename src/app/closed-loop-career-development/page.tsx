@@ -399,7 +399,8 @@ export default function ClosedLoopCareerDevelopmentPage() {
             <h2 style={h2}>Questions people ask about the loop.</h2>
             <p style={lede}>
               For the full loop, end to end, see{" "}
-              <Link href="/how-it-works" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>how it works</Link>.
+              <Link href="/how-it-works" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>how it works</Link>. Finished courses and still no interviews? Start with{" "}
+              <Link href="/courses-but-no-interviews" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>what to check</Link>.
             </p>
           </div>
           {/* Same accordion markup as the homepage FAQ */}
