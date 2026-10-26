@@ -14,6 +14,16 @@ const nextConfig: NextConfig = {
    */
   redirects() {
     return [
+      // Short link for posts in the SkillDrift Jobs & Internships WhatsApp
+      // channel (26 Oct 2026). Keeps the campaign tags out of the post text.
+      // Temporary (307), so the tags can change later without browsers
+      // caching the old target. Panel row: ORGANIC_WhatsApp_Channel_261026.
+      {
+        source: "/wa",
+        destination:
+          "https://app.skilldrift.ai/sign-up?utm_source=whatsapp_channel&utm_medium=organic&utm_campaign=ORGANIC_WhatsApp_Channel_261026&utm_content=channel_post",
+        permanent: false,
+      },
       {
         // The terms page was /terms-conditions before the rewrite.
         source: "/terms-conditions",
