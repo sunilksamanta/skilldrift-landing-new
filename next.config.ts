@@ -24,6 +24,13 @@ const nextConfig: NextConfig = {
           "https://app.skilldrift.ai/sign-up?utm_source=whatsapp_channel&utm_medium=organic&utm_campaign=ORGANIC_WhatsApp_Channel_261026&utm_content=channel_post",
         permanent: false,
       },
+      // Short link to the SkillDrift Jobs & Internships WhatsApp channel
+      // (26 Oct 2026), for captions, ambassadors and posters. Temporary (307).
+      {
+        source: "/channel",
+        destination: "https://whatsapp.com/channel/0029VbDo3S75kg6yzq8Qxp2A",
+        permanent: false,
+      },
       {
         // The terms page was /terms-conditions before the rewrite.
         source: "/terms-conditions",
