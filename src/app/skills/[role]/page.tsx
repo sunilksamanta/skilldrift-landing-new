@@ -13,6 +13,7 @@ import { notFound } from 'next/navigation';
 import type { CSSProperties, ReactNode } from 'react';
 import RoleHero from "@/components/RoleHero";
 import WhySkillDrift from "@/components/WhySkillDrift";
+import WhatsAppFollow from "@/components/WhatsAppFollow";
 import ShotPicture from "@/components/ShotPicture";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
@@ -127,6 +128,14 @@ export default async function RoleSkillsPage({ params }: { params: Promise<{ rol
           <Sect key={g.heading} alt={i % 2 === 0}>
             <Head pill={g.kind === 'technical' ? 'Technical skills' : 'Human skills'} title={g.heading} />
             <Cards items={g.skills.map((s) => ({ h: s.name, b: s.why }))} />
+            {i === n - 1 ? (
+              <WhatsAppFollow
+                heading="Get one role like this every Tuesday on WhatsApp"
+                line="Follow SkillDrift Jobs & Internships. A real job or internship every Friday too."
+                placement="role_page"
+                extra={{ role: r.slug }}
+              />
+            ) : null}
           </Sect>
         ))}
 
