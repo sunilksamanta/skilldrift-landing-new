@@ -20,9 +20,12 @@ import { ArrowRight } from "./icons";
 export default function StickyUploadCta({
   dropZone,
   onUpload,
+  label = "Upload your resume - free",
 }: {
   dropZone: React.RefObject<HTMLDivElement | null>;
   onUpload: () => void;
+  /** The role pages name the role here ("Check my project manager match"). */
+  label?: string;
 }) {
   const [show, setShow] = useState(false);
 
@@ -84,7 +87,7 @@ export default function StickyUploadCta({
           gap: 10,
         }}
       >
-        Upload your resume - free
+        {label}
         <ArrowRight size={18} />
       </button>
     </div>

@@ -121,7 +121,7 @@ export default async function RoleSkillsPage({ params }: { params: Promise<{ rol
           </ol>
         </nav>
 
-        <RoleHero h1={r.h1} answer={r.answer} intro={r.intro} role={r.role} campaign={campaign} />
+        <RoleHero h1={r.h1} answer={r.answer} intro={r.intro} role={r.role} slug={r.slug} campaign={campaign} />
 
         {r.groups.map((g, i) => (
           <Sect key={g.heading} alt={i % 2 === 0}>
