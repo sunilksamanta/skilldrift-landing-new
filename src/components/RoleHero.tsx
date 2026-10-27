@@ -15,12 +15,15 @@ export default function RoleHero({
   answer,
   intro,
   role,
+  slug,
   campaign,
 }: {
   h1: string;
   answer: string;
   intro: string;
   role: string;
+  /** The page slug, sent as `role` on the card's events. */
+  slug: string;
   campaign: string;
 }) {
   const guest = useGuestAnalysis();
@@ -77,7 +80,7 @@ export default function RoleHero({
             </p>
           </div>
           <div id="upload">
-            <UploadCard guest={guest} campaign={campaign} />
+            <UploadCard guest={guest} campaign={campaign} role={{ name: role, slug }} />
           </div>
         </div>
       </div>

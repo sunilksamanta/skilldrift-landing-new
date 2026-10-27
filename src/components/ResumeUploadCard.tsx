@@ -5,6 +5,7 @@ import { ArrowRight, DocPlus, DocScan } from "./icons";
 import TrackedLink from "./TrackedLink";
 import GuestResultSection from "./GuestResultSection";
 import StickyUploadCta from "./StickyUploadCta";
+import HeroGoalPicker from "./HeroGoalPicker";
 import UploadProgress from "./UploadProgress";
 import { signUpHref } from "@/lib/cta";
 import { ACCEPTED_TYPES } from "@/lib/guest-api";
@@ -36,13 +37,26 @@ const panelBorder: React.CSSProperties = {
 
 type Guest = ReturnType<typeof useGuestAnalysis>;
 
+/**
+ * On a /skills/<role> page the card speaks to the role the visitor searched
+ * for (27 Oct 2026): the heading names it, the three goals come first, and
+ * three lines say what the upload gives. The free check itself reads the
+ * resume on its own (the role is not sent to the scoring), so the lines only
+ * promise what the result shows, and the role-specific part is placed in the
+ * account where it happens.
+ */
+export type RoleContext = { name: string; slug: string };
+
 export function UploadCard({
   guest,
   campaign = "home",
+  role,
 }: {
   guest: Guest;
   /** Page the card is rendered on, for the UTM. Defaults to the homepage. */
   campaign?: string;
+  /** Set on the role pages only. The homepage and ATS checker leave it out. */
+  role?: RoleContext;
 }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [dragging, setDragging] = useState(false);
@@ -54,6 +68,9 @@ export function UploadCard({
   // because the picker opens from two different buttons.
   const entryMethod = useRef<"drag_drop" | "file_picker">("file_picker");
   const dropZone = useRef<HTMLDivElement>(null);
+  // The goal picked on this card, for the role pages' events. "none" until a
+  // chip is picked; nothing is pre-selected.
+  const goal = useRef<string>("none");
 
   const { phase, status, fileName, error } = guest;
   const busy = phase === "uploading" || phase === "processing";
@@ -78,11 +95,12 @@ export function UploadCard({
         file_size_bytes: file.size,
         entry_method: entryMethod.current,
         marketing_opt_in: optIn,
+        ...(role ? { role: role.slug, goal: goal.current } : {}),
       });
 
       guest.upload(file);
     },
-    [guest, optIn],
+    [guest, optIn, role],
   );
 
   const ctaLabel =
@@ -128,7 +146,7 @@ export function UploadCard({
                   letterSpacing: "-0.01em",
                 }}
               >
-                Start with your resume.
+                {role ? `See how close you are to ${role.name} jobs.` : "Start with your resume."}
               </h2>
               <span
                 style={{
@@ -143,18 +161,66 @@ export function UploadCard({
                 Takes about a minute
               </span>
             </div>
-            <p
-              style={{
-                marginTop: 10,
-                fontSize: 15,
-                lineHeight: 1.6,
-                color: "var(--tx2)",
-                maxWidth: 640,
-              }}
-            >
-              Upload it once. You get your readiness score, your closest roles,
-              your real gaps and week one of a plan built for them.
-            </p>
+            {role ? (
+              <>
+                <HeroGoalPicker
+                  heading="What do you want next?"
+                  marginTop={18}
+                  compact
+                  onPick={(intent) => {
+                    goal.current = intent;
+                  }}
+                />
+                <ul
+                  style={{
+                    marginTop: 18,
+                    padding: 0,
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 8,
+                    fontSize: 15,
+                    lineHeight: 1.55,
+                    color: "var(--tx2)",
+                    maxWidth: 640,
+                  }}
+                >
+                  {[
+                    "Your closest jobs, each scored out of 100 against your resume.",
+                    "What you already have, and what is left to close.",
+                    `In your free account, add ${role.name} as a career path and get a course for each gap, sized to the hours you have.`,
+                  ].map((line) => (
+                    <li key={line} style={{ display: "flex", gap: 10 }}>
+                      <span
+                        aria-hidden="true"
+                        style={{
+                          flex: "0 0 auto",
+                          marginTop: 8,
+                          width: 7,
+                          height: 7,
+                          borderRadius: 999,
+                          background: "var(--ac)",
+                        }}
+                      />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <p
+                style={{
+                  marginTop: 10,
+                  fontSize: 15,
+                  lineHeight: 1.6,
+                  color: "var(--tx2)",
+                  maxWidth: 640,
+                }}
+              >
+                Upload it once. You get your readiness score, your closest roles,
+                your real gaps and week one of a plan built for them.
+              </p>
+            )}
           </div>
 
           <input
@@ -363,12 +429,13 @@ export function UploadCard({
           <a
             href={signUpHref(campaign, "hero_build_resume")}
             onClick={() => {
-              trackCta("hero", "build_resume");
+              trackCta("hero", "build_resume", role ? { role: role.slug, goal: goal.current } : undefined);
               track(AnalyticsEvents.ANONYMOUS_UPLOAD_STARTED, {
                 file_type: null,
                 file_size_bytes: null,
                 entry_method: "build_resume_instead",
                 marketing_opt_in: optIn,
+                ...(role ? { role: role.slug, goal: goal.current } : {}),
               });
             }}
             style={{
@@ -443,7 +510,11 @@ export function UploadCard({
         </div>
       </div>
 
-      <StickyUploadCta dropZone={dropZone} onUpload={openPicker} />
+      <StickyUploadCta
+        dropZone={dropZone}
+        onUpload={openPicker}
+        {...(role ? { label: `Check my ${role.name} match` } : {})}
+      />
     </>
   );
 }
