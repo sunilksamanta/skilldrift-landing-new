@@ -37,6 +37,7 @@ export type CtaSection =
   | "related_features"
   | "ats_checker"
   | "final_cta"
+  | "whatsapp_channel"
   | "footer";
 
 /**

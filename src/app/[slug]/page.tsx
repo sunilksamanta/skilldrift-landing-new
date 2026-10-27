@@ -19,6 +19,7 @@ import {
 } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { campaignFor } from "@/lib/cta";
+import WhatsAppFollow from "@/components/WhatsAppFollow";
 
 /**
  * Hero paragraphs that end with a link to the closed loop explainer. Kept here
@@ -114,6 +115,19 @@ export default async function ContentPage({
             campaign={campaignFor(route.path)}
           />
         ))}
+
+        {route.path === "/jobs" && (
+          <section className="sect">
+            <div className="wrap">
+              <WhatsAppFollow
+                marginTop={0}
+                heading="New jobs and internships on WhatsApp, every week"
+                line="Follow SkillDrift Jobs & Internships. Tuesday: one role and the skills it asks for. Friday: one real job or internship."
+                placement="jobs_page"
+              />
+            </div>
+          </section>
+        )}
 
         {route.feature && (
           <RelatedFeatures current={route.path} heading={route.relatedHeading} />

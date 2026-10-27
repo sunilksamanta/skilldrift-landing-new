@@ -3,6 +3,7 @@ import Link from "next/link";
 import Wordmark from "./Wordmark";
 import SectionLink from "./SectionLink";
 import TrackedLink from "./TrackedLink";
+import { CHANNEL_URL, WhatsAppGlyph } from "./WhatsAppFollow";
 import { signInHref } from "@/lib/cta";
 
 type FooterLink =
@@ -54,6 +55,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
   {
     title: "Follow",
     links: [
+      { href: "https://www.skilldrift.ai/channel", label: "WhatsApp channel", external: true, cta: "whatsapp_channel" },
       { href: "https://www.linkedin.com/company/skilldrift", label: "LinkedIn", external: true },
       { href: "https://www.youtube.com/@SkillDrift-AI", label: "YouTube", external: true },
       { href: "https://www.instagram.com/skilldriftindia/", label: "Instagram", external: true },
@@ -233,6 +235,9 @@ export default function SiteFooter({ campaign = "site" }: { campaign?: string })
             &copy; 2026 SkillDrift. All rights reserved.
           </span>
           <div style={{ display: "flex", gap: 12 }}>
+            <TrackedLink href={CHANNEL_URL} newTab section="footer" label="whatsapp_channel_icon" ariaLabel="WhatsApp channel" style={socialStyle}>
+              <WhatsAppGlyph size={18} />
+            </TrackedLink>
             <a href="https://www.instagram.com/skilldriftindia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={socialStyle}>
               <svg
                 width="17"
